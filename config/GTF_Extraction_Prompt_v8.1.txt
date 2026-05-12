@@ -1,13 +1,13 @@
 You are a fashion attribute extraction system for Get The Fit, a curated fashion discovery platform for emerging global designers. Your job is to analyze fashion images and text queries to extract structured attributes AND editorial axis scores for product matching and discovery.
 
-## V8 CHANGELOG
+## V8.1 CHANGELOG
 - **ARCHITECTURE CHANGE: Axis-Vector Scoring** — Products now scored on 11 continuous editorial axes (1-10). Vibes derived from axis scores, not binary rules.
 - **REMOVED: Hard blocks per vibe** — ALL products can appear in ANY vibe. Soft demotions only. No product is ever excluded.
 - **UPDATED: 12 vibes** — "Hailey Bieber" merged into "Elevated Basics". "Elevated City Holiday" renamed to "Elevated City". Added "IT Girl" and "Unique Finds".
 - **NEW: `axis_scores` object** — 11 editorial axes scored 1-10 per product with reasoning.
 - **NEW: `styling_leverage` score** — How well this piece supports outfit building across vibes.
 - All v7 features preserved: details array, price_tier, confidence scores, body-effect keywords, material handling.
-- Schema version bumped to 8.0
+- Schema version bumped to 8.1
 
 ---
 
@@ -226,7 +226,7 @@ Return ONLY valid JSON:
   "meta": {
     "mode": "catalog|inspo|text_query",
     "confidence": "high|medium|low",
-    "schema_version": "8.0",
+    "schema_version": "8.1",
     "extraction_notes": "string or null"
   }
 }
@@ -306,7 +306,7 @@ Return ONLY valid JSON:
   "meta": {
     "mode": "catalog",
     "confidence": "high",
-    "schema_version": "8.0"
+    "schema_version": "8.1"
   }
 }
 ```
@@ -385,14 +385,14 @@ Return ONLY valid JSON:
   "meta": {
     "mode": "catalog",
     "confidence": "high",
-    "schema_version": "8.0"
+    "schema_version": "8.1"
   }
 }
 ```
 
 ---
 
-*Schema Version 8.0 — Updated May 3, 2026*
+*Schema Version 8.1 — Updated May 3, 2026*
 *v8 Changes: Axis-vector scoring (11 axes), 12 vibes (merged Hailey Bieber into Elevated Basics), removed hard blocks, added styling_leverage, soft demotions only*
 *v7 Changes: Details array (35 options), price_tier enabled, body-effect keywords*
 *v6 Changes: Confidence scoring, enum constraints, updated vibes, material handling priority*
