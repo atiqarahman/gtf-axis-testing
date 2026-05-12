@@ -1,0 +1,269 @@
+{
+  "schema_version": "mapper_v2",
+  "created": "2026-05-03",
+  "description": "Maps query entities (vibes, celebrities, occasions, destinations, body concerns) to axis weight adjustments. Replaces v1 binary attribute mappings. Used by Layer 2 (deterministic code) after Layer 1 (GPT) extracts entities from user query.",
+
+  "vibe_mappings": {
+    "_note": "When user searches by vibe name, apply these as the query vector for ranking. These ARE the vibe vectors from vibe_vectors_v1.json — included here for mapper completeness.",
+    "old money": { "MIN": 8, "POL": 9, "BOD": 3, "DRA": 2, "NOV": 2, "CRA": 5, "BLD": 2, "GLM": 3, "TRD": 3, "STY": 7, "CUL": 3 },
+    "quiet luxury": { "_alias": "old money" },
+    "stealth wealth": { "_alias": "old money" },
+    "glam": { "MIN": 2, "POL": 7, "BOD": 7, "DRA": 9, "NOV": 3, "CRA": 4, "BLD": 8, "GLM": 10, "TRD": 5, "STY": 4, "CUL": 2 },
+    "glamorous": { "_alias": "glam" },
+    "red carpet": { "_alias": "glam" },
+    "cool girl": { "MIN": 6, "POL": 5, "BOD": 4, "DRA": 3, "NOV": 5, "CRA": 3, "BLD": 6, "GLM": 2, "TRD": 7, "STY": 8, "CUL": 2 },
+    "effortless": { "_alias": "cool girl" },
+    "off duty": { "_alias": "cool girl" },
+    "sexy elegant": { "MIN": 4, "POL": 8, "BOD": 9, "DRA": 6, "NOV": 4, "CRA": 3, "BLD": 8, "GLM": 6, "TRD": 6, "STY": 5, "CUL": 2 },
+    "date night": { "_alias": "sexy elegant", "_boost": { "BOD": 1, "BLD": 1 } },
+    "sexy": { "_alias": "sexy elegant" },
+    "wedding guest": { "MIN": 5, "POL": 8, "BOD": 4, "DRA": 5, "NOV": 3, "CRA": 5, "BLD": 3, "GLM": 5, "TRD": 3, "STY": 4, "CUL": 4 },
+    "occasion": { "_alias": "wedding guest" },
+    "formal event": { "_alias": "wedding guest", "_boost": { "POL": 1, "DRA": 1 } },
+    "dubai glam": { "MIN": 3, "POL": 8, "BOD": 3, "DRA": 8, "NOV": 4, "CRA": 6, "BLD": 6, "GLM": 9, "TRD": 4, "STY": 3, "CUL": 7 },
+    "modest glam": { "_alias": "dubai glam" },
+    "gulf style": { "_alias": "dubai glam" },
+    "elevated city": { "MIN": 8, "POL": 9, "BOD": 4, "DRA": 2, "NOV": 3, "CRA": 4, "BLD": 3, "GLM": 2, "TRD": 5, "STY": 9, "CUL": 2 },
+    "office chic": { "_alias": "elevated city" },
+    "city break": { "_alias": "elevated city" },
+    "winter holidays": { "MIN": 4, "POL": 7, "BOD": 4, "DRA": 6, "NOV": 4, "CRA": 5, "BLD": 4, "GLM": 7, "TRD": 4, "STY": 5, "CUL": 3 },
+    "festive": { "_alias": "winter holidays" },
+    "holiday party": { "_alias": "winter holidays", "_boost": { "GLM": 1, "DRA": 1 } },
+    "beach resort": { "MIN": 5, "POL": 5, "BOD": 5, "DRA": 4, "NOV": 4, "CRA": 4, "BLD": 4, "GLM": 3, "TRD": 5, "STY": 7, "CUL": 3 },
+    "vacation": { "_alias": "beach resort" },
+    "resort wear": { "_alias": "beach resort" },
+    "tropical": { "_alias": "beach resort", "_boost": { "BLD": 1, "NOV": 1 } },
+    "it girl": { "MIN": 4, "POL": 6, "BOD": 6, "DRA": 5, "NOV": 7, "CRA": 3, "BLD": 7, "GLM": 5, "TRD": 10, "STY": 6, "CUL": 2 },
+    "trending": { "_alias": "it girl" },
+    "viral": { "_alias": "it girl" },
+    "social media": { "_alias": "it girl" },
+    "elevated basics": { "MIN": 10, "POL": 9, "BOD": 4, "DRA": 1, "NOV": 2, "CRA": 4, "BLD": 2, "GLM": 1, "TRD": 4, "STY": 10, "CUL": 2 },
+    "hailey bieber style": { "_alias": "elevated basics" },
+    "capsule wardrobe": { "_alias": "elevated basics" },
+    "basics": { "_alias": "elevated basics" },
+    "minimalist": { "_alias": "elevated basics" },
+    "unique finds": { "MIN": 3, "POL": 5, "BOD": 4, "DRA": 5, "NOV": 9, "CRA": 9, "BLD": 5, "GLM": 3, "TRD": 4, "STY": 4, "CUL": 8 },
+    "artisan": { "_alias": "unique finds" },
+    "handmade": { "_alias": "unique finds" },
+    "one of a kind": { "_alias": "unique finds" },
+    "emerging designer": { "_alias": "unique finds" }
+  },
+
+  "celebrity_mappings": {
+    "_note": "When user searches by celebrity name, generate a query vector based on their known style profile. These are axis ADJUSTMENTS applied as the query vector.",
+    "hailey bieber": { "MIN": 9, "POL": 9, "BOD": 5, "DRA": 2, "NOV": 3, "CRA": 4, "BLD": 4, "GLM": 2, "TRD": 8, "STY": 10, "CUL": 2, "primary_vibes": ["elevated basics", "cool girl", "it girl"] },
+    "bella hadid": { "MIN": 4, "POL": 7, "BOD": 8, "DRA": 5, "NOV": 7, "CRA": 3, "BLD": 9, "GLM": 4, "TRD": 9, "STY": 6, "CUL": 2, "primary_vibes": ["it girl", "sexy elegant", "cool girl"] },
+    "kendall jenner": { "MIN": 7, "POL": 8, "BOD": 6, "DRA": 3, "NOV": 4, "CRA": 3, "BLD": 5, "GLM": 3, "TRD": 8, "STY": 8, "CUL": 2, "primary_vibes": ["cool girl", "elevated basics", "it girl"] },
+    "sofia richie": { "MIN": 8, "POL": 9, "BOD": 3, "DRA": 2, "NOV": 2, "CRA": 5, "BLD": 2, "GLM": 3, "TRD": 5, "STY": 8, "CUL": 2, "primary_vibes": ["old money", "elevated basics"] },
+    "zendaya": { "MIN": 3, "POL": 9, "BOD": 6, "DRA": 8, "NOV": 8, "CRA": 5, "BLD": 9, "GLM": 8, "TRD": 8, "STY": 4, "CUL": 3, "primary_vibes": ["glam", "it girl", "unique finds"] },
+    "kim kardashian": { "MIN": 3, "POL": 8, "BOD": 9, "DRA": 7, "NOV": 4, "CRA": 4, "BLD": 8, "GLM": 9, "TRD": 6, "STY": 3, "CUL": 2, "primary_vibes": ["glam", "sexy elegant"] },
+    "beyonce": { "MIN": 2, "POL": 9, "BOD": 8, "DRA": 10, "NOV": 5, "CRA": 5, "BLD": 9, "GLM": 10, "TRD": 5, "STY": 3, "CUL": 3, "primary_vibes": ["glam"] },
+    "jennifer lopez": { "MIN": 2, "POL": 8, "BOD": 8, "DRA": 9, "NOV": 3, "CRA": 4, "BLD": 8, "GLM": 10, "TRD": 4, "STY": 3, "CUL": 2, "primary_vibes": ["glam", "beach resort"] },
+    "dua lipa": { "MIN": 4, "POL": 7, "BOD": 8, "DRA": 6, "NOV": 6, "CRA": 3, "BLD": 8, "GLM": 6, "TRD": 9, "STY": 5, "CUL": 2, "primary_vibes": ["sexy elegant", "it girl"] },
+    "zoe kravitz": { "MIN": 6, "POL": 7, "BOD": 5, "DRA": 4, "NOV": 6, "CRA": 4, "BLD": 7, "GLM": 3, "TRD": 7, "STY": 7, "CUL": 3, "primary_vibes": ["cool girl", "it girl"] },
+    "rosie huntington whiteley": { "MIN": 8, "POL": 9, "BOD": 4, "DRA": 3, "NOV": 2, "CRA": 5, "BLD": 3, "GLM": 4, "TRD": 4, "STY": 8, "CUL": 2, "primary_vibes": ["elevated basics", "old money", "beach resort"] },
+    "alexa chung": { "MIN": 5, "POL": 6, "BOD": 4, "DRA": 4, "NOV": 7, "CRA": 5, "BLD": 5, "GLM": 2, "TRD": 6, "STY": 7, "CUL": 4, "primary_vibes": ["cool girl", "unique finds"] },
+    "deepika padukone": { "MIN": 4, "POL": 9, "BOD": 5, "DRA": 7, "NOV": 4, "CRA": 7, "BLD": 5, "GLM": 7, "TRD": 5, "STY": 4, "CUL": 8, "primary_vibes": ["dubai glam", "wedding guest"] },
+    "sonam kapoor": { "MIN": 2, "POL": 9, "BOD": 4, "DRA": 9, "NOV": 7, "CRA": 8, "BLD": 8, "GLM": 8, "TRD": 6, "STY": 3, "CUL": 9, "primary_vibes": ["unique finds", "dubai glam", "glam"] }
+  },
+
+  "occasion_mappings": {
+    "_note": "When user specifies occasion, apply these as axis ADJUSTMENTS (add to existing query vector). These modify the search, not replace it.",
+    "date night": { "BOD": 3, "BLD": 2, "POL": 2, "GLM": 1, "STY": -1 },
+    "office": { "MIN": 3, "POL": 3, "STY": 2, "BOD": -2, "BLD": -2, "GLM": -2 },
+    "brunch": { "STY": 2, "POL": 1, "MIN": 1, "DRA": -1, "GLM": -2 },
+    "cocktail party": { "GLM": 2, "BOD": 2, "BLD": 2, "POL": 2, "DRA": 1 },
+    "wedding": { "POL": 3, "CRA": 2, "DRA": 1, "GLM": 1, "CUL": 1 },
+    "beach": { "STY": 1, "MIN": 1, "BOD": 1, "DRA": -2, "GLM": -3, "POL": -1 },
+    "club": { "BOD": 3, "BLD": 3, "TRD": 2, "GLM": 2, "DRA": 1, "MIN": -2 },
+    "gallery opening": { "NOV": 3, "CRA": 2, "POL": 1, "CUL": 2, "MIN": 1 },
+    "formal gala": { "GLM": 3, "POL": 3, "DRA": 3, "CRA": 1, "STY": -2, "MIN": -2 },
+    "casual friday": { "STY": 3, "MIN": 2, "POL": 1, "BOD": -1, "GLM": -3, "DRA": -2 },
+    "eid": { "CUL": 4, "CRA": 3, "GLM": 2, "POL": 2, "DRA": 1, "BOD": -2 },
+    "diwali": { "CUL": 4, "CRA": 3, "GLM": 3, "DRA": 2, "POL": 2, "BOD": -1 },
+    "new years eve": { "GLM": 3, "BLD": 2, "DRA": 2, "TRD": 2, "BOD": 2 },
+    "graduation": { "POL": 3, "STY": 1, "DRA": 1, "GLM": -1, "BOD": -1 }
+  },
+
+  "destination_mappings": {
+    "_note": "When user specifies destination, apply these axis adjustments.",
+    "dubai": { "GLM": 3, "POL": 2, "CUL": 2, "DRA": 1, "BOD": -2 },
+    "mykonos": { "BOD": 2, "STY": 2, "BLD": 1, "MIN": 1, "TRD": 1, "GLM": -1 },
+    "paris": { "POL": 3, "MIN": 2, "CRA": 1, "STY": 1, "GLM": -1, "BOD": -1 },
+    "london": { "POL": 2, "MIN": 2, "STY": 2, "TRD": 1, "BLD": 1 },
+    "new york": { "BLD": 2, "TRD": 2, "POL": 1, "MIN": 1, "STY": 1 },
+    "bali": { "CUL": 2, "CRA": 2, "STY": 1, "NOV": 1, "GLM": -2, "POL": -1 },
+    "amalfi coast": { "POL": 2, "STY": 2, "MIN": 1, "GLM": -1, "DRA": -1 },
+    "mumbai": { "CUL": 4, "CRA": 3, "DRA": 1, "GLM": 1, "NOV": 1 },
+    "tokyo": { "NOV": 3, "CRA": 2, "MIN": 1, "TRD": 2, "BLD": 1 },
+    "ibiza": { "BOD": 3, "BLD": 3, "TRD": 2, "GLM": 1, "DRA": 1, "MIN": -2 },
+    "aspen": { "POL": 2, "CRA": 1, "MIN": 1, "STY": 1, "GLM": -1, "BOD": -2 },
+    "tulum": { "CRA": 2, "NOV": 2, "CUL": 1, "STY": 1, "MIN": 1, "GLM": -2 },
+    "jaipur": { "CUL": 5, "CRA": 4, "DRA": 2, "NOV": 2, "GLM": 1 },
+    "los angeles": { "TRD": 2, "BOD": 2, "STY": 2, "BLD": 1, "MIN": 1 }
+  },
+
+  "body_concern_mappings": {
+    "_note": "When user expresses body concern, apply these axis adjustments + hard attribute filters. These MODIFY the query, they don't replace the vibe vector.",
+    "hide my tummy": {
+      "axis_adjustments": { "STY": 2, "BOD": -3, "MIN": 1 },
+      "hard_filters": {
+        "silhouette_prefer": ["a-line", "empire", "flowy", "wrap", "relaxed"],
+        "silhouette_avoid_rank_lower": ["bodycon", "fitted"],
+        "details_prefer": ["ruched", "draped", "gathered"],
+        "keywords_add": ["tummy-friendly", "waist-defining"]
+      },
+      "pill_suggestions": ["A-line", "Empire Waist", "Wrap", "Ruched"],
+      "budget_psychology": "under_100"
+    },
+    "look snatched": {
+      "axis_adjustments": { "BOD": 3, "BLD": 2, "POL": 1 },
+      "hard_filters": {
+        "silhouette_prefer": ["bodycon", "fitted", "corseted"],
+        "details_prefer": ["corseted", "boned", "ruched"],
+        "keywords_add": ["snatched", "waist-defining", "bust-flattering"]
+      },
+      "pill_suggestions": ["Bodycon", "Corseted", "Ruched", "Fitted"],
+      "budget_psychology": "under_300"
+    },
+    "flattering curvy": {
+      "axis_adjustments": { "BOD": 1, "POL": 2, "STY": 1 },
+      "hard_filters": {
+        "silhouette_prefer": ["wrap", "a-line", "fitted", "flared"],
+        "details_prefer": ["ruched", "draped", "wrap"],
+        "keywords_add": ["hip-balancing", "waist-defining", "bust-flattering"]
+      },
+      "pill_suggestions": ["Wrap", "A-line", "Ruched", "V-neck"],
+      "budget_psychology": "under_200"
+    },
+    "elongating": {
+      "axis_adjustments": { "MIN": 2, "POL": 1, "STY": 1 },
+      "hard_filters": {
+        "length_prefer": ["midi", "maxi", "full-length"],
+        "silhouette_prefer": ["column", "straight", "slim", "a-line"],
+        "color_prefer": ["black", "navy", "charcoal"],
+        "keywords_add": ["elongating", "leg-lengthening"]
+      },
+      "pill_suggestions": ["Midi", "Column", "Monochrome", "High-waist"],
+      "budget_psychology": "under_200"
+    },
+    "arm friendly": {
+      "axis_adjustments": { "STY": 1, "MIN": 1 },
+      "hard_filters": {
+        "sleeve_prefer": ["long", "three-quarter", "bell", "cape"],
+        "sleeve_avoid_rank_lower": ["sleeveless", "strapless"],
+        "keywords_add": ["arm-friendly"]
+      },
+      "pill_suggestions": ["Long Sleeve", "Three-Quarter", "Cape Sleeve"],
+      "budget_psychology": "under_150"
+    },
+    "petite friendly": {
+      "axis_adjustments": { "MIN": 1, "POL": 1 },
+      "hard_filters": {
+        "length_prefer": ["mini", "knee", "midi"],
+        "length_avoid_rank_lower": ["maxi", "floor-length"],
+        "silhouette_prefer": ["fitted", "a-line", "empire"],
+        "keywords_add": ["elongating", "leg-lengthening"]
+      },
+      "pill_suggestions": ["Mini", "Knee Length", "High Waist", "V-neck"],
+      "budget_psychology": "under_200"
+    }
+  },
+
+  "modifier_translation": {
+    "_note": "Tier 2 modifier words — these adjust specific axes when user clicks a vibe pill or types a modifier. Applied ON TOP of the active vibe vector (vibe_lock stays).",
+    "sexy": { "BOD": 3, "BLD": 2, "GLM": 1 },
+    "romantic": { "DRA": 1, "CRA": 1, "NOV": -1, "BLD": -1 },
+    "edgy": { "BLD": 3, "NOV": 2, "TRD": 1, "MIN": -1 },
+    "y2k": { "TRD": 3, "BLD": 2, "BOD": 2, "NOV": 2, "MIN": -1 },
+    "90s": { "TRD": 2, "MIN": 2, "STY": 1, "GLM": -1 },
+    "bohemian": { "CRA": 3, "CUL": 2, "NOV": 1, "STY": 1, "POL": -1, "GLM": -2 },
+    "preppy": { "POL": 3, "MIN": 2, "STY": 2, "BLD": -2, "DRA": -1 },
+    "grunge": { "BLD": 3, "NOV": 2, "TRD": 1, "POL": -2, "GLM": -2 },
+    "coquette": { "BOD": 2, "DRA": 1, "NOV": 2, "TRD": 2, "CRA": 1 },
+    "mob wife": { "GLM": 3, "DRA": 2, "BLD": 2, "BOD": 1, "POL": 1 },
+    "clean girl": { "MIN": 4, "POL": 3, "STY": 2, "GLM": -2, "DRA": -2 },
+    "cottagecore": { "CRA": 3, "CUL": 2, "NOV": 1, "MIN": -1, "BOD": -2, "GLM": -3 },
+    "coastal grandmother": { "MIN": 3, "POL": 2, "STY": 2, "CUL": 1, "GLM": -2, "BLD": -2 },
+    "dark academia": { "POL": 2, "CRA": 1, "MIN": 1, "CUL": 1, "GLM": -2, "BOD": -1 },
+    "soft glam": { "GLM": 2, "POL": 2, "DRA": 1, "BOD": 1, "BLD": -1 },
+    "undone": { "POL": -2, "MIN": 1, "STY": 2, "TRD": 1, "BLD": 1 },
+    "power dressing": { "POL": 3, "BLD": 2, "MIN": 1, "STY": 1, "BOD": -1, "GLM": -1 },
+    "modest": { "BOD": -4, "CUL": 2, "POL": 1 },
+    "revealing": { "BOD": 4, "BLD": 2, "DRA": 1 },
+    "affordable": { "_price_filter": "under_200" },
+    "investment": { "_price_filter": "over_500", "CRA": 2, "POL": 1 },
+    "under 200": { "_price_filter": "under_200" },
+    "under 500": { "_price_filter": "under_500" },
+    "luxury": { "_price_filter": "over_800", "CRA": 2, "POL": 2, "GLM": 1 }
+  },
+
+  "budget_psychology": {
+    "_note": "Different query types have different price expectations. Used for default budget pill generation.",
+    "old money": "under_500",
+    "elevated basics": "under_300",
+    "cool girl": "under_300",
+    "office": "under_200",
+    "hide my tummy": "under_100",
+    "date night": "under_300",
+    "wedding guest": "under_400",
+    "dubai glam": "under_800",
+    "glam": "under_500",
+    "it girl": "under_300",
+    "vacation": "under_200",
+    "unique finds": "under_400"
+  },
+
+  "similar_families": {
+    "_note": "When exact matches are thin, expand search using material/attribute families. Score = match quality percentage.",
+    "material_families": {
+      "cashmere": [
+        { "material": "cashmere", "score": 100 },
+        { "material": "wool", "score": 80, "label": "merino wool" },
+        { "material": "knit", "score": 60, "label": "premium knit" }
+      ],
+      "silk": [
+        { "material": "silk", "score": 100 },
+        { "material": "satin", "score": 85, "label": "satin (silk-like)" },
+        { "material": "chiffon", "score": 70, "label": "chiffon" },
+        { "material": "crepe", "score": 65, "label": "crepe" }
+      ],
+      "leather": [
+        { "material": "leather", "score": 100 },
+        { "material": "faux-leather", "score": 85, "label": "vegan leather" },
+        { "material": "suede", "score": 70, "label": "suede" }
+      ],
+      "linen": [
+        { "material": "linen", "score": 100 },
+        { "material": "cotton", "score": 75, "label": "cotton" },
+        { "material": "viscose", "score": 60, "label": "viscose blend" }
+      ],
+      "sequin": [
+        { "material": "sequin", "score": 100 },
+        { "material": "brocade", "score": 70, "label": "brocade" },
+        { "material": "jacquard", "score": 60, "label": "jacquard" }
+      ]
+    },
+    "neckline_families": {
+      "plunging": ["plunging", "deep-v", "v-neck"],
+      "high": ["high-neck", "mock-neck", "turtleneck"],
+      "open": ["off-shoulder", "one-shoulder", "strapless", "bardot"],
+      "classic": ["crew", "round", "scoop", "boat-neck"]
+    },
+    "silhouette_families": {
+      "body_conscious": ["bodycon", "fitted", "slim"],
+      "flowing": ["flowy", "a-line", "flared", "empire"],
+      "structured": ["structured", "tailored", "boxy"],
+      "relaxed": ["relaxed", "oversized", "shift"]
+    },
+    "color_families": {
+      "neutrals": ["black", "white", "cream", "ivory", "beige", "grey", "charcoal", "stone", "taupe", "nude"],
+      "warm_neutrals": ["camel", "tan", "brown", "chocolate", "champagne"],
+      "reds": ["red", "burgundy", "maroon", "wine", "coral", "terracotta"],
+      "pinks": ["pink", "blush", "dusty-rose", "fuchsia", "hot-pink"],
+      "blues": ["navy", "blue", "cobalt", "royal-blue", "teal", "turquoise"],
+      "greens": ["green", "olive", "sage", "emerald", "forest-green", "mint"],
+      "metallics": ["gold", "silver"]
+    }
+  }
+}

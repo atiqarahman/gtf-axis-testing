@@ -1,0 +1,431 @@
+{
+  "schema_version": "vectors_v1",
+  "created": "2026-05-03",
+  "description": "GTF Vibe Vectors — 12 vibes × 11 axes. Each vibe is a weighted vector. Product scoring = dot product of product axis scores × vibe weights. Replaces vibe_rules_v3.json (binary trigger/exclusion model).",
+  "axes": {
+    "minimalism": {
+      "id": "MIN",
+      "scale": "1 = maximalist, heavy, decorated → 10 = ultra-minimal, stripped-back, nothing extra",
+      "extraction_cue": "Count visual elements. Fewer elements = higher score. Solid pattern, clean lines, no embellishment = high. Multiple textures, prints, details = low."
+    },
+    "polish": {
+      "id": "POL",
+      "scale": "1 = casual, raw, unfinished → 10 = immaculate finish, every detail considered",
+      "extraction_cue": "Assess construction quality, fit precision, fabric quality. Sharp seams, clean drape, intentional design = high. Distressed, relaxed, casual = low."
+    },
+    "body_awareness": {
+      "id": "BOD",
+      "scale": "1 = fully concealing, oversized, no body shape visible → 10 = body-hugging, revealing, skin-showing",
+      "extraction_cue": "How much does the garment reveal or follow the body? Bodycon, cutout, sheer, fitted = high. Oversized, layered, voluminous = low."
+    },
+    "drama": {
+      "id": "DRA",
+      "scale": "1 = understated, quiet, no wow-factor → 10 = theatrical, showstopping, look-at-me",
+      "extraction_cue": "Would this turn heads in a room? Volume, embellishment, unusual proportions, red-carpet energy = high. Quiet, blendable, everyday = low."
+    },
+    "novelty": {
+      "id": "NOV",
+      "scale": "1 = timeless classic, seen-it-before → 10 = never-seen-before, completely fresh",
+      "extraction_cue": "Has this silhouette/detail/combination been done before? Standard blazer = low. Asymmetric deconstructed wrap with mixed fabrics = high."
+    },
+    "craft": {
+      "id": "CRA",
+      "scale": "1 = machine-made commodity, no visible craftsmanship → 10 = master artisan handwork, heritage technique",
+      "extraction_cue": "Is there evidence of hand-making, artisanal technique, cultural textile craft? Hand-embroidery, block print, crochet = high. Standard factory construction = low."
+    },
+    "boldness": {
+      "id": "BLD",
+      "scale": "1 = safe, conventional, plays-it-safe → 10 = daring, provocative, rule-breaking",
+      "extraction_cue": "Would the average person hesitate to wear this? Deep V, cutout, bold color, unusual silhouette = high. Classic cuts, safe colors = low."
+    },
+    "glamour": {
+      "id": "GLM",
+      "scale": "1 = daytime casual, zero shine → 10 = red carpet, full sparkle, maximum embellishment",
+      "extraction_cue": "Does it sparkle, shimmer, or embellish? Sequin, metallic, crystal, beading, gold thread = high. Matte, natural, undecorated = low."
+    },
+    "trend_currency": {
+      "id": "TRD",
+      "scale": "1 = timeless, undateable, could be from any era → 10 = peak trending right now, would get Instagram engagement today",
+      "extraction_cue": "Is this silhouette/detail/brand currently circulating on social media? Trending cuts, viral brand = high. Classic unchanging = low. NOTE: This axis needs quarterly recalibration."
+    },
+    "styling_affordance": {
+      "id": "STY",
+      "scale": "1 = only works one way, single-context piece → 10 = infinite outfit potential, works in every context",
+      "extraction_cue": "How many different outfits could this anchor? A black blazer = 10. A sequin floor-length gown = 2. A white tee = 10."
+    },
+    "cultural_richness": {
+      "id": "CUL",
+      "scale": "1 = generic, placeless, could be from anywhere → 10 = deep heritage technique, regional storytelling, cultural significance",
+      "extraction_cue": "Does this garment carry cultural meaning? Block print, heritage weaving, regional embroidery, traditional silhouette with modern interpretation = high. Generic Western fashion = low. NOTE: This is ALWAYS a positive signal, never a penalty."
+    }
+  },
+  "vibes": {
+    "old_money": {
+      "display_name": "Old Money",
+      "one_liner": "Whispers wealth, never shouts it.",
+      "vector": {
+        "minimalism": 8,
+        "polish": 9,
+        "body_awareness": 3,
+        "drama": 2,
+        "novelty": 2,
+        "craft": 5,
+        "boldness": 2,
+        "glamour": 3,
+        "trend_currency": 3,
+        "styling_affordance": 7,
+        "cultural_richness": 3
+      },
+      "soft_demotions": {
+        "max_cumulative": -6,
+        "floor_score": 15,
+        "rules": [
+          { "signal": "sequin_or_metallic_material", "value": -2 },
+          { "signal": "neon_or_bright_primary_colors", "value": -2 },
+          { "signal": "bodycon_silhouette", "value": -1 },
+          { "signal": "animal_print", "value": -2 },
+          { "signal": "logo_heavy_visible_branding", "value": -2 },
+          { "signal": "crop_length", "value": -1 }
+        ]
+      },
+      "brand_refs": ["The Row", "Loro Piana", "Brunello Cucinelli", "Max Mara", "Ralph Lauren Purple Label"],
+      "celeb_refs": ["Sofia Richie Grainge", "Gwyneth Paltrow", "Carolyn Bessette-Kennedy"]
+    },
+    "glam": {
+      "display_name": "Glam",
+      "one_liner": "The most memorable person in the room.",
+      "vector": {
+        "minimalism": 2,
+        "polish": 7,
+        "body_awareness": 7,
+        "drama": 9,
+        "novelty": 3,
+        "craft": 4,
+        "boldness": 8,
+        "glamour": 10,
+        "trend_currency": 5,
+        "styling_affordance": 4,
+        "cultural_richness": 2
+      },
+      "soft_demotions": {
+        "max_cumulative": -5,
+        "floor_score": 15,
+        "rules": [
+          { "signal": "cotton_linen_casual_material", "value": -2 },
+          { "signal": "relaxed_oversized_silhouette", "value": -1 },
+          { "signal": "muted_earth_tones_only", "value": -1 },
+          { "signal": "minimal_no_embellishment_minimal_silhouette", "value": -2 }
+        ]
+      },
+      "brand_refs": ["Versace", "Retrofete", "Nadine Merabi", "Balmain", "Tom Ford"],
+      "celeb_refs": ["Kim Kardashian", "Beyoncé", "Jennifer Lopez"]
+    },
+    "cool_girl": {
+      "display_name": "Cool Girl",
+      "one_liner": "Got dressed in 5 minutes, looks better than everyone who tried for an hour.",
+      "vector": {
+        "minimalism": 6,
+        "polish": 5,
+        "body_awareness": 4,
+        "drama": 3,
+        "novelty": 5,
+        "craft": 3,
+        "boldness": 6,
+        "glamour": 2,
+        "trend_currency": 7,
+        "styling_affordance": 8,
+        "cultural_richness": 2
+      },
+      "soft_demotions": {
+        "max_cumulative": -4,
+        "floor_score": 15,
+        "rules": [
+          { "signal": "heavy_sequin_full_sparkle", "value": -2 },
+          { "signal": "floral_print", "value": -1 },
+          { "signal": "floor_length_formal_gown", "value": -1 },
+          { "signal": "heavy_traditional_embroidery", "value": -1 }
+        ]
+      },
+      "brand_refs": ["Khaite", "The Frankie Shop", "Toteme", "Agolde", "Acne Studios"],
+      "celeb_refs": ["Hailey Bieber", "Kendall Jenner", "Zoë Kravitz"]
+    },
+    "sexy_elegant": {
+      "display_name": "Sexy Elegant",
+      "one_liner": "Powerful, not exposed. The body is celebrated, not objectified.",
+      "vector": {
+        "minimalism": 4,
+        "polish": 8,
+        "body_awareness": 9,
+        "drama": 6,
+        "novelty": 4,
+        "craft": 3,
+        "boldness": 8,
+        "glamour": 6,
+        "trend_currency": 6,
+        "styling_affordance": 5,
+        "cultural_richness": 2
+      },
+      "soft_demotions": {
+        "max_cumulative": -4,
+        "floor_score": 15,
+        "rules": [
+          { "signal": "full_coverage_high_neck_long_sleeves_no_skin", "value": -2 },
+          { "signal": "oversized_baggy_silhouette", "value": -2 },
+          { "signal": "modesty_level_5", "value": -1 },
+          { "signal": "casual_sporty_material", "value": -1 }
+        ]
+      },
+      "brand_refs": ["David Koma", "Alex Perry", "Mônot", "Nensi Dojaka", "Mugler"],
+      "celeb_refs": ["Bella Hadid", "Dua Lipa", "Emily Ratajkowski"]
+    },
+    "wedding_guest": {
+      "display_name": "Wedding Guest",
+      "one_liner": "Best-dressed at the wedding, never upstaging the bride.",
+      "vector": {
+        "minimalism": 5,
+        "polish": 8,
+        "body_awareness": 4,
+        "drama": 5,
+        "novelty": 3,
+        "craft": 5,
+        "boldness": 3,
+        "glamour": 5,
+        "trend_currency": 3,
+        "styling_affordance": 4,
+        "cultural_richness": 4
+      },
+      "soft_demotions": {
+        "max_cumulative": -5,
+        "floor_score": 15,
+        "rules": [
+          { "signal": "casual_fabric_denim_jersey", "value": -2 },
+          { "signal": "crop_top", "value": -1 },
+          { "signal": "graphic_print_neon", "value": -1 },
+          { "signal": "very_revealing_bodycon_deep_v_mini", "value": -1 },
+          { "signal": "streetwear_sporty", "value": -2 }
+        ]
+      },
+      "brand_refs": ["Zimmermann", "Reformation", "Self-Portrait", "Needle & Thread"],
+      "celeb_refs": ["Meghan Markle (event styling)", "Amal Clooney"]
+    },
+    "dubai_glam": {
+      "display_name": "Dubai Glam",
+      "one_liner": "Nobu DIFC table energy — bold, luxurious, dripping in intention.",
+      "vector": {
+        "minimalism": 3,
+        "polish": 8,
+        "body_awareness": 3,
+        "drama": 8,
+        "novelty": 4,
+        "craft": 6,
+        "boldness": 6,
+        "glamour": 9,
+        "trend_currency": 4,
+        "styling_affordance": 3,
+        "cultural_richness": 7
+      },
+      "soft_demotions": {
+        "max_cumulative": -4,
+        "floor_score": 15,
+        "rules": [
+          { "signal": "very_revealing_plunging_mini_sheer_no_underlayer", "value": -2 },
+          { "signal": "casual_sporty_materials", "value": -2 },
+          { "signal": "very_minimalist_no_embellishment_no_cultural_signal", "value": -1 },
+          { "signal": "western_streetwear_no_elevation", "value": -1 }
+        ]
+      },
+      "brand_refs": ["Nadine Merabi", "Bronx & Banco", "Cult Gaia", "Elie Saab", "Aseem Kapoor (GTF)"],
+      "celeb_refs": ["Dubai influencer aesthetic", "Sheikha Mozah"],
+      "notes": "Traditional/ethnic is NEVER a demotion for Dubai Glam. Cultural richness is a POSITIVE axis here."
+    },
+    "elevated_city": {
+      "display_name": "Elevated City",
+      "one_liner": "Dinner reservation after your meeting. Professional polish with personality.",
+      "vector": {
+        "minimalism": 8,
+        "polish": 9,
+        "body_awareness": 4,
+        "drama": 2,
+        "novelty": 3,
+        "craft": 4,
+        "boldness": 3,
+        "glamour": 2,
+        "trend_currency": 5,
+        "styling_affordance": 9,
+        "cultural_richness": 2
+      },
+      "soft_demotions": {
+        "max_cumulative": -4,
+        "floor_score": 15,
+        "rules": [
+          { "signal": "heavy_embellishment_sequin", "value": -2 },
+          { "signal": "very_revealing_mini_bodycon_deep_v", "value": -1 },
+          { "signal": "resort_beachwear_prints", "value": -1 },
+          { "signal": "floor_length_gown", "value": -1 }
+        ]
+      },
+      "brand_refs": ["Theory", "Vince", "Joseph", "COS", "The Frankie Shop"],
+      "celeb_refs": ["Amal Clooney", "Victoria Beckham", "Meghan Markle"]
+    },
+    "winter_holidays": {
+      "display_name": "Winter Holidays",
+      "one_liner": "Candlelit dinner party in December — warm, rich, festive without being a costume.",
+      "vector": {
+        "minimalism": 4,
+        "polish": 7,
+        "body_awareness": 4,
+        "drama": 6,
+        "novelty": 4,
+        "craft": 5,
+        "boldness": 4,
+        "glamour": 7,
+        "trend_currency": 4,
+        "styling_affordance": 5,
+        "cultural_richness": 3
+      },
+      "soft_demotions": {
+        "max_cumulative": -4,
+        "floor_score": 15,
+        "rules": [
+          { "signal": "linen_lightweight_cotton_summer", "value": -2 },
+          { "signal": "tropical_resort_prints", "value": -2 },
+          { "signal": "very_casual_sporty", "value": -1 },
+          { "signal": "bright_tropical_colors", "value": -1 }
+        ]
+      },
+      "brand_refs": ["Reformation", "Nadine Merabi", "& Other Stories", "Ulla Johnson"],
+      "celeb_refs": ["Rosie Huntington-Whiteley", "Jennifer Lopez", "Olivia Palermo"]
+    },
+    "beach_resort": {
+      "display_name": "Beach & Resort",
+      "one_liner": "Packing for Amalfi — effortless, sun-kissed, slightly more beautiful than daily life.",
+      "vector": {
+        "minimalism": 5,
+        "polish": 5,
+        "body_awareness": 5,
+        "drama": 4,
+        "novelty": 4,
+        "craft": 4,
+        "boldness": 4,
+        "glamour": 3,
+        "trend_currency": 5,
+        "styling_affordance": 7,
+        "cultural_richness": 3
+      },
+      "soft_demotions": {
+        "max_cumulative": -4,
+        "floor_score": 15,
+        "rules": [
+          { "signal": "heavy_structured_corporate_tailoring", "value": -1 },
+          { "signal": "heavy_winter_fabrics_wool_velvet", "value": -2 },
+          { "signal": "dark_jewel_tones_only", "value": -1 },
+          { "signal": "full_sequin_heavy_evening_embellishment", "value": -1 }
+        ]
+      },
+      "brand_refs": ["Johanna Ortiz", "Zimmermann", "Farm Rio", "Cult Gaia", "Faithfull the Brand"],
+      "celeb_refs": ["Rosie Huntington-Whiteley", "Jennifer Lopez", "Olivia Palermo"]
+    },
+    "it_girl": {
+      "display_name": "IT Girl",
+      "one_liner": "Culturally current and instantly noticeable. This vibe updates faster than all others.",
+      "vector": {
+        "minimalism": 4,
+        "polish": 6,
+        "body_awareness": 6,
+        "drama": 5,
+        "novelty": 7,
+        "craft": 3,
+        "boldness": 7,
+        "glamour": 5,
+        "trend_currency": 10,
+        "styling_affordance": 6,
+        "cultural_richness": 2
+      },
+      "soft_demotions": {
+        "max_cumulative": -2,
+        "floor_score": 20,
+        "rules": [
+          { "signal": "plain_basic_zero_styling_context", "value": -1 },
+          { "signal": "purely_corporate_conservative", "value": -1 }
+        ],
+        "notes": "IT Girl has the SOFTEST demotions (-2 cap). Almost anything can be IT Girl if it's trending. This vibe borrows from ALL other vibes."
+      },
+      "brand_refs": ["Peachy Den", "Gimaguas", "With Jéan", "Miaou", "Mirror Palais", "The Attico", "Rat & Boa", "Helsa", "Réalisation Par", "Jaded London"],
+      "celeb_refs": ["Bella Hadid", "Hailey Bieber", "Kendall Jenner", "Alex Consani", "Devon Lee Carlson", "Elsa Hosk"],
+      "notes": "IT Girl is an editorial lens, not a fixed aesthetic. Requires QUARTERLY RECALIBRATION of trend_currency signals. The products that rank highest change as trends shift."
+    },
+    "elevated_basics": {
+      "display_name": "Elevated Basics / Hailey Bieber",
+      "one_liner": "Simple in a way that feels expensive, not boring, sloppy, or overdesigned.",
+      "vector": {
+        "minimalism": 10,
+        "polish": 9,
+        "body_awareness": 4,
+        "drama": 1,
+        "novelty": 2,
+        "craft": 4,
+        "boldness": 2,
+        "glamour": 1,
+        "trend_currency": 4,
+        "styling_affordance": 10,
+        "cultural_richness": 2
+      },
+      "soft_demotions": {
+        "max_cumulative": -4,
+        "floor_score": 15,
+        "rules": [
+          { "signal": "heavy_sequin_metallic_sparkle", "value": -2 },
+          { "signal": "bold_bright_neon_colors", "value": -1 },
+          { "signal": "floral_graphic_bold_print", "value": -1 },
+          { "signal": "heavy_embroidery_beading_fringe", "value": -2 }
+        ]
+      },
+      "brand_refs": ["Toteme", "The Row", "Khaite", "Tibi", "Staud", "Another Tomorrow", "Rohé", "Kallmeyer", "Leset", "Wardrobe.NYC"],
+      "celeb_refs": ["Hailey Bieber", "Rosie Huntington-Whiteley", "Kendall Jenner", "Sofia Richie Grainge", "Matilda Djerf"],
+      "notes": "Merged vibe: Elevated Basics + Hailey Bieber. Hailey is the anchor celebrity. Leather jackets are IN."
+    },
+    "unique_finds": {
+      "display_name": "Unique Finds",
+      "one_liner": "Discovered, not mass-served. 'Where did you get that?' energy.",
+      "vector": {
+        "minimalism": 3,
+        "polish": 5,
+        "body_awareness": 4,
+        "drama": 5,
+        "novelty": 9,
+        "craft": 9,
+        "boldness": 5,
+        "glamour": 3,
+        "trend_currency": 4,
+        "styling_affordance": 4,
+        "cultural_richness": 8
+      },
+      "soft_demotions": {
+        "max_cumulative": -2,
+        "floor_score": 20,
+        "rules": [
+          { "signal": "true_commodity_basic_no_unusual_quality", "value": -2 }
+        ],
+        "notes": "Unique Finds has the SOFTEST demotions tied with IT Girl (-2 cap). Only true commodity basics get demoted. Sequin, streetwear, heritage, glamour can ALL co-exist with Unique Finds if the piece feels authored/discovered."
+      },
+      "brand_refs": ["Gimaguas", "Diotima", "Magda Butrym", "Paloma Wool", "Miista", "Supriya Lele", "Siedrés", "Christopher Esber", "Cult Gaia", "Róhe", "Loulou de Saison"],
+      "celeb_refs": ["Alexa Chung", "Hannah Traore", "Chloë Sevigny", "Emma Chamberlain", "Leonie Hanne", "Devon Lee Carlson"],
+      "gtf_brand_alignment": ["Aseem Kapoor (craft:9, cultural:10)", "ITRH (craft:7, cultural:8 when embroidery is the story)"],
+      "notes": "No Revolve test data — intentional. Unique Finds is defined by what you DON'T find on mainstream platforms. Cultural richness is a KEY differentiator for GTF vs competitors."
+    }
+  },
+  "scoring": {
+    "method": "dot_product",
+    "description": "For each product, extract 11 axis scores (1-10). Compute vibe_score = dot_product(product_axes, vibe_vector) / max_possible_score * 100. Apply soft_demotions. Cap at floor_score minimum.",
+    "formula": "vibe_score = (SUM(product_axis[i] * vibe_weight[i]) / (10 * SUM(vibe_weight[i]))) * 100 + SUM(applicable_demotions)",
+    "category_normalization": "Rank products WITHIN category first (best top for this vibe vs other tops), then page builder decides category mix.",
+    "inventory_adaptive": "When vibe has < 20 live products, reduce demotion_strength by 50% and widen floor_score to 10.",
+    "styling_leverage": "Products with high styling_affordance axis score should receive a bonus when appearing as supporting pieces in outfit contexts."
+  },
+  "tier_system": {
+    "tier_1_hero_vibes": "These 12 vibes. Full vector scoring, evidence-backed frameworks, dedicated pages.",
+    "tier_2_modifier_words": "Unlimited modifiers (sexy, romantic, Y2K, snatched). Each modifier = temporary axis adjustment applied on top of active vibe. GPT translates modifier to axis deltas.",
+    "tier_3_hard_attributes": "Direct filters (black, midi, silk). Applied after vector scoring. Axes don't change.",
+    "graduation": "When a Tier 2 modifier reaches 500+ clicks with consistent axis patterns, promote to Tier 1 (create new vibe vector). Customers tell us what deserves investment."
+  }
+}
