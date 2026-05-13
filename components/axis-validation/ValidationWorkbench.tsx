@@ -40,12 +40,15 @@ export default function ValidationWorkbench() {
   const [query, setQuery] = useState('')
   const [showQa, setShowQa] = useState(false)
   const [showShortcuts, setShowShortcuts] = useState(false)
+  const [reviewerName, setReviewerName] = useState('RK')
 
   useEffect(() => {
     loadValidationData().then(({ items, qa }) => {
       setItems(items)
       setQa(qa)
       const saved = localStorage.getItem('gtf-axis-reviews')
+      const savedReviewer = localStorage.getItem('gtf-axis-reviewer')
+      if (savedReviewer) setReviewerName(savedReviewer)
       if (saved) setReviews(JSON.parse(saved))
     })
   }, [])
@@ -53,6 +56,10 @@ export default function ValidationWorkbench() {
   useEffect(() => {
     if (Object.keys(reviews).length) localStorage.setItem('gtf-axis-reviews', JSON.stringify(reviews))
   }, [reviews])
+
+  useEffect(() => {
+    localStorage.setItem('gtf-axis-reviewer', reviewerName)
+  }, [reviewerName])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -80,6 +87,10 @@ export default function ValidationWorkbench() {
   const item = filtered[Math.min(index, Math.max(0, filtered.length - 1))]
   const review = item ? reviews[item.product.product_id] ?? blankReview(item) : null
   const reviewedCount = Object.values(reviews).filter((r) => r.review_status === 'completed').length
+  const skippedCount = Object.values(reviews).filter((r) => r.review_status === 'skipped').length
+  const touchedCount = Object.keys(reviews).length
+  const filteredReviewedCount = filtered.filter((i) => reviews[i.product.product_id]?.review_status === 'completed').length
+  const progressPct = items.length ? Math.round(((reviewedCount + skippedCount) / items.length) * 100) : 0
   const correctionCount = Object.values(reviews).filter((r) => r.overall_decision === 'needs_correction' || r.axis_overrides.length || r.attribute_reviews.length || r.vibe_reviews.some((v) => v.decision === 'disagree')).length
   const vibeDisagreementCount = Object.values(reviews).reduce((sum, r) => sum + r.vibe_reviews.filter((v) => v.decision === 'disagree').length, 0)
   const axisOverrideCount = Object.values(reviews).reduce((sum, r) => sum + r.axis_overrides.length, 0)
@@ -87,7 +98,7 @@ export default function ValidationWorkbench() {
   const autoFalse = Object.values(reviews).filter((r) => items.find((i) => i.product.product_id === r.product_id)?.extraction.product_tier === 'AUTO' && r.overall_decision !== 'approve' && r.overall_decision !== 'unset').length
 
   function saveReview(next: ProductReview) {
-    setReviews((prev) => ({ ...prev, [next.product_id]: next }))
+    setReviews((prev) => ({ ...prev, [next.product_id]: { ...next, reviewer: reviewerName || 'anonymous' } }))
   }
   function setDecision(decision: ProductReview['overall_decision']) {
     if (!item || !review) return
@@ -161,8 +172,15 @@ export default function ValidationWorkbench() {
         <select value={tier} onChange={(e) => { setTier(e.target.value); setIndex(0) }}><option value="all">All tiers</option><option>AUTO</option><option>REVIEW</option><option>MANUAL</option></select>
         <button className="ghost soft-action" onClick={() => setShowQa(!showQa)}><SlidersHorizontal size={16}/> Data QA</button>
         <button className="ghost soft-action" onClick={() => setShowShortcuts(!showShortcuts)}>⌘ Shortcuts</button>
+        <label className="reviewer-field"><span>Reviewer</span><input value={reviewerName} onChange={(e) => setReviewerName(e.target.value)} /></label>
         <button className="ghost soft-action" onClick={exportCsv}><Download size={16}/> CSV</button>
         <button className="primary gradient-action" onClick={exportJson}><Download size={16}/> Export JSON</button>
+      </section>
+
+      <section className="session-strip">
+        <div className="session-copy"><b>Review session</b><span>{reviewerName || 'anonymous'} · {filteredReviewedCount}/{filtered.length} reviewed in current queue · {reviewedCount} approved/corrected, {skippedCount} skipped, {touchedCount} touched overall</span></div>
+        <div className="progress-wrap"><div className="progress-label"><span>Batch progress</span><b>{progressPct}%</b></div><div className="progress-track"><div style={{ width: `${progressPct}%` }} /></div></div>
+        <Badge tone={review.review_status === 'completed' ? 'green' : review.review_status === 'skipped' ? 'amber' : 'red'}>{review.review_status.toUpperCase()}</Badge>
       </section>
 
       {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} products / {qa.totalExtractions} extractions · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
@@ -200,10 +218,15 @@ function downloadBlob(blob: Blob, filename: string) { const url = URL.createObje
 
 function ProductImage({ item, image, review, saveReview, position }: any) {
   const src = review.selected_image_path ?? image.src
+  const selectedCandidate = image.candidates.find((c: any) => c.src === src)
+  const confirmImage = (candidate: any) => {
+    const issueTags = review.issue_tags.includes('image_ambiguous') ? review.issue_tags : [...review.issue_tags, 'image_ambiguous']
+    saveReview({ ...review, selected_image_path: candidate.src, image_status: 'ok', issue_tags: image.status === 'ambiguous' ? issueTags : review.issue_tags })
+  }
   return <aside className="image-panel">
     <div className="image-head"><Badge tone={image.status === 'ok' || image.status === 'url' ? 'green' : image.status === 'ambiguous' ? 'amber' : 'red'}>{image.status.toUpperCase()}</Badge><span>{position}</span></div>
     {src ? <img src={src} alt={`${item.product.brand} ${item.product.title}`} /> : <div className="missing"><AlertTriangle/> Missing image</div>}
-    {image.status === 'ambiguous' && <div className="candidate-box"><b>Ambiguous image — confirm before review</b><p>{image.message}</p><div className="candidates">{image.candidates.slice(0,6).map((c: any) => <button key={c.src} onClick={() => saveReview({ ...review, selected_image_path: c.src, image_status: 'ok' })}><img src={c.src}/><span>{c.label}</span></button>)}</div></div>}
+    {image.status === 'ambiguous' && <div className="candidate-box image-chooser"><div className="candidate-copy"><b>Ambiguous image — choose the exact product photo</b><p>{selectedCandidate ? `Selected: ${selectedCandidate.label}` : image.message}</p></div><div className="candidates">{image.candidates.slice(0,8).map((c: any) => <button key={c.src} className={src === c.src ? 'selected-candidate' : ''} onClick={() => confirmImage(c)}><img src={c.src} alt={c.label}/><span>{c.label}</span><em>{src === c.src ? 'Selected' : c.confidence}</em></button>)}</div></div>}
     <div className="product-caption"><p className="caption-kicker">Now reviewing</p><h2>{item.product.title}</h2><p>{item.product.brand}</p><code>{item.product.product_id}</code></div>
   </aside>
 }
