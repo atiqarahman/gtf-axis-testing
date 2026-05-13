@@ -1,5 +1,6 @@
 import { AXES, canonicalizeVibe } from './constants'
 import { normalizeValue } from './normalization'
+import { resolveImage } from './imageResolver'
 import type { Extraction, Product } from './types'
 
 export type ValidationItem = { product: Product; extraction: Extraction }
@@ -12,6 +13,9 @@ export type QaSummary = {
   invalidAxisScores: number
   missingAxes: number
   invalidVibes: number
+  missingVibeScores: number
+  imageStatusCounts: Record<string, number>
+  imageIssues: { product_id: string; brand: string; image_file: string; status: string; message?: string; candidates: string[] }[]
   invalidEnums: { product_id: string; attribute: string; value: any; warning?: string }[]
 }
 
@@ -30,7 +34,18 @@ export async function loadValidationData(): Promise<{ items: ValidationItem[]; q
   let invalidAxisScores = 0
   let missingAxes = 0
   let invalidVibes = 0
+  let missingVibeScores = 0
+  const imageStatusCounts: Record<string, number> = { ok: 0, url: 0, ambiguous: 0, missing: 0 }
+  const imageIssues: QaSummary['imageIssues'] = []
   const invalidEnums: QaSummary['invalidEnums'] = []
+
+  for (const product of products) {
+    const image = resolveImage(product)
+    imageStatusCounts[image.status] = (imageStatusCounts[image.status] ?? 0) + 1
+    if (image.status === 'ambiguous' || image.status === 'missing') {
+      imageIssues.push({ product_id: product.product_id, brand: product.brand, image_file: product.image_file, status: image.status, message: image.message, candidates: image.candidates.map((c) => c.label) })
+    }
+  }
 
   for (const e of extractions) {
     for (const axis of AXES) {
@@ -38,6 +53,9 @@ export async function loadValidationData(): Promise<{ items: ValidationItem[]; q
       if (score == null) missingAxes++
       else if (typeof score !== 'number' || score < 1 || score > 10) invalidAxisScores++
     }
+    const vibeScores = e.all_vibe_scores ?? {}
+    const expectedVibes = ['Old Money','Glam','Cool Girl','Sexy Elegant','Wedding Guest','Dubai Glam','Elevated City','Winter Holidays','Beach & Resort','IT Girl','Elevated Basics / Hailey Bieber','Unique Finds']
+    for (const vibe of expectedVibes) if (!(vibe in vibeScores)) missingVibeScores++
     for (const vibe of [...(e.suggested_vibes ?? []), ...(e.gpt_suggested_vibes ?? [])]) {
       if (!canonicalizeVibe(vibe)) invalidVibes++
     }
@@ -55,5 +73,5 @@ export async function loadValidationData(): Promise<{ items: ValidationItem[]; q
   }
 
   const items = products.filter((p) => extractionMap.has(p.product_id)).map((product) => ({ product, extraction: extractionMap.get(product.product_id)! }))
-  return { items, qa: { totalProducts: products.length, totalExtractions: extractions.length, duplicateProducts, missingExtractions, missingProducts, invalidAxisScores, missingAxes, invalidVibes, invalidEnums } }
+  return { items, qa: { totalProducts: products.length, totalExtractions: extractions.length, duplicateProducts, missingExtractions, missingProducts, invalidAxisScores, missingAxes, invalidVibes, missingVibeScores, imageStatusCounts, imageIssues, invalidEnums } }
 }

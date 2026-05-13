@@ -80,6 +80,9 @@ export default function ValidationWorkbench() {
   const review = item ? reviews[item.product.product_id] ?? blankReview(item) : null
   const reviewedCount = Object.values(reviews).filter((r) => r.review_status === 'completed').length
   const correctionCount = Object.values(reviews).filter((r) => r.overall_decision === 'needs_correction' || r.axis_overrides.length || r.attribute_reviews.length || r.vibe_reviews.some((v) => v.decision === 'disagree')).length
+  const vibeDisagreementCount = Object.values(reviews).reduce((sum, r) => sum + r.vibe_reviews.filter((v) => v.decision === 'disagree').length, 0)
+  const axisOverrideCount = Object.values(reviews).reduce((sum, r) => sum + r.axis_overrides.length, 0)
+  const imageIssueCount = Object.values(reviews).filter((r) => r.image_status === 'ambiguous' || r.image_status === 'missing' || r.issue_tags.includes('wrong_image')).length
   const autoFalse = Object.values(reviews).filter((r) => items.find((i) => i.product.product_id === r.product_id)?.extraction.product_tier === 'AUTO' && r.overall_decision !== 'approve' && r.overall_decision !== 'unset').length
 
   function saveReview(next: ProductReview) {
@@ -94,8 +97,31 @@ export default function ValidationWorkbench() {
     downloadBlob(blob, `gtf-axis-reviews-${new Date().toISOString().slice(0,10)}.json`)
   }
   function exportCsv() {
-    const rows = Object.values(reviews).map((r) => ({ product_id: r.product_id, decision: r.overall_decision, issue_tags: r.issue_tags.join('|'), vibe_disagreements: r.vibe_reviews.filter((v) => v.decision === 'disagree').length, axis_overrides: r.axis_overrides.length, attribute_reviews: r.attribute_reviews.length, prompt_issue: r.prompt_feedback.issue_type }))
-    const header = Object.keys(rows[0] ?? { product_id: '', decision: '' })
+    const rows = Object.values(reviews).map((r) => {
+      const source = items.find((i) => i.product.product_id === r.product_id)
+      return {
+        product_id: r.product_id,
+        brand: source?.product.brand ?? '',
+        title: source?.product.title ?? '',
+        product_tier: source?.extraction.product_tier ?? '',
+        review_status: r.review_status,
+        reviewed_at: r.reviewed_at ?? '',
+        image_status: r.image_status,
+        selected_image_path: r.selected_image_path ?? '',
+        overall_decision: r.overall_decision,
+        issue_tags: r.issue_tags.join('|'),
+        vibe_reviews_json: JSON.stringify(r.vibe_reviews),
+        vibe_disagreements: r.vibe_reviews.filter((v) => v.decision === 'disagree').length,
+        axis_overrides_json: JSON.stringify(r.axis_overrides),
+        axis_override_count: r.axis_overrides.length,
+        attribute_reviews_json: JSON.stringify(r.attribute_reviews),
+        attribute_review_count: r.attribute_reviews.length,
+        prompt_needs_update: r.prompt_feedback.needs_prompt_update,
+        prompt_issue_type: r.prompt_feedback.issue_type,
+        prompt_note: r.prompt_feedback.note,
+      }
+    })
+    const header = Object.keys(rows[0] ?? { product_id: '', overall_decision: '' })
     const csv = [header.join(','), ...rows.map((row) => header.map((h) => JSON.stringify((row as any)[h] ?? '')).join(','))].join('\n')
     downloadBlob(new Blob([csv], { type: 'text/csv' }), `gtf-axis-reviews-${new Date().toISOString().slice(0,10)}.csv`)
   }
@@ -116,10 +142,13 @@ export default function ValidationWorkbench() {
           <h1>GTF Axis Validation</h1>
           <p className="subtitle">Product image + GPT extraction + expert judgment → structured correction dataset.</p>
         </div>
-        <div className="metrics">
+        <div className="metrics expanded">
           <Metric label="Products" value={items.length} />
           <Metric label="Reviewed" value={reviewedCount} />
           <Metric label="Corrections" value={correctionCount} />
+          <Metric label="Vibe disagreements" value={vibeDisagreementCount} />
+          <Metric label="Axis overrides" value={axisOverrideCount} />
+          <Metric label="Image issues" value={imageIssueCount} />
           <Metric label="AUTO false confidence" value={autoFalse} />
         </div>
       </header>
@@ -133,7 +162,10 @@ export default function ValidationWorkbench() {
         <button className="primary" onClick={exportJson}><Download size={16}/> JSON</button>
       </section>
 
-      {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} products / {qa.totalExtractions} extractions · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length}</section>}
+      {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} products / {qa.totalExtractions} extractions · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
+        <details><summary>Image issues ({qa.imageIssues.length})</summary><div className="qa-list">{qa.imageIssues.slice(0,80).map((i) => <div key={i.product_id}><b>{i.product_id}</b> · {i.brand} · {i.status} · {i.image_file}<br/><span>{i.message} · candidates: {i.candidates.slice(0,4).join(', ') || 'none'}</span></div>)}</div></details>
+        <details><summary>Enum warnings ({qa.invalidEnums.length})</summary><div className="qa-list">{qa.invalidEnums.slice(0,120).map((i, idx) => <div key={`${i.product_id}-${i.attribute}-${idx}`}><b>{i.product_id}</b> · {i.attribute}: {String(i.value)} · <span>{i.warning}</span></div>)}</div></details>
+      </section>}
 
       <section className="review-grid">
         <ProductImage item={item} image={image} review={review} saveReview={saveReview} position={`${Math.min(index + 1, filtered.length)} / ${filtered.length}`} />
@@ -202,7 +234,7 @@ function AxisPanel({ item, review, saveReview, radar }: any) {
 function AxisRow({ axis, item, review, saveReview }: any) { const original = item.extraction.axis_scores[axis.id]?.score ?? 0; const existing = review.axis_overrides.find((o: any) => o.axis_id === axis.id); const value = existing?.override_score ?? original; const update = (score: number, reason = existing?.reason ?? '') => { const next = review.axis_overrides.filter((o: any) => o.axis_id !== axis.id); if (score !== original || reason) next.push({ axis_id: axis.id, label: axis.label, original_score: original, override_score: score, reason }); saveReview({ ...review, axis_overrides: next }) }; return <div className={existing ? 'axis-row modified' : 'axis-row'}><div><b>{axis.label}</b><span>{item.extraction.axis_scores[axis.id]?.reasoning}</span></div><strong>{original} → {value}</strong><input type="range" min={1} max={10} value={value} onChange={(e) => update(Number(e.target.value))}/>{value !== original && <textarea placeholder="Why override this axis?" value={existing?.reason ?? ''} onChange={(e) => update(value, e.target.value)}/>}</div> }
 
 function AttributePanel({ item, review, saveReview }: any) { const attrs = ['category','primary_color','secondary_color','material_primary','material_secondary','material_source','silhouette','length','neckline','sleeve_length','pattern','details','price_tier']; return <section className="card"><h3>Hard attribute review</h3><div className="attr-table">{attrs.map((a) => <AttributeRow key={a} attr={a} item={item} review={review} saveReview={saveReview}/>)}</div></section> }
-function AttributeRow({ attr, item, review, saveReview }: any) { const raw = item.extraction.hard_attributes[attr]; const rawValue = attr === 'details' ? (raw ?? []).map((d: any) => d.value ?? d).join(', ') : raw?.value ?? raw ?? '—'; const conf = typeof raw?.confidence === 'number' ? raw.confidence : undefined; const norm = normalizeValue(attr, raw); const existing = review.attribute_reviews.find((r: any) => r.attribute === attr); const enums = getEnumForAttribute(attr); const update = (patch: any) => { const next = review.attribute_reviews.filter((r: any) => r.attribute !== attr); next.push({ attribute: attr, raw_value: rawValue, canonical_suggestion: norm.canonical, decision: 'unset', override_value: null, reason: '', ...existing, ...patch }); saveReview({ ...review, attribute_reviews: next }) }; return <div className="attr-row"><span>{attr}</span><b>{rawValue}</b><Badge tone={confidenceTier(conf) === 'AUTO' ? 'green' : confidenceTier(conf) === 'REVIEW' ? 'amber' : 'red'}>{conf ?? '—'}</Badge><em className={norm.valid ? 'ok' : 'warn'}>{norm.canonical ?? norm.warning}</em><select value={existing?.decision ?? 'unset'} onChange={(e) => update({ decision: e.target.value })}><option value="unset">unset</option><option value="accept">accept raw</option><option value="accept_normalized">accept normalized</option><option value="override">override</option><option value="needs_review">needs review</option></select>{existing?.decision === 'override' && enums && <select value={existing.override_value ?? ''} onChange={(e) => update({ override_value: e.target.value })}><option value="">Choose canonical</option>{enums.map((v) => <option key={v}>{v}</option>)}</select>}<input placeholder="note" value={existing?.reason ?? ''} onChange={(e) => update({ reason: e.target.value })}/></div> }
+function AttributeRow({ attr, item, review, saveReview }: any) { const raw = item.extraction.hard_attributes[attr]; const rawValue = attr === 'details' ? (raw ?? []).map((d: any) => d.value ?? d).join(', ') : raw?.value ?? raw ?? '—'; const conf = typeof raw?.confidence === 'number' ? raw.confidence : undefined; const norm = normalizeValue(attr, raw); const existing = review.attribute_reviews.find((r: any) => r.attribute === attr); const enums = getEnumForAttribute(attr); const update = (patch: any) => { const next = review.attribute_reviews.filter((r: any) => r.attribute !== attr); next.push({ attribute: attr, raw_value: rawValue, canonical_suggestion: norm.canonical, decision: 'unset', override_value: attr === 'details' ? [] : null, reason: '', ...existing, ...patch }); saveReview({ ...review, attribute_reviews: next }) }; return <div className="attr-row"><span>{attr}</span><b>{rawValue}</b><Badge tone={confidenceTier(conf) === 'AUTO' ? 'green' : confidenceTier(conf) === 'REVIEW' ? 'amber' : 'red'}>{conf ?? '—'}</Badge><em className={norm.valid ? 'ok' : 'warn'}>{norm.canonical ?? norm.warning}</em><select value={existing?.decision ?? 'unset'} onChange={(e) => update({ decision: e.target.value })}><option value="unset">unset</option><option value="accept">accept raw</option><option value="accept_normalized">accept normalized</option><option value="override">override</option><option value="needs_review">needs review</option></select>{existing?.decision === 'override' && enums && (attr === 'details' ? <select multiple value={existing.override_value ?? []} onChange={(e) => update({ override_value: Array.from(e.currentTarget.selectedOptions).map((o) => o.value) })}>{enums.map((v) => <option key={v}>{v}</option>)}</select> : <select value={existing.override_value ?? ''} onChange={(e) => update({ override_value: e.target.value })}><option value="">Choose canonical</option>{enums.map((v) => <option key={v}>{v}</option>)}</select>)}<input placeholder="note" value={existing?.reason ?? ''} onChange={(e) => update({ reason: e.target.value })}/></div> }
 
 function Reasoning({ item, review, saveReview }: any) { const trace = item.extraction.reasoning_trace ?? {}; return <section className="card"><h3>Reasoning trace + prompt feedback</h3>{Object.entries(trace).map(([k,v]) => <details key={k}><summary>{k}</summary><p>{Array.isArray(v) ? v.join('; ') : String(v)}</p></details>)}<div className="prompt-feedback"><label><input type="checkbox" checked={review.prompt_feedback.needs_prompt_update} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, needs_prompt_update: e.target.checked } })}/> Prompt/scoring issue?</label><select value={review.prompt_feedback.issue_type} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, issue_type: e.target.value } })}>{feedbackTypes.map((t) => <option key={t}>{t}</option>)}</select><textarea placeholder="What should v8.2 learn from this?" value={review.prompt_feedback.note} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, note: e.target.value } })}/></div></section> }
 

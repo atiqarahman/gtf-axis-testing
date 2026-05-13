@@ -22,17 +22,20 @@ export function resolveImage(product: Product): ImageResolution {
   if (image.startsWith('http')) return { status: 'url', src: image, candidates: [{ src: image, label: 'External URL', confidence: 'url' }] }
   const slug = brandSlug(product.brand)
   const fileName = image.split('/').pop() ?? image
+  const files = knownFiles[slug] ?? []
+  const fileSet = new Set(files)
   const candidates: { src: string; label: string; confidence: 'exact' | 'fallback' | 'candidate' | 'url' }[] = []
   const add = (file: string, confidence: 'exact' | 'fallback' | 'candidate') => {
+    if (!fileSet.has(file)) return
     const src = localSrc(slug, file)
     if (!candidates.some((c) => c.src === src)) candidates.push({ src, label: file, confidence })
   }
 
+  // Only add files known to exist. This prevents broken first images when product refs say .webp but repo has .jpg.
   add(fileName, 'exact')
   const fallback = fileName.replace(/\.(webp|png)$/i, '.jpg')
   if (fallback !== fileName) add(fallback, 'fallback')
 
-  const files = knownFiles[slug] ?? []
   if (files.length) {
     const target = stem(fileName)
     for (const f of files) {
@@ -40,6 +43,11 @@ export function resolveImage(product: Product): ImageResolution {
       if (fs === target || fs.includes(target) || target.includes(fs)) add(f, 'candidate')
     }
   }
+
+  candidates.sort((a, b) => {
+    const rank = { exact: 0, fallback: 1, candidate: 2, url: 3 }
+    return rank[a.confidence] - rank[b.confidence] || a.label.length - b.label.length
+  })
 
   // Known ambiguous lookbook families: expose status so reviewer/dev does not trust guessed page mapping.
   if ((slug === 'shahin-mannan' || slug === 'surily-g') && /^page-\d+/i.test(fileName)) {
