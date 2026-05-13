@@ -10,7 +10,7 @@ import { confidenceTier, getEnumForAttribute, normalizeValue } from '@/lib/axis-
 import type { ProductReview, VibeReview } from '@/lib/axis-validation/types'
 import './validation.css'
 
-const issueOptions = ['wrong_image','wrong_category','wrong_vibe','glamour_underweighted','cultural_richness_underweighted','body_awareness_wrong','material_uncertain','confidence_too_high','prompt_issue','taxonomy_issue']
+const issueOptions = ['wrong_image','wrong_category','wrong_vibe','wrong_axis_score','wrong_hard_attribute','glamour_underweighted','glamour_overweighted','cultural_richness_underweighted','body_awareness_wrong','material_uncertain','image_ambiguous','confidence_too_high','auto_false_positive','prompt_issue','taxonomy_issue','manual_review_needed']
 const feedbackTypes = ['none','axis_underweight','axis_overweight','wrong_vibe_mapping','bad_attribute_extraction','image_ambiguity','taxonomy_issue']
 
 function blankReview(item: ValidationItem): ProductReview {
@@ -39,6 +39,7 @@ export default function ValidationWorkbench() {
   const [tier, setTier] = useState('all')
   const [query, setQuery] = useState('')
   const [showQa, setShowQa] = useState(false)
+  const [showShortcuts, setShowShortcuts] = useState(false)
 
   useEffect(() => {
     loadValidationData().then(({ items, qa }) => {
@@ -159,6 +160,7 @@ export default function ValidationWorkbench() {
         <select value={brand} onChange={(e) => { setBrand(e.target.value); setIndex(0) }}><option value="all">All brands</option>{brands.map((b) => <option key={b}>{b}</option>)}</select>
         <select value={tier} onChange={(e) => { setTier(e.target.value); setIndex(0) }}><option value="all">All tiers</option><option>AUTO</option><option>REVIEW</option><option>MANUAL</option></select>
         <button className="ghost soft-action" onClick={() => setShowQa(!showQa)}><SlidersHorizontal size={16}/> Data QA</button>
+        <button className="ghost soft-action" onClick={() => setShowShortcuts(!showShortcuts)}>⌘ Shortcuts</button>
         <button className="ghost soft-action" onClick={exportCsv}><Download size={16}/> CSV</button>
         <button className="primary gradient-action" onClick={exportJson}><Download size={16}/> Export JSON</button>
       </section>
@@ -167,6 +169,8 @@ export default function ValidationWorkbench() {
         <details><summary>Image issues ({qa.imageIssues.length})</summary><div className="qa-list">{qa.imageIssues.slice(0,80).map((i) => <div key={i.product_id}><b>{i.product_id}</b> · {i.brand} · {i.status} · {i.image_file}<br/><span>{i.message} · candidates: {i.candidates.slice(0,4).join(', ') || 'none'}</span></div>)}</div></details>
         <details><summary>Enum warnings ({qa.invalidEnums.length})</summary><div className="qa-list">{qa.invalidEnums.slice(0,120).map((i, idx) => <div key={`${i.product_id}-${i.attribute}-${idx}`}><b>{i.product_id}</b> · {i.attribute}: {String(i.value)} · <span>{i.warning}</span></div>)}</div></details>
       </section>}
+
+      {showShortcuts && <section className="qa shortcuts"><b>Keyboard shortcuts:</b> ← Previous · → Next · A Approve · D Needs correction · S Skip · E Export JSON. Inputs, selects, and textareas ignore shortcuts while focused.</section>}
 
       <section className="review-grid">
         <ProductImage item={item} image={image} review={review} saveReview={saveReview} position={`${Math.min(index + 1, filtered.length)} / ${filtered.length}`} />
