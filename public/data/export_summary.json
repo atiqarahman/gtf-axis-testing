@@ -1,0 +1,36 @@
+{
+  "export_date": "2026-05-12T22:10:28.498292",
+  "total_products": 260,
+  "schema_version": "8.1",
+  "scoring_method": "11-axis dot product with vibe weight vectors",
+  "vibes_count": 12,
+  "axes_count": 11,
+  "tier_breakdown": {
+    "auto": 170,
+    "review": 72,
+    "manual": 18
+  },
+  "brands": {
+    "Try On Dress": 30,
+    "Studio Picante": 17,
+    "Self Centred": 8,
+    "Dilnaz": 10,
+    "Aseem Kapoor": 7,
+    "Afro Nikitha (Nikita Mhaisalkar)": 59,
+    "Bobo Calcutta": 16,
+    "LEH Studios": 24,
+    "ITRH": 15,
+    "Shahin Mannan": 28,
+    "Surily G": 46
+  },
+  "files": [
+    "products.json",
+    "extractions_v8_1.json"
+  ],
+  "source_configs": {
+    "extraction_prompt": "GTF_Extraction_Prompt_v8.1",
+    "vibe_vectors": "vibe_vectors_v1.json (12 vibes \u00d7 11 axes)",
+    "confidence_thresholds": "GTF_Tiered_Confidence_System (per-attribute AUTO/REVIEW/MANUAL)"
+  },
+  "notes": "Batch 1: 260 products across 11 brands. Images are local files \u2014 Rahul will need image paths or we upload to a CDN/bucket."
+}
