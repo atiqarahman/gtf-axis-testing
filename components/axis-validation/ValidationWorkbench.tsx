@@ -40,6 +40,7 @@ export default function ValidationWorkbench() {
   const [reviews, setReviews] = useState<Record<string, ProductReview>>({})
   const [brand, setBrand] = useState('all')
   const [tier, setTier] = useState('all')
+  const [queue, setQueue] = useState('all')
   const [query, setQuery] = useState('')
   const [showQa, setShowQa] = useState(false)
   const [showShortcuts, setShowShortcuts] = useState(false)
@@ -81,13 +82,21 @@ export default function ValidationWorkbench() {
   const activeItems = useMemo(() => items.filter((i) => !EXCLUDED_BRANDS.includes(i.product.brand)), [items])
   const excludedCount = items.length - activeItems.length
   const brands = useMemo(() => Array.from(new Set(activeItems.map((i) => i.product.brand))).sort(), [activeItems])
+  const unresolvedImageIssueIds = useMemo(() => new Set((qa?.imageIssues ?? []).filter((i) => {
+    if (EXCLUDED_BRANDS.includes(i.brand)) return false
+    const r = reviews[i.product_id]
+    return !(r?.image_resolution_status === 'approved' && r.selected_image_path)
+  }).map((i) => i.product_id)), [qa, reviews])
+  const approvedImageIds = useMemo(() => new Set(Object.values(reviews).filter((r) => r.image_resolution_status === 'approved').map((r) => r.product_id)), [reviews])
   const filtered = useMemo(() => activeItems.filter((item) => {
+    if (queue === 'image_unresolved' && !unresolvedImageIssueIds.has(item.product.product_id)) return false
+    if (queue === 'image_approved' && !approvedImageIds.has(item.product.product_id)) return false
     if (brand !== 'all' && item.product.brand !== brand) return false
     if (tier !== 'all' && item.extraction.product_tier !== tier) return false
     const q = query.toLowerCase().trim()
     if (q && !`${item.product.product_id} ${item.product.title} ${item.product.brand}`.toLowerCase().includes(q)) return false
     return true
-  }), [activeItems, brand, tier, query])
+  }), [activeItems, approvedImageIds, brand, queue, tier, query, unresolvedImageIssueIds])
 
   const item = filtered[Math.min(index, Math.max(0, filtered.length - 1))]
   const review = item ? reviews[item.product.product_id] ?? blankReview(item) : null
@@ -99,11 +108,7 @@ export default function ValidationWorkbench() {
   const correctionCount = Object.values(reviews).filter((r) => r.overall_decision === 'needs_correction' || r.axis_overrides.length || r.attribute_reviews.length || r.vibe_reviews.some((v) => v.decision === 'disagree')).length
   const vibeDisagreementCount = Object.values(reviews).reduce((sum, r) => sum + r.vibe_reviews.filter((v) => v.decision === 'disagree').length, 0)
   const axisOverrideCount = Object.values(reviews).reduce((sum, r) => sum + r.axis_overrides.length, 0)
-  const unresolvedImageIssues = qa?.imageIssues.filter((i) => {
-    if (EXCLUDED_BRANDS.includes(i.brand)) return false
-    const r = reviews[i.product_id]
-    return !(r?.image_resolution_status === 'approved' && r.selected_image_path)
-  }) ?? []
+  const unresolvedImageIssues = qa?.imageIssues.filter((i) => unresolvedImageIssueIds.has(i.product_id)) ?? []
   const imageIssueCount = unresolvedImageIssues.length
   const autoFalse = Object.values(reviews).filter((r) => items.find((i) => i.product.product_id === r.product_id)?.extraction.product_tier === 'AUTO' && r.overall_decision !== 'approve' && r.overall_decision !== 'unset').length
 
@@ -120,6 +125,7 @@ export default function ValidationWorkbench() {
     setBrand('all')
     setTier('all')
     setQuery('')
+    setQueue('all')
     setIndex(targetIndex)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -224,6 +230,7 @@ export default function ValidationWorkbench() {
         <input placeholder="Search products, brands, SKUs…" value={query} onChange={(e) => { setQuery(e.target.value); setIndex(0) }} />
         <select value={brand} onChange={(e) => { setBrand(e.target.value); setIndex(0) }}><option value="all">All brands</option>{brands.map((b) => <option key={b}>{b}</option>)}</select>
         <select value={tier} onChange={(e) => { setTier(e.target.value); setIndex(0) }}><option value="all">All tiers</option><option>AUTO</option><option>REVIEW</option><option>MANUAL</option></select>
+        <select value={queue} onChange={(e) => { setQueue(e.target.value); setIndex(0) }}><option value="all">All active products</option><option value="image_unresolved">Unresolved ambiguous photos ({unresolvedImageIssues.length})</option><option value="image_approved">Approved images ({approvedImageIds.size})</option></select>
         <button className="ghost soft-action" onClick={() => setShowQa(!showQa)}><SlidersHorizontal size={16}/> Data QA</button>
         <button className="ghost soft-action" onClick={() => setShowShortcuts(!showShortcuts)}>⌘ Shortcuts</button>
         <label className="reviewer-field"><span>Reviewer</span><input value={reviewerName} onChange={(e) => setReviewerName(e.target.value)} /></label>
@@ -236,6 +243,8 @@ export default function ValidationWorkbench() {
         <div className="progress-wrap"><div className="progress-label"><span>Batch progress</span><b>{progressPct}%</b></div><div className="progress-track"><div style={{ width: `${progressPct}%` }} /></div></div>
         <Badge tone={review.review_status === 'completed' ? 'green' : review.review_status === 'skipped' ? 'amber' : 'red'}>{review.review_status.toUpperCase()}</Badge>
       </section>
+
+      {queue === 'image_unresolved' && <section className="queue-banner"><b>Image QA queue</b><span>Only unresolved ambiguous/missing images are shown. Approving selected image removes the product from this queue.</span></section>}
 
       {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} source products / {activeItems.length} active products · {excludedCount} Shahin Mannan excluded · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · unresolved image issues {unresolvedImageIssues.length} / original {qa.imageIssues.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
         <details><summary>Image issues ({unresolvedImageIssues.length} unresolved)</summary><div className="qa-list clickable">{unresolvedImageIssues.slice(0,120).map((i) => <button type="button" key={i.product_id} onClick={() => jumpToProduct(i.product_id)}><b>{i.product_id}</b> · {i.brand} · {i.status} · {i.image_file}<br/><span>{i.message} · candidates: {i.candidates.slice(0,4).join(', ') || 'none'} · click to review</span></button>)}</div>{!unresolvedImageIssues.length && <p className="qa-resolved">All visible image issues are resolved in this browser session.</p>}</details>
