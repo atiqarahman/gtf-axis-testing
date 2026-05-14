@@ -6,7 +6,9 @@
     "category": "dress",
     "image_file": "baby pink tod .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/baby pink tod .jpg",
+    "extraction_image_local": "baby pink tod .webp"
   },
   {
     "product_id": "GTF-TOD-002",
@@ -15,7 +17,9 @@
     "category": "co-ord",
     "image_file": "cardigan and set .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/cardigan and set .jpg",
+    "extraction_image_local": "cardigan and set .webp"
   },
   {
     "product_id": "GTF-TOD-003",
@@ -24,7 +28,9 @@
     "category": "cardigan",
     "image_file": "cardigan pin tod .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/cardigan pin tod .jpg",
+    "extraction_image_local": "cardigan pin tod .webp"
   },
   {
     "product_id": "GTF-TOD-004",
@@ -33,7 +39,9 @@
     "category": "cardigan",
     "image_file": "cardigan tod grey .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/cardigan tod grey .jpg",
+    "extraction_image_local": "cardigan tod grey .webp"
   },
   {
     "product_id": "GTF-TOD-005",
@@ -42,7 +50,9 @@
     "category": "cardigan",
     "image_file": "cardigan.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/cardigan.jpg",
+    "extraction_image_local": "cardigan.webp"
   },
   {
     "product_id": "GTF-TOD-006",
@@ -51,7 +61,9 @@
     "category": "cardigan",
     "image_file": "caridgan .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/caridgan .jpg",
+    "extraction_image_local": "caridgan .webp"
   },
   {
     "product_id": "GTF-TOD-007",
@@ -60,7 +72,9 @@
     "category": "dress",
     "image_file": "dress .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/dress .jpg",
+    "extraction_image_local": "dress .webp"
   },
   {
     "product_id": "GTF-TOD-008",
@@ -69,7 +83,9 @@
     "category": "dress",
     "image_file": "dress black tod.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/dress black tod.jpg",
+    "extraction_image_local": "dress black tod.webp"
   },
   {
     "product_id": "GTF-TOD-009",
@@ -78,7 +94,9 @@
     "category": "dress",
     "image_file": "dress tod .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/dress tod .jpg",
+    "extraction_image_local": "dress tod .webp"
   },
   {
     "product_id": "GTF-TOD-010",
@@ -87,7 +105,9 @@
     "category": "dress",
     "image_file": "dress tod blackk.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/dress tod blackk.jpg",
+    "extraction_image_local": "dress tod blackk.webp"
   },
   {
     "product_id": "GTF-TOD-011",
@@ -96,7 +116,9 @@
     "category": "dress",
     "image_file": "dress tod pink.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/dress tod pink.jpg",
+    "extraction_image_local": "dress tod pink.webp"
   },
   {
     "product_id": "GTF-TOD-012",
@@ -105,7 +127,9 @@
     "category": "dress",
     "image_file": "dress tod,, .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/dress tod,, .jpg",
+    "extraction_image_local": "dress tod,, .webp"
   },
   {
     "product_id": "GTF-TOD-013",
@@ -114,7 +138,9 @@
     "category": "dress",
     "image_file": "dress tod.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/dress tod.jpg",
+    "extraction_image_local": "dress tod.webp"
   },
   {
     "product_id": "GTF-TOD-014",
@@ -123,7 +149,9 @@
     "category": "pants",
     "image_file": "pant tod black.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/pant tod black.jpg",
+    "extraction_image_local": "pant tod black.webp"
   },
   {
     "product_id": "GTF-TOD-015",
@@ -132,7 +160,9 @@
     "category": "cardigan",
     "image_file": "see through cardigan, tod .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/see through cardigan, tod .jpg",
+    "extraction_image_local": "see through cardigan, tod .webp"
   },
   {
     "product_id": "GTF-TOD-016",
@@ -141,7 +171,9 @@
     "category": "set",
     "image_file": "set:relaxed pant .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/set:relaxed pant .jpg",
+    "extraction_image_local": "set:relaxed pant .webp"
   },
   {
     "product_id": "GTF-TOD-017",
@@ -150,7 +182,9 @@
     "category": "dress",
     "image_file": "tod blue dres.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/tod blue dres.jpg",
+    "extraction_image_local": "tod blue dres.webp"
   },
   {
     "product_id": "GTF-TOD-018",
@@ -159,7 +193,9 @@
     "category": "dress",
     "image_file": "tod brown .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/tod brown .jpg",
+    "extraction_image_local": "tod brown .webp"
   },
   {
     "product_id": "GTF-TOD-019",
@@ -168,7 +204,9 @@
     "category": "cardigan",
     "image_file": "tod cardigan brown .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/tod cardigan brown .jpg",
+    "extraction_image_local": "tod cardigan brown .webp"
   },
   {
     "product_id": "GTF-TOD-020",
@@ -177,7 +215,9 @@
     "category": "cardigan",
     "image_file": "tod cardigan red .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/tod cardigan red .jpg",
+    "extraction_image_local": "tod cardigan red .webp"
   },
   {
     "product_id": "GTF-TOD-021",
@@ -186,7 +226,9 @@
     "category": "cardigan",
     "image_file": "tod cardigan sparkly .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/tod cardigan sparkly .jpg",
+    "extraction_image_local": "tod cardigan sparkly .webp"
   },
   {
     "product_id": "GTF-TOD-022",
@@ -195,7 +237,9 @@
     "category": "dress",
     "image_file": "tod cut out black .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/tod cut out black .jpg",
+    "extraction_image_local": "tod cut out black .webp"
   },
   {
     "product_id": "GTF-TOD-023",
@@ -204,7 +248,9 @@
     "category": "dress",
     "image_file": "tod dress ivory .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/tod dress ivory .jpg",
+    "extraction_image_local": "tod dress ivory .webp"
   },
   {
     "product_id": "GTF-TOD-024",
@@ -213,7 +259,9 @@
     "category": "dress",
     "image_file": "tod green .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/tod green .jpg",
+    "extraction_image_local": "tod green .webp"
   },
   {
     "product_id": "GTF-TOD-025",
@@ -222,7 +270,9 @@
     "category": "dress",
     "image_file": "tod ivory .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/tod ivory .jpg",
+    "extraction_image_local": "tod ivory .webp"
   },
   {
     "product_id": "GTF-TOD-026",
@@ -231,7 +281,9 @@
     "category": "dress",
     "image_file": "tod khaki .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/tod khaki .jpg",
+    "extraction_image_local": "tod khaki .webp"
   },
   {
     "product_id": "GTF-TOD-027",
@@ -240,7 +292,9 @@
     "category": "dress",
     "image_file": "tod red dress.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/tod red dress.jpg",
+    "extraction_image_local": "tod red dress.webp"
   },
   {
     "product_id": "GTF-TOD-028",
@@ -249,7 +303,9 @@
     "category": "dress",
     "image_file": "tod white .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/tod white .jpg",
+    "extraction_image_local": "tod white .webp"
   },
   {
     "product_id": "GTF-TOD-029",
@@ -258,7 +314,9 @@
     "category": "top",
     "image_file": "top .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/top .jpg",
+    "extraction_image_local": "top .webp"
   },
   {
     "product_id": "GTF-TOD-030",
@@ -267,7 +325,9 @@
     "category": "dress",
     "image_file": "wrap up tod .webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/try-on-dress/wrap up tod .jpg",
+    "extraction_image_local": "wrap up tod .webp"
   },
   {
     "product_id": "GTF-SP-001",
@@ -276,7 +336,9 @@
     "category": "pants",
     "image_file": "black pants studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: black pants studio picante.png",
+    "extraction_image_local": "black pants studio picante.png"
   },
   {
     "product_id": "GTF-SP-002",
@@ -285,7 +347,9 @@
     "category": "top",
     "image_file": "corset sparkely stuido picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: corset sparkely stuido picante.png",
+    "extraction_image_local": "corset sparkely stuido picante.png"
   },
   {
     "product_id": "GTF-SP-003",
@@ -294,7 +358,9 @@
     "category": "top",
     "image_file": "corset top studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: corset top studio picante.png",
+    "extraction_image_local": "corset top studio picante.png"
   },
   {
     "product_id": "GTF-SP-004",
@@ -303,7 +369,9 @@
     "category": "blazer",
     "image_file": "everday blazer studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: everday blazer studio picante.png",
+    "extraction_image_local": "everday blazer studio picante.png"
   },
   {
     "product_id": "GTF-SP-005",
@@ -312,7 +380,9 @@
     "category": "pants",
     "image_file": "everyday pant studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: everyday pant studio picante.png",
+    "extraction_image_local": "everyday pant studio picante.png"
   },
   {
     "product_id": "GTF-SP-006",
@@ -321,7 +391,9 @@
     "category": "dress",
     "image_file": "mini dress studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: mini dress studio picante.png",
+    "extraction_image_local": "mini dress studio picante.png"
   },
   {
     "product_id": "GTF-SP-007",
@@ -330,7 +402,9 @@
     "category": "pants",
     "image_file": "relaxed pant studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: relaxed pant studio picante.png",
+    "extraction_image_local": "relaxed pant studio picante.png"
   },
   {
     "product_id": "GTF-SP-008",
@@ -339,7 +413,9 @@
     "category": "top",
     "image_file": "royal blue top studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: royal blue top studio picante.png",
+    "extraction_image_local": "royal blue top studio picante.png"
   },
   {
     "product_id": "GTF-SP-009",
@@ -348,7 +424,9 @@
     "category": "skirt",
     "image_file": "skirt long studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: skirt long studio picante.png",
+    "extraction_image_local": "skirt long studio picante.png"
   },
   {
     "product_id": "GTF-SP-010",
@@ -357,7 +435,9 @@
     "category": "skirt",
     "image_file": "skirt studio picante .png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: skirt studio picante .png",
+    "extraction_image_local": "skirt studio picante .png"
   },
   {
     "product_id": "GTF-SP-011",
@@ -366,7 +446,9 @@
     "category": "skirt",
     "image_file": "skirt studio picante burgandy .png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: skirt studio picante burgandy .png",
+    "extraction_image_local": "skirt studio picante burgandy .png"
   },
   {
     "product_id": "GTF-SP-012",
@@ -375,7 +457,9 @@
     "category": "dress",
     "image_file": "sparkly dress studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: sparkly dress studio picante.png",
+    "extraction_image_local": "sparkly dress studio picante.png"
   },
   {
     "product_id": "GTF-SP-013",
@@ -384,7 +468,9 @@
     "category": "skirt",
     "image_file": "sparkly sheer tassel skirty studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: sparkly sheer tassel skirty studio picante.png",
+    "extraction_image_local": "sparkly sheer tassel skirty studio picante.png"
   },
   {
     "product_id": "GTF-SP-014",
@@ -393,7 +479,9 @@
     "category": "top",
     "image_file": "studio picante halter neck sparkly cheetah top .png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: studio picante halter neck sparkly cheetah top .png",
+    "extraction_image_local": "studio picante halter neck sparkly cheetah top .png"
   },
   {
     "product_id": "GTF-SP-015",
@@ -402,7 +490,9 @@
     "category": "top",
     "image_file": "top purple studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: top purple studio picante.png",
+    "extraction_image_local": "top purple studio picante.png"
   },
   {
     "product_id": "GTF-SP-016",
@@ -411,7 +501,9 @@
     "category": "top",
     "image_file": "top studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: top studio picante.png",
+    "extraction_image_local": "top studio picante.png"
   },
   {
     "product_id": "GTF-SP-017",
@@ -420,7 +512,9 @@
     "category": "top",
     "image_file": "top tube studio picante.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: top tube studio picante.png",
+    "extraction_image_local": "top tube studio picante.png"
   },
   {
     "product_id": "GTF-SC-001",
@@ -429,7 +523,9 @@
     "category": "dress",
     "image_file": "JKimg_0384_1080x.jpg.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/self-centred/JKimg_0384_1080x.jpg.jpg",
+    "extraction_image_local": "JKimg_0384_1080x.jpg.webp"
   },
   {
     "product_id": "GTF-SC-002",
@@ -438,7 +534,9 @@
     "category": "dress",
     "image_file": "Nima_1080x.png.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/self-centred/Nima_1080x.png.jpg",
+    "extraction_image_local": "Nima_1080x.png.webp"
   },
   {
     "product_id": "GTF-SC-003",
@@ -447,7 +545,9 @@
     "category": "top",
     "image_file": "VivianTop_1080x.png.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/self-centred/VivianTop_1080x.png.jpg",
+    "extraction_image_local": "VivianTop_1080x.png.webp"
   },
   {
     "product_id": "GTF-SC-004",
@@ -456,7 +556,9 @@
     "category": "gown",
     "image_file": "gown self cntrd.png.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/self-centred/gown self cntrd.png.jpg",
+    "extraction_image_local": "gown self cntrd.png.webp"
   },
   {
     "product_id": "GTF-SC-005",
@@ -465,7 +567,9 @@
     "category": "gown",
     "image_file": "gown self cntrd.png.webp 2.png.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: gown self cntrd.png.webp 2.png.webp",
+    "extraction_image_local": "gown self cntrd.png.webp 2.png.webp"
   },
   {
     "product_id": "GTF-SC-006",
@@ -474,7 +578,9 @@
     "category": "pants",
     "image_file": "pant self cntred.jpg.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/self-centred/pant self cntred.jpg.jpg",
+    "extraction_image_local": "pant self cntred.jpg.webp"
   },
   {
     "product_id": "GTF-SC-007",
@@ -483,7 +589,9 @@
     "category": "top",
     "image_file": "self-cntrd-52_ top .jpg.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/self-centred/self-cntrd-52_ top .jpg.jpg",
+    "extraction_image_local": "self-cntrd-52_ top .jpg.webp"
   },
   {
     "product_id": "GTF-SC-008",
@@ -492,7 +600,9 @@
     "category": "top",
     "image_file": "slf centred corset top .jpg.webp",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/self-centred/slf centred corset top .jpg.jpg",
+    "extraction_image_local": "slf centred corset top .jpg.webp"
   },
   {
     "product_id": "GTF-DIL-001",
@@ -501,7 +611,9 @@
     "category": "dress",
     "image_file": "_DSF2443.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/dilnaz/_DSF2443.jpg",
+    "extraction_image_local": "_DSF2443.jpg"
   },
   {
     "product_id": "GTF-DIL-002",
@@ -510,7 +622,9 @@
     "category": "dress",
     "image_file": "_DSF2455.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/dilnaz/_DSF2455.jpg",
+    "extraction_image_local": "_DSF2455.jpg"
   },
   {
     "product_id": "GTF-DIL-003",
@@ -519,7 +633,9 @@
     "category": "co-ord",
     "image_file": "_DSF2552.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/dilnaz/_DSF2552.jpg",
+    "extraction_image_local": "_DSF2552.jpg"
   },
   {
     "product_id": "GTF-DIL-004",
@@ -528,7 +644,9 @@
     "category": "saree",
     "image_file": "_DSF2626.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/dilnaz/_DSF2626.jpg",
+    "extraction_image_local": "_DSF2626.jpg"
   },
   {
     "product_id": "GTF-DIL-005",
@@ -537,7 +655,9 @@
     "category": "co-ord",
     "image_file": "_DSF2877.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/dilnaz/_DSF2877.jpg",
+    "extraction_image_local": "_DSF2877.jpg"
   },
   {
     "product_id": "GTF-DIL-006",
@@ -546,7 +666,9 @@
     "category": "gown",
     "image_file": "_DSF3221.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/dilnaz/_DSF3221.jpg",
+    "extraction_image_local": "_DSF3221.jpg"
   },
   {
     "product_id": "GTF-DIL-007",
@@ -555,7 +677,9 @@
     "category": "dress",
     "image_file": "_DSF3516.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/dilnaz/_DSF3516.jpg",
+    "extraction_image_local": "_DSF3516.jpg"
   },
   {
     "product_id": "GTF-DIL-008",
@@ -564,7 +688,9 @@
     "category": "gown",
     "image_file": "_DSF3819.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/dilnaz/_DSF3819.jpg",
+    "extraction_image_local": "_DSF3819.jpg"
   },
   {
     "product_id": "GTF-DIL-009",
@@ -573,7 +699,9 @@
     "category": "dress",
     "image_file": "_DSF4030.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/dilnaz/_DSF4030.jpg",
+    "extraction_image_local": "_DSF4030.jpg"
   },
   {
     "product_id": "GTF-DIL-010",
@@ -582,7 +710,9 @@
     "category": "co-ord",
     "image_file": "_DSF4184.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/dilnaz/_DSF4184.jpg",
+    "extraction_image_local": "_DSF4184.jpg"
   },
   {
     "product_id": "GTF-AK-001",
@@ -591,7 +721,9 @@
     "category": "shirt",
     "image_file": "Screenshot 2026-05-12 at 2.49.28\u202fPM.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: Screenshot 2026-05-12 at 2.49.28\u202fPM.png",
+    "extraction_image_local": "Screenshot 2026-05-12 at 2.49.28\u202fPM.png"
   },
   {
     "product_id": "GTF-AK-002",
@@ -600,7 +732,9 @@
     "category": "cape shirt",
     "image_file": "Screenshot 2026-05-12 at 2.49.42\u202fPM.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: Screenshot 2026-05-12 at 2.49.42\u202fPM.png",
+    "extraction_image_local": "Screenshot 2026-05-12 at 2.49.42\u202fPM.png"
   },
   {
     "product_id": "GTF-AK-003",
@@ -609,7 +743,9 @@
     "category": "gilet",
     "image_file": "Screenshot 2026-05-12 at 2.49.47\u202fPM.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: Screenshot 2026-05-12 at 2.49.47\u202fPM.png",
+    "extraction_image_local": "Screenshot 2026-05-12 at 2.49.47\u202fPM.png"
   },
   {
     "product_id": "GTF-AK-004",
@@ -618,7 +754,9 @@
     "category": "dress",
     "image_file": "Screenshot 2026-05-12 at 2.49.55\u202fPM.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: Screenshot 2026-05-12 at 2.49.55\u202fPM.png",
+    "extraction_image_local": "Screenshot 2026-05-12 at 2.49.55\u202fPM.png"
   },
   {
     "product_id": "GTF-AK-005",
@@ -627,7 +765,9 @@
     "category": "jumpsuit",
     "image_file": "Screenshot 2026-05-12 at 2.50.01\u202fPM.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: Screenshot 2026-05-12 at 2.50.01\u202fPM.png",
+    "extraction_image_local": "Screenshot 2026-05-12 at 2.50.01\u202fPM.png"
   },
   {
     "product_id": "GTF-AK-006",
@@ -636,7 +776,9 @@
     "category": "jacket",
     "image_file": "Screenshot 2026-05-12 at 2.50.10\u202fPM.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: Screenshot 2026-05-12 at 2.50.10\u202fPM.png",
+    "extraction_image_local": "Screenshot 2026-05-12 at 2.50.10\u202fPM.png"
   },
   {
     "product_id": "GTF-AK-007",
@@ -645,7 +787,9 @@
     "category": "jacket",
     "image_file": "Screenshot 2026-05-12 at 2.50.34\u202fPM.png",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "Local file: Screenshot 2026-05-12 at 2.50.34\u202fPM.png",
+    "extraction_image_local": "Screenshot 2026-05-12 at 2.50.34\u202fPM.png"
   },
   {
     "product_id": "GTF-AFRO-003",
@@ -654,7 +798,9 @@
     "category": "pantsuit",
     "image_file": "https://drive.google.com/uc?export=view&id=1S70Bu7LxIfdtfMtsCoN7i3XE2V22hxt0",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1S70Bu7LxIfdtfMtsCoN7i3XE2V22hxt0",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1S70Bu7LxIfdtfMtsCoN7i3XE2V22hxt0"
   },
   {
     "product_id": "GTF-AFRO-015",
@@ -663,7 +809,9 @@
     "category": "bustier",
     "image_file": "https://drive.google.com/uc?export=view&id=1xcIzoVDuX1paTojJeo4bB22b5UWIbMYh",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1xcIzoVDuX1paTojJeo4bB22b5UWIbMYh",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1xcIzoVDuX1paTojJeo4bB22b5UWIbMYh"
   },
   {
     "product_id": "GTF-AFRO-026",
@@ -672,7 +820,9 @@
     "category": "bralette",
     "image_file": "https://drive.google.com/uc?export=view&id=1xmvp3k6JFqMlPYTh8LepnnnLYDJdt3Q8",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1xmvp3k6JFqMlPYTh8LepnnnLYDJdt3Q8",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1xmvp3k6JFqMlPYTh8LepnnnLYDJdt3Q8"
   },
   {
     "product_id": "GTF-AFRO-032",
@@ -681,7 +831,9 @@
     "category": "pantsuit",
     "image_file": "https://drive.google.com/uc?export=view&id=1FlWaxM_NnYhD8tbwhbv24KhweWZEYtpx",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1FlWaxM_NnYhD8tbwhbv24KhweWZEYtpx",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1FlWaxM_NnYhD8tbwhbv24KhweWZEYtpx"
   },
   {
     "product_id": "GTF-AFRO-043",
@@ -690,7 +842,9 @@
     "category": "dress",
     "image_file": "https://drive.google.com/uc?export=view&id=1RHr5PJIPdoncFDNWdQGzIA1YDnpmmqDQ",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1RHr5PJIPdoncFDNWdQGzIA1YDnpmmqDQ",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1RHr5PJIPdoncFDNWdQGzIA1YDnpmmqDQ"
   },
   {
     "product_id": "GTF-AFRO-044",
@@ -699,7 +853,9 @@
     "category": "top",
     "image_file": "https://drive.google.com/uc?export=view&id=1AbHTBrjiMvD46wg4FIde5q0Bmd9RONgb",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1AbHTBrjiMvD46wg4FIde5q0Bmd9RONgb",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1AbHTBrjiMvD46wg4FIde5q0Bmd9RONgb"
   },
   {
     "product_id": "GTF-AFRO-045",
@@ -708,7 +864,9 @@
     "category": "skirt",
     "image_file": "https://drive.google.com/uc?export=view&id=13MXHy0XDvHV3L7MYxypzO-_UQ2a-QSTJ",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=13MXHy0XDvHV3L7MYxypzO-_UQ2a-QSTJ",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=13MXHy0XDvHV3L7MYxypzO-_UQ2a-QSTJ"
   },
   {
     "product_id": "GTF-AFRO-046",
@@ -717,7 +875,9 @@
     "category": "coat",
     "image_file": "https://drive.google.com/uc?export=view&id=1IU9M1djFRAJvYAmBRmZ3AUCRxSwGCe1x",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1IU9M1djFRAJvYAmBRmZ3AUCRxSwGCe1x",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1IU9M1djFRAJvYAmBRmZ3AUCRxSwGCe1x"
   },
   {
     "product_id": "GTF-AFRO-047",
@@ -726,7 +886,9 @@
     "category": "dress",
     "image_file": "https://drive.google.com/uc?export=view&id=1xvqsnrzY-Kh5w2B_WwZ6V6wAHk1WHlmu",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1xvqsnrzY-Kh5w2B_WwZ6V6wAHk1WHlmu",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1xvqsnrzY-Kh5w2B_WwZ6V6wAHk1WHlmu"
   },
   {
     "product_id": "GTF-AFRO-048",
@@ -735,7 +897,9 @@
     "category": "dress",
     "image_file": "https://drive.google.com/uc?export=view&id=1PT1RkgOskgnlEBLpNj8271IPLZKI2Vnu",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1PT1RkgOskgnlEBLpNj8271IPLZKI2Vnu",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1PT1RkgOskgnlEBLpNj8271IPLZKI2Vnu"
   },
   {
     "product_id": "GTF-AFRO-049",
@@ -744,7 +908,9 @@
     "category": "kaftan",
     "image_file": "https://drive.google.com/uc?export=view&id=1Ax0AS2mWk_IKrEOPJ1K_FJSuguVIjsX-",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1Ax0AS2mWk_IKrEOPJ1K_FJSuguVIjsX-",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1Ax0AS2mWk_IKrEOPJ1K_FJSuguVIjsX-"
   },
   {
     "product_id": "GTF-AFRO-051",
@@ -753,7 +919,9 @@
     "category": "jacket",
     "image_file": "https://drive.google.com/uc?export=view&id=1STO9QEg-qowZvEFwtWsmZTgvASQhryak",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1STO9QEg-qowZvEFwtWsmZTgvASQhryak",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1STO9QEg-qowZvEFwtWsmZTgvASQhryak"
   },
   {
     "product_id": "GTF-AFRO-052",
@@ -762,7 +930,9 @@
     "category": "pants",
     "image_file": "https://drive.google.com/uc?export=view&id=1CveKuSV9fQfJvVsBURzmF2V-Pki6ay5S",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1CveKuSV9fQfJvVsBURzmF2V-Pki6ay5S",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1CveKuSV9fQfJvVsBURzmF2V-Pki6ay5S"
   },
   {
     "product_id": "GTF-AFRO-053",
@@ -771,7 +941,9 @@
     "category": "pants",
     "image_file": "https://drive.google.com/uc?export=view&id=14MYKpufjld-o0_YOwkMF-c99P0PEmNoV",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=14MYKpufjld-o0_YOwkMF-c99P0PEmNoV",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=14MYKpufjld-o0_YOwkMF-c99P0PEmNoV"
   },
   {
     "product_id": "GTF-AFRO-054",
@@ -780,7 +952,9 @@
     "category": "top",
     "image_file": "https://drive.google.com/uc?export=view&id=1MngfdFEZ0LB0mQEvLrpIA0aar8gIDHV1",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1MngfdFEZ0LB0mQEvLrpIA0aar8gIDHV1",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1MngfdFEZ0LB0mQEvLrpIA0aar8gIDHV1"
   },
   {
     "product_id": "GTF-AFRO-055",
@@ -789,7 +963,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=10mQ-P9PdLk0DTGSOWA-tNVrGYRNBABn9",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=10mQ-P9PdLk0DTGSOWA-tNVrGYRNBABn9",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=10mQ-P9PdLk0DTGSOWA-tNVrGYRNBABn9"
   },
   {
     "product_id": "GTF-AFRO-056",
@@ -798,7 +974,9 @@
     "category": "vest",
     "image_file": "https://drive.google.com/uc?export=view&id=1mcSxotajnWq3pxuw5rX4B1OS4ltJ1kWS",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1mcSxotajnWq3pxuw5rX4B1OS4ltJ1kWS",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1mcSxotajnWq3pxuw5rX4B1OS4ltJ1kWS"
   },
   {
     "product_id": "GTF-AFRO-057",
@@ -807,7 +985,9 @@
     "category": "kaftan",
     "image_file": "https://drive.google.com/uc?export=view&id=17m1Nus0ER52Sw3AtFTpNvogs0dsfWIKX",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=17m1Nus0ER52Sw3AtFTpNvogs0dsfWIKX",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=17m1Nus0ER52Sw3AtFTpNvogs0dsfWIKX"
   },
   {
     "product_id": "GTF-BOBO-002",
@@ -816,7 +996,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=1jAA4vCGHXmY0UElNh18F5opmFnepls4H",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1jAA4vCGHXmY0UElNh18F5opmFnepls4H",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1jAA4vCGHXmY0UElNh18F5opmFnepls4H"
   },
   {
     "product_id": "GTF-BOBO-003",
@@ -825,7 +1007,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=1EJG69OLainotkH3CoB_W72g3SoUiHSeT",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1EJG69OLainotkH3CoB_W72g3SoUiHSeT",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1EJG69OLainotkH3CoB_W72g3SoUiHSeT"
   },
   {
     "product_id": "GTF-BOBO-004",
@@ -834,7 +1018,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=1ha1gwvoGTLVTdRU-GHPNBIW7xDWoAEy9",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1ha1gwvoGTLVTdRU-GHPNBIW7xDWoAEy9",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1ha1gwvoGTLVTdRU-GHPNBIW7xDWoAEy9"
   },
   {
     "product_id": "GTF-BOBO-007",
@@ -843,7 +1029,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=1FINmW2I3T0efNPb71-fMD2EjlCzU-Ngm",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1FINmW2I3T0efNPb71-fMD2EjlCzU-Ngm",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1FINmW2I3T0efNPb71-fMD2EjlCzU-Ngm"
   },
   {
     "product_id": "GTF-BOBO-008",
@@ -852,7 +1040,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=1XkTXRnu8XuAJ7CZTOnHLMss6pWAsq8X_",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1XkTXRnu8XuAJ7CZTOnHLMss6pWAsq8X_",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1XkTXRnu8XuAJ7CZTOnHLMss6pWAsq8X_"
   },
   {
     "product_id": "GTF-BOBO-009",
@@ -861,7 +1051,9 @@
     "category": "trousers",
     "image_file": "https://drive.google.com/uc?export=view&id=1XkTXRnu8XuAJ7CZTOnHLMss6pWAsq8X_",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1XkTXRnu8XuAJ7CZTOnHLMss6pWAsq8X_",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1XkTXRnu8XuAJ7CZTOnHLMss6pWAsq8X_"
   },
   {
     "product_id": "GTF-BOBO-010",
@@ -870,7 +1062,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=1ssNdhCbZx5maDbAala-wzfxN7z7B_O8n",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1ssNdhCbZx5maDbAala-wzfxN7z7B_O8n",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1ssNdhCbZx5maDbAala-wzfxN7z7B_O8n"
   },
   {
     "product_id": "GTF-BOBO-011",
@@ -879,7 +1073,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=1U5UmEsLsqzzY_167FaV74BUcgcIKI193",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1U5UmEsLsqzzY_167FaV74BUcgcIKI193",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1U5UmEsLsqzzY_167FaV74BUcgcIKI193"
   },
   {
     "product_id": "GTF-BOBO-012",
@@ -888,7 +1084,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=1aY69qYuCqgNG3Sfs_bka3doAWwWT-j6K",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1aY69qYuCqgNG3Sfs_bka3doAWwWT-j6K",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1aY69qYuCqgNG3Sfs_bka3doAWwWT-j6K"
   },
   {
     "product_id": "GTF-BOBO-013",
@@ -897,7 +1095,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=1gnA9nVmw6QB_ow8_y5eUxlxjsUFS93_Q",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1gnA9nVmw6QB_ow8_y5eUxlxjsUFS93_Q",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1gnA9nVmw6QB_ow8_y5eUxlxjsUFS93_Q"
   },
   {
     "product_id": "GTF-BOBO-014",
@@ -906,7 +1106,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=1NuZS8zgufz2ZI3ci0QQD7SS1R1JUxb2A",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1NuZS8zgufz2ZI3ci0QQD7SS1R1JUxb2A",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1NuZS8zgufz2ZI3ci0QQD7SS1R1JUxb2A"
   },
   {
     "product_id": "GTF-BOBO-015",
@@ -915,7 +1117,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=1FvRzOq1wx-zX3m0UMT2MMye07smQSjwL",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1FvRzOq1wx-zX3m0UMT2MMye07smQSjwL",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1FvRzOq1wx-zX3m0UMT2MMye07smQSjwL"
   },
   {
     "product_id": "GTF-BOBO-016",
@@ -924,7 +1128,9 @@
     "category": "shirt",
     "image_file": "https://drive.google.com/uc?export=view&id=1_aKaagaZ6i9sHhNs3e0jt_aBEzMWwG14",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://drive.google.com/uc?export=view&id=1_aKaagaZ6i9sHhNs3e0jt_aBEzMWwG14",
+    "extraction_image_local": "https://drive.google.com/uc?export=view&id=1_aKaagaZ6i9sHhNs3e0jt_aBEzMWwG14"
   },
   {
     "product_id": "GTF-LEH-001",
@@ -933,7 +1139,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/04Leh-1_JPG.jpg?v=1772017402",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/04Leh-1_JPG.jpg?v=1772017402",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/04Leh-1_JPG.jpg?v=1772017402"
   },
   {
     "product_id": "GTF-LEH-002",
@@ -942,7 +1150,9 @@
     "category": "trench coat",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/13_6981045c-86de-49eb-b73d-2636e6cdf46c.jpg?v=1733816917",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/13_6981045c-86de-49eb-b73d-2636e6cdf46c.jpg?v=1733816917",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/13_6981045c-86de-49eb-b73d-2636e6cdf46c.jpg?v=1733816917"
   },
   {
     "product_id": "GTF-LEH-003",
@@ -951,7 +1161,9 @@
     "category": "top",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-147.jpg?v=1740036053",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-147.jpg?v=1740036053",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-147.jpg?v=1740036053"
   },
   {
     "product_id": "GTF-LEH-004",
@@ -960,7 +1172,9 @@
     "category": "top",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-53.jpg?v=1740035798",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-53.jpg?v=1740035798",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-53.jpg?v=1740035798"
   },
   {
     "product_id": "GTF-LEH-005",
@@ -969,7 +1183,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_d8ab7f89-eefc-42f0-a2eb-02eeb2fa6843.jpg?v=1733929279",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_d8ab7f89-eefc-42f0-a2eb-02eeb2fa6843.jpg?v=1733929279",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_d8ab7f89-eefc-42f0-a2eb-02eeb2fa6843.jpg?v=1733929279"
   },
   {
     "product_id": "GTF-LEH-006",
@@ -978,7 +1194,9 @@
     "category": "co-ord",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/IMG_0044_2_bf3d066c-9029-4138-b175-6ce195ae2c2f.jpg?v=1759563937",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/IMG_0044_2_bf3d066c-9029-4138-b175-6ce195ae2c2f.jpg?v=1759563937",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/IMG_0044_2_bf3d066c-9029-4138-b175-6ce195ae2c2f.jpg?v=1759563937"
   },
   {
     "product_id": "GTF-LEH-007",
@@ -987,7 +1205,9 @@
     "category": "top",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/16thb_4094.jpg?v=1734019301",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/16thb_4094.jpg?v=1734019301",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/16thb_4094.jpg?v=1734019301"
   },
   {
     "product_id": "GTF-LEH-009",
@@ -996,7 +1216,9 @@
     "category": "top",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/IMG_0039_6.jpg?v=1758377938",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/IMG_0039_6.jpg?v=1758377938",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/IMG_0039_6.jpg?v=1758377938"
   },
   {
     "product_id": "GTF-LEH-012",
@@ -1005,7 +1227,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-236.jpg?v=1740026600",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-236.jpg?v=1740026600",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-236.jpg?v=1740026600"
   },
   {
     "product_id": "GTF-LEH-013",
@@ -1014,7 +1238,9 @@
     "category": "top",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-29.jpg?v=1740035567",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-29.jpg?v=1740035567",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-29.jpg?v=1740035567"
   },
   {
     "product_id": "GTF-LEH-014",
@@ -1023,7 +1249,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-201.jpg?v=1740029687",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-201.jpg?v=1740029687",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-201.jpg?v=1740029687"
   },
   {
     "product_id": "GTF-LEH-015",
@@ -1032,7 +1260,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/DSC00658-Edit_81c1de35-881a-4606-8ee9-9a9384f7b3ed.jpg?v=1759956230",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/DSC00658-Edit_81c1de35-881a-4606-8ee9-9a9384f7b3ed.jpg?v=1759956230",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/DSC00658-Edit_81c1de35-881a-4606-8ee9-9a9384f7b3ed.jpg?v=1759956230"
   },
   {
     "product_id": "GTF-LEH-016",
@@ -1041,7 +1271,9 @@
     "category": "pants",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/DSC05093-Edit.jpg?v=1778135673",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/DSC05093-Edit.jpg?v=1778135673",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/DSC05093-Edit.jpg?v=1778135673"
   },
   {
     "product_id": "GTF-LEH-017",
@@ -1050,7 +1282,9 @@
     "category": "top",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-168.jpg?v=1740035728",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-168.jpg?v=1740035728",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-168.jpg?v=1740035728"
   },
   {
     "product_id": "GTF-LEH-018",
@@ -1059,7 +1293,9 @@
     "category": "skirt",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/25Leh-1.jpg?v=1772009062",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/25Leh-1.jpg?v=1772009062",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/25Leh-1.jpg?v=1772009062"
   },
   {
     "product_id": "GTF-LEH-019",
@@ -1068,7 +1304,9 @@
     "category": "jacket",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/13_80c7fe65-d141-40df-bea9-d246543597e9.jpg?v=1737103344",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/13_80c7fe65-d141-40df-bea9-d246543597e9.jpg?v=1737103344",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/13_80c7fe65-d141-40df-bea9-d246543597e9.jpg?v=1737103344"
   },
   {
     "product_id": "GTF-LEH-020",
@@ -1077,7 +1315,9 @@
     "category": "blazer",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_a2027208-03e4-40fe-9062-7b35795639cf.jpg?v=1733999776",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_a2027208-03e4-40fe-9062-7b35795639cf.jpg?v=1733999776",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_a2027208-03e4-40fe-9062-7b35795639cf.jpg?v=1733999776"
   },
   {
     "product_id": "GTF-LEH-021",
@@ -1086,7 +1326,9 @@
     "category": "jacket",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_87439b16-a2d1-4abf-b2d2-bd9d465ce3bf.jpg?v=1733999866",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_87439b16-a2d1-4abf-b2d2-bd9d465ce3bf.jpg?v=1733999866",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_87439b16-a2d1-4abf-b2d2-bd9d465ce3bf.jpg?v=1733999866"
   },
   {
     "product_id": "GTF-LEH-022",
@@ -1095,7 +1337,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-36.jpg?v=1740029916",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-36.jpg?v=1740029916",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-36.jpg?v=1740029916"
   },
   {
     "product_id": "GTF-LEH-023",
@@ -1104,7 +1348,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/19Leh-1_7bcc4eb4-75ef-4063-9138-a37d57a1eab6.jpg?v=1772050304",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/19Leh-1_7bcc4eb4-75ef-4063-9138-a37d57a1eab6.jpg?v=1772050304",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/19Leh-1_7bcc4eb4-75ef-4063-9138-a37d57a1eab6.jpg?v=1772050304"
   },
   {
     "product_id": "GTF-LEH-024",
@@ -1113,7 +1359,9 @@
     "category": "coat",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/DSC02536_bd95bd50-d032-4153-bb65-23610a6a2811.jpg?v=1734020469",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/DSC02536_bd95bd50-d032-4153-bb65-23610a6a2811.jpg?v=1734020469",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/DSC02536_bd95bd50-d032-4153-bb65-23610a6a2811.jpg?v=1734020469"
   },
   {
     "product_id": "GTF-LEH-025",
@@ -1122,7 +1370,9 @@
     "category": "top",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/LEH-66.jpg?v=1772002683",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/LEH-66.jpg?v=1772002683",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/LEH-66.jpg?v=1772002683"
   },
   {
     "product_id": "GTF-LEH-026",
@@ -1131,7 +1381,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/03Leh-1_JPG.jpg?v=1772025918",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/03Leh-1_JPG.jpg?v=1772025918",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/03Leh-1_JPG.jpg?v=1772025918"
   },
   {
     "product_id": "GTF-LEH-028",
@@ -1140,7 +1392,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_13990f18-4dcb-45a5-9f6f-54bb47cd4036.jpg?v=1737094274",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_13990f18-4dcb-45a5-9f6f-54bb47cd4036.jpg?v=1737094274",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_13990f18-4dcb-45a5-9f6f-54bb47cd4036.jpg?v=1737094274"
   },
   {
     "product_id": "GTF-AFRO-001",
@@ -1149,7 +1403,9 @@
     "category": "dress",
     "image_file": "GTF-AFRO-001_GEOMETRIC FUCHSIA PINK DRAPED DRESS WITH HAND EMBR.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-001_GEOMETRIC FUCHSIA PINK DRAPED DRESS WITH HAND EMBR.jpg",
+    "extraction_image_local": "GTF-AFRO-001_GEOMETRIC FUCHSIA PINK DRAPED DRESS WITH HAND EMBR.jpg"
   },
   {
     "product_id": "GTF-AFRO-002",
@@ -1158,7 +1414,9 @@
     "category": "bralette",
     "image_file": "GTF-AFRO-002_BEIGE FAUX LEATHER HAND DETAILD BRALETTE.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-002_BEIGE FAUX LEATHER HAND DETAILD BRALETTE.jpg",
+    "extraction_image_local": "GTF-AFRO-002_BEIGE FAUX LEATHER HAND DETAILD BRALETTE.jpg"
   },
   {
     "product_id": "GTF-AFRO-004",
@@ -1167,7 +1425,9 @@
     "category": "co-ord",
     "image_file": "GTF-AFRO-004_INDIGO HEMP DENIM CROPPED JACKET WITH SHORTS.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-004_INDIGO HEMP DENIM CROPPED JACKET WITH SHORTS.jpg",
+    "extraction_image_local": "GTF-AFRO-004_INDIGO HEMP DENIM CROPPED JACKET WITH SHORTS.jpg"
   },
   {
     "product_id": "GTF-AFRO-005",
@@ -1176,7 +1436,9 @@
     "category": "dress",
     "image_file": "GTF-AFRO-005_BROWN GEOMETRIC KIMONO DRESS WITH HANDMADE TASSELS.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-005_BROWN GEOMETRIC KIMONO DRESS WITH HANDMADE TASSELS.jpg",
+    "extraction_image_local": "GTF-AFRO-005_BROWN GEOMETRIC KIMONO DRESS WITH HANDMADE TASSELS.jpg"
   },
   {
     "product_id": "GTF-AFRO-006",
@@ -1185,7 +1447,9 @@
     "category": "dress",
     "image_file": "GTF-AFRO-006_BROWN GEOMETRIC COWN NECKNDRESS WITH ATTACHED SCAR.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-006_BROWN GEOMETRIC COWN NECKNDRESS WITH ATTACHED SCAR.jpg",
+    "extraction_image_local": "GTF-AFRO-006_BROWN GEOMETRIC COWN NECKNDRESS WITH ATTACHED SCAR.jpg"
   },
   {
     "product_id": "GTF-AFRO-007",
@@ -1194,7 +1458,9 @@
     "category": "dress",
     "image_file": "GTF-AFRO-007_FUCHSIA GEOMETRIC PRINT BRAIDED DRESS WITH BEADED.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-007_FUCHSIA GEOMETRIC PRINT BRAIDED DRESS WITH BEADED.jpg",
+    "extraction_image_local": "GTF-AFRO-007_FUCHSIA GEOMETRIC PRINT BRAIDED DRESS WITH BEADED.jpg"
   },
   {
     "product_id": "GTF-AFRO-008",
@@ -1203,7 +1469,9 @@
     "category": "top",
     "image_file": "GTF-AFRO-008_INDIGO HEMP DENIM HALTER NECK CUTOUT TOP WITH TIE.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-008_INDIGO HEMP DENIM HALTER NECK CUTOUT TOP WITH TIE.jpg",
+    "extraction_image_local": "GTF-AFRO-008_INDIGO HEMP DENIM HALTER NECK CUTOUT TOP WITH TIE.jpg"
   },
   {
     "product_id": "GTF-AFRO-009",
@@ -1212,7 +1480,9 @@
     "category": "skirt",
     "image_file": "GTF-AFRO-009_INDIGO HEMP DENIM RUFFLE ASYMMETRICAL SKIRT.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-009_INDIGO HEMP DENIM RUFFLE ASYMMETRICAL SKIRT.jpg",
+    "extraction_image_local": "GTF-AFRO-009_INDIGO HEMP DENIM RUFFLE ASYMMETRICAL SKIRT.jpg"
   },
   {
     "product_id": "GTF-AFRO-010",
@@ -1221,7 +1491,9 @@
     "category": "top",
     "image_file": "GTF-AFRO-010_CHOCOLATE SWIRL PRINT TOP WITH BISHOP SLEEVES.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-010_CHOCOLATE SWIRL PRINT TOP WITH BISHOP SLEEVES.jpg",
+    "extraction_image_local": "GTF-AFRO-010_CHOCOLATE SWIRL PRINT TOP WITH BISHOP SLEEVES.jpg"
   },
   {
     "product_id": "GTF-AFRO-011",
@@ -1230,7 +1502,9 @@
     "category": "pants",
     "image_file": "GTF-AFRO-011_CHOCOLATE SWIRL PRINT SHEETED SEQUINS PANTS WITH B.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-011_CHOCOLATE SWIRL PRINT SHEETED SEQUINS PANTS WITH B.jpg",
+    "extraction_image_local": "GTF-AFRO-011_CHOCOLATE SWIRL PRINT SHEETED SEQUINS PANTS WITH B.jpg"
   },
   {
     "product_id": "GTF-AFRO-012",
@@ -1239,7 +1513,9 @@
     "category": "dress",
     "image_file": "GTF-AFRO-012_NOIR PRINTED SEQUINS DRAPED DRESS.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-012_NOIR PRINTED SEQUINS DRAPED DRESS.jpg",
+    "extraction_image_local": "GTF-AFRO-012_NOIR PRINTED SEQUINS DRAPED DRESS.jpg"
   },
   {
     "product_id": "GTF-AFRO-013",
@@ -1248,7 +1524,9 @@
     "category": "co-ord",
     "image_file": "GTF-AFRO-013_CHOCOLATE SWIRL PRINT PLEATED MAXI SKIRT AND TOP.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-013_CHOCOLATE SWIRL PRINT PLEATED MAXI SKIRT AND TOP.jpg",
+    "extraction_image_local": "GTF-AFRO-013_CHOCOLATE SWIRL PRINT PLEATED MAXI SKIRT AND TOP.jpg"
   },
   {
     "product_id": "GTF-AFRO-014",
@@ -1257,7 +1535,9 @@
     "category": "pantsuit",
     "image_file": "GTF-AFRO-014_INDIGO PRINT SHEETED SEQUINS PANTSUIT.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-014_INDIGO PRINT SHEETED SEQUINS PANTSUIT.jpg",
+    "extraction_image_local": "GTF-AFRO-014_INDIGO PRINT SHEETED SEQUINS PANTSUIT.jpg"
   },
   {
     "product_id": "GTF-AFRO-016",
@@ -1266,7 +1546,9 @@
     "category": "top",
     "image_file": "GTF-AFRO-016_CHARCOAL CORSET WITH BEADED HAND EMBROIDERY.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-016_CHARCOAL CORSET WITH BEADED HAND EMBROIDERY.jpg",
+    "extraction_image_local": "GTF-AFRO-016_CHARCOAL CORSET WITH BEADED HAND EMBROIDERY.jpg"
   },
   {
     "product_id": "GTF-AFRO-017",
@@ -1275,7 +1557,9 @@
     "category": "skort",
     "image_file": "GTF-AFRO-017_CHARCOAL SKORT SKIRT.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-017_CHARCOAL SKORT SKIRT.jpg",
+    "extraction_image_local": "GTF-AFRO-017_CHARCOAL SKORT SKIRT.jpg"
   },
   {
     "product_id": "GTF-AFRO-018",
@@ -1284,7 +1568,9 @@
     "category": "overcoat",
     "image_file": "GTF-AFRO-018_CHARCOAL TWEED OVERCOAT.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-018_CHARCOAL TWEED OVERCOAT.jpg",
+    "extraction_image_local": "GTF-AFRO-018_CHARCOAL TWEED OVERCOAT.jpg"
   },
   {
     "product_id": "GTF-AFRO-019",
@@ -1293,7 +1579,9 @@
     "category": "co-ord",
     "image_file": "GTF-AFRO-019_NOIR SWIRL PRINTED CO-ORD SET.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-019_NOIR SWIRL PRINTED CO-ORD SET.jpg",
+    "extraction_image_local": "GTF-AFRO-019_NOIR SWIRL PRINTED CO-ORD SET.jpg"
   },
   {
     "product_id": "GTF-AFRO-020",
@@ -1302,7 +1590,9 @@
     "category": "dress",
     "image_file": "GTF-AFRO-020_BEIGE SHIRT DRESS WITH BELT  BEADED SPIKED CUFF IN.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-020_BEIGE SHIRT DRESS WITH BELT  BEADED SPIKED CUFF IN.jpg",
+    "extraction_image_local": "GTF-AFRO-020_BEIGE SHIRT DRESS WITH BELT  BEADED SPIKED CUFF IN.jpg"
   },
   {
     "product_id": "GTF-AFRO-021",
@@ -1311,7 +1601,9 @@
     "category": "dress",
     "image_file": "GTF-AFRO-021_FUCHSIA PRINT CHANTILLY DETAILED DRAPED DRESS.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-021_FUCHSIA PRINT CHANTILLY DETAILED DRAPED DRESS.jpg",
+    "extraction_image_local": "GTF-AFRO-021_FUCHSIA PRINT CHANTILLY DETAILED DRAPED DRESS.jpg"
   },
   {
     "product_id": "GTF-AFRO-022",
@@ -1320,7 +1612,9 @@
     "category": "top",
     "image_file": "GTF-AFRO-022_BROWN GEOMETRIC PRINT LUREX TOP.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-022_BROWN GEOMETRIC PRINT LUREX TOP.jpg",
+    "extraction_image_local": "GTF-AFRO-022_BROWN GEOMETRIC PRINT LUREX TOP.jpg"
   },
   {
     "product_id": "GTF-AFRO-023",
@@ -1329,7 +1623,9 @@
     "category": "coat",
     "image_file": "GTF-AFRO-023_BROWN GEOMETRIC PRINT LUREX TRENCH.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-023_BROWN GEOMETRIC PRINT LUREX TRENCH.jpg",
+    "extraction_image_local": "GTF-AFRO-023_BROWN GEOMETRIC PRINT LUREX TRENCH.jpg"
   },
   {
     "product_id": "GTF-AFRO-024",
@@ -1338,7 +1634,9 @@
     "category": "pants",
     "image_file": "GTF-AFRO-024_INDIGO HEMP DENIM PANTS.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-024_INDIGO HEMP DENIM PANTS.jpg",
+    "extraction_image_local": "GTF-AFRO-024_INDIGO HEMP DENIM PANTS.jpg"
   },
   {
     "product_id": "GTF-AFRO-025",
@@ -1347,7 +1645,9 @@
     "category": "pantsuit",
     "image_file": "GTF-AFRO-025_NOIR SWIRL PRINTED SEQUINS PANTSUIT.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-025_NOIR SWIRL PRINTED SEQUINS PANTSUIT.jpg",
+    "extraction_image_local": "GTF-AFRO-025_NOIR SWIRL PRINTED SEQUINS PANTSUIT.jpg"
   },
   {
     "product_id": "GTF-AFRO-027",
@@ -1356,7 +1656,9 @@
     "category": "saree",
     "image_file": "GTF-AFRO-027_NOIR PRINTED EMBELLISHED DRAPED SAREE WITH BEADED.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-027_NOIR PRINTED EMBELLISHED DRAPED SAREE WITH BEADED.jpg",
+    "extraction_image_local": "GTF-AFRO-027_NOIR PRINTED EMBELLISHED DRAPED SAREE WITH BEADED.jpg"
   },
   {
     "product_id": "GTF-AFRO-028",
@@ -1365,7 +1667,9 @@
     "category": "co-ord",
     "image_file": "GTF-AFRO-028_INDIGO PRINTED GUNMETAL EMBROIDERED SHORT KURTA WI.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-028_INDIGO PRINTED GUNMETAL EMBROIDERED SHORT KURTA WI.jpg",
+    "extraction_image_local": "GTF-AFRO-028_INDIGO PRINTED GUNMETAL EMBROIDERED SHORT KURTA WI.jpg"
   },
   {
     "product_id": "GTF-AFRO-029",
@@ -1374,7 +1678,9 @@
     "category": "dress",
     "image_file": "GTF-AFRO-029_BEIGE LUXE SHEETED SEQUINS KIMONO DRESS.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-029_BEIGE LUXE SHEETED SEQUINS KIMONO DRESS.jpg",
+    "extraction_image_local": "GTF-AFRO-029_BEIGE LUXE SHEETED SEQUINS KIMONO DRESS.jpg"
   },
   {
     "product_id": "GTF-AFRO-030",
@@ -1383,7 +1689,9 @@
     "category": "dress",
     "image_file": "GTF-AFRO-030_BROWN PLEATED DRAPED DRESS BEADED HAND EMBROIDERED.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-030_BROWN PLEATED DRAPED DRESS BEADED HAND EMBROIDERED.jpg",
+    "extraction_image_local": "GTF-AFRO-030_BROWN PLEATED DRAPED DRESS BEADED HAND EMBROIDERED.jpg"
   },
   {
     "product_id": "GTF-AFRO-031",
@@ -1392,7 +1700,9 @@
     "category": "pantsuit",
     "image_file": "GTF-AFRO-031_BROWN PYTHON PRINT PANTSUIT.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-031_BROWN PYTHON PRINT PANTSUIT.jpg",
+    "extraction_image_local": "GTF-AFRO-031_BROWN PYTHON PRINT PANTSUIT.jpg"
   },
   {
     "product_id": "GTF-AFRO-033",
@@ -1401,7 +1711,9 @@
     "category": "pants",
     "image_file": "GTF-AFRO-033_DARK BROWN PINSTRIPED PANTS.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-033_DARK BROWN PINSTRIPED PANTS.jpg",
+    "extraction_image_local": "GTF-AFRO-033_DARK BROWN PINSTRIPED PANTS.jpg"
   },
   {
     "product_id": "GTF-AFRO-034",
@@ -1410,7 +1722,9 @@
     "category": "bodysuit",
     "image_file": "GTF-AFRO-034_CANARY BEADED BROWN TULLE BODYSUIT.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-034_CANARY BEADED BROWN TULLE BODYSUIT.jpg",
+    "extraction_image_local": "GTF-AFRO-034_CANARY BEADED BROWN TULLE BODYSUIT.jpg"
   },
   {
     "product_id": "GTF-AFRO-035",
@@ -1419,7 +1733,9 @@
     "category": "top",
     "image_file": "GTF-AFRO-035_INDIGO SWIRL PRINTED CROP TOP.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-035_INDIGO SWIRL PRINTED CROP TOP.jpg",
+    "extraction_image_local": "GTF-AFRO-035_INDIGO SWIRL PRINTED CROP TOP.jpg"
   },
   {
     "product_id": "GTF-AFRO-036",
@@ -1428,7 +1744,9 @@
     "category": "skirt",
     "image_file": "GTF-AFRO-036_INDIGO SWIRL PRINTED SKIRT WITH RUFFLES.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-036_INDIGO SWIRL PRINTED SKIRT WITH RUFFLES.jpg",
+    "extraction_image_local": "GTF-AFRO-036_INDIGO SWIRL PRINTED SKIRT WITH RUFFLES.jpg"
   },
   {
     "product_id": "GTF-AFRO-037",
@@ -1437,7 +1755,9 @@
     "category": "jacket",
     "image_file": "GTF-AFRO-037_INDIGO PRINTED DENIM BOLERO JACKET.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-037_INDIGO PRINTED DENIM BOLERO JACKET.jpg",
+    "extraction_image_local": "GTF-AFRO-037_INDIGO PRINTED DENIM BOLERO JACKET.jpg"
   },
   {
     "product_id": "GTF-AFRO-038",
@@ -1446,7 +1766,9 @@
     "category": "dress",
     "image_file": "GTF-AFRO-038_BROWN PYTHON PRINT DRAPED DRESS  CANARY CUTWORK EM.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-038_BROWN PYTHON PRINT DRAPED DRESS  CANARY CUTWORK EM.jpg",
+    "extraction_image_local": "GTF-AFRO-038_BROWN PYTHON PRINT DRAPED DRESS  CANARY CUTWORK EM.jpg"
   },
   {
     "product_id": "GTF-AFRO-039",
@@ -1455,7 +1777,9 @@
     "category": "top",
     "image_file": "GTF-AFRO-039_OLIVE BEADED HAND EMBROIDERED TOP.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-039_OLIVE BEADED HAND EMBROIDERED TOP.jpg",
+    "extraction_image_local": "GTF-AFRO-039_OLIVE BEADED HAND EMBROIDERED TOP.jpg"
   },
   {
     "product_id": "GTF-AFRO-040",
@@ -1464,7 +1788,9 @@
     "category": "pants",
     "image_file": "GTF-AFRO-040_OLIVE CORDUROY WIDE LEG PANTS.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-040_OLIVE CORDUROY WIDE LEG PANTS.jpg",
+    "extraction_image_local": "GTF-AFRO-040_OLIVE CORDUROY WIDE LEG PANTS.jpg"
   },
   {
     "product_id": "GTF-AFRO-041",
@@ -1473,7 +1799,9 @@
     "category": "bralette",
     "image_file": "GTF-AFRO-041_OLIVE CORDUROY BRALETTE.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-041_OLIVE CORDUROY BRALETTE.jpg",
+    "extraction_image_local": "GTF-AFRO-041_OLIVE CORDUROY BRALETTE.jpg"
   },
   {
     "product_id": "GTF-AFRO-042",
@@ -1482,7 +1810,9 @@
     "category": "dress",
     "image_file": "GTF-AFRO-042_OLIVE HEAVY BAROQUE EMBELLISHED SHEATH DRESS.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-042_OLIVE HEAVY BAROQUE EMBELLISHED SHEATH DRESS.jpg",
+    "extraction_image_local": "GTF-AFRO-042_OLIVE HEAVY BAROQUE EMBELLISHED SHEATH DRESS.jpg"
   },
   {
     "product_id": "GTF-AFRO-050",
@@ -1491,7 +1821,9 @@
     "category": "co-ord",
     "image_file": "GTF-AFRO-050_BROWN GEOMETRIC PRINT CUTWORK CO-ORD SET.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-050_BROWN GEOMETRIC PRINT CUTWORK CO-ORD SET.jpg",
+    "extraction_image_local": "GTF-AFRO-050_BROWN GEOMETRIC PRINT CUTWORK CO-ORD SET.jpg"
   },
   {
     "product_id": "GTF-AFRO-058",
@@ -1500,7 +1832,9 @@
     "category": "shirt",
     "image_file": "GTF-AFRO-058_BROWN GEOMETRIC PRINT SHIRT.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-058_BROWN GEOMETRIC PRINT SHIRT.jpg",
+    "extraction_image_local": "GTF-AFRO-058_BROWN GEOMETRIC PRINT SHIRT.jpg"
   },
   {
     "product_id": "GTF-AFRO-059",
@@ -1509,7 +1843,9 @@
     "category": "skirt",
     "image_file": "GTF-AFRO-059_BROWN GEOMETRIC PRINT WRAP SKIRT.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/afro-nikitha/GTF-AFRO-059_BROWN GEOMETRIC PRINT WRAP SKIRT.jpg",
+    "extraction_image_local": "GTF-AFRO-059_BROWN GEOMETRIC PRINT WRAP SKIRT.jpg"
   },
   {
     "product_id": "GTF-BOBO-001",
@@ -1518,7 +1854,9 @@
     "category": "top",
     "image_file": "GTF-BOBO-001_ORGANZA OVERLAY.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/bobo-calcutta/GTF-BOBO-001_ORGANZA OVERLAY.jpg",
+    "extraction_image_local": "GTF-BOBO-001_ORGANZA OVERLAY.jpg"
   },
   {
     "product_id": "GTF-BOBO-005",
@@ -1527,7 +1865,9 @@
     "category": "shirt",
     "image_file": "GTF-BOBO-005_ORGANZA SHIRT.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/bobo-calcutta/GTF-BOBO-005_ORGANZA SHIRT.jpg",
+    "extraction_image_local": "GTF-BOBO-005_ORGANZA SHIRT.jpg"
   },
   {
     "product_id": "GTF-BOBO-006",
@@ -1536,7 +1876,9 @@
     "category": "trousers",
     "image_file": "GTF-BOBO-006_SILK FLARED TOUSER.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/bobo-calcutta/GTF-BOBO-006_SILK FLARED TOUSER.jpg",
+    "extraction_image_local": "GTF-BOBO-006_SILK FLARED TOUSER.jpg"
   },
   {
     "product_id": "GTF-ITRH-ITRHKK02",
@@ -1545,7 +1887,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/244_aa7728bf-0c8c-46a4-beac-035ff7c869d5.webp?v=1768222948",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/244_aa7728bf-0c8c-46a4-beac-035ff7c869d5.webp?v=1768222948",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/244_aa7728bf-0c8c-46a4-beac-035ff7c869d5.webp?v=1768222948"
   },
   {
     "product_id": "GTF-ITRH-ONB32",
@@ -1554,7 +1898,9 @@
     "category": "blazer set",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/243.webp?v=1768221179",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/243.webp?v=1768221179",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/243.webp?v=1768221179"
   },
   {
     "product_id": "GTF-ITRH-BR42",
@@ -1563,7 +1909,9 @@
     "category": "saree",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/178.webp?v=1767952253",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/178.webp?v=1767952253",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/178.webp?v=1767952253"
   },
   {
     "product_id": "GTF-ITRH-5",
@@ -1572,7 +1920,9 @@
     "category": "co-ord",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/147.webp?v=1767431009",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/147.webp?v=1767431009",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/147.webp?v=1767431009"
   },
   {
     "product_id": "GTF-ITRH-0",
@@ -1581,7 +1931,9 @@
     "category": "co-ord",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/127.webp?v=1767421523",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/127.webp?v=1767421523",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/127.webp?v=1767421523"
   },
   {
     "product_id": "GTF-ITRH-006",
@@ -1590,7 +1942,9 @@
     "category": "co-ord",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/123.webp?v=1767420540",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/123.webp?v=1767420540",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/123.webp?v=1767420540"
   },
   {
     "product_id": "GTF-ITRH-007",
@@ -1599,7 +1953,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Aaliyaamrin1.jpg?v=1762260266",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Aaliyaamrin1.jpg?v=1762260266",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Aaliyaamrin1.jpg?v=1762260266"
   },
   {
     "product_id": "GTF-ITRH-008",
@@ -1608,7 +1964,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/IMG-20250924-WA0179.jpg?v=1759946042",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/IMG-20250924-WA0179.jpg?v=1759946042",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/IMG-20250924-WA0179.jpg?v=1759946042"
   },
   {
     "product_id": "GTF-ITRH-009",
@@ -1617,7 +1975,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/2_a86ac2ee-4019-4ece-8cb5-3893196b463d.jpg?v=1756278653",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/2_a86ac2ee-4019-4ece-8cb5-3893196b463d.jpg?v=1756278653",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/2_a86ac2ee-4019-4ece-8cb5-3893196b463d.jpg?v=1756278653"
   },
   {
     "product_id": "GTF-ITRH-010",
@@ -1626,7 +1986,9 @@
     "category": "co-ord",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/7.jpg?v=1756278657",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/7.jpg?v=1756278657",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/7.jpg?v=1756278657"
   },
   {
     "product_id": "GTF-ITRH-011",
@@ -1635,7 +1997,9 @@
     "category": "gown",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/01-04-25Itrh.4742.jpg?v=1756278660",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/01-04-25Itrh.4742.jpg?v=1756278660",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/01-04-25Itrh.4742.jpg?v=1756278660"
   },
   {
     "product_id": "GTF-ITRH-012",
@@ -1644,7 +2008,9 @@
     "category": "gown",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9136_ceec3da0-10e1-4195-8a3b-bafec18f3c67.jpg?v=1756278665",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9136_ceec3da0-10e1-4195-8a3b-bafec18f3c67.jpg?v=1756278665",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9136_ceec3da0-10e1-4195-8a3b-bafec18f3c67.jpg?v=1756278665"
   },
   {
     "product_id": "GTF-ITRH-013",
@@ -1653,7 +2019,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9061.jpg?v=1756278674",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9061.jpg?v=1756278674",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9061.jpg?v=1756278674"
   },
   {
     "product_id": "GTF-ITRH-014",
@@ -1662,7 +2030,9 @@
     "category": "dress",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9180.jpg?v=1756278677",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9180.jpg?v=1756278677",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9180.jpg?v=1756278677"
   },
   {
     "product_id": "GTF-ITRH-015",
@@ -1671,7 +2041,9 @@
     "category": "co-ord",
     "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9216.jpg?v=1756278678",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9216.jpg?v=1756278678",
+    "extraction_image_local": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9216.jpg?v=1756278678"
   },
   {
     "product_id": "GTF-SM-ORY-001",
@@ -1680,7 +2052,9 @@
     "category": "dress",
     "image_file": "page-01.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-01.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-01.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-002",
@@ -1689,7 +2063,9 @@
     "category": "blazer",
     "image_file": "page-05.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-05.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-05.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-004",
@@ -1698,7 +2074,9 @@
     "category": "dress",
     "image_file": "page-07.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-07.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-07.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-005",
@@ -1707,7 +2085,9 @@
     "category": "blazer",
     "image_file": "page-09.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-09.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-09.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-001",
@@ -1716,7 +2096,9 @@
     "category": "co-ord",
     "image_file": "page-03.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-03.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-03.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-002",
@@ -1725,7 +2107,9 @@
     "category": "co-ord",
     "image_file": "page-06.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-06.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-06.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-003",
@@ -1734,7 +2118,9 @@
     "category": "co-ord",
     "image_file": "page-07.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-07.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-07.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-004",
@@ -1743,7 +2129,9 @@
     "category": "co-ord",
     "image_file": "page-09.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-09.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-09.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-005",
@@ -1752,7 +2140,9 @@
     "category": "dress",
     "image_file": "page-10.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-10.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-10.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-006",
@@ -1761,7 +2151,9 @@
     "category": "co-ord",
     "image_file": "page-11.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-11.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-11.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-007",
@@ -1770,7 +2162,9 @@
     "category": "saree",
     "image_file": "page-12.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-12.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-12.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-008",
@@ -1779,7 +2173,9 @@
     "category": "kaftan",
     "image_file": "page-13.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-13.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-13.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-009",
@@ -1788,7 +2184,9 @@
     "category": "co-ord",
     "image_file": "page-14.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-14.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-14.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-010",
@@ -1797,7 +2195,9 @@
     "category": "co-ord",
     "image_file": "page-15.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-15.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-15.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-011",
@@ -1806,7 +2206,9 @@
     "category": "co-ord",
     "image_file": "page-16.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-16.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-16.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-012",
@@ -1815,7 +2217,9 @@
     "category": "co-ord",
     "image_file": "page-17.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-17.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-17.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-013",
@@ -1824,7 +2228,9 @@
     "category": "jumpsuit",
     "image_file": "page-18.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-18.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-18.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-014",
@@ -1833,7 +2239,9 @@
     "category": "co-ord",
     "image_file": "page-19.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-19.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-19.jpg"
   },
   {
     "product_id": "GTF-SG-AUR-015",
@@ -1842,7 +2250,9 @@
     "category": "co-ord",
     "image_file": "page-20.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_aurelia_page-20.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_aurelia/page-20.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-001",
@@ -1851,7 +2261,9 @@
     "category": "co-ord",
     "image_file": "page-04.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-04.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-04.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-002",
@@ -1860,7 +2272,9 @@
     "category": "jumpsuit",
     "image_file": "page-07.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-07.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-07.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-003",
@@ -1869,7 +2283,9 @@
     "category": "jumpsuit",
     "image_file": "page-08.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-08.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-08.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-004",
@@ -1878,7 +2294,9 @@
     "category": "dress",
     "image_file": "page-09.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-09.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-09.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-005",
@@ -1887,7 +2305,9 @@
     "category": "dress",
     "image_file": "page-10.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-10.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-10.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-006",
@@ -1896,7 +2316,9 @@
     "category": "co-ord",
     "image_file": "page-11.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-11.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-11.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-007",
@@ -1905,7 +2327,9 @@
     "category": "co-ord",
     "image_file": "page-12.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-12.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-12.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-008",
@@ -1914,7 +2338,9 @@
     "category": "co-ord",
     "image_file": "page-13.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-13.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-13.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-009",
@@ -1923,7 +2349,9 @@
     "category": "kaftan",
     "image_file": "page-14.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-14.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-14.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-010",
@@ -1932,7 +2360,9 @@
     "category": "co-ord",
     "image_file": "page-15.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-15.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-15.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-011",
@@ -1941,7 +2371,9 @@
     "category": "kaftan",
     "image_file": "page-17.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-17.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-17.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-012",
@@ -1950,7 +2382,9 @@
     "category": "co-ord",
     "image_file": "page-18.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-18.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-18.jpg"
   },
   {
     "product_id": "GTF-SG-LAY-013",
@@ -1959,7 +2393,9 @@
     "category": "co-ord",
     "image_file": "page-19.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_layla_page-19.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_layla/page-19.jpg"
   },
   {
     "product_id": "GTF-SG-LUM-001",
@@ -1968,7 +2404,9 @@
     "category": "co-ord",
     "image_file": "page-04.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_lumi_page-04.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_lumi/page-04.jpg"
   },
   {
     "product_id": "GTF-SG-LUM-002",
@@ -1977,7 +2415,9 @@
     "category": "co-ord",
     "image_file": "page-05.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_lumi_page-05.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_lumi/page-05.jpg"
   },
   {
     "product_id": "GTF-SG-LUM-003",
@@ -1986,7 +2426,9 @@
     "category": "co-ord",
     "image_file": "page-06.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_lumi_page-06.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_lumi/page-06.jpg"
   },
   {
     "product_id": "GTF-SG-LUM-004",
@@ -1995,7 +2437,9 @@
     "category": "co-ord",
     "image_file": "page-07.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_lumi_page-07.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_lumi/page-07.jpg"
   },
   {
     "product_id": "GTF-SG-LUM-005",
@@ -2004,7 +2448,9 @@
     "category": "kaftan",
     "image_file": "page-08.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_lumi_page-08.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_lumi/page-08.jpg"
   },
   {
     "product_id": "GTF-SG-LUM-006",
@@ -2013,7 +2459,9 @@
     "category": "top",
     "image_file": "page-09.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_lumi_page-09.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_lumi/page-09.jpg"
   },
   {
     "product_id": "GTF-SG-LUM-007",
@@ -2022,7 +2470,9 @@
     "category": "dress",
     "image_file": "page-10.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_lumi_page-10.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_lumi/page-10.jpg"
   },
   {
     "product_id": "GTF-SG-LUM-008",
@@ -2031,7 +2481,9 @@
     "category": "co-ord",
     "image_file": "page-15.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_lumi_page-15.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_lumi/page-15.jpg"
   },
   {
     "product_id": "GTF-SG-LUM-009",
@@ -2040,7 +2492,9 @@
     "category": "top",
     "image_file": "page-19.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_lumi_page-19.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_lumi/page-19.jpg"
   },
   {
     "product_id": "GTF-SG-LUM-010",
@@ -2049,7 +2503,9 @@
     "category": "saree",
     "image_file": "page-20.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_lumi_page-20.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_lumi/page-20.jpg"
   },
   {
     "product_id": "GTF-SG-ZIY-001",
@@ -2058,7 +2514,9 @@
     "category": "co-ord",
     "image_file": "page-03.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_ziya_page-03.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_ziya/page-03.jpg"
   },
   {
     "product_id": "GTF-SG-ZIY-002",
@@ -2067,7 +2525,9 @@
     "category": "co-ord",
     "image_file": "page-04.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_ziya_page-04.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_ziya/page-04.jpg"
   },
   {
     "product_id": "GTF-SG-ZIY-003",
@@ -2076,7 +2536,9 @@
     "category": "co-ord",
     "image_file": "page-05.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_ziya_page-05.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_ziya/page-05.jpg"
   },
   {
     "product_id": "GTF-SG-ZIY-004",
@@ -2085,7 +2547,9 @@
     "category": "co-ord",
     "image_file": "page-06.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_ziya_page-06.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_ziya/page-06.jpg"
   },
   {
     "product_id": "GTF-SG-ZIY-005",
@@ -2094,7 +2558,9 @@
     "category": "co-ord",
     "image_file": "page-08.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_ziya_page-08.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_ziya/page-08.jpg"
   },
   {
     "product_id": "GTF-SG-ZIY-006",
@@ -2103,7 +2569,9 @@
     "category": "tunic",
     "image_file": "page-10.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_ziya_page-10.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_ziya/page-10.jpg"
   },
   {
     "product_id": "GTF-SG-ZIY-007",
@@ -2112,7 +2580,9 @@
     "category": "saree",
     "image_file": "page-12.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_ziya_page-12.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_ziya/page-12.jpg"
   },
   {
     "product_id": "GTF-SG-ZIY-008",
@@ -2121,7 +2591,9 @@
     "category": "kaftan",
     "image_file": "page-16.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/surily-g/surily_ziya_page-16.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/surily_ziya/page-16.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-006",
@@ -2130,7 +2602,9 @@
     "category": "jumpsuit",
     "image_file": "page-30.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-30.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-30.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-007",
@@ -2139,7 +2613,9 @@
     "category": "co-ord",
     "image_file": "page-35.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-35.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-35.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-008",
@@ -2148,7 +2624,9 @@
     "category": "dress",
     "image_file": "page-40.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-40.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-40.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-009",
@@ -2157,7 +2635,9 @@
     "category": "co-ord",
     "image_file": "page-45.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-45.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-45.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-010",
@@ -2166,7 +2646,9 @@
     "category": "dress",
     "image_file": "page-50.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-50.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-50.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-011",
@@ -2175,7 +2657,9 @@
     "category": "dress",
     "image_file": "page-65.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-65.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-65.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-012",
@@ -2184,7 +2668,9 @@
     "category": "dress",
     "image_file": "page-70.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-70.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-70.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-013",
@@ -2193,7 +2679,9 @@
     "category": "dress",
     "image_file": "page-75.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-75.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-75.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-014",
@@ -2202,7 +2690,9 @@
     "category": "dress",
     "image_file": "page-80.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-80.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-80.jpg"
   },
   {
     "product_id": "GTF-SM-ORY-015",
@@ -2211,7 +2701,9 @@
     "category": "dress",
     "image_file": "page-85.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_orya_page-85.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_orya/page-85.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-001",
@@ -2220,7 +2712,9 @@
     "category": "jumpsuit",
     "image_file": "page-01.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-01.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-01.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-002",
@@ -2229,7 +2723,9 @@
     "category": "co-ord",
     "image_file": "page-05.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-05.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-05.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-003",
@@ -2238,7 +2734,9 @@
     "category": "dress",
     "image_file": "page-10.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-10.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-10.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-004",
@@ -2247,7 +2745,9 @@
     "category": "dress",
     "image_file": "page-20.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-20.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-20.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-005",
@@ -2256,7 +2756,9 @@
     "category": "co-ord",
     "image_file": "page-25.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-25.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-25.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-006",
@@ -2265,7 +2767,9 @@
     "category": "dress",
     "image_file": "page-30.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-30.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-30.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-007",
@@ -2274,7 +2778,9 @@
     "category": "jumpsuit",
     "image_file": "page-35.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-35.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-35.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-008",
@@ -2283,7 +2789,9 @@
     "category": "dress",
     "image_file": "page-40.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-40.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-40.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-009",
@@ -2292,7 +2800,9 @@
     "category": "dress",
     "image_file": "page-45.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-45.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-45.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-010",
@@ -2301,7 +2811,9 @@
     "category": "dress",
     "image_file": "page-50.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-50.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-50.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-011",
@@ -2310,7 +2822,9 @@
     "category": "co-ord",
     "image_file": "page-60.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-60.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-60.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-012",
@@ -2319,7 +2833,9 @@
     "category": "dress",
     "image_file": "page-70.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-70.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-70.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-013",
@@ -2328,7 +2844,9 @@
     "category": "dress",
     "image_file": "page-80.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-80.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-80.jpg"
   },
   {
     "product_id": "GTF-SM-UNA-014",
@@ -2337,6 +2855,8 @@
     "category": "co-ord",
     "image_file": "page-88.jpg",
     "price": null,
-    "currency": null
+    "currency": null,
+    "extraction_image_url": "https://github.com/atiqarahman/gtf-axis-testing/blob/main/images/shahin-mannan/shahin_una_page-88.jpg",
+    "extraction_image_local": "/Users/atiqarahman/clawd/gtf-extraction/lookbook_pages/shahin_una/page-88.jpg"
   }
 ]
