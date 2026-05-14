@@ -11,8 +11,8 @@ import { confidenceTier, getEnumForAttribute, normalizeValue } from '@/lib/axis-
 import type { ProductReview, VibeReview } from '@/lib/axis-validation/types'
 import './validation.css'
 
-const issueOptions = ['wrong_image','wrong_category','wrong_vibe','wrong_axis_score','wrong_hard_attribute','glamour_underweighted','glamour_overweighted','cultural_richness_underweighted','body_awareness_wrong','material_uncertain','image_ambiguous','confidence_too_high','auto_false_positive','prompt_issue','taxonomy_issue','manual_review_needed']
-const feedbackTypes = ['none','axis_underweight','axis_overweight','wrong_vibe_mapping','bad_attribute_extraction','image_ambiguity','taxonomy_issue']
+const issueOptions = ['wrong_image','image_mapping_failed','metadata_image_conflict','wrong_category','wrong_vibe','wrong_axis_score','wrong_hard_attribute','glamour_underweighted','glamour_overweighted','cultural_richness_underweighted','body_awareness_wrong','material_uncertain','image_ambiguous','confidence_too_high','auto_false_positive','prompt_issue','taxonomy_issue','manual_review_needed']
+const feedbackTypes = ['none','axis_underweight','axis_overweight','wrong_vibe_mapping','bad_attribute_extraction','image_ambiguity','metadata_image_conflict','taxonomy_issue']
 const EXCLUDED_BRANDS = ['Shahin Mannan', 'Surily G']
 const EXCLUSION_LABEL = '74 lookbook products excluded pending CSV/image-source repair + re-extraction'
 
@@ -86,18 +86,20 @@ export default function ValidationWorkbench() {
   const unresolvedImageIssueIds = useMemo(() => new Set((qa?.imageIssues ?? []).filter((i) => {
     if (EXCLUDED_BRANDS.includes(i.brand)) return false
     const r = reviews[i.product_id]
-    return !(r?.image_resolution_status === 'approved' && r.selected_image_path)
+    return !(r?.image_resolution_status === 'approved' && r.selected_image_path) && r?.image_resolution_status !== 'no_valid_candidate'
   }).map((i) => i.product_id)), [qa, reviews])
   const approvedImageIds = useMemo(() => new Set(Object.values(reviews).filter((r) => r.image_resolution_status === 'approved').map((r) => r.product_id)), [reviews])
+  const failedImageIds = useMemo(() => new Set(Object.values(reviews).filter((r) => r.image_resolution_status === 'no_valid_candidate').map((r) => r.product_id)), [reviews])
   const filtered = useMemo(() => activeItems.filter((item) => {
     if (queue === 'image_unresolved' && !unresolvedImageIssueIds.has(item.product.product_id)) return false
     if (queue === 'image_approved' && !approvedImageIds.has(item.product.product_id)) return false
+    if (queue === 'image_failed' && !failedImageIds.has(item.product.product_id)) return false
     if (brand !== 'all' && item.product.brand !== brand) return false
     if (tier !== 'all' && item.extraction.product_tier !== tier) return false
     const q = query.toLowerCase().trim()
     if (q && !`${item.product.product_id} ${item.product.title} ${item.product.brand}`.toLowerCase().includes(q)) return false
     return true
-  }), [activeItems, approvedImageIds, brand, queue, tier, query, unresolvedImageIssueIds])
+  }), [activeItems, approvedImageIds, brand, failedImageIds, queue, tier, query, unresolvedImageIssueIds])
 
   const item = filtered[Math.min(index, Math.max(0, filtered.length - 1))]
   const review = item ? reviews[item.product.product_id] ?? blankReview(item) : null
@@ -149,6 +151,7 @@ export default function ValidationWorkbench() {
       image_resolution_reviewer: r.image_resolution_reviewer ?? '',
       image_resolution_reviewed_at: r.image_resolution_reviewed_at ?? '',
       image_resolution_note: r.image_resolution_note ?? '',
+      prompt_guard_version: 'v8.2-image-over-metadata-guard',
       axis_rubric_version: AXIS_RUBRIC_VERSION,
       analysis_keys: {
         category_issue_tags: (r.issue_tags ?? []).map((tag) => `${source?.product.category ?? 'unknown'}::${tag}`),
@@ -195,6 +198,7 @@ export default function ValidationWorkbench() {
         prompt_needs_update: r.prompt_feedback.needs_prompt_update,
         prompt_issue_type: r.prompt_feedback.issue_type,
         prompt_note: r.prompt_feedback.note,
+        prompt_guard_version: 'v8.2-image-over-metadata-guard',
         axis_rubric_version: AXIS_RUBRIC_VERSION,
         category_issue_tags: r.issue_tags.map((tag) => `${source?.product.category ?? 'unknown'}::${tag}`).join('|'),
         category_axis_overrides: r.axis_overrides.map((o) => `${source?.product.category ?? 'unknown'}::${o.axis_id}`).join('|'),
@@ -239,7 +243,7 @@ export default function ValidationWorkbench() {
         <input placeholder="Search products, brands, SKUs…" value={query} onChange={(e) => { setQuery(e.target.value); setIndex(0) }} />
         <select value={brand} onChange={(e) => { setBrand(e.target.value); setIndex(0) }}><option value="all">All brands</option>{brands.map((b) => <option key={b}>{b}</option>)}</select>
         <select value={tier} onChange={(e) => { setTier(e.target.value); setIndex(0) }}><option value="all">All tiers</option><option>AUTO</option><option>REVIEW</option><option>MANUAL</option></select>
-        <select value={queue} onChange={(e) => { setQueue(e.target.value); setIndex(0) }}><option value="all">All active products</option><option value="image_unresolved">Unresolved ambiguous photos ({unresolvedImageIssues.length})</option><option value="image_approved">Approved images ({approvedImageIds.size})</option></select>
+        <select value={queue} onChange={(e) => { setQueue(e.target.value); setIndex(0) }}><option value="all">All active products</option><option value="image_unresolved">Unresolved ambiguous photos ({unresolvedImageIssues.length})</option><option value="image_approved">Approved images ({approvedImageIds.size})</option><option value="image_failed">Manual image fix ({failedImageIds.size})</option></select>
         <button className="ghost soft-action" onClick={() => setShowQa(!showQa)}><SlidersHorizontal size={16}/> Data QA</button>
         <button className="ghost soft-action" onClick={() => setShowShortcuts(!showShortcuts)}>⌘ Shortcuts</button>
         <label className="reviewer-field"><span>Reviewer</span><input value={reviewerName} onChange={(e) => setReviewerName(e.target.value)} /></label>
@@ -253,7 +257,9 @@ export default function ValidationWorkbench() {
         <Badge tone={review.review_status === 'completed' ? 'green' : review.review_status === 'skipped' ? 'amber' : 'red'}>{review.review_status.toUpperCase()}</Badge>
       </section>
 
-      {queue === 'image_unresolved' && <section className="queue-banner"><b>Image QA queue</b><span>Only unresolved ambiguous/missing images are shown. Approving selected image removes the product from this queue.</span></section>}
+      {queue === 'image_unresolved' && <section className="queue-banner"><b>Image QA queue</b><span>Only unresolved ambiguous/missing images are shown. Approving selected image removes the product from this queue. If none match, send it to Manual image fix.</span></section>}
+
+      {queue === 'image_failed' && <section className="queue-banner danger-banner"><b>Manual image fix queue</b><span>These products have no valid local image candidate. Do not validate attributes, axes, or vibes until source image mapping is repaired.</span></section>}
 
       {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} source products / {activeItems.length} active products · {EXCLUSION_LABEL} · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · unresolved image issues {unresolvedImageIssues.length} / original {qa.imageIssues.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
         <details><summary>Image issues ({unresolvedImageIssues.length} unresolved)</summary><div className="qa-list clickable">{unresolvedImageIssues.slice(0,120).map((i) => <button type="button" key={i.product_id} onClick={() => jumpToProduct(i.product_id)}><b>{i.product_id}</b> · {i.brand} · {i.status} · {i.image_file}<br/><span>{i.message} · candidates: {i.candidates.slice(0,4).join(', ') || 'none'} · click to review</span></button>)}</div>{!unresolvedImageIssues.length && <p className="qa-resolved">All visible image issues are resolved in this browser session.</p>}</details>
@@ -263,7 +269,7 @@ export default function ValidationWorkbench() {
       {showShortcuts && <section className="qa shortcuts"><b>Keyboard shortcuts:</b> ← Previous · → Next · A Approve · D Needs correction · S Skip · E Export JSON. Inputs, selects, and textareas ignore shortcuts while focused.</section>}
 
       <section className="review-grid">
-        <ProductImage item={item} image={image} review={review} saveReview={saveReview} reviewerName={reviewerName} position={`${Math.min(index + 1, filtered.length)} / ${filtered.length}`} />
+        <ProductImage item={item} image={image} review={review} saveReview={saveReview} reviewerName={reviewerName} queue={queue} onAdvance={() => setIndex((i) => Math.min(filtered.length - 1, i + 1))} position={`${Math.min(index + 1, filtered.length)} / ${filtered.length}`} />
         <div className="review-panel">
           <Meta item={item} image={image} />
           <Decision review={review} saveReview={saveReview} setDecision={setDecision} />
@@ -274,11 +280,13 @@ export default function ValidationWorkbench() {
         </div>
       </section>
 
-      <footer className="navrow">
+      <footer className={queue === 'image_unresolved' ? "navrow image-mode" : "navrow"}>
         <button className="ghost" onClick={() => setIndex((i) => Math.max(0, i - 1))}><ChevronLeft size={16}/> Previous</button>
-        <button className="danger" onClick={() => setDecision('manual_escalation')}>Manual escalation</button>
-        <button className="ghost" onClick={() => setDecision('skip_for_now')}>Skip</button>
-        <button className="primary" onClick={() => setDecision('approve')}><Check size={16}/> Approve</button>
+        {queue === 'image_unresolved' ? <span className="mode-copy">Image QA mode: approve image mapping in the image panel, or mark no valid candidate. Product approval is intentionally hidden.</span> : <>
+          <button className="danger" onClick={() => setDecision('manual_escalation')}>Manual escalation</button>
+          <button className="ghost" onClick={() => setDecision('skip_for_now')}>Skip</button>
+          <button className="primary" onClick={() => setDecision('approve')}><Check size={16}/> Approve product</button>
+        </>}
         <button className="ghost" onClick={() => setIndex((i) => Math.min(filtered.length - 1, i + 1))}>Next <ChevronRight size={16}/></button>
       </footer>
     </main>
@@ -288,10 +296,11 @@ export default function ValidationWorkbench() {
 function Metric({ label, value }: { label: string; value: number }) { return <div className="metric"><strong>{value}</strong><span>{label}</span></div> }
 function downloadBlob(blob: Blob, filename: string) { const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = filename; a.click(); URL.revokeObjectURL(url) }
 
-function ProductImage({ item, image, review, saveReview, position, reviewerName }: any) {
+function ProductImage({ item, image, review, saveReview, position, reviewerName, queue, onAdvance }: any) {
   const src = review.selected_image_path ?? image.src
   const selectedCandidate = image.candidates.find((c: any) => c.src === src)
   const isImageApproved = review.image_resolution_status === 'approved'
+  const hasNoValidCandidate = review.image_resolution_status === 'no_valid_candidate'
   const selectImage = (candidate: any) => {
     const issueTags = review.issue_tags.includes('image_ambiguous') ? review.issue_tags : [...review.issue_tags, 'image_ambiguous']
     saveReview({
@@ -316,11 +325,27 @@ function ProductImage({ item, image, review, saveReview, position, reviewerName 
       image_resolution_reviewed_at: new Date().toISOString(),
       issue_tags: image.status === 'ambiguous' ? issueTags : review.issue_tags,
     })
+    if (queue === 'image_unresolved') window.setTimeout(onAdvance, 180)
+  }
+  const markNoValidCandidate = () => {
+    const tags = Array.from(new Set([...review.issue_tags, 'wrong_image', 'image_mapping_failed', 'manual_review_needed']))
+    saveReview({
+      ...review,
+      image_status: 'missing',
+      image_resolution_status: 'no_valid_candidate',
+      image_resolution_reviewer: reviewerName || 'anonymous',
+      image_resolution_reviewed_at: new Date().toISOString(),
+      image_resolution_note: review.image_resolution_note || 'No displayed candidate matches the product; source image mapping must be repaired before attribute/axis/vibe validation.',
+      overall_decision: 'manual_escalation',
+      reviewed_at: new Date().toISOString(),
+      issue_tags: tags,
+    })
+    if (queue === 'image_unresolved') window.setTimeout(onAdvance, 180)
   }
   return <aside className="image-panel">
-    <div className="image-head"><Badge tone={isImageApproved || image.status === 'ok' || image.status === 'url' ? 'green' : image.status === 'ambiguous' ? 'amber' : 'red'}>{isImageApproved ? 'IMAGE APPROVED' : image.status.toUpperCase()}</Badge><span>{position}</span></div>
+    <div className="image-head"><Badge tone={isImageApproved || image.status === 'ok' || image.status === 'url' ? 'green' : hasNoValidCandidate ? 'red' : image.status === 'ambiguous' ? 'amber' : 'red'}>{hasNoValidCandidate ? 'NO VALID IMAGE' : isImageApproved ? 'IMAGE APPROVED' : image.status.toUpperCase()}</Badge><span>{position}</span></div>
     {src ? <img src={src} alt={`${item.product.brand} ${item.product.title}`} /> : <div className="missing"><AlertTriangle/> Missing image</div>}
-    {image.status === 'ambiguous' && <div className="candidate-box image-chooser"><div className="candidate-copy"><b>Ambiguous image — choose and approve exact product photo</b><p>{selectedCandidate ? `Selected: ${selectedCandidate.label}` : image.message}</p></div><div className="candidates">{image.candidates.slice(0,8).map((c: any) => <button key={c.src} className={src === c.src ? 'selected-candidate' : ''} onClick={() => selectImage(c)}><img src={c.src} alt={c.label}/><span>{c.label}</span><em>{src === c.src ? 'Selected' : c.confidence}</em></button>)}</div><div className="image-approval"><button className={isImageApproved ? 'selected' : 'primary'} disabled={!selectedCandidate || isImageApproved} onClick={approveSelectedImage}>{isImageApproved ? 'Selected image approved' : 'Approve selected image'}</button>{isImageApproved ? <span>Approved by {review.image_resolution_reviewer} · saved in export</span> : <span>Selection is not resolved until approved.</span>}</div></div>}
+    {image.status === 'ambiguous' && <div className="candidate-box image-chooser"><div className="candidate-copy"><b>Ambiguous image — choose and approve exact product photo</b><p>{selectedCandidate ? `Selected: ${selectedCandidate.label}` : image.message}</p></div><div className="candidates">{image.candidates.slice(0,8).map((c: any) => <button key={c.src} className={src === c.src ? 'selected-candidate' : ''} onClick={() => selectImage(c)}><img src={c.src} alt={c.label}/><span>{c.label}</span><em>{src === c.src ? 'Selected' : c.confidence}</em></button>)}</div><div className="image-approval"><div className="image-actions"><button className={isImageApproved ? 'selected' : 'primary'} disabled={!selectedCandidate || isImageApproved || hasNoValidCandidate} onClick={approveSelectedImage}>{isImageApproved ? 'Selected image approved' : 'Approve selected image'}</button><button className="danger" disabled={hasNoValidCandidate} onClick={markNoValidCandidate}>None of these match product</button></div>{hasNoValidCandidate ? <span>Sent to Manual image fix · do not validate downstream fields yet.</span> : isImageApproved ? <span>Approved by {review.image_resolution_reviewer} · saved in export · auto-advances in Image QA queue</span> : <span>Selection is not resolved until approved.</span>}</div></div>}
     <div className="product-caption"><p className="caption-kicker">Now reviewing</p><h2>{item.product.title}</h2><p>{item.product.brand}</p><code>{item.product.product_id}</code></div>
   </aside>
 }
@@ -377,9 +402,62 @@ function AxisRow({ axis, item, review, saveReview }: any) {
   </div>
 }
 
-function AttributePanel({ item, review, saveReview }: any) { const attrs = ['category','primary_color','secondary_color','material_primary','material_secondary','material_source','silhouette','length','neckline','sleeve_length','pattern','details','price_tier']; return <section className="card"><div className="section-kicker">Structured product truth</div><h3>Hard attribute review</h3><div className="attr-table">{attrs.map((a) => <AttributeRow key={a} attr={a} item={item} review={review} saveReview={saveReview}/>)}</div></section> }
-function AttributeRow({ attr, item, review, saveReview }: any) { const raw = item.extraction.hard_attributes[attr]; const rawValue = attr === 'details' ? (raw ?? []).map((d: any) => d.value ?? d).join(', ') : raw?.value ?? raw ?? '—'; const conf = typeof raw?.confidence === 'number' ? raw.confidence : undefined; const norm = normalizeValue(attr, raw); const existing = review.attribute_reviews.find((r: any) => r.attribute === attr); const enums = getEnumForAttribute(attr); const update = (patch: any) => { const next = review.attribute_reviews.filter((r: any) => r.attribute !== attr); next.push({ attribute: attr, raw_value: rawValue, canonical_suggestion: norm.canonical, decision: 'unset', override_value: attr === 'details' ? [] : null, reason: '', ...existing, ...patch }); saveReview({ ...review, attribute_reviews: next }) }; return <div className="attr-row"><span>{attr}</span><b>{rawValue}</b><Badge tone={confidenceTier(conf) === 'AUTO' ? 'green' : confidenceTier(conf) === 'REVIEW' ? 'amber' : 'red'}>{conf ?? '—'}</Badge><em className={norm.valid ? 'ok' : 'warn'}>{norm.canonical ?? norm.warning}</em><select value={existing?.decision ?? 'unset'} onChange={(e) => update({ decision: e.target.value })}><option value="unset">unset</option><option value="accept">accept raw</option><option value="accept_normalized">accept normalized</option><option value="override">override</option><option value="needs_review">needs review</option></select>{existing?.decision === 'override' && enums && (attr === 'details' ? <select multiple value={existing.override_value ?? []} onChange={(e) => update({ override_value: Array.from(e.currentTarget.selectedOptions).map((o) => o.value) })}>{enums.map((v) => <option key={v}>{v}</option>)}</select> : <select value={existing.override_value ?? ''} onChange={(e) => update({ override_value: e.target.value })}><option value="">Choose canonical</option>{enums.map((v) => <option key={v}>{v}</option>)}</select>)}<input placeholder="note" value={existing?.reason ?? ''} onChange={(e) => update({ reason: e.target.value })}/></div> }
+function displayRawAttribute(attr: string, raw: any) {
+  if (attr === 'details') return (Array.isArray(raw) ? raw : raw?.value ?? []).map((d: any) => d?.value ?? d).filter(Boolean).join(', ') || '—'
+  return raw?.value ?? raw ?? '—'
+}
 
-function Reasoning({ item, review, saveReview }: any) { const trace = item.extraction.reasoning_trace ?? {}; return <section className="card reasoning-card"><div className="sparkle-badge">✦</div><div className="section-kicker">Stylist reasoning</div><h3>Reasoning trace + prompt feedback</h3>{Object.entries(trace).map(([k,v]) => <details key={k}><summary>{k}</summary><p>{Array.isArray(v) ? v.join('; ') : String(v)}</p></details>)}<div className="prompt-feedback"><label><input type="checkbox" checked={review.prompt_feedback.needs_prompt_update} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, needs_prompt_update: e.target.checked } })}/> Prompt/scoring issue?</label><select value={review.prompt_feedback.issue_type} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, issue_type: e.target.value } })}>{feedbackTypes.map((t) => <option key={t}>{t}</option>)}</select><textarea className="stylist-note" placeholder="What should v8.2 learn from this?" value={review.prompt_feedback.note} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, note: e.target.value } })}/></div></section> }
+function displayCanonical(canonical: string | string[] | null) {
+  if (Array.isArray(canonical)) return canonical.join(', ')
+  return canonical ?? null
+}
+
+function AttributePanel({ item, review, saveReview }: any) {
+  const attrs = ['category','primary_color','secondary_color','material_primary','material_secondary','material_source','silhouette','length','neckline','sleeve_length','pattern','details','price_tier']
+  const acceptAllNormalized = () => {
+    const next = [...review.attribute_reviews]
+    for (const attr of attrs) {
+      const raw = item.extraction.hard_attributes[attr]
+      const rawValue = displayRawAttribute(attr, raw)
+      if (rawValue === '—') continue
+      const norm = normalizeValue(attr, raw)
+      const existingIndex = next.findIndex((r: any) => r.attribute === attr)
+      const existing = existingIndex >= 0 ? next[existingIndex] : undefined
+      if (existing?.decision === 'override' || existing?.decision === 'needs_review') continue
+      const decision = norm.canonical ? 'accept_normalized' : norm.valid ? 'accept' : 'needs_review'
+      const record = {
+        attribute: attr,
+        override_value: attr === 'details' ? [] : null,
+        reason: decision === 'needs_review' ? (norm.warning ?? 'Needs reviewer confirmation') : '',
+        ...existing,
+        decision,
+        canonical_suggestion: norm.canonical,
+        raw_value: rawValue,
+      }
+      if (existingIndex >= 0) next[existingIndex] = record
+      else next.push(record)
+    }
+    saveReview({ ...review, attribute_reviews: next })
+  }
+
+  return <section className="card"><div className="section-kicker">Structured product truth</div><div className="card-title"><h3>Hard attribute review</h3><button className="ghost soft-action" onClick={acceptAllNormalized}>Accept all normalized attributes</button></div><p className="hint">This creates explicit audit rows. Untouched/unset fields still do not count as approval.</p><div className="attr-table">{attrs.map((a) => <AttributeRow key={a} attr={a} item={item} review={review} saveReview={saveReview}/>)}</div></section>
+}
+
+function AttributeRow({ attr, item, review, saveReview }: any) {
+  const raw = item.extraction.hard_attributes[attr]
+  const rawValue = displayRawAttribute(attr, raw)
+  const conf = typeof raw?.confidence === 'number' ? raw.confidence : undefined
+  const norm = normalizeValue(attr, raw)
+  const existing = review.attribute_reviews.find((r: any) => r.attribute === attr)
+  const enums = getEnumForAttribute(attr)
+  const update = (patch: any) => {
+    const next = review.attribute_reviews.filter((r: any) => r.attribute !== attr)
+    next.push({ attribute: attr, raw_value: rawValue, canonical_suggestion: norm.canonical, decision: 'unset', override_value: attr === 'details' ? [] : null, reason: '', ...existing, ...patch })
+    saveReview({ ...review, attribute_reviews: next })
+  }
+  return <div className="attr-row"><span>{attr}</span><b>{rawValue}</b><Badge tone={confidenceTier(conf) === 'AUTO' ? 'green' : confidenceTier(conf) === 'REVIEW' ? 'amber' : 'red'}>{conf ?? '—'}</Badge><em className={norm.valid ? 'ok' : 'warn'}>{displayCanonical(norm.canonical) ?? norm.warning}</em><select value={existing?.decision ?? 'unset'} onChange={(e) => update({ decision: e.target.value })}><option value="unset">unset</option><option value="accept">accept raw</option><option value="accept_normalized">accept normalized</option><option value="override">override</option><option value="needs_review">needs review</option></select>{existing?.decision === 'override' && enums && (attr === 'details' ? <select multiple value={existing.override_value ?? []} onChange={(e) => update({ override_value: Array.from(e.currentTarget.selectedOptions).map((o) => o.value) })}>{enums.map((v) => <option key={v}>{v}</option>)}</select> : <select value={existing.override_value ?? ''} onChange={(e) => update({ override_value: e.target.value })}><option value="">Choose canonical</option>{enums.map((v) => <option key={v}>{v}</option>)}</select>)}<input placeholder="note" value={existing?.reason ?? ''} onChange={(e) => update({ reason: e.target.value })}/></div>
+}
+
+function Reasoning({ item, review, saveReview }: any) { const trace = item.extraction.reasoning_trace ?? {}; return <section className="card reasoning-card"><div className="sparkle-badge">✦</div><div className="section-kicker">Stylist reasoning</div><h3>Reasoning trace + prompt feedback</h3>{Object.entries(trace).map(([k,v]) => <details key={k}><summary>{k}</summary><p>{Array.isArray(v) ? v.join('; ') : String(v)}</p></details>)}<details open><summary>v8.2 structural prompt guard</summary><p>Treat product title, category, and filename as weak metadata hints only. The product image is the source of truth. If metadata contradicts visible evidence, trust the image and flag <code>metadata_image_conflict</code> instead of forcing category/vibe to match the title.</p></details><div className="prompt-feedback"><label><input type="checkbox" checked={review.prompt_feedback.needs_prompt_update} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, needs_prompt_update: e.target.checked } })}/> Prompt/scoring issue?</label><select value={review.prompt_feedback.issue_type} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, issue_type: e.target.value } })}>{feedbackTypes.map((t) => <option key={t}>{t}</option>)}</select><textarea className="stylist-note" placeholder="What should v8.2 learn from this? If metadata conflicts with image evidence, note metadata_image_conflict and the visible proof." value={review.prompt_feedback.note} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, note: e.target.value } })}/></div></section> }
 
 function Badge({ children, tone = 'green' }: { children: React.ReactNode; tone?: 'green' | 'amber' | 'red' }) { return <span className={`badge ${tone}`}>{children}</span> }

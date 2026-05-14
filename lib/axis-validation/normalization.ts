@@ -37,18 +37,36 @@ export function getEnumForAttribute(attribute: string): string[] | null {
   return null
 }
 
-export function normalizeValue(attribute: string, raw: any): { canonical: string | null; valid: boolean; warning?: string } {
-  const value = typeof raw === 'object' && raw !== null && 'value' in raw ? raw.value : raw
-  if (value == null) return { canonical: null, valid: false, warning: 'Missing value' }
-  const str = String(value).trim()
-  const lower = str.toLowerCase()
+export function normalizeValue(attribute: string, raw: any): { canonical: string | string[] | null; valid: boolean; warning?: string } {
   const enumValues = getEnumForAttribute(attribute)
-  if (!enumValues) return { canonical: str, valid: true }
-  if (enumValues.includes(lower)) return { canonical: lower, valid: true }
-  const alias = aliases[lower]
-  if (alias && enumValues.includes(alias)) return { canonical: alias, valid: false, warning: `Non-canonical value mapped from ${str}` }
-  if (alias === 'unknown') return { canonical: null, valid: false, warning: 'Unknown value requires review' }
-  return { canonical: null, valid: false, warning: `Non-canonical value: ${str}` }
+
+  const normalizeOne = (input: any): { canonical: string | null; valid: boolean; warning?: string; original: string } => {
+    const value = typeof input === 'object' && input !== null && 'value' in input ? input.value : input
+    if (value == null) return { canonical: null, valid: false, warning: 'Missing value', original: '' }
+    const str = String(value).trim()
+    const lower = str.toLowerCase()
+    if (!enumValues) return { canonical: str, valid: true, original: str }
+    if (enumValues.includes(lower)) return { canonical: lower, valid: true, original: str }
+    const alias = aliases[lower]
+    if (alias === 'unknown') return { canonical: null, valid: false, warning: 'Unknown value requires review', original: str }
+    if (alias && enumValues.includes(alias)) return { canonical: alias, valid: false, warning: `Non-canonical value mapped from ${str}`, original: str }
+    return { canonical: null, valid: false, warning: `Non-canonical value: ${str}`, original: str }
+  }
+
+  const rawValues: any[] | null = Array.isArray(raw) ? raw : Array.isArray(raw?.value) ? raw.value : null
+  if (rawValues) {
+    const normalized: Array<{ canonical: string | null; valid: boolean; warning?: string; original: string }> = rawValues.map(normalizeOne)
+    const canonical = normalized.map((n) => n.canonical).filter(Boolean) as string[]
+    const missing = normalized.filter((n) => !n.canonical).map((n) => n.original).filter(Boolean)
+    const mapped = normalized.filter((n) => n.warning && n.canonical).map((n) => `${n.original}→${n.canonical}`)
+    if (!canonical.length) return { canonical: null, valid: false, warning: missing.length ? `Non-canonical values: ${missing.join(', ')}` : 'Missing value' }
+    if (missing.length) return { canonical, valid: false, warning: `Non-canonical values: ${missing.join(', ')}` }
+    if (mapped.length) return { canonical, valid: false, warning: `Mapped values: ${mapped.join(', ')}` }
+    return { canonical, valid: true }
+  }
+
+  const normalized = normalizeOne(raw)
+  return { canonical: normalized.canonical, valid: normalized.valid, warning: normalized.warning }
 }
 
 export function confidenceTier(confidence: number | undefined): 'AUTO' | 'REVIEW' | 'MANUAL' {

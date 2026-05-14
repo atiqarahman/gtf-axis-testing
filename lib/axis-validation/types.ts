@@ -44,7 +44,7 @@ export type VibeReview = {
 }
 
 export type AxisOverride = { axis_id: AxisId; label: string; original_score: number; override_score: number; reason: string; rubric_version?: string }
-export type AttributeReview = { attribute: string; raw_value: any; canonical_suggestion: string | null; decision: 'unset' | 'accept' | 'accept_normalized' | 'override' | 'needs_review'; override_value: any; reason: string }
+export type AttributeReview = { attribute: string; raw_value: any; canonical_suggestion: string | string[] | null; decision: 'unset' | 'accept' | 'accept_normalized' | 'override' | 'needs_review'; override_value: any; reason: string }
 
 export type ProductReview = {
   product_id: string
@@ -53,7 +53,7 @@ export type ProductReview = {
   reviewed_at?: string
   image_status: ImageResolution['status']
   selected_image_path?: string
-  image_resolution_status?: 'not_needed' | 'pending' | 'approved' | 'unresolved'
+  image_resolution_status?: 'not_needed' | 'pending' | 'approved' | 'unresolved' | 'no_valid_candidate'
   image_resolution_reviewed_at?: string
   image_resolution_reviewer?: string
   image_resolution_note?: string
