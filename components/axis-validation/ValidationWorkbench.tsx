@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Download, AlertTriangle, Check, ChevronLeft, ChevronRight, SlidersHorizontal } from 'lucide-react'
 import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer } from 'recharts'
 import { AXES, VIBES, canonicalizeVibe, type AxisId, type VibeId } from '@/lib/axis-validation/constants'
+import { AXIS_RUBRICS, AXIS_RUBRIC_VERSION } from '@/lib/axis-validation/rubric'
 import { loadValidationData, type QaSummary, type ValidationItem } from '@/lib/axis-validation/loadData'
 import { resolveImage } from '@/lib/axis-validation/imageResolver'
 import { confidenceTier, getEnumForAttribute, normalizeValue } from '@/lib/axis-validation/normalization'
@@ -94,7 +95,11 @@ export default function ValidationWorkbench() {
   const correctionCount = Object.values(reviews).filter((r) => r.overall_decision === 'needs_correction' || r.axis_overrides.length || r.attribute_reviews.length || r.vibe_reviews.some((v) => v.decision === 'disagree')).length
   const vibeDisagreementCount = Object.values(reviews).reduce((sum, r) => sum + r.vibe_reviews.filter((v) => v.decision === 'disagree').length, 0)
   const axisOverrideCount = Object.values(reviews).reduce((sum, r) => sum + r.axis_overrides.length, 0)
-  const imageIssueCount = Object.values(reviews).filter((r) => r.image_status === 'ambiguous' || r.image_status === 'missing' || r.issue_tags.includes('wrong_image')).length
+  const unresolvedImageIssues = qa?.imageIssues.filter((i) => {
+    const r = reviews[i.product_id]
+    return !(r?.image_status === 'ok' && r.selected_image_path)
+  }) ?? []
+  const imageIssueCount = unresolvedImageIssues.length
   const autoFalse = Object.values(reviews).filter((r) => items.find((i) => i.product.product_id === r.product_id)?.extraction.product_tier === 'AUTO' && r.overall_decision !== 'approve' && r.overall_decision !== 'unset').length
 
   function saveReview(next: ProductReview) {
@@ -104,8 +109,37 @@ export default function ValidationWorkbench() {
     if (!item || !review) return
     saveReview({ ...review, overall_decision: decision, review_status: decision === 'skip_for_now' ? 'skipped' : 'completed', reviewed_at: new Date().toISOString() })
   }
+  function jumpToProduct(productId: string) {
+    const targetIndex = items.findIndex((i) => i.product.product_id === productId)
+    if (targetIndex < 0) return
+    setBrand('all')
+    setTier('all')
+    setQuery('')
+    setIndex(targetIndex)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+  function enrichedReview(r: ProductReview) {
+    const source = items.find((i) => i.product.product_id === r.product_id)
+    return {
+      ...r,
+      brand: source?.product.brand ?? '',
+      title: source?.product.title ?? '',
+      product_category: source?.product.category ?? '',
+      extraction_category: source?.extraction.hard_attributes.category?.value ?? '',
+      product_tier: source?.extraction.product_tier ?? '',
+      price: source?.product.price ?? null,
+      currency: source?.product.currency ?? null,
+      axis_rubric_version: AXIS_RUBRIC_VERSION,
+      analysis_keys: {
+        category_issue_tags: (r.issue_tags ?? []).map((tag) => `${source?.product.category ?? 'unknown'}::${tag}`),
+        category_axis_overrides: (r.axis_overrides ?? []).map((o) => `${source?.product.category ?? 'unknown'}::${o.axis_id}`),
+        category_attribute_reviews: (r.attribute_reviews ?? []).map((a) => `${source?.product.category ?? 'unknown'}::${a.attribute}`),
+        brand_issue_tags: (r.issue_tags ?? []).map((tag) => `${source?.product.brand ?? 'unknown'}::${tag}`),
+      },
+    }
+  }
   function exportJson() {
-    const blob = new Blob([JSON.stringify(Object.values(reviews), null, 2)], { type: 'application/json' })
+    const blob = new Blob([JSON.stringify(Object.values(reviews).map(enrichedReview), null, 2)], { type: 'application/json' })
     downloadBlob(blob, `gtf-axis-reviews-${new Date().toISOString().slice(0,10)}.json`)
   }
   function exportCsv() {
@@ -115,6 +149,8 @@ export default function ValidationWorkbench() {
         product_id: r.product_id,
         brand: source?.product.brand ?? '',
         title: source?.product.title ?? '',
+        product_category: source?.product.category ?? '',
+        extraction_category: source?.extraction.hard_attributes.category?.value ?? '',
         product_tier: source?.extraction.product_tier ?? '',
         review_status: r.review_status,
         reviewed_at: r.reviewed_at ?? '',
@@ -131,6 +167,11 @@ export default function ValidationWorkbench() {
         prompt_needs_update: r.prompt_feedback.needs_prompt_update,
         prompt_issue_type: r.prompt_feedback.issue_type,
         prompt_note: r.prompt_feedback.note,
+        axis_rubric_version: AXIS_RUBRIC_VERSION,
+        category_issue_tags: r.issue_tags.map((tag) => `${source?.product.category ?? 'unknown'}::${tag}`).join('|'),
+        category_axis_overrides: r.axis_overrides.map((o) => `${source?.product.category ?? 'unknown'}::${o.axis_id}`).join('|'),
+        category_attribute_reviews: r.attribute_reviews.map((a) => `${source?.product.category ?? 'unknown'}::${a.attribute}`).join('|'),
+        brand_issue_tags: r.issue_tags.map((tag) => `${source?.product.brand ?? 'unknown'}::${tag}`).join('|'),
       }
     })
     const header = Object.keys(rows[0] ?? { product_id: '', overall_decision: '' })
@@ -183,8 +224,8 @@ export default function ValidationWorkbench() {
         <Badge tone={review.review_status === 'completed' ? 'green' : review.review_status === 'skipped' ? 'amber' : 'red'}>{review.review_status.toUpperCase()}</Badge>
       </section>
 
-      {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} products / {qa.totalExtractions} extractions · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
-        <details><summary>Image issues ({qa.imageIssues.length})</summary><div className="qa-list">{qa.imageIssues.slice(0,80).map((i) => <div key={i.product_id}><b>{i.product_id}</b> · {i.brand} · {i.status} · {i.image_file}<br/><span>{i.message} · candidates: {i.candidates.slice(0,4).join(', ') || 'none'}</span></div>)}</div></details>
+      {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} products / {qa.totalExtractions} extractions · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · unresolved image issues {unresolvedImageIssues.length} / original {qa.imageIssues.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
+        <details><summary>Image issues ({unresolvedImageIssues.length} unresolved)</summary><div className="qa-list clickable">{unresolvedImageIssues.slice(0,120).map((i) => <button type="button" key={i.product_id} onClick={() => jumpToProduct(i.product_id)}><b>{i.product_id}</b> · {i.brand} · {i.status} · {i.image_file}<br/><span>{i.message} · candidates: {i.candidates.slice(0,4).join(', ') || 'none'} · click to review</span></button>)}</div>{!unresolvedImageIssues.length && <p className="qa-resolved">All visible image issues are resolved in this browser session.</p>}</details>
         <details><summary>Enum warnings ({qa.invalidEnums.length})</summary><div className="qa-list">{qa.invalidEnums.slice(0,120).map((i, idx) => <div key={`${i.product_id}-${i.attribute}-${idx}`}><b>{i.product_id}</b> · {i.attribute}: {String(i.value)} · <span>{i.warning}</span></div>)}</div></details>
       </section>}
 
@@ -259,7 +300,27 @@ function VibeRow({ vibe, review, saveReview }: any) {
 function AxisPanel({ item, review, saveReview, radar }: any) {
   return <section className="card axis-card"><div className="section-kicker">Editorial axis profile</div><h3>11-axis score review</h3><div className="radar"><ResponsiveContainer width="100%" height={260}><RadarChart data={radar}><PolarGrid/><PolarAngleAxis dataKey="axis" tick={{ fontSize: 10 }}/><PolarRadiusAxis angle={90} domain={[0,10]} tick={false}/><Radar dataKey="original" stroke="#7c6aef" fill="#7c6aef" fillOpacity={0.18}/><Radar dataKey="override" stroke="#0a0a0a" fill="#0a0a0a" fillOpacity={0.06}/></RadarChart></ResponsiveContainer></div>{AXES.map((axis) => <AxisRow key={axis.id} axis={axis} item={item} review={review} saveReview={saveReview}/>)}</section>
 }
-function AxisRow({ axis, item, review, saveReview }: any) { const original = item.extraction.axis_scores[axis.id]?.score ?? 0; const existing = review.axis_overrides.find((o: any) => o.axis_id === axis.id); const value = existing?.override_score ?? original; const update = (score: number, reason = existing?.reason ?? '') => { const next = review.axis_overrides.filter((o: any) => o.axis_id !== axis.id); if (score !== original || reason) next.push({ axis_id: axis.id, label: axis.label, original_score: original, override_score: score, reason }); saveReview({ ...review, axis_overrides: next }) }; return <div className={existing ? 'axis-row modified' : 'axis-row'}><div><b>{axis.label}</b><span>{item.extraction.axis_scores[axis.id]?.reasoning}</span></div><strong>{original} → {value}</strong><input type="range" min={1} max={10} value={value} onChange={(e) => update(Number(e.target.value))}/>{value !== original && <textarea placeholder="Why override this axis?" value={existing?.reason ?? ''} onChange={(e) => update(value, e.target.value)}/>}</div> }
+function AxisRow({ axis, item, review, saveReview }: any) {
+  const original = item.extraction.axis_scores[axis.id]?.score ?? 0
+  const existing = review.axis_overrides.find((o: any) => o.axis_id === axis.id)
+  const value = existing?.override_score ?? original
+  const rubric = AXIS_RUBRICS[axis.id as AxisId]
+  const update = (score: number, reason = existing?.reason ?? '') => {
+    const next = review.axis_overrides.filter((o: any) => o.axis_id !== axis.id)
+    if (score !== original || reason) next.push({ axis_id: axis.id, label: axis.label, original_score: original, override_score: score, reason, rubric_version: AXIS_RUBRIC_VERSION })
+    saveReview({ ...review, axis_overrides: next })
+  }
+  return <div className={existing ? 'axis-row modified' : 'axis-row'}>
+    <div>
+      <div className="axis-title"><b>{axis.label}</b><details className="axis-rubric"><summary>Rubric</summary><div className="rubric-popover"><p className="rubric-version">Axis Rubric {AXIS_RUBRIC_VERSION}</p><p><b>{rubric.question}</b></p><p>{rubric.measures}</p><div className="rubric-grid"><div><h4>Signals ↑</h4><ul>{rubric.increases.map((s) => <li key={s}>{s}</li>)}</ul></div><div><h4>Signals ↓</h4><ul>{rubric.decreases.map((s) => <li key={s}>{s}</li>)}</ul></div></div><table><tbody>{rubric.bands.map((b) => <tr key={b.range}><th>{b.range}</th><td><b>{b.label}</b><br/><span>{b.example}</span></td></tr>)}</tbody></table>{rubric.caps?.length ? <div className="rubric-caps"><b>Caps</b><ul>{rubric.caps.map((c) => <li key={c}>{c}</li>)}</ul></div> : null}{rubric.notes?.map((n) => <p key={n} className="rubric-note">{n}</p>)}</div></details></div>
+      <span className="axis-definition"><b>Definition:</b> {rubric.measures} <em>{rubric.question}</em></span>
+      <span>{item.extraction.axis_scores[axis.id]?.reasoning}</span>
+    </div>
+    <strong>{original} → {value}</strong>
+    <input type="range" min={1} max={10} value={value} onChange={(e) => update(Number(e.target.value))}/>
+    {value !== original && <textarea placeholder="Reference rubric signals: what visible evidence justifies this score change?" value={existing?.reason ?? ''} onChange={(e) => update(value, e.target.value)}/>}
+  </div>
+}
 
 function AttributePanel({ item, review, saveReview }: any) { const attrs = ['category','primary_color','secondary_color','material_primary','material_secondary','material_source','silhouette','length','neckline','sleeve_length','pattern','details','price_tier']; return <section className="card"><div className="section-kicker">Structured product truth</div><h3>Hard attribute review</h3><div className="attr-table">{attrs.map((a) => <AttributeRow key={a} attr={a} item={item} review={review} saveReview={saveReview}/>)}</div></section> }
 function AttributeRow({ attr, item, review, saveReview }: any) { const raw = item.extraction.hard_attributes[attr]; const rawValue = attr === 'details' ? (raw ?? []).map((d: any) => d.value ?? d).join(', ') : raw?.value ?? raw ?? '—'; const conf = typeof raw?.confidence === 'number' ? raw.confidence : undefined; const norm = normalizeValue(attr, raw); const existing = review.attribute_reviews.find((r: any) => r.attribute === attr); const enums = getEnumForAttribute(attr); const update = (patch: any) => { const next = review.attribute_reviews.filter((r: any) => r.attribute !== attr); next.push({ attribute: attr, raw_value: rawValue, canonical_suggestion: norm.canonical, decision: 'unset', override_value: attr === 'details' ? [] : null, reason: '', ...existing, ...patch }); saveReview({ ...review, attribute_reviews: next }) }; return <div className="attr-row"><span>{attr}</span><b>{rawValue}</b><Badge tone={confidenceTier(conf) === 'AUTO' ? 'green' : confidenceTier(conf) === 'REVIEW' ? 'amber' : 'red'}>{conf ?? '—'}</Badge><em className={norm.valid ? 'ok' : 'warn'}>{norm.canonical ?? norm.warning}</em><select value={existing?.decision ?? 'unset'} onChange={(e) => update({ decision: e.target.value })}><option value="unset">unset</option><option value="accept">accept raw</option><option value="accept_normalized">accept normalized</option><option value="override">override</option><option value="needs_review">needs review</option></select>{existing?.decision === 'override' && enums && (attr === 'details' ? <select multiple value={existing.override_value ?? []} onChange={(e) => update({ override_value: Array.from(e.currentTarget.selectedOptions).map((o) => o.value) })}>{enums.map((v) => <option key={v}>{v}</option>)}</select> : <select value={existing.override_value ?? ''} onChange={(e) => update({ override_value: e.target.value })}><option value="">Choose canonical</option>{enums.map((v) => <option key={v}>{v}</option>)}</select>)}<input placeholder="note" value={existing?.reason ?? ''} onChange={(e) => update({ reason: e.target.value })}/></div> }
