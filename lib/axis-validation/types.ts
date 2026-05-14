@@ -53,6 +53,10 @@ export type ProductReview = {
   reviewed_at?: string
   image_status: ImageResolution['status']
   selected_image_path?: string
+  image_resolution_status?: 'not_needed' | 'pending' | 'approved' | 'unresolved'
+  image_resolution_reviewed_at?: string
+  image_resolution_reviewer?: string
+  image_resolution_note?: string
   overall_decision: 'unset' | 'approve' | 'needs_correction' | 'manual_escalation' | 'skip_for_now'
   issue_tags: string[]
   vibe_reviews: VibeReview[]

@@ -13,6 +13,7 @@ import './validation.css'
 
 const issueOptions = ['wrong_image','wrong_category','wrong_vibe','wrong_axis_score','wrong_hard_attribute','glamour_underweighted','glamour_overweighted','cultural_richness_underweighted','body_awareness_wrong','material_uncertain','image_ambiguous','confidence_too_high','auto_false_positive','prompt_issue','taxonomy_issue','manual_review_needed']
 const feedbackTypes = ['none','axis_underweight','axis_overweight','wrong_vibe_mapping','bad_attribute_extraction','image_ambiguity','taxonomy_issue']
+const EXCLUDED_BRANDS = ['Shahin Mannan']
 
 function blankReview(item: ValidationItem): ProductReview {
   const image = resolveImage(item.product)
@@ -22,6 +23,7 @@ function blankReview(item: ValidationItem): ProductReview {
     review_status: 'draft',
     image_status: image.status,
     selected_image_path: image.src,
+    image_resolution_status: image.status === 'ambiguous' ? 'pending' : image.status === 'missing' ? 'unresolved' : 'not_needed',
     overall_decision: 'unset',
     issue_tags: [],
     vibe_reviews: [],
@@ -76,14 +78,16 @@ export default function ValidationWorkbench() {
     return () => window.removeEventListener('keydown', onKey)
   })
 
-  const brands = useMemo(() => Array.from(new Set(items.map((i) => i.product.brand))).sort(), [items])
-  const filtered = useMemo(() => items.filter((item) => {
+  const activeItems = useMemo(() => items.filter((i) => !EXCLUDED_BRANDS.includes(i.product.brand)), [items])
+  const excludedCount = items.length - activeItems.length
+  const brands = useMemo(() => Array.from(new Set(activeItems.map((i) => i.product.brand))).sort(), [activeItems])
+  const filtered = useMemo(() => activeItems.filter((item) => {
     if (brand !== 'all' && item.product.brand !== brand) return false
     if (tier !== 'all' && item.extraction.product_tier !== tier) return false
     const q = query.toLowerCase().trim()
     if (q && !`${item.product.product_id} ${item.product.title} ${item.product.brand}`.toLowerCase().includes(q)) return false
     return true
-  }), [items, brand, tier, query])
+  }), [activeItems, brand, tier, query])
 
   const item = filtered[Math.min(index, Math.max(0, filtered.length - 1))]
   const review = item ? reviews[item.product.product_id] ?? blankReview(item) : null
@@ -91,13 +95,14 @@ export default function ValidationWorkbench() {
   const skippedCount = Object.values(reviews).filter((r) => r.review_status === 'skipped').length
   const touchedCount = Object.keys(reviews).length
   const filteredReviewedCount = filtered.filter((i) => reviews[i.product.product_id]?.review_status === 'completed').length
-  const progressPct = items.length ? Math.round(((reviewedCount + skippedCount) / items.length) * 100) : 0
+  const progressPct = activeItems.length ? Math.round(((reviewedCount + skippedCount) / activeItems.length) * 100) : 0
   const correctionCount = Object.values(reviews).filter((r) => r.overall_decision === 'needs_correction' || r.axis_overrides.length || r.attribute_reviews.length || r.vibe_reviews.some((v) => v.decision === 'disagree')).length
   const vibeDisagreementCount = Object.values(reviews).reduce((sum, r) => sum + r.vibe_reviews.filter((v) => v.decision === 'disagree').length, 0)
   const axisOverrideCount = Object.values(reviews).reduce((sum, r) => sum + r.axis_overrides.length, 0)
   const unresolvedImageIssues = qa?.imageIssues.filter((i) => {
+    if (EXCLUDED_BRANDS.includes(i.brand)) return false
     const r = reviews[i.product_id]
-    return !(r?.image_status === 'ok' && r.selected_image_path)
+    return !(r?.image_resolution_status === 'approved' && r.selected_image_path)
   }) ?? []
   const imageIssueCount = unresolvedImageIssues.length
   const autoFalse = Object.values(reviews).filter((r) => items.find((i) => i.product.product_id === r.product_id)?.extraction.product_tier === 'AUTO' && r.overall_decision !== 'approve' && r.overall_decision !== 'unset').length
@@ -110,7 +115,7 @@ export default function ValidationWorkbench() {
     saveReview({ ...review, overall_decision: decision, review_status: decision === 'skip_for_now' ? 'skipped' : 'completed', reviewed_at: new Date().toISOString() })
   }
   function jumpToProduct(productId: string) {
-    const targetIndex = items.findIndex((i) => i.product.product_id === productId)
+    const targetIndex = activeItems.findIndex((i) => i.product.product_id === productId)
     if (targetIndex < 0) return
     setBrand('all')
     setTier('all')
@@ -129,6 +134,10 @@ export default function ValidationWorkbench() {
       product_tier: source?.extraction.product_tier ?? '',
       price: source?.product.price ?? null,
       currency: source?.product.currency ?? null,
+      image_resolution_status: r.image_resolution_status ?? 'not_needed',
+      image_resolution_reviewer: r.image_resolution_reviewer ?? '',
+      image_resolution_reviewed_at: r.image_resolution_reviewed_at ?? '',
+      image_resolution_note: r.image_resolution_note ?? '',
       axis_rubric_version: AXIS_RUBRIC_VERSION,
       analysis_keys: {
         category_issue_tags: (r.issue_tags ?? []).map((tag) => `${source?.product.category ?? 'unknown'}::${tag}`),
@@ -156,6 +165,10 @@ export default function ValidationWorkbench() {
         reviewed_at: r.reviewed_at ?? '',
         image_status: r.image_status,
         selected_image_path: r.selected_image_path ?? '',
+        image_resolution_status: r.image_resolution_status ?? 'not_needed',
+        image_resolution_reviewer: r.image_resolution_reviewer ?? '',
+        image_resolution_reviewed_at: r.image_resolution_reviewed_at ?? '',
+        image_resolution_note: r.image_resolution_note ?? '',
         overall_decision: r.overall_decision,
         issue_tags: r.issue_tags.join('|'),
         vibe_reviews_json: JSON.stringify(r.vibe_reviews),
@@ -197,7 +210,7 @@ export default function ValidationWorkbench() {
           <p className="subtitle">Review GPT’s fashion judgment against expert taste — product image, vibe logic, axis scores, and correction notes in one studio.</p>
         </div>
         <div className="metrics expanded">
-          <Metric label="Products" value={items.length} />
+          <Metric label="Active products" value={activeItems.length} />
           <Metric label="Reviewed" value={reviewedCount} />
           <Metric label="Corrections" value={correctionCount} />
           <Metric label="Vibe disagreements" value={vibeDisagreementCount} />
@@ -219,12 +232,12 @@ export default function ValidationWorkbench() {
       </section>
 
       <section className="session-strip">
-        <div className="session-copy"><b>Review session</b><span>{reviewerName || 'anonymous'} · {filteredReviewedCount}/{filtered.length} reviewed in current queue · {reviewedCount} approved/corrected, {skippedCount} skipped, {touchedCount} touched overall</span></div>
+        <div className="session-copy"><b>Review session</b><span>{reviewerName || 'anonymous'} · {filteredReviewedCount}/{filtered.length} reviewed in current queue · {reviewedCount} approved/corrected, {skippedCount} skipped, {touchedCount} touched overall · {excludedCount} Shahin Mannan excluded from active review</span></div>
         <div className="progress-wrap"><div className="progress-label"><span>Batch progress</span><b>{progressPct}%</b></div><div className="progress-track"><div style={{ width: `${progressPct}%` }} /></div></div>
         <Badge tone={review.review_status === 'completed' ? 'green' : review.review_status === 'skipped' ? 'amber' : 'red'}>{review.review_status.toUpperCase()}</Badge>
       </section>
 
-      {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} products / {qa.totalExtractions} extractions · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · unresolved image issues {unresolvedImageIssues.length} / original {qa.imageIssues.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
+      {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} source products / {activeItems.length} active products · {excludedCount} Shahin Mannan excluded · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · unresolved image issues {unresolvedImageIssues.length} / original {qa.imageIssues.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
         <details><summary>Image issues ({unresolvedImageIssues.length} unresolved)</summary><div className="qa-list clickable">{unresolvedImageIssues.slice(0,120).map((i) => <button type="button" key={i.product_id} onClick={() => jumpToProduct(i.product_id)}><b>{i.product_id}</b> · {i.brand} · {i.status} · {i.image_file}<br/><span>{i.message} · candidates: {i.candidates.slice(0,4).join(', ') || 'none'} · click to review</span></button>)}</div>{!unresolvedImageIssues.length && <p className="qa-resolved">All visible image issues are resolved in this browser session.</p>}</details>
         <details><summary>Enum warnings ({qa.invalidEnums.length})</summary><div className="qa-list">{qa.invalidEnums.slice(0,120).map((i, idx) => <div key={`${i.product_id}-${i.attribute}-${idx}`}><b>{i.product_id}</b> · {i.attribute}: {String(i.value)} · <span>{i.warning}</span></div>)}</div></details>
       </section>}
@@ -232,7 +245,7 @@ export default function ValidationWorkbench() {
       {showShortcuts && <section className="qa shortcuts"><b>Keyboard shortcuts:</b> ← Previous · → Next · A Approve · D Needs correction · S Skip · E Export JSON. Inputs, selects, and textareas ignore shortcuts while focused.</section>}
 
       <section className="review-grid">
-        <ProductImage item={item} image={image} review={review} saveReview={saveReview} position={`${Math.min(index + 1, filtered.length)} / ${filtered.length}`} />
+        <ProductImage item={item} image={image} review={review} saveReview={saveReview} reviewerName={reviewerName} position={`${Math.min(index + 1, filtered.length)} / ${filtered.length}`} />
         <div className="review-panel">
           <Meta item={item} />
           <Decision review={review} saveReview={saveReview} setDecision={setDecision} />
@@ -257,17 +270,39 @@ export default function ValidationWorkbench() {
 function Metric({ label, value }: { label: string; value: number }) { return <div className="metric"><strong>{value}</strong><span>{label}</span></div> }
 function downloadBlob(blob: Blob, filename: string) { const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = filename; a.click(); URL.revokeObjectURL(url) }
 
-function ProductImage({ item, image, review, saveReview, position }: any) {
+function ProductImage({ item, image, review, saveReview, position, reviewerName }: any) {
   const src = review.selected_image_path ?? image.src
   const selectedCandidate = image.candidates.find((c: any) => c.src === src)
-  const confirmImage = (candidate: any) => {
+  const isImageApproved = review.image_resolution_status === 'approved'
+  const selectImage = (candidate: any) => {
     const issueTags = review.issue_tags.includes('image_ambiguous') ? review.issue_tags : [...review.issue_tags, 'image_ambiguous']
-    saveReview({ ...review, selected_image_path: candidate.src, image_status: 'ok', issue_tags: image.status === 'ambiguous' ? issueTags : review.issue_tags })
+    saveReview({
+      ...review,
+      selected_image_path: candidate.src,
+      image_status: image.status,
+      image_resolution_status: 'pending',
+      image_resolution_reviewed_at: undefined,
+      image_resolution_reviewer: undefined,
+      issue_tags: image.status === 'ambiguous' ? issueTags : review.issue_tags,
+    })
+  }
+  const approveSelectedImage = () => {
+    if (!src) return
+    const issueTags = review.issue_tags.includes('image_ambiguous') ? review.issue_tags : [...review.issue_tags, 'image_ambiguous']
+    saveReview({
+      ...review,
+      selected_image_path: src,
+      image_status: 'ok',
+      image_resolution_status: 'approved',
+      image_resolution_reviewer: reviewerName || 'anonymous',
+      image_resolution_reviewed_at: new Date().toISOString(),
+      issue_tags: image.status === 'ambiguous' ? issueTags : review.issue_tags,
+    })
   }
   return <aside className="image-panel">
-    <div className="image-head"><Badge tone={image.status === 'ok' || image.status === 'url' ? 'green' : image.status === 'ambiguous' ? 'amber' : 'red'}>{image.status.toUpperCase()}</Badge><span>{position}</span></div>
+    <div className="image-head"><Badge tone={isImageApproved || image.status === 'ok' || image.status === 'url' ? 'green' : image.status === 'ambiguous' ? 'amber' : 'red'}>{isImageApproved ? 'IMAGE APPROVED' : image.status.toUpperCase()}</Badge><span>{position}</span></div>
     {src ? <img src={src} alt={`${item.product.brand} ${item.product.title}`} /> : <div className="missing"><AlertTriangle/> Missing image</div>}
-    {image.status === 'ambiguous' && <div className="candidate-box image-chooser"><div className="candidate-copy"><b>Ambiguous image — choose the exact product photo</b><p>{selectedCandidate ? `Selected: ${selectedCandidate.label}` : image.message}</p></div><div className="candidates">{image.candidates.slice(0,8).map((c: any) => <button key={c.src} className={src === c.src ? 'selected-candidate' : ''} onClick={() => confirmImage(c)}><img src={c.src} alt={c.label}/><span>{c.label}</span><em>{src === c.src ? 'Selected' : c.confidence}</em></button>)}</div></div>}
+    {image.status === 'ambiguous' && <div className="candidate-box image-chooser"><div className="candidate-copy"><b>Ambiguous image — choose and approve exact product photo</b><p>{selectedCandidate ? `Selected: ${selectedCandidate.label}` : image.message}</p></div><div className="candidates">{image.candidates.slice(0,8).map((c: any) => <button key={c.src} className={src === c.src ? 'selected-candidate' : ''} onClick={() => selectImage(c)}><img src={c.src} alt={c.label}/><span>{c.label}</span><em>{src === c.src ? 'Selected' : c.confidence}</em></button>)}</div><div className="image-approval"><button className={isImageApproved ? 'selected' : 'primary'} disabled={!selectedCandidate || isImageApproved} onClick={approveSelectedImage}>{isImageApproved ? 'Selected image approved' : 'Approve selected image'}</button>{isImageApproved ? <span>Approved by {review.image_resolution_reviewer} · saved in export</span> : <span>Selection is not resolved until approved.</span>}</div></div>}
     <div className="product-caption"><p className="caption-kicker">Now reviewing</p><h2>{item.product.title}</h2><p>{item.product.brand}</p><code>{item.product.product_id}</code></div>
   </aside>
 }
