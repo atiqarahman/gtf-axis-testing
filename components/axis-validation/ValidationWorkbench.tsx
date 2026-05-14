@@ -140,6 +140,10 @@ export default function ValidationWorkbench() {
       product_tier: source?.extraction.product_tier ?? '',
       price: source?.product.price ?? null,
       currency: source?.product.currency ?? null,
+      product_image_file: source?.product.image_file ?? '',
+      resolved_primary_image_path: source ? resolveImage(source.product).src ?? '' : '',
+      resolved_secondary_image_path: source ? resolveImage(source.product).candidates[1]?.src ?? '' : '',
+      image_candidate_paths: source ? resolveImage(source.product).candidates.map((c) => c.src) : [],
       image_resolution_status: r.image_resolution_status ?? 'not_needed',
       image_resolution_reviewer: r.image_resolution_reviewer ?? '',
       image_resolution_reviewed_at: r.image_resolution_reviewed_at ?? '',
@@ -167,6 +171,10 @@ export default function ValidationWorkbench() {
         product_category: source?.product.category ?? '',
         extraction_category: source?.extraction.hard_attributes.category?.value ?? '',
         product_tier: source?.extraction.product_tier ?? '',
+        product_image_file: source?.product.image_file ?? '',
+        resolved_primary_image_path: source ? resolveImage(source.product).src ?? '' : '',
+        resolved_secondary_image_path: source ? resolveImage(source.product).candidates[1]?.src ?? '' : '',
+        image_candidate_paths: source ? resolveImage(source.product).candidates.map((c) => c.src).join('|') : '',
         review_status: r.review_status,
         reviewed_at: r.reviewed_at ?? '',
         image_status: r.image_status,
@@ -256,7 +264,7 @@ export default function ValidationWorkbench() {
       <section className="review-grid">
         <ProductImage item={item} image={image} review={review} saveReview={saveReview} reviewerName={reviewerName} position={`${Math.min(index + 1, filtered.length)} / ${filtered.length}`} />
         <div className="review-panel">
-          <Meta item={item} />
+          <Meta item={item} image={image} />
           <Decision review={review} saveReview={saveReview} setDecision={setDecision} />
           <VibePanel item={item} review={review} saveReview={saveReview} />
           <AxisPanel item={item} review={review} saveReview={saveReview} radar={radar} />
@@ -316,9 +324,11 @@ function ProductImage({ item, image, review, saveReview, position, reviewerName 
   </aside>
 }
 
-function Meta({ item }: { item: ValidationItem }) {
+function Meta({ item, image }: { item: ValidationItem; image: any }) {
+  const primary = image.src
+  const secondary = image.candidates?.[1]?.src
   return <section className="card"><div className="card-title"><h3>Product metadata</h3><Badge tone={item.extraction.product_tier === 'AUTO' ? 'green' : item.extraction.product_tier === 'REVIEW' ? 'amber' : 'red'}>{item.extraction.product_tier}</Badge></div>
-    <div className="meta-grid"><span>Category</span><b>{item.product.category}</b><span>Extracted category</span><b>{item.extraction.hard_attributes.category?.value}</b><span>Confidence</span><b>{item.extraction.confidence ?? '—'}</b><span>Review needed</span><b>{item.extraction.review_needed?.join(', ') || 'None'}</b><span>Manual needed</span><b>{item.extraction.manual_needed?.join(', ') || 'None'}</b></div>
+    <div className="meta-grid"><span>Category</span><b>{item.product.category}</b><span>Extracted category</span><b>{item.extraction.hard_attributes.category?.value}</b><span>Confidence</span><b>{item.extraction.confidence ?? '—'}</b><span>Review needed</span><b>{item.extraction.review_needed?.join(', ') || 'None'}</b><span>Manual needed</span><b>{item.extraction.manual_needed?.join(', ') || 'None'}</b><span>Catalog image ref</span><code>{item.product.image_file || '—'}</code><span>Primary image used</span>{primary ? <a href={primary} target="_blank">open primary</a> : <b>—</b>}<span>Secondary candidate</span>{secondary ? <a href={secondary} target="_blank">open secondary</a> : <b>—</b>}</div>
   </section>
 }
 
