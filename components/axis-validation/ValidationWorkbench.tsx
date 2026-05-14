@@ -13,7 +13,8 @@ import './validation.css'
 
 const issueOptions = ['wrong_image','wrong_category','wrong_vibe','wrong_axis_score','wrong_hard_attribute','glamour_underweighted','glamour_overweighted','cultural_richness_underweighted','body_awareness_wrong','material_uncertain','image_ambiguous','confidence_too_high','auto_false_positive','prompt_issue','taxonomy_issue','manual_review_needed']
 const feedbackTypes = ['none','axis_underweight','axis_overweight','wrong_vibe_mapping','bad_attribute_extraction','image_ambiguity','taxonomy_issue']
-const EXCLUDED_BRANDS = ['Shahin Mannan']
+const EXCLUDED_BRANDS = ['Shahin Mannan', 'Surily G']
+const EXCLUSION_LABEL = '74 lookbook products excluded pending CSV/image-source repair + re-extraction'
 
 function blankReview(item: ValidationItem): ProductReview {
   const image = resolveImage(item.product)
@@ -247,14 +248,14 @@ export default function ValidationWorkbench() {
       </section>
 
       <section className="session-strip">
-        <div className="session-copy"><b>Review session</b><span>{reviewerName || 'anonymous'} · {filteredReviewedCount}/{filtered.length} reviewed in current queue · {reviewedCount} approved/corrected, {skippedCount} skipped, {touchedCount} touched overall · {excludedCount} Shahin Mannan excluded from active review</span></div>
+        <div className="session-copy"><b>Review session</b><span>{reviewerName || 'anonymous'} · {filteredReviewedCount}/{filtered.length} reviewed in current queue · {reviewedCount} approved/corrected, {skippedCount} skipped, {touchedCount} touched overall · {excludedCount} lookbook products excluded pending source repair</span></div>
         <div className="progress-wrap"><div className="progress-label"><span>Batch progress</span><b>{progressPct}%</b></div><div className="progress-track"><div style={{ width: `${progressPct}%` }} /></div></div>
         <Badge tone={review.review_status === 'completed' ? 'green' : review.review_status === 'skipped' ? 'amber' : 'red'}>{review.review_status.toUpperCase()}</Badge>
       </section>
 
       {queue === 'image_unresolved' && <section className="queue-banner"><b>Image QA queue</b><span>Only unresolved ambiguous/missing images are shown. Approving selected image removes the product from this queue.</span></section>}
 
-      {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} source products / {activeItems.length} active products · {excludedCount} Shahin Mannan excluded · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · unresolved image issues {unresolvedImageIssues.length} / original {qa.imageIssues.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
+      {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} source products / {activeItems.length} active products · {EXCLUSION_LABEL} · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · unresolved image issues {unresolvedImageIssues.length} / original {qa.imageIssues.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
         <details><summary>Image issues ({unresolvedImageIssues.length} unresolved)</summary><div className="qa-list clickable">{unresolvedImageIssues.slice(0,120).map((i) => <button type="button" key={i.product_id} onClick={() => jumpToProduct(i.product_id)}><b>{i.product_id}</b> · {i.brand} · {i.status} · {i.image_file}<br/><span>{i.message} · candidates: {i.candidates.slice(0,4).join(', ') || 'none'} · click to review</span></button>)}</div>{!unresolvedImageIssues.length && <p className="qa-resolved">All visible image issues are resolved in this browser session.</p>}</details>
         <details><summary>Enum warnings ({qa.invalidEnums.length})</summary><div className="qa-list">{qa.invalidEnums.slice(0,120).map((i, idx) => <div key={`${i.product_id}-${i.attribute}-${idx}`}><b>{i.product_id}</b> · {i.attribute}: {String(i.value)} · <span>{i.warning}</span></div>)}</div></details>
       </section>}
