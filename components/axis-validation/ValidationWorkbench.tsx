@@ -46,6 +46,7 @@ export default function ValidationWorkbench() {
   const [showQa, setShowQa] = useState(false)
   const [showShortcuts, setShowShortcuts] = useState(false)
   const [reviewerName, setReviewerName] = useState('RK')
+  const [saveNotice, setSaveNotice] = useState('')
 
   useEffect(() => {
     loadValidationData().then(({ items, qa }) => {
@@ -120,7 +121,11 @@ export default function ValidationWorkbench() {
   }
   function setDecision(decision: ProductReview['overall_decision']) {
     if (!item || !review) return
-    saveReview({ ...review, overall_decision: decision, review_status: decision === 'skip_for_now' ? 'skipped' : 'completed', reviewed_at: new Date().toISOString() })
+    const status = decision === 'skip_for_now' ? 'skipped' : 'completed'
+    saveReview({ ...review, overall_decision: decision, review_status: status, reviewed_at: new Date().toISOString() })
+    setSaveNotice(`${decision.replaceAll('_', ' ')} saved for ${item.product.product_id}`)
+    window.setTimeout(() => setSaveNotice(''), 1800)
+    window.setTimeout(() => setIndex((i) => Math.min(filtered.length - 1, i + 1)), 260)
   }
   function jumpToProduct(productId: string) {
     const targetIndex = activeItems.findIndex((i) => i.product.product_id === productId)
@@ -239,6 +244,8 @@ export default function ValidationWorkbench() {
         </div>
       </header>
 
+      {saveNotice && <div className="save-notice"><Check size={16}/>{saveNotice} · moving to next</div>}
+
       <section className="toolbar taste-toolbar">
         <input placeholder="Search products, brands, SKUs…" value={query} onChange={(e) => { setQuery(e.target.value); setIndex(0) }} />
         <select value={brand} onChange={(e) => { setBrand(e.target.value); setIndex(0) }}><option value="all">All brands</option>{brands.map((b) => <option key={b}>{b}</option>)}</select>
@@ -285,7 +292,7 @@ export default function ValidationWorkbench() {
         {queue === 'image_unresolved' ? <span className="mode-copy">Image QA mode: approve image mapping in the image panel, or mark no valid candidate. Product approval is intentionally hidden.</span> : <>
           <button className="danger" onClick={() => setDecision('manual_escalation')}>Manual escalation</button>
           <button className="ghost" onClick={() => setDecision('skip_for_now')}>Skip</button>
-          <button className="primary" onClick={() => setDecision('approve')}><Check size={16}/> Approve product</button>
+          <button className="primary" onClick={() => setDecision('approve')}><Check size={16}/> Save + approve product</button>
         </>}
         <button className="ghost" onClick={() => setIndex((i) => Math.min(filtered.length - 1, i + 1))}>Next <ChevronRight size={16}/></button>
       </footer>
@@ -354,7 +361,7 @@ function Meta({ item, image }: { item: ValidationItem; image: any }) {
   const primary = image.src
   const secondary = image.candidates?.[1]?.src
   return <section className="card"><div className="card-title"><h3>Product metadata</h3><Badge tone={item.extraction.product_tier === 'AUTO' ? 'green' : item.extraction.product_tier === 'REVIEW' ? 'amber' : 'red'}>{item.extraction.product_tier}</Badge></div>
-    <div className="meta-grid"><span>Category</span><b>{item.product.category}</b><span>Extracted category</span><b>{item.extraction.hard_attributes.category?.value}</b><span>Confidence</span><b>{item.extraction.confidence ?? '—'}</b><span>Review needed</span><b>{item.extraction.review_needed?.join(', ') || 'None'}</b><span>Manual needed</span><b>{item.extraction.manual_needed?.join(', ') || 'None'}</b><span>Catalog image ref</span><code>{item.product.image_file || '—'}</code><span>Primary image used</span>{primary ? <a href={primary} target="_blank">open primary</a> : <b>—</b>}<span>Secondary candidate</span>{secondary ? <a href={secondary} target="_blank">open secondary</a> : <b>—</b>}</div>
+    <div className="meta-grid"><span>Category</span><b>{item.product.category}</b><span>Extracted category</span><b>{item.extraction.hard_attributes.category?.value}</b><span>Confidence</span><b>{item.extraction.confidence ?? '—'}</b><span>Review needed</span><b>{item.extraction.review_needed?.join(', ') || 'None'}</b><span>Manual needed</span><b>{item.extraction.manual_needed?.join(', ') || 'None'}</b><span>Catalog image ref</span><code>{item.product.image_file || '—'}</code><span>Resolved catalog image</span>{primary ? <a href={primary} target="_blank">open resolved image</a> : <b>—</b>}<span>Secondary candidate</span>{secondary ? <a href={secondary} target="_blank">open secondary</a> : <b>—</b>}</div>
   </section>
 }
 
