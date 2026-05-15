@@ -43,6 +43,7 @@ export type VibeReview = {
   reason: string
 }
 
+export type VibeBoostSuggestion = { vibe_id: VibeId; label: string; reason: string; created_at?: string }
 export type AxisOverride = { axis_id: AxisId; label: string; original_score: number; override_score: number; reason: string; rubric_version?: string }
 export type AttributeReview = { attribute: string; raw_value: any; canonical_suggestion: string | string[] | null; decision: 'unset' | 'accept' | 'accept_normalized' | 'override' | 'needs_review'; override_value: any; reason: string }
 
@@ -60,6 +61,7 @@ export type ProductReview = {
   overall_decision: 'unset' | 'approve' | 'needs_correction' | 'manual_escalation' | 'skip_for_now'
   issue_tags: string[]
   vibe_reviews: VibeReview[]
+  vibe_boost_suggestions?: VibeBoostSuggestion[]
   axis_overrides: AxisOverride[]
   attribute_reviews: AttributeReview[]
   prompt_feedback: { needs_prompt_update: boolean; issue_type: string; note: string }

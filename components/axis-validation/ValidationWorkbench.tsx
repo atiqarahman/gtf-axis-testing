@@ -8,7 +8,7 @@ import { AXIS_RUBRICS, AXIS_RUBRIC_VERSION } from '@/lib/axis-validation/rubric'
 import { loadValidationData, type QaSummary, type ValidationItem } from '@/lib/axis-validation/loadData'
 import { resolveImage } from '@/lib/axis-validation/imageResolver'
 import { confidenceTier, getEnumForAttribute, normalizeValue } from '@/lib/axis-validation/normalization'
-import type { ProductReview, VibeReview } from '@/lib/axis-validation/types'
+import type { ProductReview, VibeBoostSuggestion, VibeReview } from '@/lib/axis-validation/types'
 import './validation.css'
 
 const issueOptions = ['wrong_image','image_mapping_failed','metadata_image_conflict','wrong_category','wrong_vibe','wrong_axis_score','wrong_hard_attribute','glamour_underweighted','glamour_overweighted','cultural_richness_underweighted','body_awareness_wrong','material_uncertain','image_ambiguous','confidence_too_high','auto_false_positive','prompt_issue','taxonomy_issue','manual_review_needed']
@@ -28,6 +28,7 @@ function blankReview(item: ValidationItem): ProductReview {
     overall_decision: 'unset',
     issue_tags: [],
     vibe_reviews: [],
+    vibe_boost_suggestions: [],
     axis_overrides: [],
     attribute_reviews: [],
     prompt_feedback: { needs_prompt_update: false, issue_type: 'none', note: '' },
@@ -111,6 +112,7 @@ export default function ValidationWorkbench() {
   const progressPct = activeItems.length ? Math.round(((reviewedCount + skippedCount) / activeItems.length) * 100) : 0
   const correctionCount = Object.values(reviews).filter((r) => r.overall_decision === 'needs_correction' || r.axis_overrides.length || r.attribute_reviews.length || r.vibe_reviews.some((v) => v.decision === 'disagree')).length
   const vibeDisagreementCount = Object.values(reviews).reduce((sum, r) => sum + r.vibe_reviews.filter((v) => v.decision === 'disagree').length, 0)
+  const vibeBoostCount = Object.values(reviews).reduce((sum, r) => sum + (r.vibe_boost_suggestions ?? []).length, 0)
   const axisOverrideCount = Object.values(reviews).reduce((sum, r) => sum + r.axis_overrides.length, 0)
   const unresolvedImageIssues = qa?.imageIssues.filter((i) => unresolvedImageIssueIds.has(i.product_id)) ?? []
   const imageIssueCount = unresolvedImageIssues.length
@@ -200,6 +202,8 @@ export default function ValidationWorkbench() {
         axis_override_count: r.axis_overrides.length,
         attribute_reviews_json: JSON.stringify(r.attribute_reviews),
         attribute_review_count: r.attribute_reviews.length,
+        vibe_boost_suggestions_json: JSON.stringify(r.vibe_boost_suggestions ?? []),
+        vibe_boost_suggestion_count: (r.vibe_boost_suggestions ?? []).length,
         prompt_needs_update: r.prompt_feedback.needs_prompt_update,
         prompt_issue_type: r.prompt_feedback.issue_type,
         prompt_note: r.prompt_feedback.note,
@@ -238,6 +242,7 @@ export default function ValidationWorkbench() {
           <Metric label="Reviewed" value={reviewedCount} />
           <Metric label="Corrections" value={correctionCount} />
           <Metric label="Vibe disagreements" value={vibeDisagreementCount} />
+          <Metric label="Also-rank-high" value={vibeBoostCount} />
           <Metric label="Axis overrides" value={axisOverrideCount} />
           <Metric label="Image issues" value={imageIssueCount} />
           <Metric label="AUTO false confidence" value={autoFalse} />
@@ -372,7 +377,27 @@ function Decision({ review, saveReview, setDecision }: any) {
 function VibePanel({ item, review, saveReview }: { item: ValidationItem; review: ProductReview; saveReview: (r: ProductReview) => void }) {
   const computed = Object.entries(item.extraction.all_vibe_scores).sort((a,b) => b[1].score - a[1].score).slice(0, 12).map(([label, obj]) => ({ label, score: obj.score, source: 'computed' as const }))
   const gpt = (item.extraction.gpt_suggested_vibes ?? []).map((label) => ({ label, score: undefined, source: 'gpt' as const }))
-  return <section className="card vibe-card"><div className="section-kicker">AI style alignment</div><h3>Suggested vibe validation</h3><p className="hint">Computed vector vibes and GPT suggestions are separate. Agree when the taste feels right; disagree with a canonical correction and stylist note.</p><div className="vibe-list">{[...computed.slice(0,3), ...gpt].map((v, idx) => <VibeRow key={`${v.source}-${v.label}-${idx}`} vibe={v} review={review} saveReview={saveReview} />)}</div><details><summary>Show all 12 computed vibe scores</summary>{computed.map((v) => <div key={v.label} className="score-row"><span>{v.label}</span><progress max={100} value={v.score}/><b>{v.score.toFixed(1)}</b></div>)}</details></section>
+  return <section className="card vibe-card"><div className="section-kicker">AI style alignment</div><h3>Suggested vibe validation</h3><p className="hint">Computed vector vibes and GPT suggestions are separate. Agree when the taste feels right; disagree only when the vibe is wrong. Use “Should also rank high” when another vibe deserves a boost without marking the current vibe wrong.</p><div className="vibe-list">{[...computed.slice(0,3), ...gpt].map((v, idx) => <VibeRow key={`${v.source}-${v.label}-${idx}`} vibe={v} review={review} saveReview={saveReview} />)}</div><VibeBoostPanel review={review} saveReview={saveReview}/><details><summary>Show all 12 computed vibe scores</summary>{computed.map((v) => <div key={v.label} className="score-row"><span>{v.label}</span><progress max={100} value={v.score}/><b>{v.score.toFixed(1)}</b></div>)}</details></section>
+}
+
+
+function VibeBoostPanel({ review, saveReview }: { review: ProductReview; saveReview: (r: ProductReview) => void }) {
+  const boosts = review.vibe_boost_suggestions ?? []
+  const addBoost = () => {
+    const firstUnused = VIBES.find((v) => !boosts.some((b) => b.vibe_id === v.id)) ?? VIBES[0]
+    const next: VibeBoostSuggestion = { vibe_id: firstUnused.id, label: firstUnused.label, reason: '', created_at: new Date().toISOString() }
+    saveReview({ ...review, vibe_boost_suggestions: [...boosts, next] })
+  }
+  const updateBoost = (idx: number, patch: Partial<VibeBoostSuggestion>) => {
+    const next = boosts.map((b, i) => {
+      if (i !== idx) return b
+      const vibe = patch.vibe_id ? VIBES.find((v) => v.id === patch.vibe_id) : undefined
+      return { ...b, ...patch, label: vibe?.label ?? patch.label ?? b.label }
+    })
+    saveReview({ ...review, vibe_boost_suggestions: next })
+  }
+  const removeBoost = (idx: number) => saveReview({ ...review, vibe_boost_suggestions: boosts.filter((_, i) => i !== idx) })
+  return <div className="vibe-boost-box"><div className="boost-head"><div><b>Should also rank high for…</b><p>This is calibration signal: the shown vibe can be right, while another canonical vibe should score closer/higher.</p></div><button className="ghost soft-action" onClick={addBoost}>Add vibe boost</button></div>{boosts.map((boost, idx) => <div className="boost-row" key={`${boost.vibe_id}-${idx}`}><select value={boost.vibe_id} onChange={(e) => updateBoost(idx, { vibe_id: e.target.value as VibeId })}>{VIBES.map((v) => <option key={v.id} value={v.id}>{v.label}</option>)}</select><input placeholder="Why should it also rank high?" value={boost.reason} onChange={(e) => updateBoost(idx, { reason: e.target.value })}/><button className="ghost" onClick={() => removeBoost(idx)}>Remove</button></div>)}</div>
 }
 
 function VibeRow({ vibe, review, saveReview }: any) {
