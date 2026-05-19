@@ -1,0 +1,492 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://getthefit.local/schemas/gtf-extraction-v8.2.json",
+  "title": "GTF Extraction Output v8.2",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "product_id",
+    "schema_version",
+    "extraction_status",
+    "brand_category",
+    "hard_attributes",
+    "axis_scores",
+    "is_multi_piece",
+    "components",
+    "search_terms",
+    "reasoning_trace",
+    "meta"
+  ],
+  "properties": {
+    "product_id": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "8.2"
+    },
+    "extraction_status": {
+      "type": "string",
+      "enum": [
+        "ok",
+        "blocked_missing_brand_category",
+        "blocked_source_truth_not_approved",
+        "category_not_visible",
+        "component_not_visible",
+        "manual_review_required"
+      ]
+    },
+    "brand_category": {
+      "type": "string",
+      "description": "Brand/category metadata supplied with request; target garment scope."
+    },
+    "target_scope": {
+      "type": "string",
+      "enum": [
+        "single_garment",
+        "multi_piece_product",
+        "text_query",
+        "inspo"
+      ]
+    },
+    "source_truth": {
+      "type": "object",
+      "required": [
+        "run_id",
+        "review_status",
+        "final_primary_image",
+        "final_secondary_image"
+      ],
+      "properties": {
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "approved",
+            "manual_fix",
+            "sent_to_review",
+            "skipped",
+            "unknown"
+          ]
+        },
+        "final_primary_image": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "final_secondary_image": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "hard_attributes": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "$ref": "#/$defs/confidentString"
+        },
+        "primary_color": {
+          "$ref": "#/$defs/confidentString"
+        },
+        "secondary_color": {
+          "$ref": "#/$defs/confidentStringOrNone"
+        },
+        "material_primary": {
+          "$ref": "#/$defs/confidentString"
+        },
+        "material_secondary": {
+          "$ref": "#/$defs/confidentStringOrNone"
+        },
+        "material_source": {
+          "type": "string",
+          "enum": [
+            "brand-provided",
+            "image-extracted",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "silhouette": {
+          "$ref": "#/$defs/confidentString"
+        },
+        "length": {
+          "$ref": "#/$defs/confidentStringOrNone"
+        },
+        "neckline": {
+          "$ref": "#/$defs/confidentStringOrNone"
+        },
+        "sleeve_length": {
+          "$ref": "#/$defs/confidentStringOrNone"
+        },
+        "pattern": {
+          "$ref": "#/$defs/confidentString"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/confidentString"
+          },
+          "maxItems": 6
+        },
+        "price_tier": {
+          "$ref": "#/$defs/confidentString"
+        }
+      },
+      "additionalProperties": true
+    },
+    "axis_scores": {
+      "type": "object",
+      "patternProperties": {
+        "^(minimalism|polish|body_awareness|drama|novelty|craft|boldness|glamour|trend_currency|styling_affordance|cultural_richness)$": {
+          "type": "object",
+          "required": [
+            "score",
+            "reasoning"
+          ],
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "reasoning": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "is_multi_piece": {
+      "type": "boolean"
+    },
+    "component_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/component"
+      }
+    },
+    "search_terms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 2
+      },
+      "uniqueItems": true
+    },
+    "metadata_image_conflict": {
+      "type": "object",
+      "properties": {
+        "has_conflict": {
+          "type": "boolean"
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "metadata_claim": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "visual_evidence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "recommended_action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "soft_attributes": {
+      "type": "object"
+    },
+    "reasoning_trace": {
+      "type": "object"
+    },
+    "meta": {
+      "type": "object",
+      "required": [
+        "mode",
+        "confidence",
+        "schema_version",
+        "prompt_guard_version"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "catalog",
+            "inspo",
+            "text_query"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "blocked"
+          ]
+        },
+        "schema_version": {
+          "const": "8.2"
+        },
+        "prompt_guard_version": {
+          "const": "v8.2-brand-category-components-search"
+        },
+        "extraction_notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "extraction_status": {
+            "const": "ok"
+          }
+        },
+        "required": [
+          "extraction_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "hard_attributes": {
+            "required": [
+              "category",
+              "primary_color",
+              "material_primary",
+              "silhouette",
+              "length",
+              "neckline",
+              "sleeve_length",
+              "pattern",
+              "details"
+            ]
+          },
+          "axis_scores": {
+            "required": [
+              "minimalism",
+              "polish",
+              "body_awareness",
+              "drama",
+              "novelty",
+              "craft",
+              "boldness",
+              "glamour",
+              "trend_currency",
+              "styling_affordance",
+              "cultural_richness"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "is_multi_piece": {
+            "const": true
+          }
+        },
+        "required": [
+          "is_multi_piece"
+        ]
+      },
+      "then": {
+        "properties": {
+          "component_count": {
+            "minimum": 2
+          }
+        },
+        "required": [
+          "component_count",
+          "components"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "is_multi_piece": {
+            "const": false
+          }
+        },
+        "required": [
+          "is_multi_piece"
+        ]
+      },
+      "then": {
+        "properties": {
+          "component_count": {
+            "const": 0
+          },
+          "components": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "confidentString": {
+      "type": "object",
+      "required": [
+        "value",
+        "confidence"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        }
+      },
+      "additionalProperties": false
+    },
+    "confidentStringOrNone": {
+      "type": "object",
+      "required": [
+        "value",
+        "confidence"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        }
+      },
+      "additionalProperties": false
+    },
+    "component": {
+      "type": "object",
+      "required": [
+        "component_index",
+        "piece_type",
+        "role",
+        "attributes",
+        "confidence"
+      ],
+      "properties": {
+        "component_index": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "piece_type": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "top",
+            "bottom",
+            "outerwear",
+            "one_piece",
+            "accessory",
+            "layer",
+            "unknown"
+          ]
+        },
+        "attributes": {
+          "$ref": "#/$defs/componentAttributes"
+        },
+        "visibility": {
+          "type": "string",
+          "enum": [
+            "visible",
+            "partially_visible",
+            "not_visible",
+            "inferred_from_name"
+          ]
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        }
+      },
+      "additionalProperties": true
+    },
+    "componentAttributes": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "$ref": "#/$defs/confidentString"
+        },
+        "primary_color": {
+          "$ref": "#/$defs/confidentString"
+        },
+        "secondary_color": {
+          "$ref": "#/$defs/confidentStringOrNone"
+        },
+        "material_primary": {
+          "$ref": "#/$defs/confidentString"
+        },
+        "material_secondary": {
+          "$ref": "#/$defs/confidentStringOrNone"
+        },
+        "silhouette": {
+          "$ref": "#/$defs/confidentString"
+        },
+        "length": {
+          "$ref": "#/$defs/confidentStringOrNone"
+        },
+        "neckline": {
+          "$ref": "#/$defs/confidentStringOrNone"
+        },
+        "sleeve_length": {
+          "$ref": "#/$defs/confidentStringOrNone"
+        },
+        "pattern": {
+          "$ref": "#/$defs/confidentString"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/confidentString"
+          },
+          "maxItems": 6
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

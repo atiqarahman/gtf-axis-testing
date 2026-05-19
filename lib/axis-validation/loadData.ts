@@ -14,15 +14,32 @@ export type QaSummary = {
   missingAxes: number
   invalidVibes: number
   missingVibeScores: number
+  v82Ready: number
+  multiPieceExtractions: number
+  missingBrandCategory: string[]
   imageStatusCounts: Record<string, number>
   imageIssues: { product_id: string; brand: string; image_file: string; status: string; message?: string; candidates: string[] }[]
   invalidEnums: { product_id: string; attribute: string; value: any; warning?: string }[]
 }
 
+async function fetchJson<T>(paths: string[]): Promise<T> {
+  let lastError: unknown
+  for (const path of paths) {
+    try {
+      const response = await fetch(path)
+      if (response.ok) return response.json() as Promise<T>
+      lastError = new Error(`${path} returned ${response.status}`)
+    } catch (error) {
+      lastError = error
+    }
+  }
+  throw lastError
+}
+
 export async function loadValidationData(): Promise<{ items: ValidationItem[]; qa: QaSummary }> {
   const [products, extractions] = await Promise.all([
     fetch('/data/products.json').then((r) => r.json()) as Promise<Product[]>,
-    fetch('/data/extractions_v8_1.json').then((r) => r.json()) as Promise<Extraction[]>,
+    fetchJson<Extraction[]>(['/data/extractions_v8_2.json', '/data/extractions_v8.2.json', '/data/extractions_v8_1.json']),
   ])
   const productIds = products.map((p) => p.product_id)
   const extractionIds = extractions.map((e) => e.product_id)
@@ -35,6 +52,9 @@ export async function loadValidationData(): Promise<{ items: ValidationItem[]; q
   let missingAxes = 0
   let invalidVibes = 0
   let missingVibeScores = 0
+  let v82Ready = 0
+  let multiPieceExtractions = 0
+  const missingBrandCategory: string[] = []
   const imageStatusCounts: Record<string, number> = { ok: 0, url: 0, ambiguous: 0, missing: 0 }
   const imageIssues: QaSummary['imageIssues'] = []
   const invalidEnums: QaSummary['invalidEnums'] = []
@@ -48,6 +68,9 @@ export async function loadValidationData(): Promise<{ items: ValidationItem[]; q
   }
 
   for (const e of extractions) {
+    if (e.brand_category || e.components?.length || e.search_terms?.length || e.schema_version?.includes('8.2')) v82Ready++
+    if (e.is_multi_piece || (e.components?.length ?? 0) > 0) multiPieceExtractions++
+    if (!e.brand_category) missingBrandCategory.push(e.product_id)
     for (const axis of AXES) {
       const score = e.axis_scores?.[axis.id]?.score
       if (score == null) missingAxes++
@@ -73,5 +96,5 @@ export async function loadValidationData(): Promise<{ items: ValidationItem[]; q
   }
 
   const items = products.filter((p) => extractionMap.has(p.product_id)).map((product) => ({ product, extraction: extractionMap.get(product.product_id)! }))
-  return { items, qa: { totalProducts: products.length, totalExtractions: extractions.length, duplicateProducts, missingExtractions, missingProducts, invalidAxisScores, missingAxes, invalidVibes, missingVibeScores, imageStatusCounts, imageIssues, invalidEnums } }
+  return { items, qa: { totalProducts: products.length, totalExtractions: extractions.length, duplicateProducts, missingExtractions, missingProducts, invalidAxisScores, missingAxes, invalidVibes, missingVibeScores, v82Ready, multiPieceExtractions, missingBrandCategory, imageStatusCounts, imageIssues, invalidEnums } }
 }

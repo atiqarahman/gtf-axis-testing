@@ -8,7 +8,7 @@ import { AXIS_RUBRICS, AXIS_RUBRIC_VERSION } from '@/lib/axis-validation/rubric'
 import { loadValidationData, type QaSummary, type ValidationItem } from '@/lib/axis-validation/loadData'
 import { resolveImage } from '@/lib/axis-validation/imageResolver'
 import { confidenceTier, getEnumForAttribute, normalizeValue } from '@/lib/axis-validation/normalization'
-import type { ProductReview, VibeBoostSuggestion, VibeReview } from '@/lib/axis-validation/types'
+import type { ComponentReview, ExtractionComponent, ProductReview, SearchMatchReason, VibeBoostSuggestion, VibeReview } from '@/lib/axis-validation/types'
 import './validation.css'
 
 const issueOptions = ['wrong_image','image_mapping_failed','metadata_image_conflict','wrong_category','wrong_vibe','wrong_axis_score','wrong_hard_attribute','glamour_underweighted','glamour_overweighted','cultural_richness_underweighted','body_awareness_wrong','material_uncertain','image_ambiguous','confidence_too_high','auto_false_positive','prompt_issue','taxonomy_issue','manual_review_needed']
@@ -31,6 +31,7 @@ function blankReview(item: ValidationItem): ProductReview {
     vibe_boost_suggestions: [],
     axis_overrides: [],
     attribute_reviews: [],
+    component_reviews: [],
     prompt_feedback: { needs_prompt_update: false, issue_type: 'none', note: '' },
   }
 }
@@ -147,6 +148,12 @@ export default function ValidationWorkbench() {
       title: source?.product.title ?? '',
       product_category: source?.product.category ?? '',
       extraction_category: source?.extraction.hard_attributes.category?.value ?? '',
+      brand_category: source?.extraction.brand_category ?? source?.product.category ?? '',
+      is_multi_piece: source?.extraction.is_multi_piece ?? ((source?.extraction.components?.length ?? 0) > 1),
+      component_count: source?.extraction.component_count ?? source?.extraction.components?.length ?? 0,
+      components: source?.extraction.components ?? [],
+      search_terms: source?.extraction.search_terms ?? [],
+      component_reviews: r.component_reviews ?? [],
       product_tier: source?.extraction.product_tier ?? '',
       price: source?.product.price ?? null,
       currency: source?.product.currency ?? null,
@@ -181,6 +188,12 @@ export default function ValidationWorkbench() {
         title: source?.product.title ?? '',
         product_category: source?.product.category ?? '',
         extraction_category: source?.extraction.hard_attributes.category?.value ?? '',
+        brand_category: source?.extraction.brand_category ?? source?.product.category ?? '',
+        is_multi_piece: source?.extraction.is_multi_piece ?? ((source?.extraction.components?.length ?? 0) > 1),
+        component_count: source?.extraction.component_count ?? source?.extraction.components?.length ?? 0,
+        components_json: JSON.stringify(source?.extraction.components ?? []),
+        search_terms: (source?.extraction.search_terms ?? []).join('|'),
+        component_reviews_json: JSON.stringify(r.component_reviews ?? []),
         product_tier: source?.extraction.product_tier ?? '',
         product_image_file: source?.product.image_file ?? '',
         resolved_primary_image_path: source ? resolveImage(source.product).src ?? '' : '',
@@ -232,10 +245,10 @@ export default function ValidationWorkbench() {
     <main className="workbench">
       <header className="topbar">
         <div>
-          <div className="brand-lockup"><span className="gtf-logo">GTF</span><span className="lab-pill">Taste Lab</span></div>
-          <p className="eyebrow">Task 3 · Axis Validation Studio</p>
+          <div className="brand-lockup"><span className="gtf-logo">GTF</span><span className="lab-pill">Taste Lab v2</span></div>
+          <p className="eyebrow">v8.2 · Category Context + Component Extraction Studio</p>
           <h1>Calibrate GTF’s Taste Engine</h1>
-          <p className="subtitle">Review GPT’s fashion judgment against expert taste — product image, vibe logic, axis scores, and correction notes in one studio.</p>
+          <p className="subtitle">Review brand category, v8.2 component extraction, search terms, match reasons, Variant C image readiness, vibe logic, and correction notes in one studio.</p>
         </div>
         <div className="metrics expanded">
           <Metric label="Active products" value={activeItems.length} />
@@ -245,7 +258,7 @@ export default function ValidationWorkbench() {
           <Metric label="Also-rank-high" value={vibeBoostCount} />
           <Metric label="Axis overrides" value={axisOverrideCount} />
           <Metric label="Image issues" value={imageIssueCount} />
-          <Metric label="AUTO false confidence" value={autoFalse} />
+          <Metric label="v8.2 ready" value={qa?.v82Ready ?? 0} />
         </div>
       </header>
 
@@ -273,8 +286,9 @@ export default function ValidationWorkbench() {
 
       {queue === 'image_failed' && <section className="queue-banner danger-banner"><b>Manual image fix queue</b><span>These products have no valid local image candidate. Do not validate attributes, axes, or vibes until source image mapping is repaired.</span></section>}
 
-      {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} source products / {activeItems.length} active products · {EXCLUSION_LABEL} · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · unresolved image issues {unresolvedImageIssues.length} / original {qa.imageIssues.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
+      {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} source products / {activeItems.length} active products · {EXCLUSION_LABEL} · v8.2 ready {qa.v82Ready}/{qa.totalExtractions} · multi-piece {qa.multiPieceExtractions} · missing brand_category {qa.missingBrandCategory.length} · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · unresolved image issues {unresolvedImageIssues.length} / original {qa.imageIssues.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
         <details><summary>Image issues ({unresolvedImageIssues.length} unresolved)</summary><div className="qa-list clickable">{unresolvedImageIssues.slice(0,120).map((i) => <button type="button" key={i.product_id} onClick={() => jumpToProduct(i.product_id)}><b>{i.product_id}</b> · {i.brand} · {i.status} · {i.image_file}<br/><span>{i.message} · candidates: {i.candidates.slice(0,4).join(', ') || 'none'} · click to review</span></button>)}</div>{!unresolvedImageIssues.length && <p className="qa-resolved">All visible image issues are resolved in this browser session.</p>}</details>
+        <details><summary>Missing brand_category ({qa.missingBrandCategory.length})</summary><div className="qa-list">{qa.missingBrandCategory.slice(0,160).map((id) => <div key={id}><b>{id}</b> · v8.2 extraction should include brand_category before acceptance use.</div>)}</div></details>
         <details><summary>Enum warnings ({qa.invalidEnums.length})</summary><div className="qa-list">{qa.invalidEnums.slice(0,120).map((i, idx) => <div key={`${i.product_id}-${i.attribute}-${idx}`}><b>{i.product_id}</b> · {i.attribute}: {String(i.value)} · <span>{i.warning}</span></div>)}</div></details>
       </section>}
 
@@ -284,6 +298,8 @@ export default function ValidationWorkbench() {
         <ProductImage item={item} image={image} review={review} saveReview={saveReview} reviewerName={reviewerName} queue={queue} onAdvance={() => setIndex((i) => Math.min(filtered.length - 1, i + 1))} position={`${Math.min(index + 1, filtered.length)} / ${filtered.length}`} />
         <div className="review-panel">
           <Meta item={item} image={image} />
+          <V82ExtractionPanel item={item} review={review} saveReview={saveReview} />
+          <SearchLabPanel item={item} />
           <Decision review={review} saveReview={saveReview} setDecision={setDecision} />
           <VibePanel item={item} review={review} saveReview={saveReview} />
           <AxisPanel item={item} review={review} saveReview={saveReview} radar={radar} />
@@ -366,8 +382,76 @@ function Meta({ item, image }: { item: ValidationItem; image: any }) {
   const primary = image.src
   const secondary = image.candidates?.[1]?.src
   return <section className="card"><div className="card-title"><h3>Product metadata</h3><Badge tone={item.extraction.product_tier === 'AUTO' ? 'green' : item.extraction.product_tier === 'REVIEW' ? 'amber' : 'red'}>{item.extraction.product_tier}</Badge></div>
-    <div className="meta-grid"><span>Category</span><b>{item.product.category}</b><span>Extracted category</span><b>{item.extraction.hard_attributes.category?.value}</b><span>Confidence</span><b>{item.extraction.confidence ?? '—'}</b><span>Review needed</span><b>{item.extraction.review_needed?.join(', ') || 'None'}</b><span>Manual needed</span><b>{item.extraction.manual_needed?.join(', ') || 'None'}</b><span>Catalog image ref</span><code>{item.product.image_file || '—'}</code><span>Resolved catalog image</span>{primary ? <a href={primary} target="_blank">open resolved image</a> : <b>—</b>}<span>Secondary candidate</span>{secondary ? <a href={secondary} target="_blank">open secondary</a> : <b>—</b>}</div>
+    <div className="meta-grid"><span>Catalog category</span><b>{item.product.category}</b><span>Brand category</span><b>{item.extraction.brand_category ?? item.product.category ?? '—'}</b><span>Extracted category</span><b>{item.extraction.hard_attributes.category?.value}</b><span>Schema</span><b>{item.extraction.schema_version}</b><span>Confidence</span><b>{item.extraction.confidence ?? '—'}</b><span>Review needed</span><b>{item.extraction.review_needed?.join(', ') || 'None'}</b><span>Manual needed</span><b>{item.extraction.manual_needed?.join(', ') || 'None'}</b><span>Catalog image ref</span><code>{item.product.image_file || '—'}</code><span>Resolved catalog image</span>{primary ? <a href={primary} target="_blank">open resolved image</a> : <b>—</b>}<span>Secondary candidate</span>{secondary ? <a href={secondary} target="_blank">open secondary</a> : <b>—</b>}</div>
   </section>
+}
+
+function componentValue(component: ExtractionComponent, key: string) {
+  const direct = (component as any)[key]
+  const nested = component.attributes?.[key]
+  const value = direct ?? nested
+  if (Array.isArray(value)) return value.map((v) => typeof v === 'object' ? v?.value ?? JSON.stringify(v) : v).join(', ')
+  if (value && typeof value === 'object') return value.value ?? JSON.stringify(value)
+  return value ?? '—'
+}
+
+function V82ExtractionPanel({ item, review, saveReview }: { item: ValidationItem; review: ProductReview; saveReview: (r: ProductReview) => void }) {
+  const extraction = item.extraction
+  const components = extraction.components ?? []
+  const isV82Ready = Boolean(extraction.brand_category || components.length || extraction.search_terms?.length || extraction.schema_version?.includes('8.2'))
+  const updateComponentReview = (component: ExtractionComponent, patch: Partial<ComponentReview>) => {
+    const existingReviews = review.component_reviews ?? []
+    const current = existingReviews.find((r) => r.component_index === component.component_index)
+    const nextReview: ComponentReview = {
+      component_index: component.component_index,
+      piece_type: component.piece_type,
+      decision: 'unset',
+      reason: '',
+      ...current,
+      ...patch,
+    }
+    saveReview({ ...review, component_reviews: [...existingReviews.filter((r) => r.component_index !== component.component_index), nextReview] })
+  }
+  return <section className="card v82-card"><div className="section-kicker">v8.2 extraction shape</div><div className="card-title"><h3>Brand category + components</h3><Badge tone={isV82Ready ? 'green' : 'red'}>{isV82Ready ? 'V8.2 SIGNALS PRESENT' : 'V8.1 / MISSING V8.2'}</Badge></div>
+    <div className="v82-summary"><div><span>brand_category</span><b>{extraction.brand_category ?? item.product.category ?? '—'}</b></div><div><span>is_multi_piece</span><b>{String(extraction.is_multi_piece ?? components.length > 1)}</b></div><div><span>component_count</span><b>{extraction.component_count ?? components.length}</b></div><div><span>search_terms</span><b>{extraction.search_terms?.length ?? 0}</b></div></div>
+    {!extraction.brand_category && <p className="v82-warning">Blocked for acceptance: v8.2 requires brand_category so shared-image separates focus the target garment instead of the visually dominant garment.</p>}
+    {extraction.extraction_error && <p className="v82-warning">Extraction error: <code>{extraction.extraction_error}</code></p>}
+    {extraction.metadata_image_conflict?.has_conflict && <div className="conflict-box"><b>Metadata/image conflict</b><p>{extraction.metadata_image_conflict.visual_evidence ?? 'Conflict flagged; route to manual review.'}</p><small>{extraction.metadata_image_conflict.recommended_action}</small></div>}
+    {components.length ? <div className="component-list">{components.map((component) => {
+      const existing = (review.component_reviews ?? []).find((r) => r.component_index === component.component_index)
+      return <div className="component-card" key={`${component.component_index}-${component.piece_type}`}><div className="component-head"><div><b>#{component.component_index} · {component.piece_type}</b><span>{component.role ?? 'component'}</span></div><select value={existing?.decision ?? 'unset'} onChange={(e) => updateComponentReview(component, { decision: e.target.value as ComponentReview['decision'] })}><option value="unset">unset</option><option value="accept">accept</option><option value="needs_correction">needs correction</option><option value="not_visible">not visible</option><option value="manual_review">manual review</option></select></div><div className="component-attrs">{['primary_color','material','material_primary','silhouette','length','neckline','sleeve_length','pattern','details'].map((key) => <div key={key}><span>{key}</span><b>{componentValue(component, key)}</b></div>)}</div>{existing?.decision === 'needs_correction' && <input placeholder="Correct piece type, e.g. bralette not blouse" value={existing.corrected_piece_type ?? ''} onChange={(e) => updateComponentReview(component, { corrected_piece_type: e.target.value })}/>}<textarea placeholder="Component-level review note: visible evidence, missing piece, wrong target, etc." value={existing?.reason ?? ''} onChange={(e) => updateComponentReview(component, { reason: e.target.value })}/></div>
+    })}</div> : <p className="hint">No components[] present yet. For set/co-ord/pantsuit products, v8.2 must add per-piece records before Taste Lab acceptance.</p>}
+    {(extraction.search_terms ?? []).length > 0 && <div className="search-terms"><b>Search terms</b><div>{extraction.search_terms!.map((term) => <span key={term}>{term}</span>)}</div></div>}
+  </section>
+}
+
+function findSearchMatches(item: ValidationItem, query: string): SearchMatchReason[] {
+  const q = query.toLowerCase().trim()
+  if (!q) return []
+  const extraction = item.extraction
+  const matches: SearchMatchReason[] = []
+  const add = (source: SearchMatchReason['source'], field: string, value: unknown, component?: ExtractionComponent) => {
+    const text = String(value ?? '').toLowerCase()
+    if (text.includes(q)) matches.push({ source, field, value: String(value), component_index: component?.component_index, piece_type: component?.piece_type })
+  }
+  add('top_level_category', 'brand_category', extraction.brand_category ?? item.product.category)
+  add('top_level_category', 'hard_attributes.category', extraction.hard_attributes.category?.value)
+  for (const component of extraction.components ?? []) {
+    add('component_piece_type', 'piece_type', component.piece_type, component)
+    for (const [field, raw] of Object.entries({ ...component.attributes, ...component })) {
+      if (['component_index','piece_type','role','attributes'].includes(field)) continue
+      add('component_attribute', field, Array.isArray(raw) ? raw.join(', ') : typeof raw === 'object' && raw ? (raw as any).value ?? JSON.stringify(raw) : raw, component)
+    }
+  }
+  for (const term of extraction.search_terms ?? []) add('search_term', 'search_terms[]', term)
+  return matches
+}
+
+function SearchLabPanel({ item }: { item: ValidationItem }) {
+  const [searchQuery, setSearchQuery] = useState('')
+  const exampleQuery = item.extraction.components?.[0]?.piece_type ?? item.extraction.search_terms?.[0] ?? item.extraction.brand_category ?? item.product.category
+  const matches = findSearchMatches(item, searchQuery)
+  return <section className="card search-lab-card"><div className="section-kicker">Search Lab</div><h3>Match reason debugger</h3><p className="hint">Tests whether search can explain why a result matched: top-level category, component piece_type, component attribute, or search term.</p><div className="search-lab-input"><input placeholder={`Try “${exampleQuery}”`} value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} /><button className="ghost soft-action" onClick={() => setSearchQuery(exampleQuery)}>Use example</button></div>{searchQuery && <div className="match-list">{matches.length ? matches.map((match, idx) => <div key={`${match.source}-${match.field}-${idx}`}><Badge tone={match.source === 'search_term' ? 'green' : match.source.startsWith('component') ? 'amber' : 'red'}>{match.source.replaceAll('_',' ')}</Badge><b>{match.field}</b><span>{match.component_index ? `Component #${match.component_index} · ${match.piece_type}` : 'Top-level product'}</span><code>{match.value}</code></div>) : <p className="v82-warning">No match. If this is a sellable phrase, add it to search_terms[] or component attributes.</p>}</div>}</section>
 }
 
 function Decision({ review, saveReview, setDecision }: any) {
@@ -490,6 +574,6 @@ function AttributeRow({ attr, item, review, saveReview }: any) {
   return <div className="attr-row"><span>{attr}</span><b>{rawValue}</b><Badge tone={confidenceTier(conf) === 'AUTO' ? 'green' : confidenceTier(conf) === 'REVIEW' ? 'amber' : 'red'}>{conf ?? '—'}</Badge><em className={norm.valid ? 'ok' : 'warn'}>{displayCanonical(norm.canonical) ?? norm.warning}</em><select value={existing?.decision ?? 'unset'} onChange={(e) => update({ decision: e.target.value })}><option value="unset">unset</option><option value="accept">accept raw</option><option value="accept_normalized">accept normalized</option><option value="override">override</option><option value="needs_review">needs review</option></select>{existing?.decision === 'override' && enums && (attr === 'details' ? <select multiple value={existing.override_value ?? []} onChange={(e) => update({ override_value: Array.from(e.currentTarget.selectedOptions).map((o) => o.value) })}>{enums.map((v) => <option key={v}>{v}</option>)}</select> : <select value={existing.override_value ?? ''} onChange={(e) => update({ override_value: e.target.value })}><option value="">Choose canonical</option>{enums.map((v) => <option key={v}>{v}</option>)}</select>)}<input placeholder="note" value={existing?.reason ?? ''} onChange={(e) => update({ reason: e.target.value })}/></div>
 }
 
-function Reasoning({ item, review, saveReview }: any) { const trace = item.extraction.reasoning_trace ?? {}; return <section className="card reasoning-card"><div className="sparkle-badge">✦</div><div className="section-kicker">Stylist reasoning</div><h3>Reasoning trace + prompt feedback</h3>{Object.entries(trace).map(([k,v]) => <details key={k}><summary>{k}</summary><p>{Array.isArray(v) ? v.join('; ') : String(v)}</p></details>)}<details open><summary>v8.2 structural prompt guard</summary><p>Treat product title, category, and filename as weak metadata hints only. The product image is the source of truth. If metadata contradicts visible evidence, trust the image and flag <code>metadata_image_conflict</code> instead of forcing category/vibe to match the title.</p></details><div className="prompt-feedback"><label><input type="checkbox" checked={review.prompt_feedback.needs_prompt_update} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, needs_prompt_update: e.target.checked } })}/> Prompt/scoring issue?</label><select value={review.prompt_feedback.issue_type} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, issue_type: e.target.value } })}>{feedbackTypes.map((t) => <option key={t}>{t}</option>)}</select><textarea className="stylist-note" placeholder="What should v8.2 learn from this? If metadata conflicts with image evidence, note metadata_image_conflict and the visible proof." value={review.prompt_feedback.note} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, note: e.target.value } })}/></div></section> }
+function Reasoning({ item, review, saveReview }: any) { const trace = item.extraction.reasoning_trace ?? {}; return <section className="card reasoning-card"><div className="sparkle-badge">✦</div><div className="section-kicker">Stylist reasoning</div><h3>Reasoning trace + prompt feedback</h3>{Object.entries(trace).map(([k,v]) => <details key={k}><summary>{k}</summary><p>{Array.isArray(v) ? v.join('; ') : String(v)}</p></details>)}<details open><summary>v8.2 structural prompt guard</summary><p><code>brand_category</code> defines the target garment scope; reviewed images define visual evidence. If the target category or named component is not visible, flag <code>metadata_image_conflict</code> / manual review instead of extracting the visually dominant non-target garment.</p></details><div className="prompt-feedback"><label><input type="checkbox" checked={review.prompt_feedback.needs_prompt_update} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, needs_prompt_update: e.target.checked } })}/> Prompt/scoring issue?</label><select value={review.prompt_feedback.issue_type} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, issue_type: e.target.value } })}>{feedbackTypes.map((t) => <option key={t}>{t}</option>)}</select><textarea className="stylist-note" placeholder="What should v8.2 learn from this? If metadata conflicts with image evidence, note metadata_image_conflict and the visible proof." value={review.prompt_feedback.note} onChange={(e) => saveReview({ ...review, prompt_feedback: { ...review.prompt_feedback, note: e.target.value } })}/></div></section> }
 
 function Badge({ children, tone = 'green' }: { children: React.ReactNode; tone?: 'green' | 'amber' | 'red' }) { return <span className={`badge ${tone}`}>{children}</span> }

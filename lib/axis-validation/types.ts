@@ -10,10 +10,51 @@ export type Product = {
   currency: string | null
 }
 
+export type ExtractionComponent = {
+  component_index: number
+  piece_type: string
+  role?: string
+  silhouette?: string
+  length?: string
+  neckline?: string
+  sleeve_length?: string
+  material?: string
+  material_primary?: string
+  primary_color?: string
+  secondary_color?: string
+  pattern?: string
+  details?: string[] | string
+  confidence?: number
+  attributes?: Record<string, any>
+}
+
+export type MetadataImageConflict = {
+  has_conflict: boolean
+  fields?: string[]
+  metadata_claim?: string
+  visual_evidence?: string
+  recommended_action?: string
+}
+
+export type SearchMatchReason = {
+  source: 'top_level_category' | 'component_piece_type' | 'component_attribute' | 'search_term'
+  field: string
+  value: string
+  component_index?: number
+  piece_type?: string
+}
+
 export type Extraction = {
   product_id: string
   schema_version: string
   extraction_timestamp?: string
+  brand_category?: string
+  is_multi_piece?: boolean
+  component_count?: number
+  components?: ExtractionComponent[]
+  search_terms?: string[]
+  extraction_error?: string
+  metadata_image_conflict?: MetadataImageConflict
   hard_attributes: Record<string, any>
   axis_scores: Record<AxisId, { score: number; reasoning: string }>
   styling_leverage?: { score: number; reasoning: string }
@@ -46,6 +87,7 @@ export type VibeReview = {
 export type VibeBoostSuggestion = { vibe_id: VibeId; label: string; reason: string; created_at?: string }
 export type AxisOverride = { axis_id: AxisId; label: string; original_score: number; override_score: number; reason: string; rubric_version?: string }
 export type AttributeReview = { attribute: string; raw_value: any; canonical_suggestion: string | string[] | null; decision: 'unset' | 'accept' | 'accept_normalized' | 'override' | 'needs_review'; override_value: any; reason: string }
+export type ComponentReview = { component_index: number; piece_type: string; decision: 'unset' | 'accept' | 'needs_correction' | 'not_visible' | 'manual_review'; corrected_piece_type?: string; reason: string }
 
 export type ProductReview = {
   product_id: string
@@ -64,5 +106,6 @@ export type ProductReview = {
   vibe_boost_suggestions?: VibeBoostSuggestion[]
   axis_overrides: AxisOverride[]
   attribute_reviews: AttributeReview[]
+  component_reviews?: ComponentReview[]
   prompt_feedback: { needs_prompt_update: boolean; issue_type: string; note: string }
 }
