@@ -378,11 +378,16 @@ function ProductImage({ item, image, review, saveReview, position, reviewerName,
   </aside>
 }
 
+function sourceTruthImageUrl(path?: string) {
+  if (!path) return ''
+  return path.startsWith('/') ? `https://gtf-source-truth.onrender.com${path}` : path
+}
+
 function Meta({ item, image }: { item: ValidationItem; image: any }) {
-  const primary = image.src
-  const secondary = image.candidates?.[1]?.src
+  const primary = sourceTruthImageUrl(item.extraction.source_truth?.final_primary_image ?? item.extraction.final_primary_image) || image.src
+  const secondary = sourceTruthImageUrl(item.extraction.source_truth?.final_secondary_image ?? item.extraction.final_secondary_image) || image.candidates?.[1]?.src
   return <section className="card"><div className="card-title"><h3>Product metadata</h3><Badge tone={item.extraction.product_tier === 'AUTO' ? 'green' : item.extraction.product_tier === 'REVIEW' ? 'amber' : 'red'}>{item.extraction.product_tier}</Badge></div>
-    <div className="meta-grid"><span>Catalog category</span><b>{item.product.category}</b><span>Brand category</span><b>{item.extraction.brand_category ?? item.product.category ?? '—'}</b><span>Extracted category</span><b>{item.extraction.hard_attributes.category?.value}</b><span>Schema</span><b>{item.extraction.schema_version}</b><span>Confidence</span><b>{item.extraction.confidence ?? '—'}</b><span>Review needed</span><b>{item.extraction.review_needed?.join(', ') || 'None'}</b><span>Manual needed</span><b>{item.extraction.manual_needed?.join(', ') || 'None'}</b><span>Catalog image ref</span><code>{item.product.image_file || '—'}</code><span>Resolved catalog image</span>{primary ? <a href={primary} target="_blank">open resolved image</a> : <b>—</b>}<span>Secondary candidate</span>{secondary ? <a href={secondary} target="_blank">open secondary</a> : <b>—</b>}</div>
+    <div className="meta-grid"><span>Catalog category</span><b>{item.product.category}</b><span>Brand category</span><b>{item.extraction.brand_category ?? item.product.category ?? '—'}</b><span>Extracted category</span><b>{item.extraction.hard_attributes.category?.value}</b><span>Schema</span><b>{item.extraction.schema_version}</b><span>Confidence</span><b>{item.extraction.confidence ?? '—'}</b><span>Review needed</span><b>{item.extraction.review_needed?.join(', ') || 'None'}</b><span>Manual needed</span><b>{item.extraction.manual_needed?.join(', ') || 'None'}</b><span>Catalog image ref</span><code>{item.product.image_file || '—'}</code><span>Source Truth primary</span>{primary ? <a href={primary} target="_blank">open final primary</a> : <b>—</b>}<span>Source Truth secondary</span>{secondary ? <a href={secondary} target="_blank">open final secondary</a> : <b>—</b>}</div>
   </section>
 }
 

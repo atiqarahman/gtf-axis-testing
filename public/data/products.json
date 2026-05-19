@@ -1,2341 +1,523 @@
 [
   {
-    "product_id": "GTF-TOD-001",
-    "title": "baby pink tod",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "baby pink tod .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-002",
-    "title": "cardigan and set",
-    "brand": "Try On Dress",
-    "category": "co-ord",
-    "image_file": "cardigan and set .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-003",
-    "title": "cardigan pin tod",
-    "brand": "Try On Dress",
-    "category": "cardigan",
-    "image_file": "cardigan pin tod .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-004",
-    "title": "cardigan tod grey",
-    "brand": "Try On Dress",
-    "category": "cardigan",
-    "image_file": "cardigan tod grey .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-005",
-    "title": "cardigan",
-    "brand": "Try On Dress",
-    "category": "cardigan",
-    "image_file": "cardigan.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-006",
-    "title": "caridgan",
-    "brand": "Try On Dress",
-    "category": "cardigan",
-    "image_file": "caridgan .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-007",
-    "title": "dress",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "dress .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-008",
-    "title": "dress black tod",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "dress black tod.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-009",
-    "title": "dress tod",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "dress tod .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-010",
-    "title": "dress tod blackk",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "dress tod blackk.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-011",
-    "title": "dress tod pink",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "dress tod pink.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-012",
-    "title": "dress tod,,",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "dress tod,, .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-013",
-    "title": "dress tod",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "dress tod.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-014",
-    "title": "pant tod black",
-    "brand": "Try On Dress",
-    "category": "pants",
-    "image_file": "pant tod black.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-015",
-    "title": "see through cardigan, tod",
-    "brand": "Try On Dress",
-    "category": "cardigan",
-    "image_file": "see through cardigan, tod .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-016",
-    "title": "set:relaxed pant",
-    "brand": "Try On Dress",
-    "category": "set",
-    "image_file": "set:relaxed pant .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-017",
-    "title": "tod blue dres",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "tod blue dres.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-018",
-    "title": "tod brown",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "tod brown .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-019",
-    "title": "tod cardigan brown",
-    "brand": "Try On Dress",
-    "category": "cardigan",
-    "image_file": "tod cardigan brown .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-020",
-    "title": "tod cardigan red",
-    "brand": "Try On Dress",
-    "category": "cardigan",
-    "image_file": "tod cardigan red .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-021",
-    "title": "tod cardigan sparkly",
-    "brand": "Try On Dress",
-    "category": "cardigan",
-    "image_file": "tod cardigan sparkly .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-022",
-    "title": "tod cut out black",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "tod cut out black .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-023",
-    "title": "tod dress ivory",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "tod dress ivory .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-024",
-    "title": "tod green",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "tod green .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-025",
-    "title": "tod ivory",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "tod ivory .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-026",
-    "title": "tod khaki",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "tod khaki .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-027",
-    "title": "tod red dress",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "tod red dress.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-028",
-    "title": "tod white",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "tod white .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-029",
-    "title": "top",
-    "brand": "Try On Dress",
-    "category": "top",
-    "image_file": "top .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-TOD-030",
-    "title": "wrap up tod",
-    "brand": "Try On Dress",
-    "category": "dress",
-    "image_file": "wrap up tod .webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-001",
-    "title": "black pants studio picante",
-    "brand": "Studio Picante",
-    "category": "pants",
-    "image_file": "black pants studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-002",
-    "title": "corset sparkely stuido picante",
-    "brand": "Studio Picante",
-    "category": "top",
-    "image_file": "corset sparkely stuido picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-003",
-    "title": "corset top studio picante",
-    "brand": "Studio Picante",
-    "category": "top",
-    "image_file": "corset top studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-004",
-    "title": "everday blazer studio picante",
-    "brand": "Studio Picante",
-    "category": "blazer",
-    "image_file": "everday blazer studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-005",
-    "title": "everyday pant studio picante",
-    "brand": "Studio Picante",
-    "category": "pants",
-    "image_file": "everyday pant studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-006",
-    "title": "mini dress studio picante",
-    "brand": "Studio Picante",
-    "category": "dress",
-    "image_file": "mini dress studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-007",
-    "title": "relaxed pant studio picante",
-    "brand": "Studio Picante",
-    "category": "pants",
-    "image_file": "relaxed pant studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-008",
-    "title": "royal blue top studio picante",
-    "brand": "Studio Picante",
-    "category": "top",
-    "image_file": "royal blue top studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-009",
-    "title": "skirt long studio picante",
-    "brand": "Studio Picante",
-    "category": "skirt",
-    "image_file": "skirt long studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-010",
-    "title": "skirt studio picante",
-    "brand": "Studio Picante",
-    "category": "skirt",
-    "image_file": "skirt studio picante .png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-011",
-    "title": "skirt studio picante burgandy",
-    "brand": "Studio Picante",
-    "category": "skirt",
-    "image_file": "skirt studio picante burgandy .png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-012",
-    "title": "sparkly dress studio picante",
-    "brand": "Studio Picante",
-    "category": "dress",
-    "image_file": "sparkly dress studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-013",
-    "title": "sparkly sheer tassel skirty studio picante",
-    "brand": "Studio Picante",
-    "category": "skirt",
-    "image_file": "sparkly sheer tassel skirty studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-014",
-    "title": "studio picante halter neck sparkly cheetah top",
-    "brand": "Studio Picante",
-    "category": "top",
-    "image_file": "studio picante halter neck sparkly cheetah top .png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-015",
-    "title": "top purple studio picante",
-    "brand": "Studio Picante",
-    "category": "top",
-    "image_file": "top purple studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-016",
-    "title": "top studio picante",
-    "brand": "Studio Picante",
-    "category": "top",
-    "image_file": "top studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SP-017",
-    "title": "top tube studio picante",
-    "brand": "Studio Picante",
-    "category": "top",
-    "image_file": "top tube studio picante.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SC-001",
-    "title": "JKimg 0384 1080x.jpg",
-    "brand": "Self Centred",
-    "category": "dress",
-    "image_file": "JKimg_0384_1080x.jpg.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SC-002",
-    "title": "Nima 1080x.png",
-    "brand": "Self Centred",
-    "category": "dress",
-    "image_file": "Nima_1080x.png.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SC-003",
-    "title": "VivianTop 1080x.png",
-    "brand": "Self Centred",
-    "category": "top",
-    "image_file": "VivianTop_1080x.png.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SC-004",
-    "title": "gown self cntrd.png",
-    "brand": "Self Centred",
-    "category": "gown",
-    "image_file": "gown self cntrd.png.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SC-005",
-    "title": "gown self cntrd.png.webp 2.png",
-    "brand": "Self Centred",
-    "category": "gown",
-    "image_file": "gown self cntrd.png.webp 2.png.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SC-006",
-    "title": "pant self cntred.jpg",
-    "brand": "Self Centred",
-    "category": "pants",
-    "image_file": "pant self cntred.jpg.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SC-007",
-    "title": "self cntrd 52  top .jpg",
-    "brand": "Self Centred",
-    "category": "top",
-    "image_file": "self-cntrd-52_ top .jpg.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SC-008",
-    "title": "slf centred corset top .jpg",
-    "brand": "Self Centred",
-    "category": "top",
-    "image_file": "slf centred corset top .jpg.webp",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-DIL-001",
-    "title": "DSF2443",
-    "brand": "Dilnaz",
-    "category": "dress",
-    "image_file": "_DSF2443.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-DIL-002",
-    "title": "DSF2455",
-    "brand": "Dilnaz",
-    "category": "dress",
-    "image_file": "_DSF2455.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-DIL-003",
-    "title": "DSF2552",
-    "brand": "Dilnaz",
-    "category": "co-ord",
-    "image_file": "_DSF2552.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-DIL-004",
-    "title": "DSF2626",
-    "brand": "Dilnaz",
-    "category": "saree",
-    "image_file": "_DSF2626.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-DIL-005",
-    "title": "DSF2877",
-    "brand": "Dilnaz",
-    "category": "co-ord",
-    "image_file": "_DSF2877.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-DIL-006",
-    "title": "DSF3221",
-    "brand": "Dilnaz",
-    "category": "gown",
-    "image_file": "_DSF3221.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-DIL-007",
-    "title": "DSF3516",
-    "brand": "Dilnaz",
-    "category": "dress",
-    "image_file": "_DSF3516.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-DIL-008",
-    "title": "DSF3819",
-    "brand": "Dilnaz",
-    "category": "gown",
-    "image_file": "_DSF3819.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-DIL-009",
-    "title": "DSF4030",
-    "brand": "Dilnaz",
-    "category": "dress",
-    "image_file": "_DSF4030.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-DIL-010",
-    "title": "DSF4184",
-    "brand": "Dilnaz",
-    "category": "co-ord",
-    "image_file": "_DSF4184.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AK-001",
-    "title": "Screenshot 2026 05 12 at 2.49.28\u202fPM",
-    "brand": "Aseem Kapoor",
-    "category": "shirt",
-    "image_file": "Screenshot 2026-05-12 at 2.49.28\u202fPM.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AK-002",
-    "title": "Screenshot 2026 05 12 at 2.49.42\u202fPM",
-    "brand": "Aseem Kapoor",
-    "category": "cape shirt",
-    "image_file": "Screenshot 2026-05-12 at 2.49.42\u202fPM.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AK-003",
-    "title": "Screenshot 2026 05 12 at 2.49.47\u202fPM",
-    "brand": "Aseem Kapoor",
-    "category": "gilet",
-    "image_file": "Screenshot 2026-05-12 at 2.49.47\u202fPM.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AK-004",
-    "title": "Screenshot 2026 05 12 at 2.49.55\u202fPM",
-    "brand": "Aseem Kapoor",
-    "category": "dress",
-    "image_file": "Screenshot 2026-05-12 at 2.49.55\u202fPM.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AK-005",
-    "title": "Screenshot 2026 05 12 at 2.50.01\u202fPM",
-    "brand": "Aseem Kapoor",
-    "category": "jumpsuit",
-    "image_file": "Screenshot 2026-05-12 at 2.50.01\u202fPM.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AK-006",
-    "title": "Screenshot 2026 05 12 at 2.50.10\u202fPM",
-    "brand": "Aseem Kapoor",
-    "category": "jacket",
-    "image_file": "Screenshot 2026-05-12 at 2.50.10\u202fPM.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AK-007",
-    "title": "Screenshot 2026 05 12 at 2.50.34\u202fPM",
-    "brand": "Aseem Kapoor",
-    "category": "jacket",
-    "image_file": "Screenshot 2026-05-12 at 2.50.34\u202fPM.png",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-003",
-    "title": "HEMP DENIM PANTSUIT WITH TOPSTITCH DETAILS",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "pantsuit",
-    "image_file": "https://drive.google.com/uc?export=view&id=1S70Bu7LxIfdtfMtsCoN7i3XE2V22hxt0",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-015",
-    "title": "INDIGO SWIRL PRINTED BUSTIER",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "bustier",
-    "image_file": "https://drive.google.com/uc?export=view&id=1xcIzoVDuX1paTojJeo4bB22b5UWIbMYh",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-026",
-    "title": "NOIR SWIRL PRINTED SEQUINS BRALETTE",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "bralette",
-    "image_file": "https://drive.google.com/uc?export=view&id=1xmvp3k6JFqMlPYTh8LepnnnLYDJdt3Q8",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-032",
-    "title": "BEIGE LUXE SHEETED SEQUINS PANTSUIT WITH BRALETTE",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "pantsuit",
-    "image_file": "https://drive.google.com/uc?export=view&id=1FlWaxM_NnYhD8tbwhbv24KhweWZEYtpx",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-043",
-    "title": "FUCHSIA SWIRL PRINTED DRAPED DRESS",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "https://drive.google.com/uc?export=view&id=1RHr5PJIPdoncFDNWdQGzIA1YDnpmmqDQ",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-044",
-    "title": "ONE SHOULDER BROWN GEOMETRIC PRINT TOP WITH GLASS BEAD EMBROIDERY",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "top",
-    "image_file": "https://drive.google.com/uc?export=view&id=1AbHTBrjiMvD46wg4FIde5q0Bmd9RONgb",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-045",
-    "title": "BROWN GEOMETRIC PRINT FRINGED SKIRT",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "skirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=13MXHy0XDvHV3L7MYxypzO-_UQ2a-QSTJ",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-046",
-    "title": "BROWN SUEDE TRENCH",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "coat",
-    "image_file": "https://drive.google.com/uc?export=view&id=1IU9M1djFRAJvYAmBRmZ3AUCRxSwGCe1x",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-047",
-    "title": "BROWN SHEETED SEQUINS DRESS WITH CUTWORK EMBROIDERY",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "https://drive.google.com/uc?export=view&id=1xvqsnrzY-Kh5w2B_WwZ6V6wAHk1WHlmu",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-048",
-    "title": "PYTHON PRINT HALTER NECK DRESS WITH CANARY HAND THREAD EMBROIDERY",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "https://drive.google.com/uc?export=view&id=1PT1RkgOskgnlEBLpNj8271IPLZKI2Vnu",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-049",
-    "title": "FUCHSIA SWIRL PRINTED KAFTAN WITH BEADED EMBROIDERY",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "kaftan",
-    "image_file": "https://drive.google.com/uc?export=view&id=1Ax0AS2mWk_IKrEOPJ1K_FJSuguVIjsX-",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-051",
-    "title": "BEIGE SUEDE JACKET + WAISTCOAT",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "jacket",
-    "image_file": "https://drive.google.com/uc?export=view&id=1STO9QEg-qowZvEFwtWsmZTgvASQhryak",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-052",
-    "title": "BROWN BAROQUE EMBROIDERED SHEER PANTS",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "pants",
-    "image_file": "https://drive.google.com/uc?export=view&id=1CveKuSV9fQfJvVsBURzmF2V-Pki6ay5S",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-053",
-    "title": "INDIGO PRINTED WIDE LEG PLEATED PANTS WITH BELT",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "pants",
-    "image_file": "https://drive.google.com/uc?export=view&id=14MYKpufjld-o0_YOwkMF-c99P0PEmNoV",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-054",
-    "title": "INDIGO SWIRL PRINTED CORSET",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "top",
-    "image_file": "https://drive.google.com/uc?export=view&id=1MngfdFEZ0LB0mQEvLrpIA0aar8gIDHV1",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-055",
-    "title": "INDIGO SWIRL PTINTED SEQUINS CROPPED SHIRT",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=10mQ-P9PdLk0DTGSOWA-tNVrGYRNBABn9",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-056",
-    "title": "INDIGO SWIRL PRINTED SEQUINS VEST",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "vest",
-    "image_file": "https://drive.google.com/uc?export=view&id=1mcSxotajnWq3pxuw5rX4B1OS4ltJ1kWS",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-057",
-    "title": "CHOCOLATE SWIRL PRINT FRONT OPEN KAFTAN WITH SLIP",
-    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "kaftan",
-    "image_file": "https://drive.google.com/uc?export=view&id=17m1Nus0ER52Sw3AtFTpNvogs0dsfWIKX",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-002",
-    "title": "ORGANZA  SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=1jAA4vCGHXmY0UElNh18F5opmFnepls4H",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-003",
-    "title": "ORGANZA SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=1EJG69OLainotkH3CoB_W72g3SoUiHSeT",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-004",
-    "title": "ORGANZA SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=1ha1gwvoGTLVTdRU-GHPNBIW7xDWoAEy9",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-007",
-    "title": "ORGANZA SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=1FINmW2I3T0efNPb71-fMD2EjlCzU-Ngm",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-008",
-    "title": "ORGANZA SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=1XkTXRnu8XuAJ7CZTOnHLMss6pWAsq8X_",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-009",
-    "title": "SILK FLARED TOUSER",
-    "brand": "Bobo Calcutta",
-    "category": "trousers",
-    "image_file": "https://drive.google.com/uc?export=view&id=1XkTXRnu8XuAJ7CZTOnHLMss6pWAsq8X_",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-010",
-    "title": "SATIN SILK SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=1ssNdhCbZx5maDbAala-wzfxN7z7B_O8n",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-011",
-    "title": "SATIN SILK SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=1U5UmEsLsqzzY_167FaV74BUcgcIKI193",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-012",
-    "title": "SATIN SILK SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=1aY69qYuCqgNG3Sfs_bka3doAWwWT-j6K",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-013",
-    "title": "SILK FULL SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=1gnA9nVmw6QB_ow8_y5eUxlxjsUFS93_Q",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-014",
-    "title": "SILK FULL SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=1NuZS8zgufz2ZI3ci0QQD7SS1R1JUxb2A",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-015",
-    "title": "SILK FULL SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=1FvRzOq1wx-zX3m0UMT2MMye07smQSjwL",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-016",
-    "title": "SILK HALF SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "https://drive.google.com/uc?export=view&id=1_aKaagaZ6i9sHhNs3e0jt_aBEzMWwG14",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-001",
-    "title": "Abra Dress",
-    "brand": "LEH Studios",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/04Leh-1_JPG.jpg?v=1772017402",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-002",
-    "title": "Alma Trench",
-    "brand": "LEH Studios",
-    "category": "trench coat",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/13_6981045c-86de-49eb-b73d-2636e6cdf46c.jpg?v=1733816917",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-003",
-    "title": "Back Straped Top",
-    "brand": "LEH Studios",
-    "category": "top",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-147.jpg?v=1740036053",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-004",
-    "title": "Bubble Hem Stem Top",
-    "brand": "LEH Studios",
-    "category": "top",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-53.jpg?v=1740035798",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-005",
-    "title": "Capri Dress",
-    "brand": "LEH Studios",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_d8ab7f89-eefc-42f0-a2eb-02eeb2fa6843.jpg?v=1733929279",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-006",
-    "title": "Cherice Crepe Cordset",
-    "brand": "LEH Studios",
-    "category": "co-ord",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/IMG_0044_2_bf3d066c-9029-4138-b175-6ce195ae2c2f.jpg?v=1759563937",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-007",
-    "title": "Eclips Top",
-    "brand": "LEH Studios",
-    "category": "top",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/16thb_4094.jpg?v=1734019301",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-009",
-    "title": "Fable top",
-    "brand": "LEH Studios",
-    "category": "top",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/IMG_0039_6.jpg?v=1758377938",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-012",
-    "title": "Illusion Tape Dress",
-    "brand": "LEH Studios",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-236.jpg?v=1740026600",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-013",
-    "title": "Illusion Top",
-    "brand": "LEH Studios",
-    "category": "top",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-29.jpg?v=1740035567",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-014",
-    "title": "Jia Dress",
-    "brand": "LEH Studios",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-201.jpg?v=1740029687",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-015",
-    "title": "Joji Dress",
-    "brand": "LEH Studios",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/DSC00658-Edit_81c1de35-881a-4606-8ee9-9a9384f7b3ed.jpg?v=1759956230",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-016",
-    "title": "Lace Balloon Pants",
-    "brand": "LEH Studios",
-    "category": "pants",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/DSC05093-Edit.jpg?v=1778135673",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-017",
-    "title": "Lana Top",
-    "brand": "LEH Studios",
-    "category": "top",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-168.jpg?v=1740035728",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-018",
-    "title": "Lara Skirt",
-    "brand": "LEH Studios",
-    "category": "skirt",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/25Leh-1.jpg?v=1772009062",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-019",
-    "title": "Mae Jacket",
-    "brand": "LEH Studios",
-    "category": "jacket",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/13_80c7fe65-d141-40df-bea9-d246543597e9.jpg?v=1737103344",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-020",
-    "title": "Midnight Blazer",
-    "brand": "LEH Studios",
-    "category": "blazer",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_a2027208-03e4-40fe-9062-7b35795639cf.jpg?v=1733999776",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-021",
-    "title": "Otis Jacket",
-    "brand": "LEH Studios",
-    "category": "jacket",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_87439b16-a2d1-4abf-b2d2-bd9d465ce3bf.jpg?v=1733999866",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-022",
-    "title": "Peony Embellished Dress",
-    "brand": "LEH Studios",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/Edit-36.jpg?v=1740029916",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-023",
-    "title": "Rini Dress",
-    "brand": "LEH Studios",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/19Leh-1_7bcc4eb4-75ef-4063-9138-a37d57a1eab6.jpg?v=1772050304",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-024",
-    "title": "Shell Coat",
-    "brand": "LEH Studios",
-    "category": "coat",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/DSC02536_bd95bd50-d032-4153-bb65-23610a6a2811.jpg?v=1734020469",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-025",
-    "title": "Spirale Denim Top",
-    "brand": "LEH Studios",
-    "category": "top",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/LEH-66.jpg?v=1772002683",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-026",
-    "title": "Spirale Dress",
-    "brand": "LEH Studios",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/03Leh-1_JPG.jpg?v=1772025918",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-LEH-028",
-    "title": "Wrap Dress",
-    "brand": "LEH Studios",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0665/1953/1657/files/1_13990f18-4dcb-45a5-9f6f-54bb47cd4036.jpg?v=1737094274",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-AFRO-001",
+    "product_id": "GTF-AFROPOP-APAP25001",
     "title": "GEOMETRIC FUCHSIA PINK DRAPED DRESS WITH HAND EMBROIDERY",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "GTF-AFRO-001_GEOMETRIC FUCHSIA PINK DRAPED DRESS WITH HAND EMBR.jpg",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1CmZOSW9-grjdOb3925EfH0V2t7Z04x9s",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-002",
+    "product_id": "GTF-AFROPOP-APAP25002",
     "title": "BEIGE FAUX LEATHER HAND DETAILD BRALETTE",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "bralette",
-    "image_file": "GTF-AFRO-002_BEIGE FAUX LEATHER HAND DETAILD BRALETTE.jpg",
+    "category": "Bralette",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/16Kdjpy7YE0jGAY54OqISAve14aEy4KDy",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-004",
+    "product_id": "GTF-AFROPOP-APAP25003",
+    "title": "HEMP DENIM PANTSUIT WITH TOPSTITCH DETAILS",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Pantsuit",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1TBympP2wCoyaeJcSr9zoztZl4ra3S225",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25004",
     "title": "INDIGO HEMP DENIM CROPPED JACKET WITH SHORTS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "co-ord",
-    "image_file": "GTF-AFRO-004_INDIGO HEMP DENIM CROPPED JACKET WITH SHORTS.jpg",
+    "category": "Coord Set",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1l0g_2BcbwKuGGoWvWfpjLuAB6toGB7iA",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-005",
+    "product_id": "GTF-AFROPOP-APAP25005",
     "title": "BROWN GEOMETRIC KIMONO DRESS WITH HANDMADE TASSELS & EMBROIDERED CUFFS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "GTF-AFRO-005_BROWN GEOMETRIC KIMONO DRESS WITH HANDMADE TASSELS.jpg",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1T6HCz7yiIkyJlGKGwb-qf1ZDFYGiJwrP",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-006",
+    "product_id": "GTF-AFROPOP-APAP25006",
     "title": "BROWN GEOMETRIC COWN NECKNDRESS WITH ATTACHED SCARF",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "GTF-AFRO-006_BROWN GEOMETRIC COWN NECKNDRESS WITH ATTACHED SCAR.jpg",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1-SFW0BwHIQYsyq0Fo-nDjxScOpneQDii",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-007",
+    "product_id": "GTF-AFROPOP-APAP25007",
     "title": "FUCHSIA GEOMETRIC PRINT BRAIDED DRESS WITH BEADED HAND EMBROIDERY",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "GTF-AFRO-007_FUCHSIA GEOMETRIC PRINT BRAIDED DRESS WITH BEADED.jpg",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1aMHYKy6XvPAaAfPKUJjssyAOHg6AIJ3w",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-008",
+    "product_id": "GTF-AFROPOP-APAP25008",
     "title": "INDIGO HEMP DENIM HALTER NECK CUTOUT TOP WITH TIE UP",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "top",
-    "image_file": "GTF-AFRO-008_INDIGO HEMP DENIM HALTER NECK CUTOUT TOP WITH TIE.jpg",
+    "category": "Top",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1XRTP1cwhWJmKS_mKbQHk_hmUqfaWhV9T",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-009",
+    "product_id": "GTF-AFROPOP-APAP25009",
     "title": "INDIGO HEMP DENIM RUFFLE ASYMMETRICAL SKIRT",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "skirt",
-    "image_file": "GTF-AFRO-009_INDIGO HEMP DENIM RUFFLE ASYMMETRICAL SKIRT.jpg",
+    "category": "Skirt",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1pSlrmEexSD3kIjqxJUROLPmEez4mPAAn",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-010",
+    "product_id": "GTF-AFROPOP-APAP25010",
     "title": "CHOCOLATE SWIRL PRINT TOP WITH BISHOP SLEEVES",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "top",
-    "image_file": "GTF-AFRO-010_CHOCOLATE SWIRL PRINT TOP WITH BISHOP SLEEVES.jpg",
+    "category": "Top",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1NU99KoEOoRqxiXCt6Ya4WdMDW6nwtYIw",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-011",
+    "product_id": "GTF-AFROPOP-APAP25011",
     "title": "CHOCOLATE SWIRL PRINT SHEETED SEQUINS PANTS WITH BELT",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "pants",
-    "image_file": "GTF-AFRO-011_CHOCOLATE SWIRL PRINT SHEETED SEQUINS PANTS WITH B.jpg",
+    "category": "Pants",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1Hl0I-Y41iqIvwIUSAlL0RiA94lPZ0eGV",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-012",
+    "product_id": "GTF-AFROPOP-APAP25012",
     "title": "NOIR PRINTED SEQUINS DRAPED DRESS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "GTF-AFRO-012_NOIR PRINTED SEQUINS DRAPED DRESS.jpg",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1WNMYY8saDPv0wDi_3sFGlzxzYlVC5Qxv",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-013",
+    "product_id": "GTF-AFROPOP-APAP25013",
     "title": "CHOCOLATE SWIRL PRINT PLEATED MAXI SKIRT AND TOP",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "co-ord",
-    "image_file": "GTF-AFRO-013_CHOCOLATE SWIRL PRINT PLEATED MAXI SKIRT AND TOP.jpg",
+    "category": "Skirt & Top",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1JVRdPNnM90ZeMlWuMnaJForPPc6irOwi",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-014",
+    "product_id": "GTF-AFROPOP-APAP25014",
     "title": "INDIGO PRINT SHEETED SEQUINS PANTSUIT",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "pantsuit",
-    "image_file": "GTF-AFRO-014_INDIGO PRINT SHEETED SEQUINS PANTSUIT.jpg",
+    "category": "Pantsuit",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1LNbpHpquz2tiRKG4N78sj7nq83b7kFSh",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-016",
+    "product_id": "GTF-AFROPOP-APAP25015",
+    "title": "INDIGO SWIRL PRINTED BUSTIER",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Bralette",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1xcIzoVDuX1paTojJeo4bB22b5UWIbMYh",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25016",
     "title": "CHARCOAL CORSET WITH BEADED HAND EMBROIDERY",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "top",
-    "image_file": "GTF-AFRO-016_CHARCOAL CORSET WITH BEADED HAND EMBROIDERY.jpg",
+    "category": "Corset",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1P-EeJSKVRNuEsLT2uuaptk-dVw8kIZYT",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-017",
+    "product_id": "GTF-AFROPOP-APAP25017",
     "title": "CHARCOAL SKORT SKIRT",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "skort",
-    "image_file": "GTF-AFRO-017_CHARCOAL SKORT SKIRT.jpg",
+    "category": "Skirt",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1wo2GmfLjCWBTCDLDjVgtCmsuukd7iDBD",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-018",
+    "product_id": "GTF-AFROPOP-APAP25018",
     "title": "CHARCOAL TWEED OVERCOAT",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "overcoat",
-    "image_file": "GTF-AFRO-018_CHARCOAL TWEED OVERCOAT.jpg",
+    "category": "Overcoat",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1-qMk_fc7Hr25lkyX6cov-kcCJgM6ULEu",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-019",
+    "product_id": "GTF-AFROPOP-APAP25019",
     "title": "NOIR SWIRL PRINTED CO-ORD SET",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "co-ord",
-    "image_file": "GTF-AFRO-019_NOIR SWIRL PRINTED CO-ORD SET.jpg",
+    "category": "Coord Set",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1-YFVXb9P0fyRd637ZRYO7V5FGuZslcYV",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-020",
+    "product_id": "GTF-AFROPOP-APAP25020",
     "title": "BEIGE SHIRT DRESS WITH BELT & BEADED SPIKED CUFF INNER DRESS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "GTF-AFRO-020_BEIGE SHIRT DRESS WITH BELT  BEADED SPIKED CUFF IN.jpg",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1NIfSfN35fsVfiiyrgHprt55Vp5cqC_cd",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-021",
+    "product_id": "GTF-AFROPOP-APAP25021",
     "title": "FUCHSIA PRINT CHANTILLY DETAILED DRAPED DRESS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "GTF-AFRO-021_FUCHSIA PRINT CHANTILLY DETAILED DRAPED DRESS.jpg",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1ZsKKkbkVXX5umHfYsxG4sX9ze7MNxU8T",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-022",
+    "product_id": "GTF-AFROPOP-APAP25022",
     "title": "BROWN GEOMETRIC PRINT LUREX TOP",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "top",
-    "image_file": "GTF-AFRO-022_BROWN GEOMETRIC PRINT LUREX TOP.jpg",
+    "category": "Top",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1lhiEjjHJBl4AR_-U-Nsazp3tr18LWGKx",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-023",
+    "product_id": "GTF-AFROPOP-APAP25023",
     "title": "BROWN GEOMETRIC PRINT LUREX TRENCH",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "coat",
-    "image_file": "GTF-AFRO-023_BROWN GEOMETRIC PRINT LUREX TRENCH.jpg",
+    "category": "Trench",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1PJfvSbUbcPpzxYCSK00p_Cx-zLwqydJv",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-024",
+    "product_id": "GTF-AFROPOP-APAP25024",
     "title": "INDIGO HEMP DENIM PANTS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "pants",
-    "image_file": "GTF-AFRO-024_INDIGO HEMP DENIM PANTS.jpg",
+    "category": "Denim Pants",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1ekk0OwHEbOxiCFmnEIlXi1G4mfM68Y3Y",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-025",
+    "product_id": "GTF-AFROPOP-APAP25025",
     "title": "NOIR SWIRL PRINTED SEQUINS PANTSUIT",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "pantsuit",
-    "image_file": "GTF-AFRO-025_NOIR SWIRL PRINTED SEQUINS PANTSUIT.jpg",
+    "category": "Pantsuit",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1X90EWLY5wuOg-1BGkM2muwloOYGAsc4S",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-027",
+    "product_id": "GTF-AFROPOP-APAP25026",
+    "title": "NOIR SWIRL PRINTED SEQUINS BRALETTE",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Bralette",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/12gwB0PnMR15T5Rvd5Z3Jv3MyO0kTo1KS",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25027",
     "title": "NOIR PRINTED EMBELLISHED DRAPED SAREE WITH BEADED HAND EMBROIDERED BLOUSE",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "saree",
-    "image_file": "GTF-AFRO-027_NOIR PRINTED EMBELLISHED DRAPED SAREE WITH BEADED.jpg",
+    "category": "Saree",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1yLdYscmAvx_TTv_FgOLev4GurmBWFKTB",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-028",
+    "product_id": "GTF-AFROPOP-APAP25028",
     "title": "INDIGO PRINTED GUNMETAL EMBROIDERED SHORT KURTA WITH PANTS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "co-ord",
-    "image_file": "GTF-AFRO-028_INDIGO PRINTED GUNMETAL EMBROIDERED SHORT KURTA WI.jpg",
+    "category": "Short Kurta Set",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1wMJjDeIGtwrOG53J0kHEGBnvUz8xxc49",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-029",
+    "product_id": "GTF-AFROPOP-APAP25029",
     "title": "BEIGE LUXE SHEETED SEQUINS KIMONO DRESS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "GTF-AFRO-029_BEIGE LUXE SHEETED SEQUINS KIMONO DRESS.jpg",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/11_znT6piNPZCN1oOTYUoqwb5z3VsplRY",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-030",
+    "product_id": "GTF-AFROPOP-APAP25030",
     "title": "BROWN PLEATED DRAPED DRESS &BEADED HAND EMBROIDERED CAPE WITH HANDMADE TASSELS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "GTF-AFRO-030_BROWN PLEATED DRAPED DRESS BEADED HAND EMBROIDERED.jpg",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1K_JRQDBHdqq8Ix1ELzAlu_mpIDJD5ySP",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-031",
+    "product_id": "GTF-AFROPOP-APAP25031",
     "title": "BROWN PYTHON PRINT PANTSUIT",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "pantsuit",
-    "image_file": "GTF-AFRO-031_BROWN PYTHON PRINT PANTSUIT.jpg",
+    "category": "Pantsuit",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/12KjiczQ8Rfwbvvv1Y0n8DNoKPfKwk5qm",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-033",
+    "product_id": "GTF-AFROPOP-APAP25032",
+    "title": "BEIGE LUXE SHEETED SEQUINS PANTSUIT WITH BRALETTE",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Pantsuit",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1oJ6T45Lv2CRBFchw-QhABPV2vTqI8vzM",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25033",
     "title": "DARK BROWN PINSTRIPED PANTS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "pants",
-    "image_file": "GTF-AFRO-033_DARK BROWN PINSTRIPED PANTS.jpg",
+    "category": "Pant",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1bS6NmdEm565qiQC4hE2c4iBB-2OKAoU6",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-034",
+    "product_id": "GTF-AFROPOP-APAP25034",
     "title": "CANARY BEADED BROWN TULLE BODYSUIT",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "bodysuit",
-    "image_file": "GTF-AFRO-034_CANARY BEADED BROWN TULLE BODYSUIT.jpg",
+    "category": "Bodysuit",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1efKsol8k5Xwa9pDW4SUlwe_sKHzBlc5k",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-035",
+    "product_id": "GTF-AFROPOP-APAP25035",
     "title": "INDIGO SWIRL PRINTED CROP TOP",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "top",
-    "image_file": "GTF-AFRO-035_INDIGO SWIRL PRINTED CROP TOP.jpg",
+    "category": "Top",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1maPg-3T-5u8tleXtX6DCsRNhJL8NKEZV",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-036",
+    "product_id": "GTF-AFROPOP-APAP25036",
     "title": "INDIGO SWIRL PRINTED SKIRT WITH RUFFLES",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "skirt",
-    "image_file": "GTF-AFRO-036_INDIGO SWIRL PRINTED SKIRT WITH RUFFLES.jpg",
+    "category": "Skirt",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1j7P94Zc_nrWwOWU_h5G70Y0Zsnm3-0i2",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-037",
+    "product_id": "GTF-AFROPOP-APAP25037",
     "title": "INDIGO PRINTED DENIM BOLERO JACKET",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "jacket",
-    "image_file": "GTF-AFRO-037_INDIGO PRINTED DENIM BOLERO JACKET.jpg",
+    "category": "Bomber",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1PTaKjHSpFA3JTM2YQMKc_SlmGSJGWAKX",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-038",
+    "product_id": "GTF-AFROPOP-APAP25038",
     "title": "BROWN PYTHON PRINT DRAPED DRESS & CANARY CUTWORK EMBELLISHED CAPE WITH TASSELS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "GTF-AFRO-038_BROWN PYTHON PRINT DRAPED DRESS  CANARY CUTWORK EM.jpg",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/13zst040syjQQmaMl-PIG-2lV5voV9Ggv",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-039",
+    "product_id": "GTF-AFROPOP-APAP25039",
     "title": "OLIVE BEADED HAND EMBROIDERED TOP",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "top",
-    "image_file": "GTF-AFRO-039_OLIVE BEADED HAND EMBROIDERED TOP.jpg",
+    "category": "Top",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1ObGPbVcDvraGG5T_W_35SbLSmWbBrfOP",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-040",
+    "product_id": "GTF-AFROPOP-APAP25040",
     "title": "OLIVE CORDUROY WIDE LEG PANTS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "pants",
-    "image_file": "GTF-AFRO-040_OLIVE CORDUROY WIDE LEG PANTS.jpg",
+    "category": "Pant",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1B4fvukF605A978R_9_3Z0c-sLu6seZRU",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-041",
+    "product_id": "GTF-AFROPOP-APAP25041",
     "title": "OLIVE CORDUROY BRALETTE",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "bralette",
-    "image_file": "GTF-AFRO-041_OLIVE CORDUROY BRALETTE.jpg",
+    "category": "Bralette",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1Bp9uoQXBN54ne1WLIWXV29Sm3lmV8lHe",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-042",
+    "product_id": "GTF-AFROPOP-APAP25042",
     "title": "OLIVE HEAVY BAROQUE EMBELLISHED SHEATH DRESS",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "dress",
-    "image_file": "GTF-AFRO-042_OLIVE HEAVY BAROQUE EMBELLISHED SHEATH DRESS.jpg",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1VOyj12tzZpfMu8HmsvisMCnEOq7cTBN5",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-050",
+    "product_id": "GTF-AFROPOP-APAP25043",
+    "title": "FUCHSIA SWIRL PRINTED DRAPED DRESS",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1RHr5PJIPdoncFDNWdQGzIA1YDnpmmqDQ",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25045",
+    "title": "BROWN GEOMETRIC PRINT FRINGED SKIRT",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Skirt",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1NRcsSdT4g33hF0hnrc4yH0NrAkxHBt3-",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25046",
+    "title": "BROWN SUEDE TRENCH",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Trench",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1IU9M1djFRAJvYAmBRmZ3AUCRxSwGCe1x",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25047",
+    "title": "BROWN SHEETED SEQUINS DRESS WITH CUTWORK EMBROIDERY",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1xvqsnrzY-Kh5w2B_WwZ6V6wAHk1WHlmu",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25048",
+    "title": "PYTHON PRINT HALTER NECK DRESS WITH CANARY HAND THREAD EMBROIDERY",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1PT1RkgOskgnlEBLpNj8271IPLZKI2Vnu",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25049",
+    "title": "FUCHSIA SWIRL PRINTED KAFTAN WITH BEADED EMBROIDERY",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1lzpcZvngEeljWODtItL8EDXLWlbxG30i",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25050",
     "title": "BROWN GEOMETRIC PRINT CUTWORK CO-ORD SET",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "co-ord",
-    "image_file": "GTF-AFRO-050_BROWN GEOMETRIC PRINT CUTWORK CO-ORD SET.jpg",
+    "category": "Coord Set",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1NbIPbYDSsYj6dnQfz95-evCk3K6yPz9y",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-058",
+    "product_id": "GTF-AFROPOP-APAP25051",
+    "title": "BEIGE SUEDE JACKET + WAISTCOAT",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Jacket",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1STO9QEg-qowZvEFwtWsmZTgvASQhryak",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25052",
+    "title": "BROWN BAROQUE EMBROIDERED SHEER PANTS",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Pantsuit",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1CveKuSV9fQfJvVsBURzmF2V-Pki6ay5S",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25053",
+    "title": "INDIGO PRINTED WIDE LEG PLEATED PANTS WITH BELT",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Pants",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/14MYKpufjld-o0_YOwkMF-c99P0PEmNoV",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25054",
+    "title": "INDIGO SWIRL PRINTED CORSET",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Top",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1MngfdFEZ0LB0mQEvLrpIA0aar8gIDHV1",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25055",
+    "title": "INDIGO SWIRL PTINTED SEQUINS CROPPED SHIRT",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Shirt",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/10mQ-P9PdLk0DTGSOWA-tNVrGYRNBABn9",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25056",
+    "title": "INDIGO SWIRL PRINTED SEQUINS VEST",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Top",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1c-s1edIoRlzCjpM7vHP5Mr103k1kQTos",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25057",
+    "title": "CHOCOLATE SWIRL PRINT FRONT OPEN KAFTAN WITH SLIP",
+    "brand": "Afro Nikitha (Nikita Mhaisalkar)",
+    "category": "Dress",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1uVcnbnj1Fm55B0GkrZMDVHznQ79-h6U3",
+    "price": null,
+    "currency": null
+  },
+  {
+    "product_id": "GTF-AFROPOP-APAP25058",
     "title": "BROWN GEOMETRIC PRINT SHIRT",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "shirt",
-    "image_file": "GTF-AFRO-058_BROWN GEOMETRIC PRINT SHIRT.jpg",
+    "category": "Shirt",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1GLe5Q8rG1g4Qi5D5yjZ-izutAunDVa8l",
     "price": null,
     "currency": null
   },
   {
-    "product_id": "GTF-AFRO-059",
+    "product_id": "GTF-AFROPOP-APAP25059",
     "title": "BROWN GEOMETRIC PRINT WRAP SKIRT",
     "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-    "category": "skirt",
-    "image_file": "GTF-AFRO-059_BROWN GEOMETRIC PRINT WRAP SKIRT.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-001",
-    "title": "ORGANZA OVERLAY",
-    "brand": "Bobo Calcutta",
-    "category": "top",
-    "image_file": "GTF-BOBO-001_ORGANZA OVERLAY.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-005",
-    "title": "ORGANZA SHIRT",
-    "brand": "Bobo Calcutta",
-    "category": "shirt",
-    "image_file": "GTF-BOBO-005_ORGANZA SHIRT.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-BOBO-006",
-    "title": "SILK FLARED TOUSER",
-    "brand": "Bobo Calcutta",
-    "category": "trousers",
-    "image_file": "GTF-BOBO-006_SILK FLARED TOUSER.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-ITRHKK02",
-    "title": "Khushi Kapoor in Iris Rose Mini Dress",
-    "brand": "ITRH",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/244_aa7728bf-0c8c-46a4-beac-035ff7c869d5.webp?v=1768222948",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-ONB32",
-    "title": "Vishal Jethwa in Aurelio Blazer Set",
-    "brand": "ITRH",
-    "category": "blazer set",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/243.webp?v=1768221179",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-BR42",
-    "title": "Jully Patel in Mekhala Saree Set",
-    "brand": "ITRH",
-    "category": "saree",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/178.webp?v=1767952253",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-5",
-    "title": "Alaric Pantsuit Set",
-    "brand": "ITRH",
-    "category": "co-ord",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/147.webp?v=1767431009",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-0",
-    "title": "Cael Blazer Set",
-    "brand": "ITRH",
-    "category": "co-ord",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/127.webp?v=1767421523",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-006",
-    "title": "MELON CREPE",
-    "brand": "ITRH",
-    "category": "co-ord",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/123.webp?v=1767420540",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-007",
-    "title": "Aaliya amrin in Zeina Kaftan Dress",
-    "brand": "ITRH",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Aaliyaamrin1.jpg?v=1762260266",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-008",
-    "title": "Kusha Kapila in Glittering Lavender Draped Dress",
-    "brand": "ITRH",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/IMG-20250924-WA0179.jpg?v=1759946042",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-009",
-    "title": "Rayhana Tube Dress",
-    "brand": "ITRH",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/2_a86ac2ee-4019-4ece-8cb5-3893196b463d.jpg?v=1756278653",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-010",
-    "title": "Sadeem Co-ord Set",
-    "brand": "ITRH",
-    "category": "co-ord",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/7.jpg?v=1756278657",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-011",
-    "title": "Qareenah Gown",
-    "brand": "ITRH",
-    "category": "gown",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/01-04-25Itrh.4742.jpg?v=1756278660",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-012",
-    "title": "Marha Gown",
-    "brand": "ITRH",
-    "category": "gown",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9136_ceec3da0-10e1-4195-8a3b-bafec18f3c67.jpg?v=1756278665",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-013",
-    "title": "SHR24B",
-    "brand": "ITRH",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9061.jpg?v=1756278674",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-014",
-    "title": "SHR24",
-    "brand": "ITRH",
-    "category": "dress",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9180.jpg?v=1756278677",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-ITRH-015",
-    "title": "SHR23",
-    "brand": "ITRH",
-    "category": "co-ord",
-    "image_file": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/DSC9216.jpg?v=1756278678",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-001",
-    "title": "Sunburst Stripe Mini Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-01.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-002",
-    "title": "Hazel Leaves White Blazer",
-    "brand": "Shahin Mannan",
-    "category": "blazer",
-    "image_file": "page-05.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-004",
-    "title": "Palm Tree Shirt Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-07.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-005",
-    "title": "Hazel Leaves Black Blazer with Pants",
-    "brand": "Shahin Mannan",
-    "category": "blazer",
-    "image_file": "page-09.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-001",
-    "title": "AU-01 Ivory Crochet Corset with Skirt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-03.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-002",
-    "title": "AU-04 Ivory Gold Studded Top with Drape Skirt and Cape",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-06.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-003",
-    "title": "AU-05 Beige Crochet Corset with Tiered Skirt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-07.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-004",
-    "title": "AU-07 Ivory Noodle Top with Wrap Pants",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-09.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-005",
-    "title": "AU-08 Ivory Asymmetrical Crochet Dress",
-    "brand": "Surily G",
-    "category": "dress",
-    "image_file": "page-10.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-006",
-    "title": "AU-09 Beige Rope Top with Short Skirt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-11.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-007",
-    "title": "AU-10 Beige Rope Dress",
-    "brand": "Surily G",
-    "category": "saree",
-    "image_file": "page-12.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-008",
-    "title": "AU-11 Ivory Kaftan with Embroidered Neckline",
-    "brand": "Surily G",
-    "category": "kaftan",
-    "image_file": "page-13.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-009",
-    "title": "AU-12 Ivory Crochet One Shoulder Top with Knot Pants",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-14.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-010",
-    "title": "AU-13 Ivory Gold Rivet Top with Crochet Fringe Skirt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-15.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-011",
-    "title": "AU-14 Ivory Crochet Waistcoat with Goa Pants",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-16.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-012",
-    "title": "AU-15 Beige Waistcoat with Balloon Pants",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-17.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-013",
-    "title": "AU-16 Ivory Gold Rivets One Shoulder Jumpsuit",
-    "brand": "Surily G",
-    "category": "jumpsuit",
-    "image_file": "page-18.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-014",
-    "title": "AU-17 Ivory Crochet Top with Pants",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-19.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-AUR-015",
-    "title": "AU-18 Ivory Blouson Top with Mini Crochet Skirt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-20.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-001",
-    "title": "LL-02 Pink Embellished Off Shoulder Blouse with Skirt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-04.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-002",
-    "title": "LL-04 Pink Jumpsuit with Bralette",
-    "brand": "Surily G",
-    "category": "jumpsuit",
-    "image_file": "page-07.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-003",
-    "title": "LL-05 Red Embellished Jumpsuit",
-    "brand": "Surily G",
-    "category": "jumpsuit",
-    "image_file": "page-08.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-004",
-    "title": "LL-06 Red One-Shoulder Dress",
-    "brand": "Surily G",
-    "category": "dress",
-    "image_file": "page-09.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-005",
-    "title": "LL-07 Red Embellished Dress with Fringe Slip",
-    "brand": "Surily G",
-    "category": "dress",
-    "image_file": "page-10.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-006",
-    "title": "LL-08 Red Embellished Skirt with Blouse",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-11.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-007",
-    "title": "LL-09 Blue Embellished Bodysuit with Drape Skirt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-12.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-008",
-    "title": "LL-10 Blue Long Embellished Kurta with Pants",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-13.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-009",
-    "title": "LL-11 Blue Embellished Kaftan",
-    "brand": "Surily G",
-    "category": "kaftan",
-    "image_file": "page-14.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-010",
-    "title": "LL-12 Black Embellished Fringe Cape with Corset and Mini Skirt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-15.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-011",
-    "title": "LL-14 Black Kaftan",
-    "brand": "Surily G",
-    "category": "kaftan",
-    "image_file": "page-17.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-012",
-    "title": "LL-15 Black Embellished Top with Godet Skirt and Belt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-18.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LAY-013",
-    "title": "LL-16 Black Embellished Waistcoat with Flared Pants",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-19.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LUM-001",
-    "title": "LU-02 Peach Embroidered Blouse with Lehenga",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-04.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LUM-002",
-    "title": "LU-03 Turquoise Halter with Multi-Shade Drape Skirt and Cape",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-05.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LUM-003",
-    "title": "LU-04 Coral Tassel Top with Ombre Sharara",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-06.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LUM-004",
-    "title": "LU-05 Green Crushed Halter with Multi-Shade Long Skirt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-07.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LUM-005",
-    "title": "LU-06 Turquoise Blouse with Gathered Skirt and Cape",
-    "brand": "Surily G",
-    "category": "kaftan",
-    "image_file": "page-08.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LUM-006",
-    "title": "LU-07 Green Crushed Halter Top (separate piece)",
-    "brand": "Surily G",
-    "category": "top",
-    "image_file": "page-09.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LUM-007",
-    "title": "LU-08 Nude One Shoulder Blouse with Coral Embroidered Skirt",
-    "brand": "Surily G",
-    "category": "dress",
-    "image_file": "page-10.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LUM-008",
-    "title": "LU-11 Turquoise Peplum Top with Green Ombre Drape Skirt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-15.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LUM-009",
-    "title": "LU-17 Multi-Shade Embroidered Neckline Top",
-    "brand": "Surily G",
-    "category": "top",
-    "image_file": "page-19.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-LUM-010",
-    "title": "LU-18 Peach Ombre Saree with Embroidered Border",
-    "brand": "Surily G",
-    "category": "saree",
-    "image_file": "page-20.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-ZIY-001",
-    "title": "ZA-01 Ivory Pearl Box Top with Embroidered Long Skirt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-03.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-ZIY-002",
-    "title": "ZA-02 Ivory Pearl Jacket with Bralette and Sharara",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-04.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-ZIY-003",
-    "title": "ZA-03 Ivory Pearl One Shoulder Top with Wrap Pants",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-05.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-ZIY-004",
-    "title": "ZA-04 Ivory Pearl Top with Ombre Skirt",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-06.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-ZIY-005",
-    "title": "ZA-06 Ivory Pearl Bralette Cape and Ombre Flared Pants",
-    "brand": "Surily G",
-    "category": "co-ord",
-    "image_file": "page-08.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-ZIY-006",
-    "title": "ZA-08 Ivory Pearl Sleeveless Tunic with Straight Pants",
-    "brand": "Surily G",
-    "category": "tunic",
-    "image_file": "page-10.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-ZIY-007",
-    "title": "ZA-10 Pink Pearl Peplum Top with Ombre Saree",
-    "brand": "Surily G",
-    "category": "saree",
-    "image_file": "page-12.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SG-ZIY-008",
-    "title": "ZA-12 Turquoise Ombre One Shoulder Kaftan",
-    "brand": "Surily G",
-    "category": "kaftan",
-    "image_file": "page-16.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-006",
-    "title": "ORYA Stamp Tailored Jumpsuit",
-    "brand": "Shahin Mannan",
-    "category": "jumpsuit",
-    "image_file": "page-30.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-007",
-    "title": "ORYA Love Checks Jacket with Skirt",
-    "brand": "Shahin Mannan",
-    "category": "co-ord",
-    "image_file": "page-35.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-008",
-    "title": "ORYA Butterfly Scribble Shirt Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-40.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-009",
-    "title": "ORYA Lighthouse Shirt with Track Pants",
-    "brand": "Shahin Mannan",
-    "category": "co-ord",
-    "image_file": "page-45.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-010",
-    "title": "ORYA Stamp Panelled Shift Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-50.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-011",
-    "title": "ORYA Butterfly Embellished High Low Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-65.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-012",
-    "title": "ORYA Dainty Leaves Flared Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-70.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-013",
-    "title": "ORYA Fuzzy Butterfly Pink Midi Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-75.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-014",
-    "title": "ORYA Dainty Leaves White Midi Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-80.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-ORY-015",
-    "title": "ORYA Delicate Leaves Yellow Shirt Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-85.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-001",
-    "title": "UNA Black Floral Embroidered Jumpsuit",
-    "brand": "Shahin Mannan",
-    "category": "jumpsuit",
-    "image_file": "page-01.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-002",
-    "title": "UNA Butterfly Stamp Shirt with Skirt",
-    "brand": "Shahin Mannan",
-    "category": "co-ord",
-    "image_file": "page-05.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-003",
-    "title": "UNA Taxi Shift Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-10.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-004",
-    "title": "UNA Dreams Panelled Shift Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-20.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-005",
-    "title": "UNA Waves Cropped Blazer with Pants",
-    "brand": "Shahin Mannan",
-    "category": "co-ord",
-    "image_file": "page-25.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-006",
-    "title": "UNA Waves Pink Midi Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-30.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-007",
-    "title": "UNA Butterfly Splashes Jacket Dress",
-    "brand": "Shahin Mannan",
-    "category": "jumpsuit",
-    "image_file": "page-35.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-008",
-    "title": "UNA Flower Applique Shift Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-40.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-009",
-    "title": "UNA Abstract Roses Midi Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-45.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-010",
-    "title": "UNA Colourful Lotus Wrap Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-50.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-011",
-    "title": "UNA Sunflower Boxy Shirt with Pants",
-    "brand": "Shahin Mannan",
-    "category": "co-ord",
-    "image_file": "page-60.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-012",
-    "title": "UNA Monkey on Tree Shirt Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-70.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-013",
-    "title": "UNA Fish and Prawn Jacket Dress",
-    "brand": "Shahin Mannan",
-    "category": "dress",
-    "image_file": "page-80.jpg",
-    "price": null,
-    "currency": null
-  },
-  {
-    "product_id": "GTF-SM-UNA-014",
-    "title": "UNA Insect Shirt with Pants",
-    "brand": "Shahin Mannan",
-    "category": "co-ord",
-    "image_file": "page-88.jpg",
+    "category": "Skirt",
+    "image_file": "https://gtf-source-truth.onrender.com/source-truth/drive-image/1t6f2NLuV-qkI6pgrVhczYiAt0yyMTxVM",
     "price": null,
     "currency": null
   }

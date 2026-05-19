@@ -48,7 +48,18 @@ export type Extraction = {
   product_id: string
   schema_version: string
   extraction_timestamp?: string
+  brand_sku?: string
+  product_name?: string
   brand_category?: string
+  category?: string
+  source_truth?: {
+    run_id?: string
+    review_status?: string
+    final_primary_image?: string
+    final_secondary_image?: string
+  }
+  final_primary_image?: string
+  final_secondary_image?: string
   is_multi_piece?: boolean
   component_count?: number
   components?: ExtractionComponent[]
