@@ -1,0 +1,204 @@
+{
+  "schema_version": "8.2_examples",
+  "examples": [
+    {
+      "name": "single_target_bottoms_from_shared_model_image",
+      "input_contract": {
+        "product_id": "GTF-AFRO-024",
+        "product_name": "INDIGO HEMP DENIM PANTS",
+        "brand_category": "pants",
+        "source_truth_review_status": "approved"
+      },
+      "expected_output": {
+        "product_id": "GTF-AFRO-024",
+        "schema_version": "8.2",
+        "extraction_status": "ok",
+        "brand_category": "pants",
+        "target_scope": "single_garment",
+        "source_truth": {
+          "run_id": "afropop-source-truth-run",
+          "review_status": "approved",
+          "final_primary_image": "review-handoff://GTF-AFRO-024/primary",
+          "final_secondary_image": "review-handoff://GTF-AFRO-024/secondary"
+        },
+        "hard_attributes": {
+          "category": { "value": "pants", "confidence": 1.0 },
+          "primary_color": { "value": "blue", "confidence": 0.86 },
+          "secondary_color": { "value": "none", "confidence": 1.0 },
+          "material_primary": { "value": "denim", "confidence": 0.9 },
+          "material_secondary": { "value": "none", "confidence": 1.0 },
+          "material_source": "brand-provided",
+          "silhouette": { "value": "straight", "confidence": 0.82 },
+          "length": { "value": "full-length", "confidence": 0.9 },
+          "neckline": { "value": "none", "confidence": 1.0 },
+          "sleeve_length": { "value": "none", "confidence": 1.0 },
+          "pattern": { "value": "solid", "confidence": 0.82 },
+          "details": [],
+          "price_tier": { "value": "unknown", "confidence": 0.0 }
+        },
+        "axis_scores": {
+          "minimalism": { "score": 7, "reasoning": "Pants are clean and low-detail; ignore trench/top styling in shared image." },
+          "polish": { "score": 7, "reasoning": "Tailored denim separates with intentional fit." },
+          "body_awareness": { "score": 3, "reasoning": "Straight full-length pants do not reveal or cling strongly." },
+          "drama": { "score": 2, "reasoning": "The target pants are quiet even if surrounding styling is louder." },
+          "novelty": { "score": 3, "reasoning": "Hemp denim pants are elevated but familiar." },
+          "craft": { "score": 4, "reasoning": "Material choice has craft signal; no visible handwork." },
+          "boldness": { "score": 2, "reasoning": "Wearable and safe as a standalone bottom." },
+          "glamour": { "score": 1, "reasoning": "No shine or embellishment on target pants." },
+          "trend_currency": { "score": 5, "reasoning": "Wide/straight denim remains current." },
+          "styling_affordance": { "score": 9, "reasoning": "Denim pants can anchor many outfits." },
+          "cultural_richness": { "score": 2, "reasoning": "No strong cultural textile cue visible." }
+        },
+        "is_multi_piece": false,
+        "component_count": 0,
+        "components": [],
+        "search_terms": ["indigo pants", "denim pants", "hemp denim pants", "straight pants", "full length pants"],
+        "metadata_image_conflict": { "has_conflict": false },
+        "reasoning_trace": {
+          "category_reasoning": "brand_category=pants controls scope; non-pants garments in the image are ignored.",
+          "uncertainties": ["Exact leg cut may be straight or wide depending image angle."]
+        },
+        "meta": { "mode": "catalog", "confidence": "high", "schema_version": "8.2", "prompt_guard_version": "v8.2-brand-category-components-search", "extraction_notes": null }
+      }
+    },
+    {
+      "name": "multi_piece_pantsuit_with_bralette",
+      "input_contract": {
+        "product_id": "GTF-AFRO-032",
+        "product_name": "BEIGE LUXE SHEETED SEQUINS PANTSUIT WITH BRALETTE",
+        "brand_category": "pantsuit",
+        "source_truth_review_status": "approved"
+      },
+      "expected_output": {
+        "product_id": "GTF-AFRO-032",
+        "schema_version": "8.2",
+        "extraction_status": "ok",
+        "brand_category": "pantsuit",
+        "target_scope": "multi_piece_product",
+        "source_truth": {
+          "run_id": "afropop-source-truth-run",
+          "review_status": "approved",
+          "final_primary_image": "review-handoff://GTF-AFRO-032/primary",
+          "final_secondary_image": "review-handoff://GTF-AFRO-032/secondary"
+        },
+        "hard_attributes": {
+          "category": { "value": "pantsuit", "confidence": 1.0 },
+          "primary_color": { "value": "beige", "confidence": 0.92 },
+          "secondary_color": { "value": "none", "confidence": 1.0 },
+          "material_primary": { "value": "sequin", "confidence": 0.9 },
+          "material_secondary": { "value": "none", "confidence": 1.0 },
+          "material_source": "image-extracted",
+          "silhouette": { "value": "structured", "confidence": 0.88 },
+          "length": { "value": "full-length", "confidence": 0.86 },
+          "neckline": { "value": "mixed", "confidence": 0.75 },
+          "sleeve_length": { "value": "mixed", "confidence": 0.75 },
+          "pattern": { "value": "sequined", "confidence": 0.95 },
+          "details": [{ "value": "sequin", "confidence": 0.95 }],
+          "price_tier": { "value": "luxury", "confidence": 0.8 }
+        },
+        "axis_scores": {
+          "minimalism": { "score": 2, "reasoning": "Three-piece sequined product is visually maximal." },
+          "polish": { "score": 8, "reasoning": "Coordinated tailoring and finish read elevated." },
+          "body_awareness": { "score": 7, "reasoning": "Bralette plus tailored pieces reveal/follow body." },
+          "drama": { "score": 8, "reasoning": "Full sequined three-piece set is high-impact." },
+          "novelty": { "score": 5, "reasoning": "Pantsuit is known; bralette component makes it more distinctive." },
+          "craft": { "score": 5, "reasoning": "Sequined construction has surface-work signal." },
+          "boldness": { "score": 7, "reasoning": "Bralette styling and shine are assertive." },
+          "glamour": { "score": 9, "reasoning": "Sequins across components create strong glamour." },
+          "trend_currency": { "score": 6, "reasoning": "Statement pantsuits and bralette layering remain current." },
+          "styling_affordance": { "score": 5, "reasoning": "Components can be separated, but full set is occasion-led." },
+          "cultural_richness": { "score": 2, "reasoning": "No strong regional heritage cue visible." }
+        },
+        "is_multi_piece": true,
+        "component_count": 3,
+        "components": [
+          {
+            "component_index": 1,
+            "piece_type": "blazer",
+            "role": "outerwear",
+            "visibility": "visible",
+            "confidence": 0.88,
+            "attributes": {
+              "category": { "value": "blazer", "confidence": 0.9 },
+              "primary_color": { "value": "beige", "confidence": 0.92 },
+              "material_primary": { "value": "sequin", "confidence": 0.9 },
+              "silhouette": { "value": "structured", "confidence": 0.86 },
+              "length": { "value": "hip-length", "confidence": 0.76 },
+              "neckline": { "value": "lapel", "confidence": 0.86 },
+              "sleeve_length": { "value": "long", "confidence": 0.86 },
+              "pattern": { "value": "sequined", "confidence": 0.95 },
+              "details": [{ "value": "sequin", "confidence": 0.95 }]
+            }
+          },
+          {
+            "component_index": 2,
+            "piece_type": "pants",
+            "role": "bottom",
+            "visibility": "visible",
+            "confidence": 0.85,
+            "attributes": {
+              "category": { "value": "pants", "confidence": 0.92 },
+              "primary_color": { "value": "beige", "confidence": 0.92 },
+              "material_primary": { "value": "sequin", "confidence": 0.88 },
+              "silhouette": { "value": "straight", "confidence": 0.76 },
+              "length": { "value": "full-length", "confidence": 0.86 },
+              "neckline": { "value": "none", "confidence": 1.0 },
+              "sleeve_length": { "value": "none", "confidence": 1.0 },
+              "pattern": { "value": "sequined", "confidence": 0.95 },
+              "details": [{ "value": "sequin", "confidence": 0.95 }]
+            }
+          },
+          {
+            "component_index": 3,
+            "piece_type": "bralette",
+            "role": "top",
+            "visibility": "visible",
+            "confidence": 0.8,
+            "attributes": {
+              "category": { "value": "bralette", "confidence": 0.86 },
+              "primary_color": { "value": "beige", "confidence": 0.9 },
+              "material_primary": { "value": "sequin", "confidence": 0.86 },
+              "silhouette": { "value": "fitted", "confidence": 0.82 },
+              "length": { "value": "crop", "confidence": 0.9 },
+              "neckline": { "value": "v-neck", "confidence": 0.72 },
+              "sleeve_length": { "value": "sleeveless", "confidence": 0.95 },
+              "pattern": { "value": "sequined", "confidence": 0.95 },
+              "details": [{ "value": "sequin", "confidence": 0.95 }]
+            }
+          }
+        ],
+        "search_terms": ["beige pantsuit", "sequined pantsuit", "three piece set", "beige blazer", "sequined blazer", "beige pants", "sequined pants", "beige bralette", "sequined bralette", "co-ord set"],
+        "metadata_image_conflict": { "has_conflict": false },
+        "reasoning_trace": {
+          "category_reasoning": "brand_category=pantsuit and title says with bralette, so output keeps top-level product plus separate blazer/pants/bralette components.",
+          "uncertainties": ["Exact pants leg shape may require secondary image."]
+        },
+        "meta": { "mode": "catalog", "confidence": "high", "schema_version": "8.2", "prompt_guard_version": "v8.2-brand-category-components-search", "extraction_notes": null }
+      }
+    },
+    {
+      "name": "sent_to_review_negative_control",
+      "input_contract": {
+        "product_id": "GTF-AFRO-999",
+        "product_name": "ANY PRODUCT",
+        "brand_category": "dress",
+        "source_truth_review_status": "sent_to_review"
+      },
+      "expected_output": {
+        "product_id": "GTF-AFRO-999",
+        "schema_version": "8.2",
+        "extraction_status": "blocked_source_truth_not_approved",
+        "brand_category": "dress",
+        "target_scope": "single_garment",
+        "hard_attributes": {},
+        "axis_scores": {},
+        "is_multi_piece": false,
+        "component_count": 0,
+        "components": [],
+        "search_terms": [],
+        "reasoning_trace": { "blocked_reason": "source_truth_review_status=sent_to_review; extraction must wait for approved/manual_fix final images." },
+        "meta": { "mode": "catalog", "confidence": "blocked", "schema_version": "8.2", "prompt_guard_version": "v8.2-brand-category-components-search", "extraction_notes": "Do not score unapproved source-truth images." }
+      }
+    }
+  ]
+}
