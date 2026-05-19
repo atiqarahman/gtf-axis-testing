@@ -380,6 +380,8 @@ function ProductImage({ item, image, review, saveReview, position, reviewerName,
 
 function sourceTruthImageUrl(path?: string) {
   if (!path) return ''
+  const driveMatch = path.match(/\/source-truth\/drive-image\/([^/?#]+)/)
+  if (driveMatch?.[1]) return `https://drive.google.com/thumbnail?id=${driveMatch[1]}&sz=w1400`
   return path.startsWith('/') ? `https://gtf-source-truth.onrender.com${path}` : path
 }
 
