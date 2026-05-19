@@ -443,7 +443,7 @@ function findSearchMatches(item: ValidationItem, query: string): SearchMatchReas
   add('top_level_category', 'hard_attributes.category', extraction.hard_attributes.category?.value)
   for (const component of extraction.components ?? []) {
     add('component_piece_type', 'piece_type', component.piece_type, component)
-    for (const [field, raw] of Object.entries({ ...component.attributes, ...component })) {
+    for (const [field, raw] of Object.entries({ ...(component.attributes ?? {}), ...component })) {
       if (['component_index','piece_type','role','attributes'].includes(field)) continue
       add('component_attribute', field, Array.isArray(raw) ? raw.join(', ') : typeof raw === 'object' && raw ? (raw as any).value ?? JSON.stringify(raw) : raw, component)
     }
@@ -464,9 +464,9 @@ function Decision({ review, saveReview, setDecision }: any) {
 }
 
 function VibePanel({ item, review, saveReview }: { item: ValidationItem; review: ProductReview; saveReview: (r: ProductReview) => void }) {
-  const computed = Object.entries(item.extraction.all_vibe_scores).sort((a,b) => b[1].score - a[1].score).slice(0, 12).map(([label, obj]) => ({ label, score: obj.score, source: 'computed' as const }))
+  const computed = Object.entries(item.extraction.all_vibe_scores ?? {}).sort((a,b) => (b[1]?.score ?? 0) - (a[1]?.score ?? 0)).slice(0, 12).map(([label, obj]) => ({ label, score: obj?.score ?? 0, source: 'computed' as const }))
   const gpt = (item.extraction.gpt_suggested_vibes ?? []).map((label) => ({ label, score: undefined, source: 'gpt' as const }))
-  return <section className="card vibe-card"><div className="section-kicker">AI style alignment</div><h3>Suggested vibe validation</h3><p className="hint">Computed vector vibes and GPT suggestions are separate. Agree when the taste feels right; disagree only when the vibe is wrong. Use “Should also rank high” when another vibe deserves a boost without marking the current vibe wrong.</p><div className="vibe-list">{[...computed.slice(0,3), ...gpt].map((v, idx) => <VibeRow key={`${v.source}-${v.label}-${idx}`} vibe={v} review={review} saveReview={saveReview} />)}</div><VibeBoostPanel review={review} saveReview={saveReview}/><details><summary>Show all 12 computed vibe scores</summary>{computed.map((v) => <div key={v.label} className="score-row"><span>{v.label}</span><progress max={100} value={v.score}/><b>{v.score.toFixed(1)}</b></div>)}</details></section>
+  return <section className="card vibe-card"><div className="section-kicker">AI style alignment</div><h3>Suggested vibe validation</h3><p className="hint">Computed vector vibes and GPT suggestions are separate. Agree when the taste feels right; disagree only when the vibe is wrong. Use “Should also rank high” when another vibe deserves a boost without marking the current vibe wrong.</p>{computed.length || gpt.length ? <div className="vibe-list">{[...computed.slice(0,3), ...gpt].map((v, idx) => <VibeRow key={`${v.source}-${v.label}-${idx}`} vibe={v} review={review} saveReview={saveReview} />)}</div> : <p className="v82-warning">No computed vibe scores found in this v8.2 row yet. Review extraction/components first, then run the production vibe scoring pass.</p>}<VibeBoostPanel review={review} saveReview={saveReview}/>{computed.length > 0 && <details><summary>Show all computed vibe scores</summary>{computed.map((v) => <div key={v.label} className="score-row"><span>{v.label}</span><progress max={100} value={v.score}/><b>{v.score.toFixed(1)}</b></div>)}</details>}</section>
 }
 
 
