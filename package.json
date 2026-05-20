@@ -15,6 +15,7 @@
     "@radix-ui/react-slot": "latest",
     "@radix-ui/react-tabs": "latest",
     "@radix-ui/react-tooltip": "latest",
+    "@vercel/blob": "^2.4.0",
     "clsx": "latest",
     "lucide-react": "latest",
     "next": "latest",

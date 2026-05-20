@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { promises as fs } from 'fs'
 import path from 'path'
+import { get, put } from '@vercel/blob'
 
 export const dynamic = 'force-dynamic'
 
@@ -11,14 +12,18 @@ const REVIEW_FILE = path.join(REVIEW_DIR, 'axis-reviews.json')
 const SNAPSHOT_FILE = path.join(REVIEW_DIR, 'axis-reviews.snapshots.jsonl')
 const IS_VERCEL = Boolean(process.env.VERCEL)
 const ALLOW_EPHEMERAL = process.env.TASTE_LAB_ALLOW_EPHEMERAL_STORAGE === '1'
+const BLOB_KEY = process.env.TASTE_LAB_REVIEW_BLOB_KEY || 'taste-lab/axis-reviews.json'
+const BLOB_SNAPSHOT_PREFIX = process.env.TASTE_LAB_REVIEW_BLOB_SNAPSHOT_PREFIX || 'taste-lab/snapshots'
+const HAS_BLOB = Boolean(process.env.BLOB_READ_WRITE_TOKEN)
 const KV_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || ''
 const KV_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || ''
 const KV_KEY = process.env.TASTE_LAB_REVIEW_KV_KEY || 'gtf:taste-lab:axis-reviews'
 const HAS_KV = Boolean(KV_URL && KV_TOKEN)
 
-type StorageInfo = { mode: 'kv' | 'file'; durable: boolean }
+type StorageInfo = { mode: 'blob' | 'kv' | 'file'; durable: boolean }
 
 function storageInfo(): StorageInfo {
+  if (HAS_BLOB) return { mode: 'blob', durable: true }
   if (HAS_KV) return { mode: 'kv', durable: true }
   if (IS_VERCEL && !ALLOW_EPHEMERAL) {
     throw new Error('Durable review storage is not configured. Set Upstash/Vercel KV env vars or deploy on persistent disk before review work resumes.')
@@ -46,6 +51,16 @@ async function kvCommand(command: any[]) {
 
 async function readReviews(): Promise<ReviewMap> {
   try {
+    if (HAS_BLOB) {
+      const blob = await get(BLOB_KEY, { access: 'private', useCache: false })
+      if (!blob || blob.statusCode === 304 || !blob.stream) return {}
+      const raw = await new Response(blob.stream).text()
+      const parsed = JSON.parse(raw)
+      if (Array.isArray(parsed)) return Object.fromEntries(parsed.filter((r) => r?.product_id).map((r) => [r.product_id, r]))
+      if (parsed && typeof parsed === 'object') return parsed.reviews ?? parsed
+      return {}
+    }
+
     if (HAS_KV) {
       const raw = await kvCommand(['GET', KV_KEY])
       if (!raw) return {}
@@ -60,6 +75,8 @@ async function readReviews(): Promise<ReviewMap> {
     if (Array.isArray(parsed)) return Object.fromEntries(parsed.filter((r) => r?.product_id).map((r) => [r.product_id, r]))
     if (parsed && typeof parsed === 'object') return parsed.reviews ?? parsed
   } catch (error: any) {
+    const message = String(error?.message ?? error)
+    if (HAS_BLOB && (error?.name === 'BlobNotFoundError' || /not found/i.test(message))) return {}
     if (error?.code !== 'ENOENT') throw error
   }
   return {}
@@ -135,7 +152,10 @@ export async function POST(request: NextRequest) {
       reviews: merged,
     })
 
-    if (info.mode === 'kv') {
+    if (info.mode === 'blob') {
+      await put(BLOB_KEY, JSON.stringify(payload, null, 2), { access: 'private', allowOverwrite: true, contentType: 'application/json' })
+      await put(`${BLOB_SNAPSHOT_PREFIX}/${payload.updated_at.replace(/[:.]/g, '-')}.json`, snapshot, { access: 'private', allowOverwrite: true, contentType: 'application/json' })
+    } else if (info.mode === 'kv') {
       await kvCommand(['SET', KV_KEY, JSON.stringify(payload)])
       await kvCommand(['LPUSH', `${KV_KEY}:snapshots`, snapshot])
       await kvCommand(['LTRIM', `${KV_KEY}:snapshots`, 0, 49])
