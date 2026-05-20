@@ -19,8 +19,19 @@ const KV_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL
 const KV_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || ''
 const KV_KEY = process.env.TASTE_LAB_REVIEW_KV_KEY || 'gtf:taste-lab:axis-reviews'
 const HAS_KV = Boolean(KV_URL && KV_TOKEN)
+const REVIEW_ACCESS_TOKEN = process.env.TASTE_LAB_REVIEW_ACCESS_TOKEN || ''
+const REVIEW_ACCESS_HEADER = 'x-taste-lab-review-token'
 
 type StorageInfo = { mode: 'blob' | 'kv' | 'file'; durable: boolean }
+
+function authorized(request: NextRequest) {
+  if (!REVIEW_ACCESS_TOKEN) return true
+  return request.headers.get(REVIEW_ACCESS_HEADER) === REVIEW_ACCESS_TOKEN
+}
+
+function unauthorized() {
+  return NextResponse.json({ ok: false, mode: 'unauthorized', writable: false, durable: false, reviews: {}, summary: summarize({}), error: 'Taste Lab review access key required.' }, { status: 401 })
+}
 
 function storageInfo(): StorageInfo {
   if (HAS_BLOB) return { mode: 'blob', durable: true }
@@ -118,7 +129,8 @@ function summarize(reviews: ReviewMap) {
   return { total: list.length, completed, skipped, approved, withAttributeRows, attributeApproved, withAxisOverrides, withVibeReview }
 }
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  if (!authorized(request)) return unauthorized()
   try {
     await ensureDir()
     const info = storageInfo()
@@ -130,6 +142,7 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
+  if (!authorized(request)) return unauthorized()
   try {
     await ensureDir()
     const info = storageInfo()

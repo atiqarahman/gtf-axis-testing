@@ -16,6 +16,7 @@ const feedbackTypes = ['none','axis_underweight','axis_overweight','wrong_vibe_m
 const EXCLUDED_BRANDS = ['Shahin Mannan', 'Surily G']
 const EXCLUSION_LABEL = '74 lookbook products excluded pending CSV/image-source repair + re-extraction'
 const REVIEW_STORAGE_KEY = 'gtf-axis-reviews'
+const REVIEW_ACCESS_KEY = 'gtf-axis-review-access-token'
 
 type ServerSaveState = { ok: boolean; writable: boolean; mode: string; message: string; lastSavedAt?: string; summary?: any }
 
@@ -72,8 +73,13 @@ export default function ValidationWorkbench() {
   const [showShortcuts, setShowShortcuts] = useState(false)
   const [reviewerName, setReviewerName] = useState('RK')
   const [saveNotice, setSaveNotice] = useState('')
+  const [reviewAccessToken, setReviewAccessToken] = useState(() => typeof window === 'undefined' ? '' : localStorage.getItem(REVIEW_ACCESS_KEY) || '')
   const [serverSave, setServerSave] = useState<ServerSaveState>({ ok: false, writable: false, mode: 'loading', message: 'Checking server persistence…' })
   const [hydrated, setHydrated] = useState(false)
+
+  function reviewApiHeaders(extra: Record<string, string> = {}) {
+    return reviewAccessToken ? { ...extra, 'x-taste-lab-review-token': reviewAccessToken } : extra
+  }
 
   useEffect(() => {
     loadValidationData().then(async ({ items, qa }) => {
@@ -84,7 +90,7 @@ export default function ValidationWorkbench() {
       if (savedReviewer) setReviewerName(savedReviewer)
       const localReviews = saved ? JSON.parse(saved) : {}
       try {
-        const response = await fetch('/api/reviews', { cache: 'no-store' })
+        const response = await fetch('/api/reviews', { cache: 'no-store', headers: reviewApiHeaders() })
         const server = await response.json()
         const serverReviews = server?.reviews ?? {}
         const merged = mergeReviewMaps(localReviews, serverReviews)
@@ -98,7 +104,7 @@ export default function ValidationWorkbench() {
         setHydrated(true)
       }
     })
-  }, [])
+  }, [reviewAccessToken])
 
   useEffect(() => {
     if (!hydrated) return
@@ -114,7 +120,7 @@ export default function ValidationWorkbench() {
       try {
         const response = await fetch('/api/reviews', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: reviewApiHeaders({ 'Content-Type': 'application/json' }),
           body: JSON.stringify({ source: 'taste_lab_autosave', reviewer: reviewerName, reviews }),
           signal: controller.signal,
         })
@@ -130,11 +136,16 @@ export default function ValidationWorkbench() {
       controller.abort()
       window.clearTimeout(timer)
     }
-  }, [hydrated, reviewerName, reviews])
+  }, [hydrated, reviewerName, reviews, reviewAccessToken])
 
   useEffect(() => {
     localStorage.setItem('gtf-axis-reviewer', reviewerName)
   }, [reviewerName])
+
+  useEffect(() => {
+    if (reviewAccessToken) localStorage.setItem(REVIEW_ACCESS_KEY, reviewAccessToken)
+    else localStorage.removeItem(REVIEW_ACCESS_KEY)
+  }, [reviewAccessToken])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -270,7 +281,7 @@ export default function ValidationWorkbench() {
   async function persistNow(nextReviews = reviews, source = 'manual_save') {
     const response = await fetch('/api/reviews', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: reviewApiHeaders({ 'Content-Type': 'application/json' }),
       body: JSON.stringify({ source, reviewer: reviewerName, reviews: nextReviews }),
     })
     const result = await response.json()
@@ -397,6 +408,7 @@ export default function ValidationWorkbench() {
         <button className="ghost soft-action" onClick={() => setShowQa(!showQa)}><SlidersHorizontal size={16}/> Data QA</button>
         <button className="ghost soft-action" onClick={() => setShowShortcuts(!showShortcuts)}>⌘ Shortcuts</button>
         <label className="reviewer-field"><span>Reviewer</span><input value={reviewerName} onChange={(e) => setReviewerName(e.target.value)} /></label>
+        <label className="reviewer-field"><span>Access key</span><input type="password" value={reviewAccessToken} onChange={(e) => setReviewAccessToken(e.target.value.trim())} placeholder="Required for server save" /></label>
         <button className="ghost soft-action" onClick={() => persistNow().catch((error) => setServerSave({ ok: false, writable: false, mode: 'manual_save_error', message: `Manual save failed: ${error?.message ?? error}` }))}>Save server</button>
         <label className="ghost soft-action import-button"><input type="file" accept="application/json,.json" onChange={(e) => importReviewFile(e.target.files?.[0] ?? null)} />Import JSON</label>
         <button className="ghost soft-action" onClick={exportCsv}><Download size={16}/> CSV</button>
