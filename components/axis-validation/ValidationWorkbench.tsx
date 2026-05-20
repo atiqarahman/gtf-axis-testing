@@ -15,6 +15,29 @@ const issueOptions = ['wrong_image','image_mapping_failed','metadata_image_confl
 const feedbackTypes = ['none','axis_underweight','axis_overweight','wrong_vibe_mapping','bad_attribute_extraction','image_ambiguity','metadata_image_conflict','taxonomy_issue']
 const EXCLUDED_BRANDS = ['Shahin Mannan', 'Surily G']
 const EXCLUSION_LABEL = '74 lookbook products excluded pending CSV/image-source repair + re-extraction'
+const REVIEW_STORAGE_KEY = 'gtf-axis-reviews'
+
+type ServerSaveState = { ok: boolean; writable: boolean; mode: string; message: string; lastSavedAt?: string; summary?: any }
+
+function reviewTime(review: any) {
+  return Date.parse(review?.reviewed_at ?? review?.updated_at ?? 0) || 0
+}
+
+function mergeReviewMaps(local: Record<string, ProductReview>, server: Record<string, ProductReview>) {
+  const merged: Record<string, ProductReview> = { ...local }
+  for (const [productId, serverReview] of Object.entries(server ?? {})) {
+    const localReview = merged[productId]
+    merged[productId] = reviewTime(serverReview) >= reviewTime(localReview) ? serverReview : localReview
+  }
+  return merged
+}
+
+function approvedAttributeProducts(reviews: Record<string, ProductReview>) {
+  return Object.values(reviews).filter((r) => {
+    const rows = r.attribute_reviews ?? []
+    return rows.length > 0 && rows.every((a: any) => ['accept', 'accept_normalized', 'override'].includes(a.decision))
+  }).length
+}
 
 function blankReview(item: ValidationItem): ProductReview {
   const image = resolveImage(item.product)
@@ -49,21 +72,65 @@ export default function ValidationWorkbench() {
   const [showShortcuts, setShowShortcuts] = useState(false)
   const [reviewerName, setReviewerName] = useState('RK')
   const [saveNotice, setSaveNotice] = useState('')
+  const [serverSave, setServerSave] = useState<ServerSaveState>({ ok: false, writable: false, mode: 'loading', message: 'Checking server persistence…' })
+  const [hydrated, setHydrated] = useState(false)
 
   useEffect(() => {
-    loadValidationData().then(({ items, qa }) => {
+    loadValidationData().then(async ({ items, qa }) => {
       setItems(items)
       setQa(qa)
-      const saved = localStorage.getItem('gtf-axis-reviews')
+      const saved = localStorage.getItem(REVIEW_STORAGE_KEY)
       const savedReviewer = localStorage.getItem('gtf-axis-reviewer')
       if (savedReviewer) setReviewerName(savedReviewer)
-      if (saved) setReviews(JSON.parse(saved))
+      const localReviews = saved ? JSON.parse(saved) : {}
+      try {
+        const response = await fetch('/api/reviews', { cache: 'no-store' })
+        const server = await response.json()
+        const serverReviews = server?.reviews ?? {}
+        const merged = mergeReviewMaps(localReviews, serverReviews)
+        setReviews(merged)
+        if (Object.keys(merged).length) localStorage.setItem(REVIEW_STORAGE_KEY, JSON.stringify(merged))
+        setServerSave({ ok: Boolean(server?.ok), writable: Boolean(server?.writable), mode: server?.mode ?? 'unknown', message: server?.writable ? 'Server persistence ON' : `Server persistence unavailable: ${server?.error ?? 'unknown'}`, summary: server?.summary })
+      } catch (error: any) {
+        setReviews(localReviews)
+        setServerSave({ ok: false, writable: false, mode: 'localStorage', message: `Local-only fallback: ${error?.message ?? error}` })
+      } finally {
+        setHydrated(true)
+      }
     })
   }, [])
 
   useEffect(() => {
-    if (Object.keys(reviews).length) localStorage.setItem('gtf-axis-reviews', JSON.stringify(reviews))
-  }, [reviews])
+    if (!hydrated) return
+    if (Object.keys(reviews).length) localStorage.setItem(REVIEW_STORAGE_KEY, JSON.stringify(reviews))
+  }, [hydrated, reviews])
+
+  useEffect(() => {
+    if (!hydrated) return
+    const count = Object.keys(reviews).length
+    if (!count) return
+    const controller = new AbortController()
+    const timer = window.setTimeout(async () => {
+      try {
+        const response = await fetch('/api/reviews', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ source: 'taste_lab_autosave', reviewer: reviewerName, reviews }),
+          signal: controller.signal,
+        })
+        const result = await response.json()
+        if (!response.ok || !result?.ok) throw new Error(result?.error ?? `HTTP ${response.status}`)
+        setServerSave({ ok: true, writable: true, mode: result.mode ?? 'file', message: `Server saved ${count} review records`, lastSavedAt: new Date().toISOString(), summary: result.summary })
+      } catch (error: any) {
+        if (error?.name === 'AbortError') return
+        setServerSave({ ok: false, writable: false, mode: 'localStorage', message: `Local-only — export required: ${error?.message ?? error}` })
+      }
+    }, 650)
+    return () => {
+      controller.abort()
+      window.clearTimeout(timer)
+    }
+  }, [hydrated, reviewerName, reviews])
 
   useEffect(() => {
     localStorage.setItem('gtf-axis-reviewer', reviewerName)
@@ -114,6 +181,8 @@ export default function ValidationWorkbench() {
   const reviewedCount = Object.values(reviews).filter((r) => r.review_status === 'completed').length
   const skippedCount = Object.values(reviews).filter((r) => r.review_status === 'skipped').length
   const touchedCount = Object.keys(reviews).length
+  const attributeApprovedCount = approvedAttributeProducts(reviews)
+  const attributeTouchedCount = Object.values(reviews).filter((r) => (r.attribute_reviews ?? []).length > 0).length
   const filteredReviewedCount = filtered.filter((i) => reviews[i.product.product_id]?.review_status === 'completed').length
   const progressPct = activeItems.length ? Math.round(((reviewedCount + skippedCount) / activeItems.length) * 100) : 0
   const correctionCount = Object.values(reviews).filter((r) => r.overall_decision === 'needs_correction' || r.axis_overrides.length || r.attribute_reviews.length || r.vibe_reviews.some((v) => v.decision === 'disagree')).length
@@ -184,6 +253,38 @@ export default function ValidationWorkbench() {
     const blob = new Blob([JSON.stringify(Object.values(reviews).map(enrichedReview), null, 2)], { type: 'application/json' })
     downloadBlob(blob, `gtf-axis-reviews-${new Date().toISOString().slice(0,10)}.json`)
   }
+  async function persistNow(nextReviews = reviews, source = 'manual_save') {
+    const response = await fetch('/api/reviews', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ source, reviewer: reviewerName, reviews: nextReviews }),
+    })
+    const result = await response.json()
+    if (!response.ok || !result?.ok) throw new Error(result?.error ?? `HTTP ${response.status}`)
+    setServerSave({ ok: true, writable: true, mode: result.mode ?? 'file', message: `Server saved ${Object.keys(nextReviews).length} review records`, lastSavedAt: new Date().toISOString(), summary: result.summary })
+    return result
+  }
+
+  function importReviewFile(file: File | null) {
+    if (!file) return
+    const reader = new FileReader()
+    reader.onload = async () => {
+      try {
+        const parsed = JSON.parse(String(reader.result ?? '{}'))
+        const importedRaw = Array.isArray(parsed) ? Object.fromEntries(parsed.filter((r: any) => r?.product_id).map((r: any) => [r.product_id, r])) : (parsed.reviews ?? parsed)
+        const imported = mergeReviewMaps(reviews, importedRaw)
+        setReviews(imported)
+        localStorage.setItem(REVIEW_STORAGE_KEY, JSON.stringify(imported))
+        await persistNow(imported, 'manual_import')
+        setSaveNotice(`Imported ${Object.keys(importedRaw ?? {}).length} review records and saved to server`)
+        window.setTimeout(() => setSaveNotice(''), 2500)
+      } catch (error: any) {
+        setServerSave({ ok: false, writable: false, mode: 'import_error', message: `Import failed: ${error?.message ?? error}` })
+      }
+    }
+    reader.readAsText(file)
+  }
+
   function exportCsv() {
     const rows = Object.values(reviews).map((r) => {
       const source = items.find((i) => i.product.product_id === r.product_id)
@@ -258,16 +359,21 @@ export default function ValidationWorkbench() {
         <div className="metrics expanded">
           <Metric label="Active products" value={activeItems.length} />
           <Metric label="Reviewed" value={reviewedCount} />
-          <Metric label="Corrections" value={correctionCount} />
+          <Metric label="Attribute approved" value={attributeApprovedCount} />
           <Metric label="Vibe disagreements" value={vibeDisagreementCount} />
           <Metric label="Also-rank-high" value={vibeBoostCount} />
           <Metric label="Axis overrides" value={axisOverrideCount} />
-          <Metric label="Image issues" value={imageIssueCount} />
+          <Metric label="Attr touched" value={attributeTouchedCount} />
           <Metric label="v8.2 ready" value={qa?.v82Ready ?? 0} />
         </div>
       </header>
 
       {saveNotice && <div className="save-notice"><Check size={16}/>{saveNotice} · moving to next</div>}
+
+      <section className={serverSave.writable ? 'persistence-strip persistence-ok' : 'persistence-strip persistence-risk'}>
+        <b>{serverSave.writable ? 'Persistent review saving enabled' : 'P0 risk: reviews are local-only'}</b>
+        <span>{serverSave.message}{serverSave.lastSavedAt ? ` · ${new Date(serverSave.lastSavedAt).toLocaleTimeString()}` : ''}. Attribute-approved products: {attributeApprovedCount}. Export remains the manual backup.</span>
+      </section>
 
       <section className="toolbar taste-toolbar">
         <input placeholder="Search products, brands, SKUs…" value={query} onChange={(e) => { setQuery(e.target.value); setIndex(0) }} />
@@ -277,12 +383,14 @@ export default function ValidationWorkbench() {
         <button className="ghost soft-action" onClick={() => setShowQa(!showQa)}><SlidersHorizontal size={16}/> Data QA</button>
         <button className="ghost soft-action" onClick={() => setShowShortcuts(!showShortcuts)}>⌘ Shortcuts</button>
         <label className="reviewer-field"><span>Reviewer</span><input value={reviewerName} onChange={(e) => setReviewerName(e.target.value)} /></label>
+        <button className="ghost soft-action" onClick={() => persistNow().catch((error) => setServerSave({ ok: false, writable: false, mode: 'manual_save_error', message: `Manual save failed: ${error?.message ?? error}` }))}>Save server</button>
+        <label className="ghost soft-action import-button"><input type="file" accept="application/json,.json" onChange={(e) => importReviewFile(e.target.files?.[0] ?? null)} />Import JSON</label>
         <button className="ghost soft-action" onClick={exportCsv}><Download size={16}/> CSV</button>
         <button className="primary gradient-action" onClick={exportJson}><Download size={16}/> Export JSON</button>
       </section>
 
       <section className="session-strip">
-        <div className="session-copy"><b>Review session</b><span>{reviewerName || 'anonymous'} · {filteredReviewedCount}/{filtered.length} reviewed in current queue · {reviewedCount} approved/corrected, {skippedCount} skipped, {touchedCount} touched overall · {excludedCount} lookbook products excluded pending source repair</span></div>
+        <div className="session-copy"><b>Review session</b><span>{reviewerName || 'anonymous'} · {filteredReviewedCount}/{filtered.length} reviewed in current queue · {reviewedCount} completed, {skippedCount} skipped, {touchedCount} touched overall · {attributeApprovedCount} products with all explicit attributes approved · {excludedCount} lookbook products excluded pending source repair</span></div>
         <div className="progress-wrap"><div className="progress-label"><span>Batch progress</span><b>{progressPct}%</b></div><div className="progress-track"><div style={{ width: `${progressPct}%` }} /></div></div>
         <Badge tone={review.review_status === 'completed' ? 'green' : review.review_status === 'skipped' ? 'amber' : 'red'}>{review.review_status.toUpperCase()}</Badge>
       </section>
