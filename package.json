@@ -6,7 +6,7 @@
     "dev": "next dev -p 3013",
     "build": "next build",
     "start": "next start -p 3013",
-    "lint": "next lint"
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "latest",

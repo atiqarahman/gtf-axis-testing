@@ -6,16 +6,55 @@ export const dynamic = 'force-dynamic'
 
 type ReviewMap = Record<string, any>
 
-const REVIEW_DIR = path.join(process.cwd(), 'data', 'reviews')
+const REVIEW_DIR = path.resolve(process.env.TASTE_LAB_REVIEW_DIR || path.join(process.cwd(), 'data', 'reviews'))
 const REVIEW_FILE = path.join(REVIEW_DIR, 'axis-reviews.json')
 const SNAPSHOT_FILE = path.join(REVIEW_DIR, 'axis-reviews.snapshots.jsonl')
+const IS_VERCEL = Boolean(process.env.VERCEL)
+const ALLOW_EPHEMERAL = process.env.TASTE_LAB_ALLOW_EPHEMERAL_STORAGE === '1'
+const KV_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || ''
+const KV_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || ''
+const KV_KEY = process.env.TASTE_LAB_REVIEW_KV_KEY || 'gtf:taste-lab:axis-reviews'
+const HAS_KV = Boolean(KV_URL && KV_TOKEN)
+
+type StorageInfo = { mode: 'kv' | 'file'; durable: boolean }
+
+function storageInfo(): StorageInfo {
+  if (HAS_KV) return { mode: 'kv', durable: true }
+  if (IS_VERCEL && !ALLOW_EPHEMERAL) {
+    throw new Error('Durable review storage is not configured. Set Upstash/Vercel KV env vars or deploy on persistent disk before review work resumes.')
+  }
+  return { mode: 'file', durable: !IS_VERCEL || ALLOW_EPHEMERAL }
+}
 
 async function ensureDir() {
-  await fs.mkdir(REVIEW_DIR, { recursive: true })
+  const info = storageInfo()
+  if (info.mode === 'file') await fs.mkdir(REVIEW_DIR, { recursive: true })
+}
+
+async function kvCommand(command: any[]) {
+  if (!HAS_KV) throw new Error('KV storage is not configured')
+  const response = await fetch(`${KV_URL}/pipeline`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${KV_TOKEN}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify([command]),
+    cache: 'no-store',
+  })
+  const data = await response.json().catch(() => null)
+  if (!response.ok) throw new Error(`KV ${command[0]} failed: ${response.status}`)
+  return Array.isArray(data) ? data[0]?.result : data?.result
 }
 
 async function readReviews(): Promise<ReviewMap> {
   try {
+    if (HAS_KV) {
+      const raw = await kvCommand(['GET', KV_KEY])
+      if (!raw) return {}
+      const parsed = typeof raw === 'string' ? JSON.parse(raw) : raw
+      if (Array.isArray(parsed)) return Object.fromEntries(parsed.filter((r) => r?.product_id).map((r) => [r.product_id, r]))
+      if (parsed && typeof parsed === 'object') return parsed.reviews ?? parsed
+      return {}
+    }
+
     const raw = await fs.readFile(REVIEW_FILE, 'utf8')
     const parsed = JSON.parse(raw)
     if (Array.isArray(parsed)) return Object.fromEntries(parsed.filter((r) => r?.product_id).map((r) => [r.product_id, r]))
@@ -65,16 +104,18 @@ function summarize(reviews: ReviewMap) {
 export async function GET() {
   try {
     await ensureDir()
+    const info = storageInfo()
     const reviews = await readReviews()
-    return NextResponse.json({ ok: true, mode: 'file', writable: true, reviews, summary: summarize(reviews), path: REVIEW_FILE })
+    return NextResponse.json({ ok: true, mode: info.mode, writable: true, durable: info.durable, reviews, summary: summarize(reviews) })
   } catch (error: any) {
-    return NextResponse.json({ ok: false, mode: 'unavailable', writable: false, reviews: {}, summary: summarize({}), error: error?.message ?? String(error) }, { status: 200 })
+    return NextResponse.json({ ok: false, mode: 'unavailable', writable: false, durable: false, reviews: {}, summary: summarize({}), error: error?.message ?? String(error) }, { status: 200 })
   }
 }
 
 export async function POST(request: NextRequest) {
   try {
     await ensureDir()
+    const info = storageInfo()
     const body = await request.json()
     const incoming = normalizeReviews(body)
     const existing = await readReviews()
@@ -85,10 +126,26 @@ export async function POST(request: NextRequest) {
       summary: summarize(merged),
       reviews: merged,
     }
-    await fs.writeFile(REVIEW_FILE, JSON.stringify(payload, null, 2))
-    await fs.appendFile(SNAPSHOT_FILE, JSON.stringify({ saved_at: payload.updated_at, source: body?.source ?? 'client_autosave', count: Object.keys(incoming).length, summary: payload.summary }) + '\n')
-    return NextResponse.json({ ok: true, mode: 'file', writable: true, summary: payload.summary, saved_count: Object.keys(incoming).length, path: REVIEW_FILE })
+
+    const snapshot = JSON.stringify({
+      saved_at: payload.updated_at,
+      source: body?.source ?? 'client_autosave',
+      count: Object.keys(incoming).length,
+      summary: payload.summary,
+      reviews: merged,
+    })
+
+    if (info.mode === 'kv') {
+      await kvCommand(['SET', KV_KEY, JSON.stringify(payload)])
+      await kvCommand(['LPUSH', `${KV_KEY}:snapshots`, snapshot])
+      await kvCommand(['LTRIM', `${KV_KEY}:snapshots`, 0, 49])
+    } else {
+      await fs.writeFile(REVIEW_FILE, JSON.stringify(payload, null, 2))
+      await fs.appendFile(SNAPSHOT_FILE, snapshot + '\n')
+    }
+
+    return NextResponse.json({ ok: true, mode: info.mode, writable: true, durable: info.durable, summary: payload.summary, saved_count: Object.keys(incoming).length })
   } catch (error: any) {
-    return NextResponse.json({ ok: false, mode: 'unavailable', writable: false, error: error?.message ?? String(error) }, { status: 500 })
+    return NextResponse.json({ ok: false, mode: 'unavailable', writable: false, durable: false, error: error?.message ?? String(error) }, { status: 500 })
   }
 }

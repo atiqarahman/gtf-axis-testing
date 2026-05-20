@@ -192,11 +192,25 @@ export default function ValidationWorkbench() {
   const unresolvedImageIssues = qa?.imageIssues.filter((i) => unresolvedImageIssueIds.has(i.product_id)) ?? []
   const imageIssueCount = unresolvedImageIssues.length
   const autoFalse = Object.values(reviews).filter((r) => items.find((i) => i.product.product_id === r.product_id)?.extraction.product_tier === 'AUTO' && r.overall_decision !== 'approve' && r.overall_decision !== 'unset').length
+  const persistenceReady = serverSave.writable === true
+
+  function blockUnsafeReviewAction(action = 'Review change') {
+    setSaveNotice(`${action} blocked — server persistence is not writable. Export/import is allowed, but AR review must stay frozen.`)
+    window.setTimeout(() => setSaveNotice(''), 3200)
+  }
 
   function saveReview(next: ProductReview) {
+    if (!persistenceReady) {
+      blockUnsafeReviewAction('Review edit')
+      return
+    }
     setReviews((prev) => ({ ...prev, [next.product_id]: { ...next, reviewer: reviewerName || 'anonymous' } }))
   }
   function setDecision(decision: ProductReview['overall_decision']) {
+    if (!persistenceReady) {
+      blockUnsafeReviewAction('Decision')
+      return
+    }
     if (!item || !review) return
     const status = decision === 'skip_for_now' ? 'skipped' : 'completed'
     saveReview({ ...review, overall_decision: decision, review_status: status, reviewed_at: new Date().toISOString() })
@@ -370,9 +384,9 @@ export default function ValidationWorkbench() {
 
       {saveNotice && <div className="save-notice"><Check size={16}/>{saveNotice} · moving to next</div>}
 
-      <section className={serverSave.writable ? 'persistence-strip persistence-ok' : 'persistence-strip persistence-risk'}>
-        <b>{serverSave.writable ? 'Persistent review saving enabled' : 'P0 risk: reviews are local-only'}</b>
-        <span>{serverSave.message}{serverSave.lastSavedAt ? ` · ${new Date(serverSave.lastSavedAt).toLocaleTimeString()}` : ''}. Attribute-approved products: {attributeApprovedCount}. Export remains the manual backup.</span>
+      <section className={persistenceReady ? 'persistence-strip persistence-ok' : 'persistence-strip persistence-risk'}>
+        <b>{persistenceReady ? 'Persistent review saving enabled' : 'P0 HARD BLOCK: review actions frozen'}</b>
+        <span>{serverSave.message}{serverSave.lastSavedAt ? ` · ${new Date(serverSave.lastSavedAt).toLocaleTimeString()}` : ''}. Attribute-approved products: {attributeApprovedCount}. Export/import remains available, but approve/edit controls are disabled until server persistence is writable.</span>
       </section>
 
       <section className="toolbar taste-toolbar">
@@ -410,12 +424,12 @@ export default function ValidationWorkbench() {
       {showShortcuts && <section className="qa shortcuts"><b>Keyboard shortcuts:</b> ← Previous · → Next · A Approve · D Needs correction · S Skip · E Export JSON. Inputs, selects, and textareas ignore shortcuts while focused.</section>}
 
       <section className="review-grid">
-        <ProductImage item={item} image={image} review={review} saveReview={saveReview} reviewerName={reviewerName} queue={queue} onAdvance={() => setIndex((i) => Math.min(filtered.length - 1, i + 1))} position={`${Math.min(index + 1, filtered.length)} / ${filtered.length}`} />
+        <ProductImage item={item} image={image} review={review} saveReview={saveReview} reviewerName={reviewerName} queue={queue} persistenceReady={persistenceReady} onAdvance={() => setIndex((i) => Math.min(filtered.length - 1, i + 1))} position={`${Math.min(index + 1, filtered.length)} / ${filtered.length}`} />
         <div className="review-panel">
           <Meta item={item} image={image} />
           <V82ExtractionPanel item={item} review={review} saveReview={saveReview} />
           <SearchLabPanel item={item} />
-          <Decision review={review} saveReview={saveReview} setDecision={setDecision} />
+          <Decision review={review} saveReview={saveReview} setDecision={setDecision} persistenceReady={persistenceReady} />
           <VibePanel item={item} review={review} saveReview={saveReview} />
           <AxisPanel item={item} review={review} saveReview={saveReview} radar={radar} />
           <AttributePanel item={item} review={review} saveReview={saveReview} />
@@ -426,9 +440,9 @@ export default function ValidationWorkbench() {
       <footer className={queue === 'image_unresolved' ? "navrow image-mode" : "navrow"}>
         <button className="ghost" onClick={() => setIndex((i) => Math.max(0, i - 1))}><ChevronLeft size={16}/> Previous</button>
         {queue === 'image_unresolved' ? <span className="mode-copy">Image QA mode: approve image mapping in the image panel, or mark no valid candidate. Product approval is intentionally hidden.</span> : <>
-          <button className="danger" onClick={() => setDecision('manual_escalation')}>Manual escalation</button>
-          <button className="ghost" onClick={() => setDecision('skip_for_now')}>Skip</button>
-          <button className="primary" onClick={() => setDecision('approve')}><Check size={16}/> Save + approve product</button>
+          <button className="danger" disabled={!persistenceReady} onClick={() => setDecision('manual_escalation')}>Manual escalation</button>
+          <button className="ghost" disabled={!persistenceReady} onClick={() => setDecision('skip_for_now')}>Skip</button>
+          <button className="primary" disabled={!persistenceReady} onClick={() => setDecision('approve')}><Check size={16}/> Save + approve product</button>
         </>}
         <button className="ghost" onClick={() => setIndex((i) => Math.min(filtered.length - 1, i + 1))}>Next <ChevronRight size={16}/></button>
       </footer>
@@ -439,7 +453,7 @@ export default function ValidationWorkbench() {
 function Metric({ label, value }: { label: string; value: number }) { return <div className="metric"><strong>{value}</strong><span>{label}</span></div> }
 function downloadBlob(blob: Blob, filename: string) { const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = filename; a.click(); URL.revokeObjectURL(url) }
 
-function ProductImage({ item, image, review, saveReview, position, reviewerName, queue, onAdvance }: any) {
+function ProductImage({ item, image, review, saveReview, position, reviewerName, queue, persistenceReady, onAdvance }: any) {
   const src = review.selected_image_path ?? image.src
   const selectedCandidate = image.candidates.find((c: any) => c.src === src)
   const isImageApproved = review.image_resolution_status === 'approved'
@@ -488,7 +502,7 @@ function ProductImage({ item, image, review, saveReview, position, reviewerName,
   return <aside className="image-panel">
     <div className="image-head"><Badge tone={isImageApproved || image.status === 'ok' || image.status === 'url' ? 'green' : hasNoValidCandidate ? 'red' : image.status === 'ambiguous' ? 'amber' : 'red'}>{hasNoValidCandidate ? 'NO VALID IMAGE' : isImageApproved ? 'IMAGE APPROVED' : image.status.toUpperCase()}</Badge><span>{position}</span></div>
     {src ? <img src={src} alt={`${item.product.brand} ${item.product.title}`} /> : <div className="missing"><AlertTriangle/> Missing image</div>}
-    {image.status === 'ambiguous' && <div className="candidate-box image-chooser"><div className="candidate-copy"><b>Ambiguous image — choose and approve exact product photo</b><p>{selectedCandidate ? `Selected: ${selectedCandidate.label}` : image.message}</p></div><div className="candidates">{image.candidates.slice(0,8).map((c: any) => <button key={c.src} className={src === c.src ? 'selected-candidate' : ''} onClick={() => selectImage(c)}><img src={c.src} alt={c.label}/><span>{c.label}</span><em>{src === c.src ? 'Selected' : c.confidence}</em></button>)}</div><div className="image-approval"><div className="image-actions"><button className={isImageApproved ? 'selected' : 'primary'} disabled={!selectedCandidate || isImageApproved || hasNoValidCandidate} onClick={approveSelectedImage}>{isImageApproved ? 'Selected image approved' : 'Approve selected image'}</button><button className="danger" disabled={hasNoValidCandidate} onClick={markNoValidCandidate}>None of these match product</button></div>{hasNoValidCandidate ? <span>Sent to Manual image fix · do not validate downstream fields yet.</span> : isImageApproved ? <span>Approved by {review.image_resolution_reviewer} · saved in export · auto-advances in Image QA queue</span> : <span>Selection is not resolved until approved.</span>}</div></div>}
+    {image.status === 'ambiguous' && <div className="candidate-box image-chooser"><div className="candidate-copy"><b>Ambiguous image — choose and approve exact product photo</b><p>{selectedCandidate ? `Selected: ${selectedCandidate.label}` : image.message}</p></div><div className="candidates">{image.candidates.slice(0,8).map((c: any) => <button key={c.src} className={src === c.src ? 'selected-candidate' : ''} onClick={() => selectImage(c)}><img src={c.src} alt={c.label}/><span>{c.label}</span><em>{src === c.src ? 'Selected' : c.confidence}</em></button>)}</div><div className="image-approval"><div className="image-actions"><button className={isImageApproved ? 'selected' : 'primary'} disabled={!persistenceReady || !selectedCandidate || isImageApproved || hasNoValidCandidate} onClick={approveSelectedImage}>{isImageApproved ? 'Selected image approved' : 'Approve selected image'}</button><button className="danger" disabled={!persistenceReady || hasNoValidCandidate} onClick={markNoValidCandidate}>None of these match product</button></div>{hasNoValidCandidate ? <span>Sent to Manual image fix · do not validate downstream fields yet.</span> : isImageApproved ? <span>Approved by {review.image_resolution_reviewer} · saved in export · auto-advances in Image QA queue</span> : <span>Selection is not resolved until approved.</span>}</div></div>}
     <div className="product-caption"><p className="caption-kicker">Now reviewing</p><h2>{item.product.title}</h2><p>{item.product.brand}</p><code>{item.product.product_id}</code></div>
   </aside>
 }
@@ -576,8 +590,8 @@ function SearchLabPanel({ item }: { item: ValidationItem }) {
   return <section className="card search-lab-card"><div className="section-kicker">Search Lab</div><h3>Match reason debugger</h3><p className="hint">Tests whether search can explain why a result matched: top-level category, component piece_type, component attribute, or search term.</p><div className="search-lab-input"><input placeholder={`Try “${exampleQuery}”`} value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} /><button className="ghost soft-action" onClick={() => setSearchQuery(exampleQuery)}>Use example</button></div>{searchQuery && <div className="match-list">{matches.length ? matches.map((match, idx) => <div key={`${match.source}-${match.field}-${idx}`}><Badge tone={match.source === 'search_term' ? 'green' : match.source.startsWith('component') ? 'amber' : 'red'}>{match.source.replaceAll('_',' ')}</Badge><b>{match.field}</b><span>{match.component_index ? `Component #${match.component_index} · ${match.piece_type}` : 'Top-level product'}</span><code>{match.value}</code></div>) : <p className="v82-warning">No match. If this is a sellable phrase, add it to search_terms[] or component attributes.</p>}</div>}</section>
 }
 
-function Decision({ review, saveReview, setDecision }: any) {
-  return <section className="card"><h3>Overall decision</h3><div className="button-grid">{['approve','needs_correction','manual_escalation','skip_for_now'].map((d) => <button key={d} className={review.overall_decision === d ? 'selected' : 'ghost'} onClick={() => setDecision(d)}>{d.replaceAll('_',' ')}</button>)}</div><div className="chips">{issueOptions.map((tag) => <button key={tag} className={review.issue_tags.includes(tag) ? 'chip active' : 'chip'} onClick={() => saveReview({ ...review, issue_tags: review.issue_tags.includes(tag) ? review.issue_tags.filter((t: string) => t !== tag) : [...review.issue_tags, tag] })}>{tag.replaceAll('_',' ')}</button>)}</div></section>
+function Decision({ review, saveReview, setDecision, persistenceReady }: any) {
+  return <section className="card"><h3>Overall decision</h3>{!persistenceReady && <p className="p0-lock-copy">Review decisions are locked until server persistence is writable.</p>}<div className="button-grid">{['approve','needs_correction','manual_escalation','skip_for_now'].map((d) => <button key={d} disabled={!persistenceReady} className={review.overall_decision === d ? 'selected' : 'ghost'} onClick={() => setDecision(d)}>{d.replaceAll('_',' ')}</button>)}</div><div className="chips">{issueOptions.map((tag) => <button key={tag} disabled={!persistenceReady} className={review.issue_tags.includes(tag) ? 'chip active' : 'chip'} onClick={() => saveReview({ ...review, issue_tags: review.issue_tags.includes(tag) ? review.issue_tags.filter((t: string) => t !== tag) : [...review.issue_tags, tag] })}>{tag.replaceAll('_',' ')}</button>)}</div></section>
 }
 
 function VibePanel({ item, review, saveReview }: { item: ValidationItem; review: ProductReview; saveReview: (r: ProductReview) => void }) {
