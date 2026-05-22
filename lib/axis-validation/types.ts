@@ -98,7 +98,7 @@ export type VibeReview = {
 export type VibeBoostSuggestion = { vibe_id: VibeId; label: string; reason: string; created_at?: string }
 export type AxisOverride = { axis_id: AxisId; label: string; original_score: number; override_score: number; reason: string; rubric_version?: string }
 export type AttributeReview = { attribute: string; raw_value: any; canonical_suggestion: string | string[] | null; decision: 'unset' | 'accept' | 'accept_normalized' | 'override' | 'needs_review'; override_value: any; reason: string }
-export type ComponentReview = { component_index: number; piece_type: string; decision: 'unset' | 'accept' | 'needs_correction' | 'not_visible' | 'manual_review'; corrected_piece_type?: string; reason: string }
+export type ComponentReview = { component_index: number; piece_type: string; decision: 'unset' | 'accept' | 'needs_correction' | 'not_visible' | 'manual_review'; corrected_piece_type?: string; reason: string; attribute_reviews?: AttributeReview[] }
 
 export type ProductReview = {
   product_id: string

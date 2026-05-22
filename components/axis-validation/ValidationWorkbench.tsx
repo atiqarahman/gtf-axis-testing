@@ -534,10 +534,13 @@ function Meta({ item, image }: { item: ValidationItem; image: any }) {
   </section>
 }
 
+function componentRaw(component: ExtractionComponent, key: string) {
+  if (key === 'category') return component.attributes?.category ?? { value: component.piece_type, confidence: component.confidence }
+  return component.attributes?.[key] ?? (component as any)[key]
+}
+
 function componentValue(component: ExtractionComponent, key: string) {
-  const direct = (component as any)[key]
-  const nested = component.attributes?.[key]
-  const value = direct ?? nested
+  const value = componentRaw(component, key)
   if (Array.isArray(value)) return value.map((v) => typeof v === 'object' ? v?.value ?? JSON.stringify(v) : v).join(', ')
   if (value && typeof value === 'object') return value.value ?? JSON.stringify(value)
   return value ?? '—'
@@ -547,6 +550,7 @@ function V82ExtractionPanel({ item, review, saveReview }: { item: ValidationItem
   const extraction = item.extraction
   const components = extraction.components ?? []
   const isV82Ready = Boolean(extraction.brand_category || components.length || extraction.search_terms?.length || extraction.schema_version?.includes('8.2'))
+  const componentAttrs = ['category','primary_color','secondary_color','material_primary','material','silhouette','length','neckline','sleeve_length','pattern','details']
   const updateComponentReview = (component: ExtractionComponent, patch: Partial<ComponentReview>) => {
     const existingReviews = review.component_reviews ?? []
     const current = existingReviews.find((r) => r.component_index === component.component_index)
@@ -560,6 +564,18 @@ function V82ExtractionPanel({ item, review, saveReview }: { item: ValidationItem
     }
     saveReview({ ...review, component_reviews: [...existingReviews.filter((r) => r.component_index !== component.component_index), nextReview] })
   }
+  const updateComponentAttributeReview = (component: ExtractionComponent, attr: string, patch: any) => {
+    const existingReviews = review.component_reviews ?? []
+    const current = existingReviews.find((r) => r.component_index === component.component_index) ?? { component_index: component.component_index, piece_type: component.piece_type, decision: 'unset' as const, reason: '', attribute_reviews: [] }
+    const raw = componentRaw(component, attr)
+    const rawValue = displayRawAttribute(attr, raw)
+    const norm = normalizeValue(attr, raw)
+    const attrReviews = current.attribute_reviews ?? []
+    const existing = attrReviews.find((r) => r.attribute === attr)
+    const nextAttr = { attribute: attr, raw_value: rawValue, canonical_suggestion: norm.canonical, decision: 'unset', override_value: attr === 'details' ? [] : null, reason: '', ...existing, ...patch }
+    const nextReview: ComponentReview = { ...current, attribute_reviews: [...attrReviews.filter((r) => r.attribute !== attr), nextAttr] }
+    saveReview({ ...review, component_reviews: [...existingReviews.filter((r) => r.component_index !== component.component_index), nextReview] })
+  }
   return <section className="card v82-card"><div className="section-kicker">v8.2 extraction shape</div><div className="card-title"><h3>Brand category + components</h3><Badge tone={isV82Ready ? 'green' : 'red'}>{isV82Ready ? 'V8.2 SIGNALS PRESENT' : 'V8.1 / MISSING V8.2'}</Badge></div>
     <div className="v82-summary"><div><span>brand_category</span><b>{extraction.brand_category ?? item.product.category ?? '—'}</b></div><div><span>is_multi_piece</span><b>{String(extraction.is_multi_piece ?? components.length > 1)}</b></div><div><span>component_count</span><b>{extraction.component_count ?? components.length}</b></div><div><span>search_terms</span><b>{extraction.search_terms?.length ?? 0}</b></div></div>
     {!extraction.brand_category && <p className="v82-warning">Blocked for acceptance: v8.2 requires brand_category so shared-image separates focus the target garment instead of the visually dominant garment.</p>}
@@ -567,7 +583,7 @@ function V82ExtractionPanel({ item, review, saveReview }: { item: ValidationItem
     {extraction.metadata_image_conflict?.has_conflict && <div className="conflict-box"><b>Metadata/image conflict</b><p>{extraction.metadata_image_conflict.visual_evidence ?? 'Conflict flagged; route to manual review.'}</p><small>{extraction.metadata_image_conflict.recommended_action}</small></div>}
     {components.length ? <div className="component-list">{components.map((component) => {
       const existing = (review.component_reviews ?? []).find((r) => r.component_index === component.component_index)
-      return <div className="component-card" key={`${component.component_index}-${component.piece_type}`}><div className="component-head"><div><b>#{component.component_index} · {component.piece_type}</b><span>{component.role ?? 'component'}</span></div><select value={existing?.decision ?? 'unset'} onChange={(e) => updateComponentReview(component, { decision: e.target.value as ComponentReview['decision'] })}><option value="unset">unset</option><option value="accept">accept</option><option value="needs_correction">needs correction</option><option value="not_visible">not visible</option><option value="manual_review">manual review</option></select></div><div className="component-attrs">{['primary_color','material','material_primary','silhouette','length','neckline','sleeve_length','pattern','details'].map((key) => <div key={key}><span>{key}</span><b>{componentValue(component, key)}</b></div>)}</div>{existing?.decision === 'needs_correction' && <input placeholder="Correct piece type, e.g. bralette not blouse" value={existing.corrected_piece_type ?? ''} onChange={(e) => updateComponentReview(component, { corrected_piece_type: e.target.value })}/>}<textarea placeholder="Component-level review note: visible evidence, missing piece, wrong target, etc." value={existing?.reason ?? ''} onChange={(e) => updateComponentReview(component, { reason: e.target.value })}/></div>
+      return <div className="component-card" key={`${component.component_index}-${component.piece_type}`}><div className="component-head"><div><b>#{component.component_index} · {component.piece_type}</b><span>{component.role ?? 'component'} · review this piece’s own attributes, not the whole outfit</span></div><select value={existing?.decision ?? 'unset'} onChange={(e) => updateComponentReview(component, { decision: e.target.value as ComponentReview['decision'] })}><option value="unset">component unset</option><option value="accept">component accepted</option><option value="needs_correction">piece type needs correction</option><option value="not_visible">piece not visible</option><option value="manual_review">manual review</option></select></div><div className="component-attrs">{componentAttrs.map((key) => <div key={key}><span>{key}</span><b>{componentValue(component, key)}</b></div>)}</div><details className="component-attribute-review"><summary>Review attributes for {component.piece_type}</summary><p className="hint">Use this for AR’s multi-garment issue: top-level attributes describe the sellable set; these rows approve/correct each garment piece separately.</p>{componentAttrs.map((attr) => { const raw = componentRaw(component, attr); const rawValue = displayRawAttribute(attr, raw); const norm = normalizeValue(attr, raw); const attrReview = existing?.attribute_reviews?.find((r) => r.attribute === attr); const enums = getEnumForAttribute(attr); return <div className="component-attr-row" key={attr}><span>{attr}</span><b>{rawValue}</b><em className={norm.valid ? 'ok' : 'warn'}>{displayCanonical(norm.canonical) ?? norm.warning}</em><select value={attrReview?.decision ?? 'unset'} onChange={(e) => updateComponentAttributeReview(component, attr, { decision: e.target.value })}><option value="unset">unset</option><option value="accept">accept raw</option><option value="accept_normalized">accept normalized</option><option value="override">override</option><option value="needs_review">needs review</option></select>{attrReview?.decision === 'override' && enums && (attr === 'details' ? <select multiple value={attrReview.override_value ?? []} onChange={(e) => updateComponentAttributeReview(component, attr, { override_value: Array.from(e.currentTarget.selectedOptions).map((o) => o.value) })}>{enums.map((v) => <option key={v}>{v}</option>)}</select> : <select value={attrReview.override_value ?? ''} onChange={(e) => updateComponentAttributeReview(component, attr, { override_value: e.target.value })}><option value="">Choose canonical</option>{enums.map((v) => <option key={v}>{v}</option>)}</select>)}<input placeholder="component note" value={attrReview?.reason ?? ''} onChange={(e) => updateComponentAttributeReview(component, attr, { reason: e.target.value })}/></div>})}</details>{existing?.decision === 'needs_correction' && <input placeholder="Correct piece type, e.g. bralette not blouse" value={existing.corrected_piece_type ?? ''} onChange={(e) => updateComponentReview(component, { corrected_piece_type: e.target.value })}/>}<textarea placeholder="Component-level review note: visible evidence, missing piece, wrong target, etc." value={existing?.reason ?? ''} onChange={(e) => updateComponentReview(component, { reason: e.target.value })}/></div>
     })}</div> : <p className="hint">No components[] present yet. For set/co-ord/pantsuit products, v8.2 must add per-piece records before Taste Lab acceptance.</p>}
     {(extraction.search_terms ?? []).length > 0 && <div className="search-terms"><b>Search terms</b><div>{extraction.search_terms!.map((term) => <span key={term}>{term}</span>)}</div></div>}
   </section>
@@ -704,7 +720,8 @@ function AttributePanel({ item, review, saveReview }: any) {
     saveReview({ ...review, attribute_reviews: next })
   }
 
-  return <section className="card"><div className="section-kicker">Structured product truth</div><div className="card-title"><h3>Hard attribute review</h3><button className="ghost soft-action" onClick={acceptAllNormalized}>Accept all normalized attributes</button></div><p className="hint">This creates explicit audit rows. Untouched/unset fields still do not count as approval.</p><div className="attr-table">{attrs.map((a) => <AttributeRow key={a} attr={a} item={item} review={review} saveReview={saveReview}/>)}</div></section>
+  const isMultiPiece = Boolean(item.extraction.is_multi_piece || (item.extraction.components?.length ?? 0) > 0)
+  return <section className="card"><div className="section-kicker">Structured product truth</div><div className="card-title"><h3>{isMultiPiece ? 'Top-level product attribute review' : 'Hard attribute review'}</h3><button className="ghost soft-action" onClick={acceptAllNormalized}>Accept all normalized attributes</button></div>{isMultiPiece ? <p className="v82-warning">Multi-piece rule: these top-level rows describe the sellable product/set only. Do not use top-level neckline, sleeve, or length as truth for every garment. Approve/correct per-piece attributes inside the Brand category + components card above.</p> : <p className="hint">This creates explicit audit rows. Untouched/unset fields still do not count as approval.</p>}<div className="attr-table">{attrs.map((a) => <AttributeRow key={a} attr={a} item={item} review={review} saveReview={saveReview}/>)}</div></section>
 }
 
 function AttributeRow({ attr, item, review, saveReview }: any) {
