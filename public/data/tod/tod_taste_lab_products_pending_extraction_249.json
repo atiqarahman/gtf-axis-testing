@@ -6,7 +6,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1VLtj2iHVHWW0JDuldELHlL0Z9el7bETZ",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1200-044-120-s-m-petite"
   },
   {
     "product_id": "GTF-TOD-031010124040SM",
@@ -15,7 +18,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1VBwNKpYmOzRyT4jCG4skFnT5PXUDsUGi",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1010-124-040-s-m-"
   },
   {
     "product_id": "GTF-TOD-021011116660XSSPETITE",
@@ -24,7 +30,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1j15PpFPtadD5jAN8jUIJzDO9KP-VCFOe",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1011-116-660-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-011010101510ONESIZEPETITE",
@@ -33,7 +42,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/11QiCy0oH4zbZgyagXrmdbIsvjTf9qZDu",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1010-101-510-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-021350009070ONESIZE1",
@@ -42,7 +54,10 @@
     "category": "Scarves & Shawls",
     "image_file": "/product-image/drive/1KnvUjJ4ZvvM8NSM43I423iAjDrt0M2Qu",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1350-009-070-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-021040003510XSS",
@@ -51,7 +66,10 @@
     "category": "Shirts",
     "image_file": "/product-image/drive/1lWin5GDhg9SxuRY-T3G5yWWpnLwls4Y_",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1040-003-510-xs-s-"
   },
   {
     "product_id": "GTF-TOD-021200061510XSSPETITE",
@@ -60,7 +78,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1fsXjzKcIC0LNXajeb5UmdIudiOP99vAK",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1200-061-510-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-021010139510ONESIZE1PETITE",
@@ -69,7 +90,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1TJaQ9wPR22O9eWZVDmTLq_MbfNdMeJ19",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1010-139-510-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-021210016510XSSPETITE",
@@ -78,7 +102,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/1k8Mv1csEw705vaHIu22Mplq97D5Zf4vF",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1210-016-510-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-021050046510XSS",
@@ -87,7 +114,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1QjXg0vuNv9e7TgIy23gXyOLbI-50C5gf",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1050-046-510-xs-s-"
   },
   {
     "product_id": "GTF-TOD-021060005510XSS",
@@ -96,7 +126,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1Kx_DjI2RAC19FMjCx43lSGnIRAoh4VhL",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1060-005-510-xs-s-"
   },
   {
     "product_id": "GTF-TOD-021010139070ONESIZE1PETITE",
@@ -105,7 +138,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1LTr1m-QFxE3XFvgkHd_Dm2iVIJfa9ZK5",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1010-139-070-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-021020036510SM",
@@ -114,7 +150,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1Leu0ucVC74pGCdXQCKoeyaslksR4Nmk3",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1020-036-510-S/M-"
   },
   {
     "product_id": "GTF-TOD-021050480660ONESIZE1PETITE",
@@ -123,7 +162,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1Jsw1Z012LIebZiXrvD7mGVeKbGTc2YHa",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1050-480-660-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-021050042690ONESIZE1PETITE",
@@ -132,7 +174,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1wB5CrYhYqPFhjJqlCluhtdgDiLJjeqNN",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1050-042-690-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-021210016070XSSPETITE",
@@ -141,7 +186,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/1zSpWtGdoJ2De8gfoCTJImG8iMzw0Lvr1",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1210-016-070-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-021060005070XSS",
@@ -150,7 +198,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/113DQVxoX5Td-yd15AezdIPAOprZBCyMD",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1060-005-070-xs-s-"
   },
   {
     "product_id": "GTF-TOD-021350004510ONESIZE1",
@@ -159,7 +210,10 @@
     "category": "Scarves & Shawls",
     "image_file": "/product-image/drive/1aT7XjqsD9FxCA_elcOVFkQBGgmYLO3ZX",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1350-004-510-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-021200061220XSSPETITE",
@@ -168,7 +222,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1z0-zj0scxRMMP910MnIFlUPr1poUHKqb",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1200-061-220-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-021040003070XSS",
@@ -177,7 +234,10 @@
     "category": "Shirts",
     "image_file": "/product-image/drive/1427usR3SkScTztdjszha3Jd2dA4Y_Dq9",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1040-003-070-xs-s-"
   },
   {
     "product_id": "GTF-TOD-021050042580ONESIZE1PETITE",
@@ -186,7 +246,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1CIvKc9kXUcmPa1T1SPXyyB9p7-ulVraT",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1050-042-580-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-021010139220ONESIZE1PETITE",
@@ -195,7 +258,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1XUCZZhKPIRy0xalhGmvVRTcTqFnUYlyy",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1010-139-220-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-021050046220XSS",
@@ -204,7 +270,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1orsumKxVaWcDI4x5LOSey13uYpLUbz0Y",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1050-046-220-xs-s-"
   },
   {
     "product_id": "GTF-TOD-021050480040ONESIZE1PETITE",
@@ -213,7 +282,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/16492i4S8dMnrAao_-pqiCGsDDyOZzDeO",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1050-480-040-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-021010112580SMPETITE",
@@ -222,7 +294,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1d26Olnfx80aH-IH6t9xERmxcOwzlMLRh",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1010-112-580-s-m-petite"
   },
   {
     "product_id": "GTF-TOD-021010112690SMPETITE",
@@ -231,7 +306,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1Qz196yYB8XM2boGND-T4RIgDp4jOM8d6",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1010-112-690-s-m-petite"
   },
   {
     "product_id": "GTF-TOD-021210016220XSSPETITE",
@@ -240,7 +318,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/1j5O9hKEQygUIN-4NjoCQ82lpGv0oYLX-",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1210-016-220-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-021050046070XSS",
@@ -249,7 +330,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1nrhZKNnM9uENt2znQcBHi7LIphDSwg3z",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1050-046-070-xs-s-"
   },
   {
     "product_id": "GTF-TOD-021040003220XSS",
@@ -258,7 +342,10 @@
     "category": "Shirts",
     "image_file": "/product-image/drive/1xyQjAnppggHSoahEX1y58jwFBf-NpceY",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1040-003-220-xs-s-"
   },
   {
     "product_id": "GTF-TOD-021200044510SMPETITE",
@@ -267,7 +354,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1aBorM2zLVxRGDxeoopGzg2HeZhitUxdb",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1200-044-510-s-m-petite"
   },
   {
     "product_id": "GTF-TOD-021020036170SM",
@@ -276,7 +366,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1hJ7rGwJPueMo3iLuX96aqz073ith3nuH",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1020-036-170-S/M-"
   },
   {
     "product_id": "GTF-TOD-021350004070ONESIZE1",
@@ -285,7 +378,10 @@
     "category": "Scarves & Shawls",
     "image_file": "/product-image/drive/1_7ariv_NgZySKXShEbU1YbHlKI_Canom",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1350-004-070-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-021200061070XSSPETITE",
@@ -294,7 +390,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1Ue0sWqh2pBPK6idT8Ogj59ZejiPAKNc6",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1200-061-070-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-021350009220ONESIZE1",
@@ -303,7 +402,10 @@
     "category": "Scarves & Shawls",
     "image_file": "/product-image/drive/1pRBxcP4-jQWsmyH8P9QLvXtKG9P3Mxhm",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1350-009-220-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-021010093530XSS",
@@ -312,7 +414,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1-V96bdv66PNK8ASbKYV0mEwTQjsT0zLW",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1010-093-530-xs-s-"
   },
   {
     "product_id": "GTF-TOD-021350004220ONESIZE1",
@@ -321,7 +426,10 @@
     "category": "Scarves & Shawls",
     "image_file": "/product-image/drive/1MH18yLD98-jV_27Tpkd8bmuh4UwIXwIs",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1350-004-220-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-021350009510ONESIZE1",
@@ -330,7 +438,10 @@
     "category": "Scarves & Shawls",
     "image_file": "/product-image/drive/1vTXqkAkfCqZYLns_FgamfkyujyZt1c7C",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1350-009-510-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-021010093210XSS",
@@ -339,7 +450,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1dSPrMaSL2emLbkD_qsiUNKVXky3TLkhq",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1010-093-210-xs-s-"
   },
   {
     "product_id": "GTF-TOD-021200044170SMPETITE",
@@ -348,7 +462,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1m0DXudRbQTuh1DSZWhLLjGXdnH78_61u",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1200-044-170-s-m-petite"
   },
   {
     "product_id": "GTF-TOD-031050051040ONESIZE1PETITE",
@@ -357,7 +474,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/11i9rrDlDHi6a_l6nD1ienCN5AND1eOaV",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1050-051-040-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-001020002510ONESIZE1",
@@ -366,7 +486,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1pVfz9uflCJYFXps0bIu5mfun_kRdfFxn",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-002-510-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-031051054040ONESIZE1PETITE",
@@ -375,7 +498,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1UzazMzN288zN9Ny9FFDZOQQCJcbSwfL9",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1051-054-040-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-021051040310ONESIZE1PETITE",
@@ -384,7 +510,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1qFv-g0XejJ-_s0FAAflyTM_MEMCgFnbG",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1051-040-310-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-031011129040XSSPETITE",
@@ -393,7 +522,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1NGm48_LaceAqLLFotxDpWRG41Vm3m-eW",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1011-129-040-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-032011031148XSSPETITE",
@@ -402,7 +534,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1nQrUXVodxV-A0gD3PgJVYFn_L4Nu90pI",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-2011-031-148-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-031051054290ONESIZE1PETITE",
@@ -411,7 +546,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1Sho40s9lECD2cTDqowk4zZqZ2fJuiIh-",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1051-054-290-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-031020043510SM",
@@ -420,7 +558,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1EcBq1Cc9B4MwTOB6Zv_aHnvPllK9u3ol",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1020-043-510-s-m-"
   },
   {
     "product_id": "GTF-TOD-021020036270SM",
@@ -429,7 +570,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1SFUN8fzCTnej6sQChmsKSeJEG9L8osPs",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1020-036-270-S/M-"
   },
   {
     "product_id": "GTF-TOD-031050055510ONESIZE1",
@@ -438,7 +582,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1LRdXQ11SIv0Ht8Xba8Vz16XnszFtyHWc",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1050-055-510-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-031050035020ONESIZE1PETITE",
@@ -447,7 +594,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1-jY30RZ8klOHwfvF3AI7EmfSRn1iMPRR",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1050-035-020-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-031020043690SM",
@@ -456,7 +606,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1j2ClVUIoxRkOgqLg-7oPWskT5x1mq8Z5",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1020-043-690-s-m-"
   },
   {
     "product_id": "GTF-TOD-002101005510XSS",
@@ -465,7 +618,10 @@
     "category": "Overcoats",
     "image_file": "/product-image/drive/18XppY9-htKDKL9mnQtQUbWF-Ytd1R4sW",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-2101-005-510-xs-s-"
   },
   {
     "product_id": "GTF-TOD-002101005040SM",
@@ -474,7 +630,10 @@
     "category": "Overcoats",
     "image_file": "/product-image/drive/1y5hUuHvrOqjk9BFWHgSAijELR3itgAFg",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-2101-005-040-S/M-"
   },
   {
     "product_id": "GTF-TOD-011010099170ONESIZE1",
@@ -483,7 +642,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1ReTqNELV3AR2Tzbe-wFVVU1CZdEQoc4p",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1010-099-170-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-001010070690ONESIZESTANDART",
@@ -492,7 +654,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1_IpxDzRi9Dt7xB_0z3REnauLiOddgkhQ",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-070-690-One Size-Standart"
   },
   {
     "product_id": "GTF-TOD-031010124290SM",
@@ -501,7 +666,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1j4BOy975oWaS9Ppuo3K4dQQRcLWIJIrA",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1010-124-290-s-m-"
   },
   {
     "product_id": "GTF-TOD-031050055070ONESIZE1",
@@ -510,7 +678,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/16OGkP_2jE8v_lT89XCS6OOBegAwN2sFO",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1050-055-070-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-031020047510XSS",
@@ -519,7 +690,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1ZZR9qkH6mJ1xY9zMSi6SppBzCDNC2Qsm",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1020-047-510-xs-s-"
   },
   {
     "product_id": "GTF-TOD-001070019320SM",
@@ -528,7 +702,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/1H2x77hLUHjtgbYIGvOUcPHnHGG774nCC",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1070-019-320-S/M-"
   },
   {
     "product_id": "GTF-TOD-031070045310XSS",
@@ -537,7 +714,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1LMKadwEbGTutZR0-5nIz0wkJYqZ97wHB",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1070-045-310-xs-s-"
   },
   {
     "product_id": "GTF-TOD-001090001460XSS",
@@ -546,7 +726,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/1_fNhGTTdxsoPkRYSm--tbDeqg8uoJV_V",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1090-001-460-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001200016050ONESIZE1PETITE",
@@ -555,7 +738,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1MTlkSFnxvs3G8HhsJlcIbfBQKBvSgoEk",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-016-050-one-size-1-petite"
   },
   {
     "product_id": "GTF-TOD-001070021050XSS",
@@ -564,7 +750,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/15SN4KJeL5Qq2LQs3OlfVTmbVq4uM0WdI",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1070-021-050-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001051001690ONESIZEPETITE",
@@ -573,7 +762,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1si_AcbKYo-ng3Ft0CxNN6UaJ4eINyzbR",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-001-690-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001200020690SMPETITE",
@@ -582,7 +774,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1YpdIDlXBlx5QZf5ogTwWtivUIvuPJoQg",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-020-690-S/M-Petite"
   },
   {
     "product_id": "GTF-TOD-021010093690XSS",
@@ -591,7 +786,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1oiP_9zeO5PG9gQFfS74lgjg32eEy1Dth",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1010-093-690-xs-s-"
   },
   {
     "product_id": "GTF-TOD-021010093020XSS",
@@ -600,7 +798,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1i-VhisdRtyGPHc_Tba-od93oYwcHtLod",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1010-093-020-xs-s-"
   },
   {
     "product_id": "GTF-TOD-001210001510XSSPETITE",
@@ -609,7 +810,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/1S-HuBFJurkRlTEksh46oAMEMQpvp30ZH",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1210-001-510-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001210001010XSSPETITE",
@@ -618,7 +822,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/1HZkk_K0G35fCzE_GtuAO66mONUBQfGHJ",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1210-001-010-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-011010099220ONESIZE1",
@@ -627,7 +834,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1ORqesEluUD2iVeR5P2ltGY8bJpEbvmzw",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1010-099-220-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-011010099690ONESIZE1",
@@ -636,7 +846,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1u3lXqqu2Xzp7ctoJXEI9DNalLYor7AS-",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1010-099-690-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-011010099300ONESIZE1",
@@ -645,7 +858,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/18aNYJ1-NMRUfw-ZT288Bmt7XS_YxvRJl",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1010-099-300-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-001010070510ONESIZE",
@@ -654,7 +870,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/19paWsRorj3F8ViWTEn4dp4NiV0Jz2SFm",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-070-510-One Size-"
   },
   {
     "product_id": "GTF-TOD-021010116230XSSPETITE",
@@ -663,7 +882,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1kBzNevSzuvy-bdGzb2tTSugPA0ZAHZZU",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1010-116-230-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-001090001320XSS",
@@ -672,7 +894,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/11zhnxIO189mQ67ts6jQde3zjdO0psG9u",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1090-001-320-XS/S-"
   },
   {
     "product_id": "GTF-TOD-031050049110ONESIZE1",
@@ -681,7 +906,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1D_ddDkqo9KugaoUm-YyoawCtparrcp35",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1050-049-110-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-001051001590ONESIZEPETITE",
@@ -690,7 +918,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1rn0BGQgaP2AinJpATyvkMrR-wW5m7AgW",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-001-590-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-031020043090SM",
@@ -699,7 +930,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1tpRwQ2hM2rCRLCTMC0Q0QVkA1C9EzcAH",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1020-043-090-s-m-"
   },
   {
     "product_id": "GTF-TOD-001200020510SMPETITE",
@@ -708,7 +942,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1D-BfQ3cGPLp9V8QpmPdvXYs4A5cdsirm",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-020-510-S/M-Petite"
   },
   {
     "product_id": "GTF-TOD-031070045040XSS",
@@ -717,7 +954,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1KenrbL5PhfJsq54RF4UH6Zz3xuOiqMuH",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1070-045-040-xs-s-"
   },
   {
     "product_id": "GTF-TOD-021090002310XSSPETITE",
@@ -726,7 +966,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/1kaxQYYwqQg6KtoQrP20brP2Pb2j9UBTc",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1090-002-310-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-021090002070XSSPETITE",
@@ -735,7 +978,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/1oyWg_j9uZdAyQOI1dkFdemqmYF2JQMqR",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1090-002-070-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-011051030580ONESIZEPETITE",
@@ -744,7 +990,10 @@
     "category": "Outerwear",
     "image_file": "/product-image/drive/162LmeLzw2fwjjNyjjida8vl-7Kguasqd",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1051-030-580-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001200003220SMPETITE",
@@ -753,7 +1002,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1Q60tEcmSa2aA_QpzVJqOYhlYQCMcKG0B",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-003-220-s-m-petite"
   },
   {
     "product_id": "GTF-TOD-011010099510ONESIZE1",
@@ -762,7 +1014,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1-lB5Pyid17PMnwHMFf3WHsBu0vGrTnv4",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1010-099-510-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-001050011690ONESIZE",
@@ -771,7 +1026,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1y9EwPu2aBYOQfEiCjSiJLg5f1T21mKx1",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1050-011-690-One Size-"
   },
   {
     "product_id": "GTF-TOD-001010072320ONESIZEPETITE",
@@ -780,7 +1038,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1S5yxq66haaZoP0PoTnpr64Lk5Mn_HFkD",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-072-320-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001010072220ONESIZEPETITE",
@@ -789,7 +1050,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/11ErD-QbEsLohgE3NcTWkagsevek5eMXo",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-072-220-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001051031220ONESIZE",
@@ -798,7 +1062,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1E2GhrsUJdM8oqov8Fw7jZMCsaPed9Z57",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-031-220-One Size-"
   },
   {
     "product_id": "GTF-TOD-001010024040XSSSTANDART",
@@ -807,7 +1074,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1qSnyA-H7dZHTM1JAOBkqnZlzgmV3YGIk",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-024-040-XS/S-Standart"
   },
   {
     "product_id": "GTF-TOD-031020047070XSS",
@@ -816,7 +1086,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1wv4rTQRATCdzFIxOYu9_8u_vsWXOHkKN",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1020-047-070-xs-s-"
   },
   {
     "product_id": "GTF-TOD-031200072650XSS",
@@ -825,7 +1098,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1VEGHDhPKERmO8DLBQejdnuKh-9fhJRYg",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1200-072-650-xs-s-"
   },
   {
     "product_id": "GTF-TOD-001200029320XSS",
@@ -834,7 +1110,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1Ol8s69AxwBQrlNYMFujE569VGYXo98RH",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-029-320-XS/S-"
   },
   {
     "product_id": "GTF-TOD-031070040110XSS",
@@ -843,7 +1122,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1TXpsTDxkSeAFkJhmeRwuSfNNOF-JEKcj",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1070-040-110-xs-s-"
   },
   {
     "product_id": "GTF-TOD-031200067110XSSPETITE",
@@ -852,7 +1134,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1UNP-gOMfEkGqIkGtn5mlF_qo8MAr89qR",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1200-067-110-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-001070021690XSS",
@@ -861,7 +1146,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1aR33P519T0NRf0Z05yy8KstqhVdf-TL7",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1070-021-690-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001070021510XSS",
@@ -870,7 +1158,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1J4DmLyu2DC0FUpSf09qS4Rht1EFLDoAa",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1070-021-510-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001200020090SMPETITE",
@@ -879,7 +1170,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1sFlKlqRSp9yDyRVhjdesSfFssnJO6L2M",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-020-090-S/M-Petite"
   },
   {
     "product_id": "GTF-TOD-011150003650SM",
@@ -888,7 +1182,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1vDO1pdNCHjfR0T19RUb36rqRRDXVN14_",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1150-003-650-S/M-"
   },
   {
     "product_id": "GTF-TOD-001020027650ONESIZE",
@@ -897,7 +1194,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1WAlOW_MLfmetpK6nVMwuHFiM3nf-7xoZ",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-027-650-One Size-"
   },
   {
     "product_id": "GTF-TOD-021090002040XSSPETITE",
@@ -906,7 +1206,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/1jUTH1vHd8nAClYIQg4rHKklw9yOX8fK0",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1090-002-040-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-001200003510SMPETITE",
@@ -915,7 +1218,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/16ndgVXkhojNf6wGFfBuwixD0awvsBsX8",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-003-510-s-m-petite"
   },
   {
     "product_id": "GTF-TOD-011010099010ONESIZE1",
@@ -924,7 +1230,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1tCo55DKEekpCIosmy6pt8ImDuMFKta3I",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1010-099-010-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-001010011020SMSTANDARD",
@@ -933,7 +1242,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1-Y0q82tfqI3UZ5rn7y4yqip5aR-SpZf1",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-011-020-s-m-Standard"
   },
   {
     "product_id": "GTF-TOD-001050012510ML",
@@ -942,7 +1254,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1HnybUoUaTr6CTyi5vUqdD3t7kskWPtw3",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1050-012-510-M/L-"
   },
   {
     "product_id": "GTF-TOD-001072023420SM",
@@ -951,7 +1266,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1p-JaJfh32g5-wMQpnK8C1c8-gbkkrt8B",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1072-023-420-S/M-"
   },
   {
     "product_id": "GTF-TOD-001050012040ML",
@@ -960,7 +1278,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1lcvOuGpTXiKer8DOxFBOjVAbbdi8dDia",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1050-012-040-M/L-"
   },
   {
     "product_id": "GTF-TOD-001010070040ONESIZE",
@@ -969,7 +1290,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1sfeT1CBNZ-DrDnB3SVS4Jenisv4pGRbB",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-070-040-One Size-"
   },
   {
     "product_id": "GTF-TOD-001010065320ONESIZESTANDART",
@@ -978,7 +1302,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1rp1HlDBXmna0cU1gxMMNXAaBUe-lkGtE",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-065-320-One size-Standart"
   },
   {
     "product_id": "GTF-TOD-001010065290ONESIZESTANDART",
@@ -987,7 +1314,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1KrqQrYWevmaHPYEgnqQDh0AALW820RDO",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-065-290-One size-Standart"
   },
   {
     "product_id": "GTF-TOD-032011032690XSSPETITE",
@@ -996,7 +1326,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1N9mWeyd_F2nT-FJ3_QE6BKarMFRKg56v",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-2011-032-690-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-001010079570SMPETITE",
@@ -1005,7 +1338,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1-SMXM-Op-qHnpNF9xnTRtOdJHRA7M1Fq",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-079-570-s-m-Petite"
   },
   {
     "product_id": "GTF-TOD-031020047650XSS",
@@ -1014,7 +1350,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1tY8Vh1SdFvsfVOo2QB2427Az6AVKS69T",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1020-047-650-xs-s-"
   },
   {
     "product_id": "GTF-TOD-001200029690XSS",
@@ -1023,7 +1362,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1nQW_BdQHT6Vdbhf3z74in74rYCoEdud5",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-029-690-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001200029510XSS",
@@ -1032,7 +1374,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/16vXHWGY2WG1y5tjJ5cZFKy53K3Kkhe6X",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-029-510-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001051032320ONESIZE",
@@ -1041,7 +1386,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/19Sns7bJ8alPAsXI3ct0qa6h8JLVBMlXn",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-032-320-One Size-"
   },
   {
     "product_id": "GTF-TOD-001070019690SM",
@@ -1050,7 +1398,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/1KrgzDBMsx8VtTUowljhDHFTmf8LvBnRM",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1070-019-690-S/M-"
   },
   {
     "product_id": "GTF-TOD-001090001510XSS",
@@ -1059,7 +1410,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/1j2VfiXvIsM8AnNZNfrfOqSWBdXfzyGwi",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1090-001-510-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001010067460XSS",
@@ -1068,7 +1422,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1KczRjTgLUgAE0kFgka2K8HCwI_7TdovB",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-067-460-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001010067320XSS",
@@ -1077,7 +1434,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/14JQkhp_B5E3A-gi9Z1kkz-4aavf2UTVv",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-067-320-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001010067690XSS",
@@ -1086,7 +1446,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1f-ehP-xHtejehPiAZVey4EwNYT9gYTVD",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-067-690-XS/S-"
   },
   {
     "product_id": "GTF-TOD-031210018040XSSPETITE",
@@ -1095,7 +1458,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/1vxTrgb7PJ_qXxQyl-gH8HD_DH3TYFv_X",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1210-018-040-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-031350006110ONESIZE1",
@@ -1104,7 +1470,10 @@
     "category": "Scarves & Shawls",
     "image_file": "/product-image/drive/18jJB2thQWPi2MaiJrfUp7ViTTuhGcjvD",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1350-006-110-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-001200016510ONESIZEPETITE",
@@ -1113,7 +1482,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1r2nfkqTWfEMlrRRi70FjffW0oaKzHYtZ",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-016-510-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001200016320ONESIZEPETITE",
@@ -1122,7 +1494,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/16xQcP1S2wT89scu55AoBGPigqPEJnb0f",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-016-320-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-011200032220XSS",
@@ -1131,7 +1506,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1nPJfhFT1EMN2OcJhX3wpOoBQjoVXxSs0",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1200-032-220-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001050028220ONESIZE",
@@ -1140,7 +1518,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1_lbaYd3TqBlWaEYunGoBRN9hzzxvgqWc",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1050-028-220-One Size-"
   },
   {
     "product_id": "GTF-TOD-001050028040ONESIZE",
@@ -1149,7 +1530,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1jtgtTXQJBN3G0AubD8B7e15OKcCNSZfm",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1050-028-040-One Size-"
   },
   {
     "product_id": "GTF-TOD-001051001420ONESIZEPETITE",
@@ -1158,7 +1542,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1n315MlDFg8WP2AGCW2eEYb9DkNSCOKfN",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-001-420-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001051001020ONESIZEPETITE",
@@ -1167,7 +1554,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1jNCbpF02trXkBIXXQWPuw0Tg1TIpZMHl",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-001-020-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001010080590XSSPETITE",
@@ -1176,7 +1566,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1OTvu-exuq_t8P-II3dl0CLDLN4IJ1Iyv",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-080-590-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001010080610XSSPETITE",
@@ -1185,7 +1578,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1qlweiSffd4aBS8EjW5D-bwKXw2EIK0ro",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-080-610-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001010077610XSSPETITE",
@@ -1194,7 +1590,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/16ETzEq0vkxdC2yFU8AsfYbipKhSofENj",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-077-610-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001010077420XSSPETITE",
@@ -1203,7 +1602,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1Q0tszebN6NlU0J95eIBiJUWpKTS72liF",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-077-420-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-011010101010ONESIZEPETITE",
@@ -1212,7 +1614,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1FUN3c9-kUROXh0nXzx78SrjubUXwD3V5",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1010-101-010-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001010046450ONESIZEPETITE",
@@ -1221,7 +1626,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1Hj-e1TA9fv_y5KREQjyJ6K9j9oG-4p_A",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-046-450-One size-Petite"
   },
   {
     "product_id": "GTF-TOD-021060005220XSS",
@@ -1230,7 +1638,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1N9mWeyd_F2nT-FJ3_QE6BKarMFRKg56v",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1060-005-220-xs-s-"
   },
   {
     "product_id": "GTF-TOD-031020043420SM",
@@ -1239,7 +1650,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1wziWenELGsuaNzJVwFm8k8790c8Xr-DV",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1020-043-420-s-m-"
   },
   {
     "product_id": "GTF-TOD-001020009090SM",
@@ -1248,7 +1662,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1n748iLioc8h5KGyroXbcxLl7idUbcd66",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-009-090-S/M-"
   },
   {
     "product_id": "GTF-TOD-011150003030SM",
@@ -1257,7 +1674,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1rxr6h9yIdMDmt4kuarFIz9EL-aj7Oq9R",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1150-003-030-S/M-"
   },
   {
     "product_id": "GTF-TOD-011051033040ONESIZEPETITE",
@@ -1266,7 +1686,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/122LtunwsklNK3qx5PbH4r3vFSgN7U1Ib",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1051-033-040-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-011070026030SM",
@@ -1275,7 +1698,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/17tGmePwqOIB4KcO4_epoL5NHhcccK-RK",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1070-026-030-S/M-"
   },
   {
     "product_id": "GTF-TOD-011070026650SM",
@@ -1284,7 +1710,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1mikOyP4MruLNjByWSvVlim65dvkMh38Q",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1070-026-650-S/M-"
   },
   {
     "product_id": "GTF-TOD-011020027030ONESIZE",
@@ -1293,7 +1722,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1EyX0EOfOrGhMgHy-viJC0e3Gb5o1C827",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1020-027-030-One Size-"
   },
   {
     "product_id": "GTF-TOD-011010082510ONESIZEPETITE",
@@ -1302,7 +1734,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/18r1aNiMbVBE2ujuZ4TGS_wdygVnKksMB",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1010-082-510-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-011010082650ONESIZEPETITE",
@@ -1311,7 +1746,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/18r1aNiMbVBE2ujuZ4TGS_wdygVnKksMB",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1010-082-650-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-011050030040ONESIZEPETITE",
@@ -1320,7 +1758,10 @@
     "category": "Outerwear",
     "image_file": "/product-image/drive/1mKg8gOmJWbvYHXhCZEFNP53TzrkVE42a",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1050-030-040-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-011051030070ONESIZEPETITE",
@@ -1329,7 +1770,10 @@
     "category": "Outerwear",
     "image_file": "/product-image/drive/1-3S91feq0DZajYU7jFQsOJl7_yyOBjv6",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1051-030-070-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001020002220ONESIZE",
@@ -1338,7 +1782,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1_YlPnk_nwm34dJMftJ06BVXrdM5f6eoI",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-002-220-One Size-"
   },
   {
     "product_id": "GTF-TOD-001020002030ONESIZE",
@@ -1347,7 +1794,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1P2GTk-Zg5LQ8YEx9fxdquAvTSe9OiMZ4",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-002-030-One Size-"
   },
   {
     "product_id": "GTF-TOD-001020002010ONESIZE",
@@ -1356,7 +1806,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1udMFL9cbF6I09YJ_eeRWUFWZHqrce_n4",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-002-010-One Size-"
   },
   {
     "product_id": "GTF-TOD-001020002070ONESIZE",
@@ -1365,7 +1818,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1nX-VmT51c0Je7b9pV2DAvAe4JQe5UvhE",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-002-070-One Size-"
   },
   {
     "product_id": "GTF-TOD-001200003030SMPETITE",
@@ -1374,7 +1830,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1OXKJXuqNRavqvBvkSne9atLXhQCfh0rL",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-003-030-s-m-petite"
   },
   {
     "product_id": "GTF-TOD-001200003010SMPETITE",
@@ -1383,7 +1842,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1c3Sw6SqRn4iqM8dDv_9jTAIp6asmxeF8",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-003-010-s-m-petite"
   },
   {
     "product_id": "GTF-TOD-001200003070SMPETITE",
@@ -1392,7 +1854,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1Q0AjQCz_35rDc7jPwQRt9RFpcGtbtjrI",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-003-070-s-m-petite"
   },
   {
     "product_id": "GTF-TOD-001050011420ONESIZE",
@@ -1401,7 +1866,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1lyz6ZckVWuOuVwHKEYbGziJ-FUUUiCYd",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1050-011-420-One Size-"
   },
   {
     "product_id": "GTF-TOD-001050011020ONESIZE",
@@ -1410,7 +1878,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1WzwjzDq6DZnwdg8_lKorpD6XQodfIOH_",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1050-011-020-One Size-"
   },
   {
     "product_id": "GTF-TOD-001010011690SMSTANDART",
@@ -1419,7 +1890,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1pNm8PsEfPDwG-74nwoNETkyp57Xwza-6",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-011-690-S/M-Standart"
   },
   {
     "product_id": "GTF-TOD-001072023040SM",
@@ -1428,7 +1902,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1GKj8A1QuFeFP521hCi3AqsldACa0wvWJ",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1072-023-040-S/M-"
   },
   {
     "product_id": "GTF-TOD-001050012420ML",
@@ -1437,7 +1914,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1CAwJyYdEu-0hZSpXA0jdsHaoxwgx3cb-",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1050-012-420-M/L-"
   },
   {
     "product_id": "GTF-TOD-001010065480ONESIZESTANDART",
@@ -1446,7 +1926,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1g9o-mB3qAsiybnxs9PwtbtebgNQPDomw",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-065-480-One size-Standart"
   },
   {
     "product_id": "GTF-TOD-031010124690SM",
@@ -1455,7 +1938,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1sh4Xuy8JZvXOgNqUrIn00a7yKTBNjXfJ",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1010-124-690-s-m-"
   },
   {
     "product_id": "GTF-TOD-001010072040ONESIZEPETITE",
@@ -1464,7 +1950,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1t7-nnqmBDDqeDnIA-rTFzPGi30u6n5jD",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-072-040-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001051031570ONESIZE",
@@ -1473,7 +1962,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1hg-IUSEX9ZwLsnnnIP7POsstRwehyBOa",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-031-570-One Size-"
   },
   {
     "product_id": "GTF-TOD-001051031040ONESIZE",
@@ -1482,7 +1974,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1txPxcYoCjts9VuVptxn0np4u3zlCB8VS",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-031-040-One Size-"
   },
   {
     "product_id": "GTF-TOD-001010079040SMPETITE",
@@ -1491,7 +1986,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1Ai8uXOkiPL-yJUK79Ly8Ti_ymWIFjax1",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-079-040-S/M-Petite"
   },
   {
     "product_id": "GTF-TOD-001010079220SMPETITE",
@@ -1500,7 +1998,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1DFjCCXP3YoADqwzijUqiU05ffAEVFtzC",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-079-220-S/M-Petite"
   },
   {
     "product_id": "GTF-TOD-001211007510SMSTANDART",
@@ -1509,7 +2010,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/1_T7j_XXmPtF41BDoGileG0r_sqTQK6t7",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1211-007-510-s-m-standart"
   },
   {
     "product_id": "GTF-TOD-001211007460SMPETITE",
@@ -1518,7 +2022,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/11Mv4nmXWTg59UjU4fY3YL1Kms8Ys-ZYY",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1211-007-460-S/M-Petite"
   },
   {
     "product_id": "GTF-TOD-001051032510ONESIZE",
@@ -1527,7 +2034,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/10Z_1yrOBkE6rNb7OVliJ1qeasdYiCuBZ",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-032-510-One Size-"
   },
   {
     "product_id": "GTF-TOD-001051032690SM",
@@ -1536,7 +2046,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1AszQickmhc9LkIdMyQNCzYyYEqwIjPAC",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-032-690-S/M-"
   },
   {
     "product_id": "GTF-TOD-001020019510SM",
@@ -1545,7 +2058,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1dQaWcPc-txtP7J6lf0ecM8WQmxv-5BvE",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-019-510-S/M-"
   },
   {
     "product_id": "GTF-TOD-001020019320SM",
@@ -1554,7 +2070,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1V8OBqgJKoF55FxznncPXHeVHjXll2JPV",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-019-320-S/M-"
   },
   {
     "product_id": "GTF-TOD-001070019510SM",
@@ -1563,7 +2082,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/1TxIRbXBVUGkkW4nLVbwz0XmKK5i8fujw",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1070-019-510-S/M-"
   },
   {
     "product_id": "GTF-TOD-001090001690XSS",
@@ -1572,7 +2094,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/1hhWtfhZ9Gkaz8viVrGOjk-dpqTCqILCF",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1090-001-690-XS/S-"
   },
   {
     "product_id": "GTF-TOD-031070044070XSS",
@@ -1581,7 +2106,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1eB0b6Fp_Jz5bz4-_FHEdfYwA4SMq-Ob5",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1070-044-070-xs-s-"
   },
   {
     "product_id": "GTF-TOD-031070044040XSS",
@@ -1590,7 +2118,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1YJEl8-q6hD-ISbfttjZpuKzmcNrcMNJw",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1070-044-040-xs-s-"
   },
   {
     "product_id": "GTF-TOD-031210018070XSSPETITE",
@@ -1599,7 +2130,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/12JIu3XXL_IMxlwmSPwoAbKqtFT7fKgQV",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1210-018-070-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-031050052070ONESIZE1",
@@ -1608,7 +2142,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1G8ZXSo_l-uFQNH-pta2s3Emqu5LDDiGC",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1050-052-070-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-031060006110XSS",
@@ -1617,7 +2154,10 @@
     "category": "Crop Tops",
     "image_file": "/product-image/drive/1h3BsvKY2tGDAm06bqWke86iOx-bC5ei3",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1060-006-110-xs-s-"
   },
   {
     "product_id": "GTF-TOD-001070021220XSS",
@@ -1626,7 +2166,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1j6g7uKhVzIjKqTCeHRNpBCNJx7MS-LFH",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1070-021-220-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001070021610XSS",
@@ -1635,7 +2178,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1JWep7nYK29JwAXW8PrmulhmldEgtmcm-",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1070-021-610-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001070021320XSS",
@@ -1644,7 +2190,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1EOHDOvM95DWYtN1xlGj7bgrb1_ys84wi",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1070-021-320-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001200016220ONESIZEPETITE",
@@ -1653,7 +2202,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/18IppqeOyqkelBUHn4aRxIxFtiqXuv1Jb",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-016-220-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001200016690ONESIZEPETITE",
@@ -1662,7 +2214,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1XMInVXRkOGwjSXY3knZ_q6DBEqTN60r-",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-016-690-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001070020220XSS",
@@ -1671,7 +2226,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1jdDHjaEECU3tb5hrFpgeykXMfnffcCGu",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1070-020-220-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001200032040XSS",
@@ -1680,7 +2238,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1UcFIgvILpPZqxZJICj9fjmSD3bwCHHaW",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-032-040-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001010077690XSSPETITE",
@@ -1689,7 +2250,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1KSLbqn1WpmR4p3Ul8xWR0qYxH1A-z6pe",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-077-690-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001010077590XSSPETITE",
@@ -1698,7 +2262,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1zBAXp2NhFN1nexylgPjeJI2EaOYjdWgt",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-077-590-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001051001610ONESIZEPETITE",
@@ -1707,7 +2274,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1j4ApF6aBPH_6B1RTuPatlLkqipCBIBkd",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-001-610-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001010080540XSSPETITE",
@@ -1716,7 +2286,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1eyHp6sR9EG0RHtGqvu5iFWgRN3Cz_OhX",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-080-540-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001010080420XSSPETITE",
@@ -1725,7 +2298,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1IqRLMM9AKYxXBKJZZfpkathEYOz1NPSh",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-080-420-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001010080020XSSPETITE",
@@ -1734,7 +2310,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1aAFq-D40bpudvCAXjbeWI7flbue3fLgV",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-080-020-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001010077020XSSPETITE",
@@ -1743,7 +2322,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1_83IjhHfw_h6Ko-TciEQ5Vyg3K5zH_p6",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-077-020-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001010046250ONESIZEPETITE",
@@ -1752,7 +2334,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1I5Q8xBthc1aNsbiMeNzOuHJmKP5--vFx",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-046-250-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001010046690ONESIZEPETITE",
@@ -1761,7 +2346,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1HEXNKay3JHxBZKpGSgA-kQT0Ksc24czi",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-046-690-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001010046320ONESIZEPETITE",
@@ -1770,7 +2358,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1Fnq-n0VoRpYQSKbhEYqa0ipI8mmFaSjx",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-046-320-One size-Petite"
   },
   {
     "product_id": "GTF-TOD-001200020420SMPETITE",
@@ -1779,7 +2370,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/18j2ltd3HIIjHQQ32K792GTrByt1oqbL_",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-020-420-S/M-Petite"
   },
   {
     "product_id": "GTF-TOD-011150003510SM",
@@ -1788,7 +2382,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1w5prenA3sltn0Hw7mxZDY0FFfKHQ6FUU",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1150-003-510-s-m-"
   },
   {
     "product_id": "GTF-TOD-011070026510SM",
@@ -1797,7 +2394,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1gztQKG0ag18yWJ1kcx8tqR8nm4DTIX6M",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1070-026-510-S/M-"
   },
   {
     "product_id": "GTF-TOD-011020027510ONESIZE",
@@ -1806,7 +2406,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1zEn9u66Ij8LqWTHxl66HkvuRhPgIcRwY",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1020-027-510-One Size-"
   },
   {
     "product_id": "GTF-TOD-011210013030SMPETITE",
@@ -1815,7 +2418,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/1B5Zg3IBh0_WnjCrTsRcI0RLmoFqgbaLm",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1210-013-030-S/M-petite"
   },
   {
     "product_id": "GTF-TOD-011010082040ONESIZEPETITE",
@@ -1824,7 +2430,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1tqmQih0B_wZ4e-UrRgkJgJQ4By_A28c5",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1010-082-040-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-021200056310XSSPETITE",
@@ -1833,7 +2442,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1aHvEyrnkgaQfmfoLRoh4Kr2qKpPghaOn",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1200-056-310-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-021200056070XSSPETITE",
@@ -1842,7 +2454,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1KaJPvxPV_JH0dsjuIK28w2aFCDkDrRA3",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1200-056-070-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-021200056040XSSPETITE",
@@ -1851,7 +2466,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1t8WZQJvxd96efDkUDYIlhqAFl5zJP-Z9",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "02-1200-056-040-xs-s-petite"
   },
   {
     "product_id": "GTF-TOD-001010011420SMSTANDART",
@@ -1860,7 +2478,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/18Se9eGTZlR1k04XP4bs4syaFoEviB7eJ",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-011-420-S/M-Standart"
   },
   {
     "product_id": "GTF-TOD-001200037040XSSPETITE",
@@ -1869,7 +2490,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1g4mYCyjYHIEjx16wSm6PgMdIaD3-ORv_",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-037-040-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001072023690SM",
@@ -1878,7 +2502,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/1b_Gmv2ky4EUNv_WmRvU66o0QwFKr_Gjx",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1072-023-690-S/M-"
   },
   {
     "product_id": "GTF-TOD-001210003510XSSSTANDART",
@@ -1887,7 +2514,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/1ojpEpkVeASayAurKxXhAz-Jtvghv7w5g",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1210-003-510-XS/S-Standart"
   },
   {
     "product_id": "GTF-TOD-001200037420XSSPETITE",
@@ -1896,7 +2526,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/14VLUNvSUJ6yvd0KM2kGqBrin7miRrr3x",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-037-420-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001010065690ONESIZESTANDART",
@@ -1905,7 +2538,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1kxwUkZEe0otRZIZq7jx71gG9lsM_VotW",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-065-690-One size-Standart"
   },
   {
     "product_id": "GTF-TOD-001010024180XSSSTANDART",
@@ -1914,7 +2550,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1h7Ur8Up2UDV6z5CvklH5tbmSiTtciUL4",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-024-180-xs-s-standart"
   },
   {
     "product_id": "GTF-TOD-001051032460ONESIZE1",
@@ -1923,7 +2562,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1F0QQ2EJa_zDkmRO8t7dAFKzG8gDA3Rzg",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-032-460-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-001020019050SM",
@@ -1932,7 +2574,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1PLOwqQ553Xo3NNP4TrTsVu6P_zPHvmaq",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-019-050-S/M-"
   },
   {
     "product_id": "GTF-TOD-001211007690SMPETITE",
@@ -1941,7 +2586,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/19ZwFGMpKDOIRA9pOZzCpPmAADnaFmn3O",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1211-007-690-S/M-petite"
   },
   {
     "product_id": "GTF-TOD-001200029460XSS",
@@ -1950,7 +2598,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1b-kfdnezVLYJ8ZUPAwiE4MCYsnugafzM",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-029-460-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001051032690ONESIZE",
@@ -1959,7 +2610,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1psI3ETGcQKvpNWgZ0scUHdh5RiMVKCjT",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1051-032-690-One Size-"
   },
   {
     "product_id": "GTF-TOD-001010067510XSS",
@@ -1968,7 +2622,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1mSyM__xZ4-8YXMtTMk3A6OyD2T9jpj8S",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-067-510-XS/S-"
   },
   {
     "product_id": "GTF-TOD-031050052040ONESIZE1",
@@ -1977,7 +2634,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1mCfkAoGtLb4eTKsPLsIqu2ltXsTFgZE7",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "03-1050-052-040-one-size-1-"
   },
   {
     "product_id": "GTF-TOD-011200051220XSS",
@@ -1986,7 +2646,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1Xe_ulYdz8Mefmnnhd-1E9LbzPWh_Zxog",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1200-051-220-xs-s-"
   },
   {
     "product_id": "GTF-TOD-011200051040XSS",
@@ -1995,7 +2658,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1KhyjAUDzl4i-szELiqy1Wz5DWROGGuzK",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1200-051-040-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001010080690XSSPETITE",
@@ -2004,7 +2670,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1MCv0MVqFrZWlRnWTxipMvVvq0A9tfq0W",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-080-690-XS/S-Petite"
   },
   {
     "product_id": "GTF-TOD-001010046040ONESIZEPETITE",
@@ -2013,7 +2682,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1tFzyPejUMaJFnD1vSv0zCmMYRufscABK",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-046-040-One size-Petite"
   },
   {
     "product_id": "GTF-TOD-001020009510SM",
@@ -2022,7 +2694,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/19fmn0WCxkBwJISOLZ5PEf86NJT7Py2mg",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-009-510-S/M-"
   },
   {
     "product_id": "GTF-TOD-001020009690ML",
@@ -2031,7 +2706,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1TFykqUdabVGdJ7RTA1t9edV2rvYgQPLK",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-009-690-M/L-"
   },
   {
     "product_id": "GTF-TOD-001020009420SM",
@@ -2040,7 +2718,10 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1Se0fVXBV_mE3Kn1d9fxSi1ctnMdwlYxm",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-009-420-S/M-"
   },
   {
     "product_id": "GTF-TOD-011051033650ONESIZEPETITE",
@@ -2049,7 +2730,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1jI0N8c4QIZQsbScX0NRtA1q278zTSNF8",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1051-033-650-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-011051033510ONESIZEPETITE",
@@ -2058,7 +2742,10 @@
     "category": "Cardigans",
     "image_file": "/product-image/drive/1cKC2PcQnhKPNeZNGtUCBEzvDM-dvU6oD",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1051-033-510-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-011070026040SM",
@@ -2067,7 +2754,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/12MG3rnvyLEm2b8LLFB6IxiAsMSeAUaA-",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1070-026-040-S/M-"
   },
   {
     "product_id": "GTF-TOD-011210013040SMPETITE",
@@ -2076,7 +2766,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/17zw1Qa8Eo_JnitH3BrawAIoJAM3Mifq3",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1210-013-040-s-m-petite"
   },
   {
     "product_id": "GTF-TOD-011210013510SMPETITE",
@@ -2085,7 +2778,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/16I2VyqKXhlHhXTOoslT65XTKvvH3XnHf",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1210-013-510-s-m-petite"
   },
   {
     "product_id": "GTF-TOD-011200043510SMPETITE",
@@ -2094,7 +2790,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1Drkf-3E8eWtN1f9Uz5jLeRwH4XY47yGa",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1200-043-510-S/M-Petite"
   },
   {
     "product_id": "GTF-TOD-011010082030ONESIZEPETITE",
@@ -2103,7 +2802,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1niwOVCPr3xLA2V1PnjI1Tg-pIJIMbZTX",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1010-082-030-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001010070420ONESIZE",
@@ -2112,7 +2814,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1Fe_VCDm98CAvQH7be7cEj6HtP97WpPgl",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-070-420-One Size-"
   },
   {
     "product_id": "GTF-TOD-001010065200ONESIZESTANDART",
@@ -2121,7 +2826,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1S41oqpExfT-QaupCrUQFWXHljMKpfqK8",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-065-200-One size-Standart"
   },
   {
     "product_id": "GTF-TOD-001010065510ONESIZESTANDART",
@@ -2130,7 +2838,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1Wcuv0ace7d0S-D2xGIkpGA23Aj7N7My1",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-065-510-One size-Standart"
   },
   {
     "product_id": "GTF-TOD-001211007050SMPETITE",
@@ -2139,7 +2850,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/1K1GJfqQdIJiql10w9bSKQ9Nc1MZnkWx-",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1211-007-050-S/M-petite"
   },
   {
     "product_id": "GTF-TOD-001211007320MLSTANDARD",
@@ -2148,7 +2862,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/1TNe5zDfOdQC8s4CiWIWnH7ipfWNmFYUy",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1211-007-320-m-l-standard"
   },
   {
     "product_id": "GTF-TOD-001070019460SM",
@@ -2157,7 +2874,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/1IXVAAeOGWpOUifGu4gDUkkfDx5a6HOHj",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1070-019-460-S/M-"
   },
   {
     "product_id": "GTF-TOD-001200016610ONESIZEPETITE",
@@ -2166,7 +2886,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1n1YHbhV7-wBZx5mBgZ-LL4rNBlf30d2e",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1200-016-610-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-011070028040SM",
@@ -2175,7 +2898,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/1CMuB_UsSiRyGSbJAjDuhV9rnf2EB8Z6N",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1070-028-040-S/M-"
   },
   {
     "product_id": "GTF-TOD-011070028220SM",
@@ -2184,7 +2910,10 @@
     "category": "Clothing Tops",
     "image_file": "/product-image/drive/1C_RQWm2Wflw9ia7aR10ewiTSQ5W8am_i",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1070-028-220-S/M-"
   },
   {
     "product_id": "GTF-TOD-001070020040XSS",
@@ -2193,7 +2922,10 @@
     "category": "Tank Tops",
     "image_file": "/product-image/drive/19ASJXdnNPWX0_JMBkHcS6c0U2qlqp2Vj",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1070-020-040-XS/S-"
   },
   {
     "product_id": "GTF-TOD-001010046510ONESIZEPETITE",
@@ -2202,7 +2934,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1mfPCqCbc7h2kX30YY0d88D8ze-_gnzTK",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-046-510-One size-Petite"
   },
   {
     "product_id": "GTF-TOD-011210013650SMPETITE",
@@ -2211,7 +2946,10 @@
     "category": "Pants",
     "image_file": "/product-image/drive/19stKrgI949g5Ct2t90QJOwedtNXIuIRy",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1210-013-650-S/M-petite"
   },
   {
     "product_id": "GTF-TOD-011200043040SMPETITE",
@@ -2220,7 +2958,10 @@
     "category": "Skirts",
     "image_file": "/product-image/drive/1GUpQ-jSlbPZ_d0hmT78avuW5wYscphIH",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "01-1200-043-040-S/M-Petite"
   },
   {
     "product_id": "GTF-TOD-001010072690ONESIZEPETITE",
@@ -2229,7 +2970,10 @@
     "category": "Dresses",
     "image_file": "/product-image/drive/1wf-dsPiPEpGPkrZG1o7ZN56kPO4NH_0M",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1010-072-690-One Size-Petite"
   },
   {
     "product_id": "GTF-TOD-001020019460SM",
@@ -2238,6 +2982,9 @@
     "category": "Sweaters",
     "image_file": "/product-image/drive/1-O3MVixNyk4fCXxP76zd5H23Ee_zg8M9",
     "price": null,
-    "currency": null
+    "currency": "AED",
+    "source_truth_run_id": "3db82f22",
+    "source_truth_review_status": "approved",
+    "brand_sku": "00-1020-019-460-S/M-"
   }
 ]

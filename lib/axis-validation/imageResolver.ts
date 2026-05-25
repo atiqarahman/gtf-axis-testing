@@ -19,6 +19,7 @@ function localSrc(slug: string, file: string) {
 
 export function resolveImage(product: Product): ImageResolution {
   const image = product.image_file ?? ''
+  if (image.startsWith('/product-image/')) return { status: 'ok', src: image, candidates: [{ src: image, label: 'Proxied image', confidence: 'exact' }] }
   if (image.startsWith('http')) return { status: 'url', src: image, candidates: [{ src: image, label: 'External URL', confidence: 'url' }] }
   const slug = brandSlug(product.brand)
   const fileName = image.split('/').pop() ?? image

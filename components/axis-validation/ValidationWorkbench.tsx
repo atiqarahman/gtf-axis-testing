@@ -189,17 +189,20 @@ export default function ValidationWorkbench() {
 
   const item = filtered[Math.min(index, Math.max(0, filtered.length - 1))]
   const review = item ? reviews[item.product.product_id] ?? blankReview(item) : null
-  const reviewedCount = Object.values(reviews).filter((r) => r.review_status === 'completed').length
-  const skippedCount = Object.values(reviews).filter((r) => r.review_status === 'skipped').length
-  const touchedCount = Object.keys(reviews).length
-  const attributeApprovedCount = approvedAttributeProducts(reviews)
-  const attributeTouchedCount = Object.values(reviews).filter((r) => (r.attribute_reviews ?? []).length > 0).length
+  const activeProductIds = useMemo(() => new Set(activeItems.map((i) => i.product.product_id)), [activeItems])
+  const activeReviewList = useMemo(() => Object.values(reviews).filter((r) => activeProductIds.has(r.product_id)), [activeProductIds, reviews])
+  const activeReviewMap = useMemo(() => Object.fromEntries(activeReviewList.map((r) => [r.product_id, r])), [activeReviewList])
+  const reviewedCount = activeReviewList.filter((r) => r.review_status === 'completed').length
+  const skippedCount = activeReviewList.filter((r) => r.review_status === 'skipped').length
+  const touchedCount = activeReviewList.length
+  const attributeApprovedCount = approvedAttributeProducts(activeReviewMap)
+  const attributeTouchedCount = activeReviewList.filter((r) => (r.attribute_reviews ?? []).length > 0).length
   const filteredReviewedCount = filtered.filter((i) => reviews[i.product.product_id]?.review_status === 'completed').length
   const progressPct = activeItems.length ? Math.round(((reviewedCount + skippedCount) / activeItems.length) * 100) : 0
-  const correctionCount = Object.values(reviews).filter((r) => r.overall_decision === 'needs_correction' || r.axis_overrides.length || r.attribute_reviews.length || r.vibe_reviews.some((v) => v.decision === 'disagree')).length
-  const vibeDisagreementCount = Object.values(reviews).reduce((sum, r) => sum + r.vibe_reviews.filter((v) => v.decision === 'disagree').length, 0)
-  const vibeBoostCount = Object.values(reviews).reduce((sum, r) => sum + (r.vibe_boost_suggestions ?? []).length, 0)
-  const axisOverrideCount = Object.values(reviews).reduce((sum, r) => sum + r.axis_overrides.length, 0)
+  const correctionCount = activeReviewList.filter((r) => r.overall_decision === 'needs_correction' || r.axis_overrides.length || r.attribute_reviews.length || r.vibe_reviews.some((v) => v.decision === 'disagree')).length
+  const vibeDisagreementCount = activeReviewList.reduce((sum, r) => sum + r.vibe_reviews.filter((v) => v.decision === 'disagree').length, 0)
+  const vibeBoostCount = activeReviewList.reduce((sum, r) => sum + (r.vibe_boost_suggestions ?? []).length, 0)
+  const axisOverrideCount = activeReviewList.reduce((sum, r) => sum + r.axis_overrides.length, 0)
   const unresolvedImageIssues = qa?.imageIssues.filter((i) => unresolvedImageIssueIds.has(i.product_id)) ?? []
   const imageIssueCount = unresolvedImageIssues.length
   const autoFalse = Object.values(reviews).filter((r) => items.find((i) => i.product.product_id === r.product_id)?.extraction.product_tier === 'AUTO' && r.overall_decision !== 'approve' && r.overall_decision !== 'unset').length

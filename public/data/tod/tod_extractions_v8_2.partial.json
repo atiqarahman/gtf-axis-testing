@@ -23426,179 +23426,6 @@
     }
   },
   {
-    "product_id": "GTF-TOD-021060005220XSS",
-    "schema_version": "8.2",
-    "extraction_status": "ok",
-    "brand_category": "Tank Tops",
-    "target_scope": "single_garment",
-    "source_truth": {
-      "run_id": "3db82f22",
-      "review_status": "approved",
-      "final_primary_image": "/source-truth/drive-image/1N9mWeyd_F2nT-FJ3_QE6BKarMFRKg56v",
-      "final_secondary_image": "/source-truth/drive-image/1XqWwFNQ1f79vRzi3HS08DJa834VMYtVi"
-    },
-    "hard_attributes": {
-      "category": {
-        "value": "tank top",
-        "confidence": 0.95
-      },
-      "primary_color": {
-        "value": "pink",
-        "confidence": 0.9
-      },
-      "secondary_color": {
-        "value": "none",
-        "confidence": 0.9
-      },
-      "material_primary": {
-        "value": "cotton",
-        "confidence": 0.9
-      },
-      "material_secondary": {
-        "value": "acrylic",
-        "confidence": 0.8
-      },
-      "material_source": "brand-provided",
-      "silhouette": {
-        "value": "fitted",
-        "confidence": 0.85
-      },
-      "length": {
-        "value": "cropped",
-        "confidence": 0.85
-      },
-      "neckline": {
-        "value": "bandeau",
-        "confidence": 0.9
-      },
-      "sleeve_length": {
-        "value": "none",
-        "confidence": 0.95
-      },
-      "pattern": {
-        "value": "solid",
-        "confidence": 0.9
-      },
-      "details": [
-        {
-          "value": "bandeau",
-          "confidence": 0.9
-        }
-      ],
-      "price_tier": {
-        "value": "mid",
-        "confidence": 0.8
-      }
-    },
-    "axis_scores": {
-      "minimalism": {
-        "score": 7,
-        "reasoning": "Simple design with solid color."
-      },
-      "polish": {
-        "score": 6,
-        "reasoning": "Clean lines and fitted silhouette."
-      },
-      "body_awareness": {
-        "score": 8,
-        "reasoning": "Fitted silhouette accentuates body shape."
-      },
-      "drama": {
-        "score": 4,
-        "reasoning": "Minimal dramatic elements."
-      },
-      "novelty": {
-        "score": 5,
-        "reasoning": "Standard bandeau style."
-      },
-      "craft": {
-        "score": 6,
-        "reasoning": "Good quality materials."
-      },
-      "boldness": {
-        "score": 5,
-        "reasoning": "Bright color but simple design."
-      },
-      "glamour": {
-        "score": 5,
-        "reasoning": "Moderate glamour due to fitted style."
-      },
-      "trend_currency": {
-        "score": 7,
-        "reasoning": "Trendy bandeau style."
-      },
-      "styling_affordance": {
-        "score": 6,
-        "reasoning": "Versatile for layering."
-      },
-      "cultural_richness": {
-        "score": 3,
-        "reasoning": "Limited cultural elements."
-      }
-    },
-    "is_multi_piece": false,
-    "component_count": 0,
-    "components": [],
-    "search_terms": [
-      "pink tank top",
-      "bandeau top",
-      "fitted tank",
-      "cotton acrylic top"
-    ],
-    "suggested_vibes": [
-      "Cool Girl",
-      "Beach & Resort",
-      "Elevated Basics / Hailey Bieber"
-    ],
-    "primary_vibe": "Cool Girl",
-    "all_vibe_scores": {
-      "Old Money": 3,
-      "Glam": 4,
-      "Cool Girl": 8,
-      "Sexy Elegant": 5,
-      "Wedding Guest": 2,
-      "Dubai Glam": 3,
-      "Elevated City": 5,
-      "Winter Holidays": 2,
-      "Beach & Resort": 7,
-      "IT Girl": 6,
-      "Elevated Basics / Hailey Bieber": 7,
-      "Unique Finds": 4
-    },
-    "gpt_suggested_vibes": [
-      "Cool Girl",
-      "Beach & Resort"
-    ],
-    "product_tier": "mid",
-    "review_needed": [],
-    "manual_needed": [],
-    "reasoning_trace": {},
-    "meta": {
-      "mode": "catalog",
-      "confidence": "high",
-      "schema_version": "8.2",
-      "prompt_guard_version": "v8.2-brand-category-components-search",
-      "extraction_notes": null,
-      "model": "gpt-4o",
-      "source": "tod_v82_gpt_extraction",
-      "generated_at": "2026-05-25T15:25:04.666945+00:00",
-      "source_truth_run_id": "3db82f22",
-      "prompt_tokens": 6107,
-      "completion_tokens": 1110,
-      "total_tokens": 7217
-    },
-    "gtf_sku": "GTF-TOD-021060005220XSS",
-    "brand_sku": "02-1060-005-220-xs-s-",
-    "product_name": "SAINT-TROPEZ bandeau top",
-    "category": "Tank Tops",
-    "final_primary_image": "/source-truth/drive-image/1N9mWeyd_F2nT-FJ3_QE6BKarMFRKg56v",
-    "final_secondary_image": "/source-truth/drive-image/1XqWwFNQ1f79vRzi3HS08DJa834VMYtVi",
-    "ct_runtime_validation": {
-      "status": "PASS",
-      "issues": []
-    }
-  },
-  {
     "product_id": "GTF-TOD-031020043420SM",
     "schema_version": "8.2",
     "extraction_status": "ok",
@@ -42823,6 +42650,179 @@
     "category": "Sweaters",
     "final_primary_image": "/source-truth/drive-image/1-O3MVixNyk4fCXxP76zd5H23Ee_zg8M9",
     "final_secondary_image": "/source-truth/drive-image/1WA-6T6MPN1Ny6mxnLYs3fykjaifrkS-P",
+    "ct_runtime_validation": {
+      "status": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "product_id": "GTF-TOD-021060005220XSS",
+    "schema_version": "8.2",
+    "extraction_status": "ok",
+    "brand_category": "Tank Tops",
+    "target_scope": "single_garment",
+    "source_truth": {
+      "run_id": "3db82f22",
+      "review_status": "approved",
+      "final_primary_image": "/source-truth/drive-image/1N9mWeyd_F2nT-FJ3_QE6BKarMFRKg56v",
+      "final_secondary_image": "/source-truth/drive-image/1XqWwFNQ1f79vRzi3HS08DJa834VMYtVi"
+    },
+    "hard_attributes": {
+      "category": {
+        "value": "tank top",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "pink",
+        "confidence": 0.9
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.9
+      },
+      "material_primary": {
+        "value": "cotton",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "acrylic",
+        "confidence": 0.8
+      },
+      "material_source": "brand-provided",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 0.85
+      },
+      "length": {
+        "value": "cropped",
+        "confidence": 0.85
+      },
+      "neckline": {
+        "value": "bandeau",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "none",
+        "confidence": 0.95
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "bandeau",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "mid",
+        "confidence": 0.8
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 7,
+        "reasoning": "Simple design with solid color."
+      },
+      "polish": {
+        "score": 6,
+        "reasoning": "Clean lines and fitted silhouette."
+      },
+      "body_awareness": {
+        "score": 8,
+        "reasoning": "Fitted silhouette accentuates body shape."
+      },
+      "drama": {
+        "score": 4,
+        "reasoning": "Minimal dramatic elements."
+      },
+      "novelty": {
+        "score": 5,
+        "reasoning": "Standard bandeau style."
+      },
+      "craft": {
+        "score": 6,
+        "reasoning": "Good quality materials."
+      },
+      "boldness": {
+        "score": 5,
+        "reasoning": "Bright color but simple design."
+      },
+      "glamour": {
+        "score": 5,
+        "reasoning": "Moderate glamour due to fitted style."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "Trendy bandeau style."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "Versatile for layering."
+      },
+      "cultural_richness": {
+        "score": 3,
+        "reasoning": "Limited cultural elements."
+      }
+    },
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "pink tank top",
+      "bandeau top",
+      "fitted tank",
+      "cotton acrylic top"
+    ],
+    "suggested_vibes": [
+      "Cool Girl",
+      "Beach & Resort",
+      "Elevated Basics / Hailey Bieber"
+    ],
+    "primary_vibe": "Cool Girl",
+    "all_vibe_scores": {
+      "Old Money": 3,
+      "Glam": 4,
+      "Cool Girl": 8,
+      "Sexy Elegant": 5,
+      "Wedding Guest": 2,
+      "Dubai Glam": 3,
+      "Elevated City": 5,
+      "Winter Holidays": 2,
+      "Beach & Resort": 7,
+      "IT Girl": 6,
+      "Elevated Basics / Hailey Bieber": 7,
+      "Unique Finds": 4
+    },
+    "gpt_suggested_vibes": [
+      "Cool Girl",
+      "Beach & Resort"
+    ],
+    "product_tier": "mid",
+    "review_needed": [],
+    "manual_needed": [],
+    "reasoning_trace": {},
+    "meta": {
+      "mode": "catalog",
+      "confidence": "high",
+      "schema_version": "8.2",
+      "prompt_guard_version": "v8.2-brand-category-components-search",
+      "extraction_notes": null,
+      "model": "gpt-4o",
+      "source": "tod_v82_gpt_extraction",
+      "generated_at": "2026-05-25T15:25:04.666945+00:00",
+      "source_truth_run_id": "3db82f22",
+      "prompt_tokens": 6107,
+      "completion_tokens": 1110,
+      "total_tokens": 7217
+    },
+    "gtf_sku": "GTF-TOD-021060005220XSS",
+    "brand_sku": "02-1060-005-220-xs-s-",
+    "product_name": "SAINT-TROPEZ bandeau top",
+    "category": "Tank Tops",
+    "final_primary_image": "/source-truth/drive-image/1N9mWeyd_F2nT-FJ3_QE6BKarMFRKg56v",
+    "final_secondary_image": "/source-truth/drive-image/1XqWwFNQ1f79vRzi3HS08DJa834VMYtVi",
     "ct_runtime_validation": {
       "status": "PASS",
       "issues": []

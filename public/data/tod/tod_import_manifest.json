@@ -1,0 +1,26 @@
+{
+  "dataset": "TOD Source Truth -> Taste Lab controlled handoff",
+  "run_id": "3db82f22",
+  "ar_exported_at": "2026-05-25T12:38:30.582Z",
+  "generated_at": "2026-05-25T13:47:45.322170+00:00",
+  "counts": {
+    "run_products_raw": 268,
+    "run_unique_gtf_skus": 267,
+    "ar_review_rows": 262,
+    "approved_for_gpt_extraction": 249,
+    "blocked_exceptions": 18,
+    "duplicate_sku_collision_rows": 2
+  },
+  "policy": {
+    "taste_lab_reviewable_now": false,
+    "reason": "Taste Lab needs real GPT v8.2/v8.3 extraction outputs. These 249 products are staged for GPT extraction first.",
+    "do_not_do": "Do not create fake axis_scores or hard_attributes just to make the UI render."
+  },
+  "files": {
+    "approved_source_truth": "public/data/tod/tod_source_truth_approved_249.json",
+    "gpt_extraction_queue": "public/data/tod/tod_v82_extraction_input_queue_249.json",
+    "taste_lab_products_pending_extraction": "public/data/tod/tod_taste_lab_products_pending_extraction_249.json",
+    "exceptions": "public/data/tod/tod_source_truth_exceptions_18.json",
+    "exceptions_csv": "public/data/tod/tod_source_truth_exceptions_18.csv"
+  }
+}
