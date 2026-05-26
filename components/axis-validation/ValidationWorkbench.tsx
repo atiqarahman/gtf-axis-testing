@@ -370,6 +370,7 @@ export default function ValidationWorkbench() {
   if (!item || !review) return <div className="loading">Loading GTF Axis Validation…</div>
 
   const image = resolveImage(item.product)
+  const isTodAttributeQa = item.product.brand === 'Try On Dress'
   const radar = AXES.map((axis) => {
     const override = review.axis_overrides.find((o) => o.axis_id === axis.id)
     return { axis: axis.label.replace(' ', '\n'), original: item.extraction.axis_scores[axis.id]?.score ?? 0, override: override?.override_score ?? item.extraction.axis_scores[axis.id]?.score ?? 0 }
@@ -382,14 +383,14 @@ export default function ValidationWorkbench() {
           <div className="brand-lockup"><span className="gtf-logo">GTF</span><span className="lab-pill">Taste Lab v2</span></div>
           <p className="eyebrow">v8.2 · Category Context + Component Extraction Studio</p>
           <h1>Calibrate GTF’s Taste Engine</h1>
-          <p className="subtitle">Review brand category, v8.2 component extraction, search terms, match reasons, Variant C image readiness, vibe logic, and correction notes in one studio.</p>
+          <p className="subtitle">Review brand category, v8.2 component extraction, search terms, match reasons, Variant C image readiness, and correction notes in one studio. For TOD, vibe validation is intentionally deferred until attributes are corrected.</p>
         </div>
         <div className="metrics expanded">
           <Metric label="Active products" value={activeItems.length} />
           <Metric label="Reviewed" value={reviewedCount} />
           <Metric label="Attribute approved" value={attributeApprovedCount} />
-          <Metric label="Vibe disagreements" value={vibeDisagreementCount} />
-          <Metric label="Also-rank-high" value={vibeBoostCount} />
+          {!isTodAttributeQa && <Metric label="Vibe disagreements" value={vibeDisagreementCount} />}
+          {!isTodAttributeQa && <Metric label="Also-rank-high" value={vibeBoostCount} />}
           <Metric label="Axis overrides" value={axisOverrideCount} />
           <Metric label="Attr touched" value={attributeTouchedCount} />
           <Metric label="v8.2 ready" value={qa?.v82Ready ?? 0} />
@@ -445,7 +446,7 @@ export default function ValidationWorkbench() {
           <V82ExtractionPanel item={item} review={review} saveReview={saveReview} />
           <SearchLabPanel item={item} />
           <Decision review={review} saveReview={saveReview} setDecision={setDecision} persistenceReady={persistenceReady} />
-          <VibePanel item={item} review={review} saveReview={saveReview} />
+          {isTodAttributeQa ? <TodVibeDeferredNotice /> : <VibePanel item={item} review={review} saveReview={saveReview} />}
           <AxisPanel item={item} review={review} saveReview={saveReview} radar={radar} />
           <AttributePanel item={item} review={review} saveReview={saveReview} />
           <Reasoning item={item} review={review} saveReview={saveReview} />
@@ -623,6 +624,10 @@ function SearchLabPanel({ item }: { item: ValidationItem }) {
 
 function Decision({ review, saveReview, setDecision, persistenceReady }: any) {
   return <section className="card"><h3>Overall decision</h3>{!persistenceReady && <p className="p0-lock-copy">Review decisions are locked until server persistence is writable.</p>}<div className="button-grid">{['approve','needs_correction','manual_escalation','skip_for_now'].map((d) => <button key={d} disabled={!persistenceReady} className={review.overall_decision === d ? 'selected' : 'ghost'} onClick={() => setDecision(d)}>{d.replaceAll('_',' ')}</button>)}</div><div className="chips">{issueOptions.map((tag) => <button key={tag} disabled={!persistenceReady} className={review.issue_tags.includes(tag) ? 'chip active' : 'chip'} onClick={() => saveReview({ ...review, issue_tags: review.issue_tags.includes(tag) ? review.issue_tags.filter((t: string) => t !== tag) : [...review.issue_tags, tag] })}>{tag.replaceAll('_',' ')}</button>)}</div></section>
+}
+
+function TodVibeDeferredNotice() {
+  return <section className="card vibe-card"><div className="section-kicker">Vibe validation deferred</div><h3>TOD pass = attribute/search-term QA only</h3><p className="hint">Do not review vibes for TOD right now. This pass is for hard attributes, target-scope, category, search terms, and matching-items / Shop the Look signals. Vibes should be reviewed only after v8.3 extraction fixes are applied.</p></section>
 }
 
 function VibePanel({ item, review, saveReview }: { item: ValidationItem; review: ProductReview; saveReview: (r: ProductReview) => void }) {
