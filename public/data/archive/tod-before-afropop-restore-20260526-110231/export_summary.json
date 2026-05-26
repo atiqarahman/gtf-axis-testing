@@ -1,0 +1,12 @@
+{
+  "dataset": "TOD v8.2 extraction for Taste Lab AR review",
+  "generated_at": "2026-05-25T15:25:25.563200+00:00",
+  "products": 249,
+  "extractions": 249,
+  "source_truth_run_id": "3db82f22",
+  "approved_source_truth_count": 249,
+  "blocked_exceptions_count": 18,
+  "schema_version": "8.2",
+  "model": "gpt-4o",
+  "notes": "AFROPOP dataset archived under public/data/archive/afropop-before-tod-may25/. TOD loaded as active Taste Lab dataset."
+}
