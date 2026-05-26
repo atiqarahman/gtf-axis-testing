@@ -1,30 +1,12 @@
 {
-  "dataset": "AFROPOP v8.2 extraction for Taste Lab AR review",
-  "generated_at": "2026-05-26T05:33:00.000Z",
-  "products": 58,
-  "extractions": 58,
-  "brand": "Afro Nikitha (Nikita Mhaisalkar)",
-  "source_truth_run_id": "f1ab3b74",
-  "excluded_exception": "AP/AP25/044 remains sent_to_review / pending review",
+  "dataset": "TOD v8.2 extraction for Taste Lab AR review",
+  "generated_at": "2026-05-25T15:25:25.563200+00:00",
+  "products": 249,
+  "extractions": 249,
+  "source_truth_run_id": "3db82f22",
+  "approved_source_truth_count": 249,
+  "blocked_exceptions_count": 18,
   "schema_version": "8.2",
   "model": "gpt-4o",
-  "single_piece_count": 44,
-  "multi_piece_count": 14,
-  "multi_piece_review_skus": [
-    "AP/AP25/003",
-    "AP/AP25/004",
-    "AP/AP25/013",
-    "AP/AP25/014",
-    "AP/AP25/019",
-    "AP/AP25/025",
-    "AP/AP25/027",
-    "AP/AP25/028",
-    "AP/AP25/031",
-    "AP/AP25/032",
-    "AP/AP25/038",
-    "AP/AP25/050",
-    "AP/AP25/052",
-    "AP/AP25/057"
-  ],
-  "notes": "AFROPOP restored as the active Taste Lab dataset on May 26 so AR can finish multi-piece review before TOD. TOD was backed up under public/data/archive/tod-before-afropop-restore-* and can be restored after AR finishes."
+  "notes": "AFROPOP dataset archived under public/data/archive/afropop-before-tod-may25/. TOD loaded as active Taste Lab dataset."
 }
