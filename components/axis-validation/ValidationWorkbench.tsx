@@ -67,6 +67,7 @@ export default function ValidationWorkbench() {
   const [reviews, setReviews] = useState<Record<string, ProductReview>>({})
   const [brand, setBrand] = useState('all')
   const [tier, setTier] = useState('all')
+  const [category, setCategory] = useState('all')
   const [queue, setQueue] = useState('all')
   const [query, setQuery] = useState('')
   const [showQa, setShowQa] = useState(false)
@@ -164,6 +165,23 @@ export default function ValidationWorkbench() {
   const activeItems = useMemo(() => items.filter((i) => !EXCLUDED_BRANDS.includes(i.product.brand)), [items])
   const excludedCount = items.length - activeItems.length
   const brands = useMemo(() => Array.from(new Set(activeItems.map((i) => i.product.brand))).sort(), [activeItems])
+  const categoryLabel = (item: ValidationItem) => item.extraction.brand_category || item.product.category || item.extraction.category || item.extraction.hard_attributes?.category?.value || 'Uncategorized'
+  const categories = useMemo(() => Array.from(new Set(activeItems.map(categoryLabel))).sort(), [activeItems])
+  const TOD_SAMPLE_TARGETS: Record<string, number> = {
+    'dresses': 15,
+    'cardigans': 10,
+    'skirts': 10,
+    'sweaters': 8,
+    'tank tops': 7,
+    'pants': 6,
+    'clothing tops': 5,
+    'scarves/shawls': 3,
+    'shirts': 2,
+    'outerwear': 999,
+    'overcoats': 999,
+    'crop tops': 999,
+  }
+  const selectedCategoryTarget = category === 'all' ? null : TOD_SAMPLE_TARGETS[String(category).toLowerCase()] ?? null
   const unresolvedImageIssueIds = useMemo(() => new Set((qa?.imageIssues ?? []).filter((i) => {
     if (EXCLUDED_BRANDS.includes(i.brand)) return false
     const r = reviews[i.product_id]
@@ -182,10 +200,11 @@ export default function ValidationWorkbench() {
     if (queue === 'image_failed' && !failedImageIds.has(item.product.product_id)) return false
     if (brand !== 'all' && item.product.brand !== brand) return false
     if (tier !== 'all' && item.extraction.product_tier !== tier) return false
+    if (category !== 'all' && categoryLabel(item) !== category) return false
     const q = query.toLowerCase().trim()
     if (q && !`${item.product.product_id} ${item.product.title} ${item.product.brand}`.toLowerCase().includes(q)) return false
     return true
-  }), [activeItems, approvedImageIds, brand, failedImageIds, queue, tier, query, unresolvedImageIssueIds])
+  }), [activeItems, approvedImageIds, brand, category, failedImageIds, queue, tier, query, unresolvedImageIssueIds])
 
   const item = filtered[Math.min(index, Math.max(0, filtered.length - 1))]
   const review = item ? reviews[item.product.product_id] ?? blankReview(item) : null
@@ -407,7 +426,8 @@ export default function ValidationWorkbench() {
       <section className="toolbar taste-toolbar">
         <input placeholder="Search products, brands, SKUs…" value={query} onChange={(e) => { setQuery(e.target.value); setIndex(0) }} />
         <select value={brand} onChange={(e) => { setBrand(e.target.value); setIndex(0) }}><option value="all">All brands</option>{brands.map((b) => <option key={b}>{b}</option>)}</select>
-        <select value={tier} onChange={(e) => { setTier(e.target.value); setIndex(0) }}><option value="all">All tiers</option><option>AUTO</option><option>REVIEW</option><option>MANUAL</option></select>
+        <select value={tier} onChange={(e) => { setTier(e.target.value); setIndex(0) }}><option value="all">All pipeline tiers</option><option>AUTO</option><option>REVIEW</option><option>MANUAL</option></select>
+        <select value={category} onChange={(e) => { setCategory(e.target.value); setIndex(0) }}><option value="all">All categories</option>{categories.map((c) => <option key={c}>{c}</option>)}</select>
         <select value={queue} onChange={(e) => { setQueue(e.target.value); setIndex(0) }}><option value="all">All active products</option><option value="single_garments">Single garments first ({singleCount})</option><option value="multi_piece">Multi-piece review ({multiCount})</option><option value="image_unresolved">Unresolved ambiguous photos ({unresolvedImageIssues.length})</option><option value="image_approved">Approved images ({approvedImageIds.size})</option><option value="image_failed">Manual image fix ({failedImageIds.size})</option></select>
         <button className="ghost soft-action" onClick={() => setShowQa(!showQa)}><SlidersHorizontal size={16}/> Data QA</button>
         <button className="ghost soft-action" onClick={() => setShowShortcuts(!showShortcuts)}>⌘ Shortcuts</button>
@@ -425,6 +445,7 @@ export default function ValidationWorkbench() {
         <Badge tone={review.review_status === 'completed' ? 'green' : review.review_status === 'skipped' ? 'amber' : 'red'}>{review.review_status.toUpperCase()}</Badge>
       </section>
 
+      {category !== 'all' && <section className="queue-banner"><b>Category filter: {category}</b><span>{filteredReviewedCount}/{filtered.length} reviewed in this category. TOD prompt sample target: {selectedCategoryTarget === 999 ? 'review all rows in this small category' : selectedCategoryTarget ? `${selectedCategoryTarget} products` : 'use CTO judgement'}; stop early after ~10 clean rows with no new issue pattern.</span></section>}
       {queue === 'single_garments' && <section className="queue-banner"><b>Single-garment review queue</b><span>Shows only products without component arrays. AR can safely continue normal extraction review here while multi-piece sets stay in their own queue.</span></section>}
       {queue === 'multi_piece' && <section className="queue-banner"><b>Multi-piece review queue</b><span>Shows pantsuits, co-ords, sets, saree/blouse, dress/cape and similar rows. Review component correctness before Variant C.</span></section>}
       {queue === 'image_unresolved' && <section className="queue-banner"><b>Image QA queue</b><span>Only unresolved ambiguous/missing images are shown. Approving selected image removes the product from this queue. If none match, send it to Manual image fix.</span></section>}
@@ -533,7 +554,7 @@ function sourceTruthImageUrl(path?: string) {
 function Meta({ item, image }: { item: ValidationItem; image: any }) {
   const primary = sourceTruthImageUrl(item.extraction.source_truth?.final_primary_image ?? item.extraction.final_primary_image) || image.src
   const secondary = sourceTruthImageUrl(item.extraction.source_truth?.final_secondary_image ?? item.extraction.final_secondary_image) || image.candidates?.[1]?.src
-  return <section className="card"><div className="card-title"><h3>Product metadata</h3><Badge tone={item.extraction.product_tier === 'AUTO' ? 'green' : item.extraction.product_tier === 'REVIEW' ? 'amber' : 'red'}>{item.extraction.product_tier}</Badge></div>
+  return <section className="card"><div className="card-title"><h3>Product metadata</h3><Badge tone={item.extraction.product_tier === 'AUTO' ? 'green' : item.extraction.product_tier === 'REVIEW' ? 'amber' : 'red'}>Product tier: {item.extraction.product_tier}</Badge></div>
     <div className="meta-grid"><span>Catalog category</span><b>{item.product.category}</b><span>Brand category</span><b>{item.extraction.brand_category ?? item.product.category ?? '—'}</b><span>Extracted category</span><b>{item.extraction.hard_attributes.category?.value}</b><span>Schema</span><b>{item.extraction.schema_version}</b><span>Confidence</span><b>{item.extraction.confidence ?? '—'}</b><span>Review needed</span><b>{item.extraction.review_needed?.join(', ') || 'None'}</b><span>Manual needed</span><b>{item.extraction.manual_needed?.join(', ') || 'None'}</b><span>Catalog image ref</span><code>{item.product.image_file || '—'}</code><span>Source Truth primary</span>{primary ? <a href={primary} target="_blank">open final primary</a> : <b>—</b>}<span>Source Truth secondary</span>{secondary ? <a href={secondary} target="_blank">open final secondary</a> : <b>—</b>}</div>
   </section>
 }
