@@ -166,7 +166,13 @@ export default function ValidationWorkbench() {
   const excludedCount = items.length - activeItems.length
   const brands = useMemo(() => Array.from(new Set(activeItems.map((i) => i.product.brand))).sort(), [activeItems])
   const categoryLabel = (item: ValidationItem) => item.extraction.brand_category || item.product.category || item.extraction.category || item.extraction.hard_attributes?.category?.value || 'Uncategorized'
+  const normalizeCategoryKey = (value: string) => value.toLowerCase().replace(/\s*&\s*/g, '/').replace(/\s+/g, ' ').trim()
   const categories = useMemo(() => Array.from(new Set(activeItems.map(categoryLabel))).sort(), [activeItems])
+  const categoryCounts = useMemo(() => activeItems.reduce<Record<string, number>>((acc, item) => {
+    const label = categoryLabel(item)
+    acc[label] = (acc[label] ?? 0) + 1
+    return acc
+  }, {}), [activeItems])
   const TOD_SAMPLE_TARGETS: Record<string, number> = {
     'dresses': 15,
     'cardigans': 10,
@@ -181,7 +187,13 @@ export default function ValidationWorkbench() {
     'overcoats': 999,
     'crop tops': 999,
   }
-  const selectedCategoryTarget = category === 'all' ? null : TOD_SAMPLE_TARGETS[String(category).toLowerCase()] ?? null
+  const sampleTargetForCategory = (label: string) => TOD_SAMPLE_TARGETS[normalizeCategoryKey(label)] ?? null
+  const selectedCategoryTarget = category === 'all' ? null : sampleTargetForCategory(category)
+  const categoryOptionLabel = (label: string) => {
+    const target = sampleTargetForCategory(label)
+    const targetCopy = target === 999 ? 'review all' : target ? `target ${target}` : 'CTO judgement'
+    return `${label} (${categoryCounts[label] ?? 0}; ${targetCopy})`
+  }
   const unresolvedImageIssueIds = useMemo(() => new Set((qa?.imageIssues ?? []).filter((i) => {
     if (EXCLUDED_BRANDS.includes(i.brand)) return false
     const r = reviews[i.product_id]
@@ -427,7 +439,7 @@ export default function ValidationWorkbench() {
         <input placeholder="Search products, brands, SKUs…" value={query} onChange={(e) => { setQuery(e.target.value); setIndex(0) }} />
         <select value={brand} onChange={(e) => { setBrand(e.target.value); setIndex(0) }}><option value="all">All brands</option>{brands.map((b) => <option key={b}>{b}</option>)}</select>
         <select value={tier} onChange={(e) => { setTier(e.target.value); setIndex(0) }}><option value="all">All pipeline tiers</option><option>AUTO</option><option>REVIEW</option><option>MANUAL</option></select>
-        <select value={category} onChange={(e) => { setCategory(e.target.value); setIndex(0) }}><option value="all">All categories</option>{categories.map((c) => <option key={c}>{c}</option>)}</select>
+        <select value={category} onChange={(e) => { setCategory(e.target.value); setIndex(0) }}><option value="all">All categories — choose one for TOD sample</option>{categories.map((c) => <option key={c} value={c}>{categoryOptionLabel(c)}</option>)}</select>
         <select value={queue} onChange={(e) => { setQueue(e.target.value); setIndex(0) }}><option value="all">All active products</option><option value="single_garments">Single garments first ({singleCount})</option><option value="multi_piece">Multi-piece review ({multiCount})</option><option value="image_unresolved">Unresolved ambiguous photos ({unresolvedImageIssues.length})</option><option value="image_approved">Approved images ({approvedImageIds.size})</option><option value="image_failed">Manual image fix ({failedImageIds.size})</option></select>
         <button className="ghost soft-action" onClick={() => setShowQa(!showQa)}><SlidersHorizontal size={16}/> Data QA</button>
         <button className="ghost soft-action" onClick={() => setShowShortcuts(!showShortcuts)}>⌘ Shortcuts</button>
@@ -445,7 +457,8 @@ export default function ValidationWorkbench() {
         <Badge tone={review.review_status === 'completed' ? 'green' : review.review_status === 'skipped' ? 'amber' : 'red'}>{review.review_status.toUpperCase()}</Badge>
       </section>
 
-      {category !== 'all' && <section className="queue-banner"><b>Category filter: {category}</b><span>{filteredReviewedCount}/{filtered.length} reviewed in this category. TOD prompt sample target: {selectedCategoryTarget === 999 ? 'review all rows in this small category' : selectedCategoryTarget ? `${selectedCategoryTarget} products` : 'use CTO judgement'}; stop early after ~10 clean rows with no new issue pattern.</span></section>}
+      {category !== 'all' && <section className="queue-banner"><b>Category filter: {category}</b><span>{filteredReviewedCount}/{filtered.length} reviewed in this filtered view. TOD prompt sample target: {selectedCategoryTarget === 999 ? 'review all rows in this small category' : selectedCategoryTarget ? `${selectedCategoryTarget} products` : 'use CTO judgement'}; stop early after ~10 clean rows with no new issue pattern, expand +5–10 only if recurring extraction errors appear.</span></section>}
+      {category === 'all' && isTodAttributeQa && <section className="queue-banner"><b>TOD category sampling</b><span>Use the category dropdown first. Targets: Dresses 15, Cardigans 10, Skirts 10, Sweaters 8, Tank Tops 7, Pants 6, Clothing Tops 5, Scarves & Shawls 3, Shirts 2, and all small categories.</span></section>}
       {queue === 'single_garments' && <section className="queue-banner"><b>Single-garment review queue</b><span>Shows only products without component arrays. AR can safely continue normal extraction review here while multi-piece sets stay in their own queue.</span></section>}
       {queue === 'multi_piece' && <section className="queue-banner"><b>Multi-piece review queue</b><span>Shows pantsuits, co-ords, sets, saree/blouse, dress/cape and similar rows. Review component correctness before Variant C.</span></section>}
       {queue === 'image_unresolved' && <section className="queue-banner"><b>Image QA queue</b><span>Only unresolved ambiguous/missing images are shown. Approving selected image removes the product from this queue. If none match, send it to Manual image fix.</span></section>}
