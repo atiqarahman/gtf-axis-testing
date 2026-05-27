@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Download, AlertTriangle, Check, ChevronLeft, ChevronRight, SlidersHorizontal } from 'lucide-react'
 import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer } from 'recharts'
 import { AXES, VIBES, canonicalizeVibe, type AxisId, type VibeId } from '@/lib/axis-validation/constants'
@@ -77,6 +77,9 @@ export default function ValidationWorkbench() {
   const [reviewAccessToken, setReviewAccessToken] = useState(() => typeof window === 'undefined' ? '' : localStorage.getItem(REVIEW_ACCESS_KEY) || '')
   const [serverSave, setServerSave] = useState<ServerSaveState>({ ok: false, writable: false, mode: 'loading', message: 'Checking server persistence…' })
   const [hydrated, setHydrated] = useState(false)
+  const lastServerSaveSignature = useRef('')
+  const latestReviewSignature = useRef('')
+  const hasUserEdited = useRef(false)
 
   function reviewApiHeaders(extra: Record<string, string> = {}) {
     return reviewAccessToken ? { ...extra, 'x-taste-lab-review-token': reviewAccessToken } : extra
@@ -95,8 +98,12 @@ export default function ValidationWorkbench() {
         const server = await response.json()
         const serverReviews = server?.reviews ?? {}
         const merged = mergeReviewMaps(localReviews, serverReviews)
+        const mergedSignature = JSON.stringify(merged)
+        lastServerSaveSignature.current = mergedSignature
+        latestReviewSignature.current = mergedSignature
+        hasUserEdited.current = false
         setReviews(merged)
-        if (Object.keys(merged).length) localStorage.setItem(REVIEW_STORAGE_KEY, JSON.stringify(merged))
+        if (Object.keys(merged).length) localStorage.setItem(REVIEW_STORAGE_KEY, mergedSignature)
         setServerSave({ ok: Boolean(server?.ok), writable: Boolean(server?.writable), mode: server?.mode ?? 'unknown', message: server?.writable ? 'Server persistence ON' : `Server persistence unavailable: ${server?.error ?? 'unknown'}`, summary: server?.summary })
       } catch (error: any) {
         setReviews(localReviews)
@@ -109,13 +116,17 @@ export default function ValidationWorkbench() {
 
   useEffect(() => {
     if (!hydrated) return
-    if (Object.keys(reviews).length) localStorage.setItem(REVIEW_STORAGE_KEY, JSON.stringify(reviews))
+    const signature = JSON.stringify(reviews)
+    latestReviewSignature.current = signature
+    if (Object.keys(reviews).length) localStorage.setItem(REVIEW_STORAGE_KEY, signature)
   }, [hydrated, reviews])
 
   useEffect(() => {
     if (!hydrated) return
     const count = Object.keys(reviews).length
-    if (!count) return
+    if (!count || !hasUserEdited.current) return
+    const reviewSignature = JSON.stringify(reviews)
+    if (reviewSignature === lastServerSaveSignature.current) return
     const controller = new AbortController()
     const timer = window.setTimeout(async () => {
       try {
@@ -127,12 +138,14 @@ export default function ValidationWorkbench() {
         })
         const result = await response.json()
         if (!response.ok || !result?.ok) throw new Error(result?.error ?? `HTTP ${response.status}`)
-        setServerSave({ ok: true, writable: true, mode: result.mode ?? 'file', message: `Server saved ${count} review records`, lastSavedAt: new Date().toISOString(), summary: result.summary })
+        lastServerSaveSignature.current = reviewSignature
+        if (latestReviewSignature.current === reviewSignature) hasUserEdited.current = false
+        setServerSave({ ok: true, writable: true, mode: result.mode ?? 'file', message: `Server autosaved ${count} review records`, lastSavedAt: new Date().toISOString(), summary: result.summary })
       } catch (error: any) {
         if (error?.name === 'AbortError') return
         setServerSave({ ok: false, writable: false, mode: 'localStorage', message: `Server unavailable — local browser copy only. Export JSON before refresh: ${error?.message ?? error}` })
       }
-    }, 8000)
+    }, 30000)
     return () => {
       controller.abort()
       window.clearTimeout(timer)
@@ -249,6 +262,7 @@ export default function ValidationWorkbench() {
       blockUnsafeReviewAction('Review edit')
       return
     }
+    hasUserEdited.current = true
     setReviews((prev) => ({ ...prev, [next.product_id]: { ...next, reviewer: reviewerName || 'anonymous' } }))
   }
   function setDecision(decision: ProductReview['overall_decision']) {
@@ -320,6 +334,10 @@ export default function ValidationWorkbench() {
     })
     const result = await response.json()
     if (!response.ok || !result?.ok) throw new Error(result?.error ?? `HTTP ${response.status}`)
+    const savedSignature = JSON.stringify(nextReviews)
+    lastServerSaveSignature.current = savedSignature
+    latestReviewSignature.current = savedSignature
+    hasUserEdited.current = false
     setServerSave({ ok: true, writable: true, mode: result.mode ?? 'file', message: `Server saved ${Object.keys(nextReviews).length} review records`, lastSavedAt: new Date().toISOString(), summary: result.summary })
     return result
   }
@@ -332,6 +350,7 @@ export default function ValidationWorkbench() {
         const parsed = JSON.parse(String(reader.result ?? '{}'))
         const importedRaw = Array.isArray(parsed) ? Object.fromEntries(parsed.filter((r: any) => r?.product_id).map((r: any) => [r.product_id, r])) : (parsed.reviews ?? parsed)
         const imported = mergeReviewMaps(reviews, importedRaw)
+        hasUserEdited.current = true
         setReviews(imported)
         localStorage.setItem(REVIEW_STORAGE_KEY, JSON.stringify(imported))
         await persistNow(imported, 'manual_import')
@@ -432,7 +451,7 @@ export default function ValidationWorkbench() {
 
       <section className={persistenceReady ? 'persistence-strip persistence-ok' : 'persistence-strip persistence-risk'}>
         <b>{persistenceReady ? 'Persistent review saving enabled' : 'P0 HARD BLOCK: review actions frozen'}</b>
-        <span>{serverSave.message}{serverSave.lastSavedAt ? ` · ${new Date(serverSave.lastSavedAt).toLocaleTimeString()}` : ''}. Attribute-approved products: {attributeApprovedCount}. Export/import remains available, but approve/edit controls are disabled until server persistence is writable.</span>
+        <span>{serverSave.message}{serverSave.lastSavedAt ? ` · ${new Date(serverSave.lastSavedAt).toLocaleTimeString()}` : ''}. Attribute-approved products: {attributeApprovedCount}. Autosave is throttled to 30s and snapshots are manual/import only; export JSON before refresh if the banner turns red.</span>
       </section>
 
       <section className="toolbar taste-toolbar">
