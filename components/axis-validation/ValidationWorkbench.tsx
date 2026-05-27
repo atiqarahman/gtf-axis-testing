@@ -130,9 +130,9 @@ export default function ValidationWorkbench() {
         setServerSave({ ok: true, writable: true, mode: result.mode ?? 'file', message: `Server saved ${count} review records`, lastSavedAt: new Date().toISOString(), summary: result.summary })
       } catch (error: any) {
         if (error?.name === 'AbortError') return
-        setServerSave({ ok: false, writable: false, mode: 'localStorage', message: `Local-only — export required: ${error?.message ?? error}` })
+        setServerSave({ ok: false, writable: false, mode: 'localStorage', message: `Server unavailable — local browser copy only. Export JSON before refresh: ${error?.message ?? error}` })
       }
-    }, 650)
+    }, 8000)
     return () => {
       controller.abort()
       window.clearTimeout(timer)

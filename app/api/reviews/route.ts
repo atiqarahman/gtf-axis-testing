@@ -148,8 +148,9 @@ export async function POST(request: NextRequest) {
     const info = storageInfo()
     const body = await request.json()
     const incoming = normalizeReviews(body)
-    const existing = await readReviews()
-    const merged = mergeReviews(existing, incoming)
+    const incomingCount = Object.keys(incoming).length
+    const existing = body?.source === 'taste_lab_autosave' && incomingCount > 0 ? {} : await readReviews()
+    const merged = body?.source === 'taste_lab_autosave' && incomingCount > 0 ? incoming : mergeReviews(existing, incoming)
     const payload = {
       schema_version: 'gtf_axis_reviews_v1',
       updated_at: new Date().toISOString(),
@@ -165,16 +166,20 @@ export async function POST(request: NextRequest) {
       reviews: merged,
     })
 
+    const shouldSnapshot = body?.source !== 'taste_lab_autosave'
+
     if (info.mode === 'blob') {
       await put(BLOB_KEY, JSON.stringify(payload, null, 2), { access: 'private', allowOverwrite: true, contentType: 'application/json' })
-      await put(`${BLOB_SNAPSHOT_PREFIX}/${payload.updated_at.replace(/[:.]/g, '-')}.json`, snapshot, { access: 'private', allowOverwrite: true, contentType: 'application/json' })
+      if (shouldSnapshot) await put(`${BLOB_SNAPSHOT_PREFIX}/${payload.updated_at.replace(/[:.]/g, '-')}.json`, snapshot, { access: 'private', allowOverwrite: true, contentType: 'application/json' })
     } else if (info.mode === 'kv') {
       await kvCommand(['SET', KV_KEY, JSON.stringify(payload)])
-      await kvCommand(['LPUSH', `${KV_KEY}:snapshots`, snapshot])
-      await kvCommand(['LTRIM', `${KV_KEY}:snapshots`, 0, 49])
+      if (shouldSnapshot) {
+        await kvCommand(['LPUSH', `${KV_KEY}:snapshots`, snapshot])
+        await kvCommand(['LTRIM', `${KV_KEY}:snapshots`, 0, 49])
+      }
     } else {
       await fs.writeFile(REVIEW_FILE, JSON.stringify(payload, null, 2))
-      await fs.appendFile(SNAPSHOT_FILE, snapshot + '\n')
+      if (shouldSnapshot) await fs.appendFile(SNAPSHOT_FILE, snapshot + '\n')
     }
 
     return NextResponse.json({ ok: true, mode: info.mode, writable: true, durable: info.durable, summary: payload.summary, saved_count: Object.keys(incoming).length })
