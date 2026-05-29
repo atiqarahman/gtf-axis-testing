@@ -69,6 +69,10 @@ export default function ValidationWorkbench() {
   const [tier, setTier] = useState('all')
   const [category, setCategory] = useState('all')
   const [queue, setQueue] = useState('all')
+  const [datasetVersion, setDatasetVersion] = useState<'v8.2' | 'v8.3'>(() => {
+    if (typeof window === 'undefined') return 'v8.2'
+    return new URLSearchParams(window.location.search).get('version') === 'v8.3' ? 'v8.3' : 'v8.2'
+  })
   const [query, setQuery] = useState('')
   const [showQa, setShowQa] = useState(false)
   const [showShortcuts, setShowShortcuts] = useState(false)
@@ -86,7 +90,7 @@ export default function ValidationWorkbench() {
   }
 
   useEffect(() => {
-    loadValidationData().then(async ({ items, qa }) => {
+    loadValidationData(datasetVersion).then(async ({ items, qa }) => {
       setItems(items)
       setQa(qa)
       const saved = localStorage.getItem(REVIEW_STORAGE_KEY)
@@ -112,7 +116,7 @@ export default function ValidationWorkbench() {
         setHydrated(true)
       }
     })
-  }, [reviewAccessToken])
+  }, [reviewAccessToken, datasetVersion])
 
   useEffect(() => {
     if (!hydrated) return
@@ -312,7 +316,7 @@ export default function ValidationWorkbench() {
       image_resolution_reviewer: r.image_resolution_reviewer ?? '',
       image_resolution_reviewed_at: r.image_resolution_reviewed_at ?? '',
       image_resolution_note: r.image_resolution_note ?? '',
-      prompt_guard_version: 'v8.2-image-over-metadata-guard',
+      prompt_guard_version: (source?.extraction as any)?.meta?.prompt_guard_version ?? source?.extraction.schema_version ?? 'unknown',
       axis_rubric_version: AXIS_RUBRIC_VERSION,
       analysis_keys: {
         category_issue_tags: (r.issue_tags ?? []).map((tag) => `${source?.product.category ?? 'unknown'}::${tag}`),
@@ -404,7 +408,7 @@ export default function ValidationWorkbench() {
         prompt_needs_update: r.prompt_feedback.needs_prompt_update,
         prompt_issue_type: r.prompt_feedback.issue_type,
         prompt_note: r.prompt_feedback.note,
-        prompt_guard_version: 'v8.2-image-over-metadata-guard',
+        prompt_guard_version: (source?.extraction as any)?.meta?.prompt_guard_version ?? source?.extraction.schema_version ?? 'unknown',
         axis_rubric_version: AXIS_RUBRIC_VERSION,
         category_issue_tags: r.issue_tags.map((tag) => `${source?.product.category ?? 'unknown'}::${tag}`).join('|'),
         category_axis_overrides: r.axis_overrides.map((o) => `${source?.product.category ?? 'unknown'}::${o.axis_id}`).join('|'),
@@ -431,9 +435,9 @@ export default function ValidationWorkbench() {
       <header className="topbar">
         <div>
           <div className="brand-lockup"><span className="gtf-logo">GTF</span><span className="lab-pill">Taste Lab v2</span></div>
-          <p className="eyebrow">v8.2 · Category Context + Component Extraction Studio</p>
+          <p className="eyebrow">{datasetVersion} · Category Context + Component Extraction Studio</p>
           <h1>Calibrate GTF’s Taste Engine</h1>
-          <p className="subtitle">Review brand category, v8.2 component extraction, search terms, match reasons, Variant C image readiness, and correction notes in one studio. For TOD, vibe validation is intentionally deferred until attributes are corrected.</p>
+          <p className="subtitle">Review Source Truth images, brand category, {datasetVersion} component extraction, hard-gate attributes, search terms, match reasons, and correction notes in one studio. v8.3 is staged file/export-only; no production or Supabase writes.</p>
         </div>
         <div className="metrics expanded">
           <Metric label="Active products" value={activeItems.length} />
@@ -443,7 +447,7 @@ export default function ValidationWorkbench() {
           {!isTodAttributeQa && <Metric label="Also-rank-high" value={vibeBoostCount} />}
           <Metric label="Axis overrides" value={axisOverrideCount} />
           <Metric label="Attr touched" value={attributeTouchedCount} />
-          <Metric label="v8.2 ready" value={qa?.v82Ready ?? 0} />
+          <Metric label={`${datasetVersion} ready`} value={qa?.readyVersionCount ?? qa?.v82Ready ?? 0} />
         </div>
       </header>
 
@@ -455,6 +459,7 @@ export default function ValidationWorkbench() {
       </section>
 
       <section className="toolbar taste-toolbar">
+        <select value={datasetVersion} onChange={(e) => { setDatasetVersion(e.target.value as 'v8.2' | 'v8.3'); setIndex(0); setReviews({}) }}><option value="v8.2">v8.2 baseline</option><option value="v8.3">v8.3 staged</option></select>
         <input placeholder="Search products, brands, SKUs…" value={query} onChange={(e) => { setQuery(e.target.value); setIndex(0) }} />
         <select value={brand} onChange={(e) => { setBrand(e.target.value); setIndex(0) }}><option value="all">All brands</option>{brands.map((b) => <option key={b}>{b}</option>)}</select>
         <select value={tier} onChange={(e) => { setTier(e.target.value); setIndex(0) }}><option value="all">All pipeline tiers</option><option>AUTO</option><option>REVIEW</option><option>MANUAL</option></select>
@@ -484,9 +489,9 @@ export default function ValidationWorkbench() {
 
       {queue === 'image_failed' && <section className="queue-banner danger-banner"><b>Manual image fix queue</b><span>These products have no valid local image candidate. Do not validate attributes, axes, or vibes until source image mapping is repaired.</span></section>}
 
-      {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} source products / {activeItems.length} active products · {EXCLUSION_LABEL} · v8.2 ready {qa.v82Ready}/{qa.totalExtractions} · multi-piece {qa.multiPieceExtractions} · missing brand_category {qa.missingBrandCategory.length} · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · unresolved image issues {unresolvedImageIssues.length} / original {qa.imageIssues.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
+      {showQa && qa && <section className="qa"><b>Data QA:</b> {qa.totalProducts} source products / {activeItems.length} active products · {datasetVersion === 'v8.2' ? EXCLUSION_LABEL : 'v8.3 staged from reviewed Source Truth; AP/AP25/044 blocked upstream'} · {datasetVersion} ready {qa.readyVersionCount}/{qa.totalExtractions} · multi-piece {qa.multiPieceExtractions} · missing brand_category {qa.missingBrandCategory.length} · missing axes {qa.missingAxes} · invalid axis scores {qa.invalidAxisScores} · missing vibe scores {qa.missingVibeScores} · invalid vibe labels {qa.invalidVibes} · enum warnings {qa.invalidEnums.length} · unresolved image issues {unresolvedImageIssues.length} / original {qa.imageIssues.length} · images ok/url/ambiguous/missing {qa.imageStatusCounts.ok}/{qa.imageStatusCounts.url}/{qa.imageStatusCounts.ambiguous}/{qa.imageStatusCounts.missing}
         <details><summary>Image issues ({unresolvedImageIssues.length} unresolved)</summary><div className="qa-list clickable">{unresolvedImageIssues.slice(0,120).map((i) => <button type="button" key={i.product_id} onClick={() => jumpToProduct(i.product_id)}><b>{i.product_id}</b> · {i.brand} · {i.status} · {i.image_file}<br/><span>{i.message} · candidates: {i.candidates.slice(0,4).join(', ') || 'none'} · click to review</span></button>)}</div>{!unresolvedImageIssues.length && <p className="qa-resolved">All visible image issues are resolved in this browser session.</p>}</details>
-        <details><summary>Missing brand_category ({qa.missingBrandCategory.length})</summary><div className="qa-list">{qa.missingBrandCategory.slice(0,160).map((id) => <div key={id}><b>{id}</b> · v8.2 extraction should include brand_category before acceptance use.</div>)}</div></details>
+        <details><summary>Missing brand_category ({qa.missingBrandCategory.length})</summary><div className="qa-list">{qa.missingBrandCategory.slice(0,160).map((id) => <div key={id}><b>{id}</b> · {datasetVersion} extraction should include brand_category before acceptance use.</div>)}</div></details>
         <details><summary>Enum warnings ({qa.invalidEnums.length})</summary><div className="qa-list">{qa.invalidEnums.slice(0,120).map((i, idx) => <div key={`${i.product_id}-${i.attribute}-${idx}`}><b>{i.product_id}</b> · {i.attribute}: {String(i.value)} · <span>{i.warning}</span></div>)}</div></details>
       </section>}
 
@@ -605,8 +610,9 @@ function componentValue(component: ExtractionComponent, key: string) {
 
 function V82ExtractionPanel({ item, review, saveReview }: { item: ValidationItem; review: ProductReview; saveReview: (r: ProductReview) => void }) {
   const extraction = item.extraction
+  const versionLabel = extraction.schema_version ? `v${extraction.schema_version}` : 'v8.x'
   const components = extraction.components ?? []
-  const isV82Ready = Boolean(extraction.brand_category || components.length || extraction.search_terms?.length || extraction.schema_version?.includes('8.2'))
+  const isV82Ready = Boolean(extraction.brand_category || components.length || extraction.search_terms?.length || extraction.schema_version?.includes('8.2') || extraction.schema_version?.includes('8.3'))
   const componentAttrs = ['category','primary_color','secondary_color','material_primary','material','silhouette','length','neckline','sleeve_length','pattern','details']
   const updateComponentReview = (component: ExtractionComponent, patch: Partial<ComponentReview>) => {
     const existingReviews = review.component_reviews ?? []
@@ -633,15 +639,15 @@ function V82ExtractionPanel({ item, review, saveReview }: { item: ValidationItem
     const nextReview: ComponentReview = { ...current, attribute_reviews: [...attrReviews.filter((r) => r.attribute !== attr), nextAttr] }
     saveReview({ ...review, component_reviews: [...existingReviews.filter((r) => r.component_index !== component.component_index), nextReview] })
   }
-  return <section className="card v82-card"><div className="section-kicker">v8.2 extraction shape</div><div className="card-title"><h3>Brand category + components</h3><Badge tone={isV82Ready ? 'green' : 'red'}>{isV82Ready ? 'V8.2 SIGNALS PRESENT' : 'V8.1 / MISSING V8.2'}</Badge></div>
+  return <section className="card v82-card"><div className="section-kicker">{versionLabel} extraction shape</div><div className="card-title"><h3>Brand category + components</h3><Badge tone={isV82Ready ? 'green' : 'red'}>{isV82Ready ? `${versionLabel.toUpperCase()} SIGNALS PRESENT` : 'MISSING STRUCTURAL SIGNALS'}</Badge></div>
     <div className="v82-summary"><div><span>brand_category</span><b>{extraction.brand_category ?? item.product.category ?? '—'}</b></div><div><span>is_multi_piece</span><b>{String(extraction.is_multi_piece ?? components.length > 1)}</b></div><div><span>component_count</span><b>{extraction.component_count ?? components.length}</b></div><div><span>search_terms</span><b>{extraction.search_terms?.length ?? 0}</b></div></div>
-    {!extraction.brand_category && <p className="v82-warning">Blocked for acceptance: v8.2 requires brand_category so shared-image separates focus the target garment instead of the visually dominant garment.</p>}
+    {!extraction.brand_category && <p className="v82-warning">Blocked for acceptance: {versionLabel} requires brand_category so shared-image separates focus the target garment instead of the visually dominant garment.</p>}
     {extraction.extraction_error && <p className="v82-warning">Extraction error: <code>{extraction.extraction_error}</code></p>}
     {extraction.metadata_image_conflict?.has_conflict && <div className="conflict-box"><b>Metadata/image conflict</b><p>{extraction.metadata_image_conflict.visual_evidence ?? 'Conflict flagged; route to manual review.'}</p><small>{extraction.metadata_image_conflict.recommended_action}</small></div>}
     {components.length ? <div className="component-list">{components.map((component) => {
       const existing = (review.component_reviews ?? []).find((r) => r.component_index === component.component_index)
       return <div className="component-card" key={`${component.component_index}-${component.piece_type}`}><div className="component-head"><div><b>#{component.component_index} · {component.piece_type}</b><span>{component.role ?? 'component'} · review this piece’s own attributes, not the whole outfit</span></div><select value={existing?.decision ?? 'unset'} onChange={(e) => updateComponentReview(component, { decision: e.target.value as ComponentReview['decision'] })}><option value="unset">component unset</option><option value="accept">component accepted</option><option value="needs_correction">piece type needs correction</option><option value="not_visible">piece not visible</option><option value="manual_review">manual review</option></select></div><div className="component-attrs">{componentAttrs.map((key) => <div key={key}><span>{key}</span><b>{componentValue(component, key)}</b></div>)}</div><details className="component-attribute-review"><summary>Review attributes for {component.piece_type}</summary><p className="hint">Use this for AR’s multi-garment issue: top-level attributes describe the sellable set; these rows approve/correct each garment piece separately.</p>{componentAttrs.map((attr) => { const raw = componentRaw(component, attr); const rawValue = displayRawAttribute(attr, raw); const norm = normalizeValue(attr, raw); const attrReview = existing?.attribute_reviews?.find((r) => r.attribute === attr); const enums = getEnumForAttribute(attr); return <div className="component-attr-row" key={attr}><span>{attr}</span><b>{rawValue}</b><em className={norm.valid ? 'ok' : 'warn'}>{displayCanonical(norm.canonical) ?? norm.warning}</em><select value={attrReview?.decision ?? 'unset'} onChange={(e) => updateComponentAttributeReview(component, attr, { decision: e.target.value })}><option value="unset">unset</option><option value="accept">accept raw</option><option value="accept_normalized">accept normalized</option><option value="override">override</option><option value="needs_review">needs review</option></select>{attrReview?.decision === 'override' && enums && (attr === 'details' ? <select multiple value={attrReview.override_value ?? []} onChange={(e) => updateComponentAttributeReview(component, attr, { override_value: Array.from(e.currentTarget.selectedOptions).map((o) => o.value) })}>{enums.map((v) => <option key={v}>{v}</option>)}</select> : <select value={attrReview.override_value ?? ''} onChange={(e) => updateComponentAttributeReview(component, attr, { override_value: e.target.value })}><option value="">Choose canonical</option>{enums.map((v) => <option key={v}>{v}</option>)}</select>)}<input placeholder="component note" value={attrReview?.reason ?? ''} onChange={(e) => updateComponentAttributeReview(component, attr, { reason: e.target.value })}/></div>})}</details>{existing?.decision === 'needs_correction' && <input placeholder="Correct piece type, e.g. bralette not blouse" value={existing.corrected_piece_type ?? ''} onChange={(e) => updateComponentReview(component, { corrected_piece_type: e.target.value })}/>}<textarea placeholder="Component-level review note: visible evidence, missing piece, wrong target, etc." value={existing?.reason ?? ''} onChange={(e) => updateComponentReview(component, { reason: e.target.value })}/></div>
-    })}</div> : <p className="hint">No components[] present yet. For set/co-ord/pantsuit products, v8.2 must add per-piece records before Taste Lab acceptance.</p>}
+    })}</div> : <p className="hint">No components[] present yet. For set/co-ord/pantsuit products, {versionLabel} must add per-piece records before Taste Lab acceptance.</p>}
     {(extraction.search_terms ?? []).length > 0 && <div className="search-terms"><b>Search terms</b><div>{extraction.search_terms!.map((term) => <span key={term}>{term}</span>)}</div></div>}
   </section>
 }
