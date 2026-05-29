@@ -71,8 +71,11 @@ export type Extraction = {
   styling_leverage?: { score: number; reasoning: string }
   suggested_vibes: string[]
   primary_vibe: string
-  all_vibe_scores: Record<string, { score: number; raw_score?: number }>
+  all_vibe_scores: Record<string, { score: number; raw_score?: number; source?: string }>
   gpt_suggested_vibes: string[]
+  vibe_review_status?: string
+  vibe_source?: string
+  vibe_generated_at?: string
   soft_attributes?: Record<string, any>
   confidence?: string
   reasoning_trace?: Record<string, any>
