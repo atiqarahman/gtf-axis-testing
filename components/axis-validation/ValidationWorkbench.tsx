@@ -504,7 +504,7 @@ export default function ValidationWorkbench() {
         <button className="ghost soft-action" onClick={() => setShowQa(!showQa)}><SlidersHorizontal size={16}/> Data QA</button>
         <button className="ghost soft-action" onClick={() => setShowShortcuts(!showShortcuts)}>⌘ Shortcuts</button>
         <label className="reviewer-field"><span>Reviewer</span><input value={reviewerName} onChange={(e) => setReviewerName(e.target.value)} /></label>
-        <label className="reviewer-field"><span>Access key</span><input type="password" value={reviewAccessToken} onChange={(e) => setReviewAccessToken(e.target.value.trim())} placeholder="Required for server save" /><small>Review session metadata, including approximate IP location, may be logged for QA.</small></label>
+        <label className="reviewer-field"><span>Access key</span><input type="password" value={reviewAccessToken} onChange={(e) => setReviewAccessToken(e.target.value.trim())} placeholder="Required for server save" /><small title="Review session metadata, including approximate IP location, may be logged for QA.">QA session audit enabled.</small></label>
         <button className="ghost soft-action" onClick={() => persistNow().catch((error) => setServerSave({ ok: false, writable: false, mode: 'manual_save_error', message: `Manual save failed: ${error?.message ?? error}` }))}>Save server</button>
         <label className="ghost soft-action import-button"><input type="file" accept="application/json,.json" onChange={(e) => importReviewFile(e.target.files?.[0] ?? null)} />Import JSON</label>
         <button className="ghost soft-action" onClick={exportCsv}><Download size={16}/> CSV</button>
