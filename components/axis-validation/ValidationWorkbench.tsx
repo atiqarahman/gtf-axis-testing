@@ -17,6 +17,7 @@ const EXCLUDED_BRANDS = ['Shahin Mannan', 'Surily G']
 const EXCLUSION_LABEL = '74 lookbook products excluded pending CSV/image-source repair + re-extraction'
 const REVIEW_STORAGE_KEY = 'gtf-axis-reviews'
 const REVIEW_ACCESS_KEY = 'gtf-axis-review-access-token'
+const REVIEW_SESSION_KEY = 'gtf-axis-review-session-id'
 
 type ServerSaveState = { ok: boolean; writable: boolean; mode: string; message: string; lastSavedAt?: string; summary?: any }
 
@@ -84,9 +85,38 @@ export default function ValidationWorkbench() {
   const lastServerSaveSignature = useRef('')
   const latestReviewSignature = useRef('')
   const hasUserEdited = useRef(false)
+  const sessionStartLogged = useRef(false)
+  const [reviewSessionId] = useState(() => {
+    if (typeof window === 'undefined') return ''
+    const existing = localStorage.getItem(REVIEW_SESSION_KEY)
+    if (existing) return existing
+    const next = `taste-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`
+    localStorage.setItem(REVIEW_SESSION_KEY, next)
+    return next
+  })
 
   function reviewApiHeaders(extra: Record<string, string> = {}) {
     return reviewAccessToken ? { ...extra, 'x-taste-lab-review-token': reviewAccessToken } : extra
+  }
+
+  function logReviewerSession(eventType: string, meta: Record<string, any> = {}) {
+    if (!reviewAccessToken || !reviewSessionId) return
+    fetch('/api/reviewer-sessions', {
+      method: 'POST',
+      headers: reviewApiHeaders({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify({
+        session_id: reviewSessionId,
+        event_type: eventType,
+        reviewer: reviewerName,
+        dataset_version: datasetVersion,
+        page: typeof window === 'undefined' ? '' : window.location.pathname + window.location.search,
+        product_id: meta.product_id,
+        review_count: Object.keys(reviews).length,
+        client_created_at: new Date().toISOString(),
+        meta,
+      }),
+      keepalive: true,
+    }).catch(() => {})
   }
 
   useEffect(() => {
@@ -109,6 +139,10 @@ export default function ValidationWorkbench() {
         setReviews(merged)
         if (Object.keys(merged).length) localStorage.setItem(REVIEW_STORAGE_KEY, mergedSignature)
         setServerSave({ ok: Boolean(server?.ok), writable: Boolean(server?.writable), mode: server?.mode ?? 'unknown', message: server?.writable ? 'Server persistence ON' : `Server persistence unavailable: ${server?.error ?? 'unknown'}`, summary: server?.summary })
+        if (server?.writable && !sessionStartLogged.current) {
+          sessionStartLogged.current = true
+          logReviewerSession('session_start', { server_mode: server?.mode, durable: server?.durable })
+        }
       } catch (error: any) {
         setReviews(localReviews)
         setServerSave({ ok: false, writable: false, mode: 'localStorage', message: `Local-only fallback: ${error?.message ?? error}` })
@@ -145,6 +179,7 @@ export default function ValidationWorkbench() {
         lastServerSaveSignature.current = reviewSignature
         if (latestReviewSignature.current === reviewSignature) hasUserEdited.current = false
         setServerSave({ ok: true, writable: true, mode: result.mode ?? 'file', message: `Server autosaved ${count} review records`, lastSavedAt: new Date().toISOString(), summary: result.summary })
+        logReviewerSession('autosave', { saved_count: count, product_id: item?.product.product_id })
       } catch (error: any) {
         if (error?.name === 'AbortError') return
         setServerSave({ ok: false, writable: false, mode: 'localStorage', message: `Server unavailable — local browser copy only. Export JSON before refresh: ${error?.message ?? error}` })
@@ -343,6 +378,7 @@ export default function ValidationWorkbench() {
     latestReviewSignature.current = savedSignature
     hasUserEdited.current = false
     setServerSave({ ok: true, writable: true, mode: result.mode ?? 'file', message: `Server saved ${Object.keys(nextReviews).length} review records`, lastSavedAt: new Date().toISOString(), summary: result.summary })
+    logReviewerSession(source, { saved_count: Object.keys(nextReviews).length, product_id: item?.product.product_id })
     return result
   }
 
@@ -468,7 +504,7 @@ export default function ValidationWorkbench() {
         <button className="ghost soft-action" onClick={() => setShowQa(!showQa)}><SlidersHorizontal size={16}/> Data QA</button>
         <button className="ghost soft-action" onClick={() => setShowShortcuts(!showShortcuts)}>⌘ Shortcuts</button>
         <label className="reviewer-field"><span>Reviewer</span><input value={reviewerName} onChange={(e) => setReviewerName(e.target.value)} /></label>
-        <label className="reviewer-field"><span>Access key</span><input type="password" value={reviewAccessToken} onChange={(e) => setReviewAccessToken(e.target.value.trim())} placeholder="Required for server save" /></label>
+        <label className="reviewer-field"><span>Access key</span><input type="password" value={reviewAccessToken} onChange={(e) => setReviewAccessToken(e.target.value.trim())} placeholder="Required for server save" /><small>Review session metadata, including approximate IP location, may be logged for QA.</small></label>
         <button className="ghost soft-action" onClick={() => persistNow().catch((error) => setServerSave({ ok: false, writable: false, mode: 'manual_save_error', message: `Manual save failed: ${error?.message ?? error}` }))}>Save server</button>
         <label className="ghost soft-action import-button"><input type="file" accept="application/json,.json" onChange={(e) => importReviewFile(e.target.files?.[0] ?? null)} />Import JSON</label>
         <button className="ghost soft-action" onClick={exportCsv}><Download size={16}/> CSV</button>
