@@ -70,8 +70,8 @@ export default function ValidationWorkbench() {
   const [category, setCategory] = useState('all')
   const [queue, setQueue] = useState('all')
   const [datasetVersion, setDatasetVersion] = useState<'v8.2' | 'v8.3'>(() => {
-    if (typeof window === 'undefined') return 'v8.2'
-    return new URLSearchParams(window.location.search).get('version') === 'v8.3' ? 'v8.3' : 'v8.2'
+    if (typeof window === 'undefined') return 'v8.3'
+    return new URLSearchParams(window.location.search).get('version') === 'v8.2' ? 'v8.2' : 'v8.3'
   })
   const [query, setQuery] = useState('')
   const [showQa, setShowQa] = useState(false)
@@ -459,7 +459,7 @@ export default function ValidationWorkbench() {
       </section>
 
       <section className="toolbar taste-toolbar">
-        <select value={datasetVersion} onChange={(e) => { setDatasetVersion(e.target.value as 'v8.2' | 'v8.3'); setIndex(0); setReviews({}) }}><option value="v8.2">v8.2 baseline</option><option value="v8.3">v8.3 staged</option></select>
+        <select value={datasetVersion} onChange={(e) => { setDatasetVersion(e.target.value as 'v8.2' | 'v8.3'); setBrand('all'); setCategory('all'); setQueue('all'); setTier('all'); setQuery(''); setIndex(0); setReviews({}) }}><option value="v8.3">v8.3 staged — AFROPOP + TOD vibes</option><option value="v8.2">v8.2 TOD baseline</option></select>
         <input placeholder="Search products, brands, SKUs…" value={query} onChange={(e) => { setQuery(e.target.value); setIndex(0) }} />
         <select value={brand} onChange={(e) => { setBrand(e.target.value); setIndex(0) }}><option value="all">All brands</option>{brands.map((b) => <option key={b}>{b}</option>)}</select>
         <select value={tier} onChange={(e) => { setTier(e.target.value); setIndex(0) }}><option value="all">All pipeline tiers</option><option>AUTO</option><option>REVIEW</option><option>MANUAL</option></select>

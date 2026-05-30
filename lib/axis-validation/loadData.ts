@@ -38,7 +38,7 @@ async function fetchJson<T>(paths: string[]): Promise<T> {
   throw lastError
 }
 
-export async function loadValidationData(datasetVersion: 'v8.2' | 'v8.3' = 'v8.2'): Promise<{ items: ValidationItem[]; qa: QaSummary }> {
+export async function loadValidationData(datasetVersion: 'v8.2' | 'v8.3' = 'v8.3'): Promise<{ items: ValidationItem[]; qa: QaSummary }> {
   const isV83 = datasetVersion === 'v8.3'
   const [products, extractions] = await Promise.all([
     fetchJson<Product[]>(isV83 ? ['/data/products_v8_3.json', '/data/products.json'] : ['/data/products.json']),
