@@ -49,6 +49,7 @@ export type Extraction = {
   schema_version: string
   extraction_timestamp?: string
   brand_sku?: string
+  gtf_sku?: string
   product_name?: string
   brand_category?: string
   category?: string

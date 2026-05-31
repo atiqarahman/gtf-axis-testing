@@ -266,7 +266,22 @@ export default function ValidationWorkbench() {
     if (tier !== 'all' && item.extraction.product_tier !== tier) return false
     if (category !== 'all' && categoryLabel(item) !== category) return false
     const q = query.toLowerCase().trim()
-    if (q && !`${item.product.product_id} ${item.product.title} ${item.product.brand}`.toLowerCase().includes(q)) return false
+    const searchable = [
+      item.product.product_id,
+      item.product.title,
+      item.product.brand,
+      item.product.category,
+      item.extraction.product_id,
+      item.extraction.gtf_sku,
+      item.extraction.brand_sku,
+      item.extraction.product_name,
+      item.extraction.brand_category,
+      item.extraction.category,
+      ...(item.extraction.search_terms ?? []),
+      item.extraction.hard_attributes?.material_primary?.value,
+      item.extraction.hard_attributes?.material_secondary?.value,
+    ].filter(Boolean).join(' ').toLowerCase()
+    if (q && !searchable.includes(q)) return false
     return true
   }), [activeItems, approvedImageIds, brand, category, failedImageIds, queue, tier, query, unresolvedImageIssueIds])
 
@@ -721,11 +736,18 @@ function Decision({ review, saveReview, setDecision, persistenceReady }: any) {
   return <section className="card"><h3>Overall decision</h3>{!persistenceReady && <p className="p0-lock-copy">Review decisions are locked until server persistence is writable.</p>}<div className="button-grid">{['approve','needs_correction','manual_escalation','skip_for_now'].map((d) => <button key={d} disabled={!persistenceReady} className={review.overall_decision === d ? 'selected' : 'ghost'} onClick={() => setDecision(d)}>{d.replaceAll('_',' ')}</button>)}</div><div className="chips">{issueOptions.map((tag) => <button key={tag} disabled={!persistenceReady} className={review.issue_tags.includes(tag) ? 'chip active' : 'chip'} onClick={() => saveReview({ ...review, issue_tags: review.issue_tags.includes(tag) ? review.issue_tags.filter((t: string) => t !== tag) : [...review.issue_tags, tag] })}>{tag.replaceAll('_',' ')}</button>)}</div></section>
 }
 
+function vibeScoreValue(obj: any) {
+  if (typeof obj === 'number') return obj
+  if (typeof obj?.score === 'number') return obj.score
+  const parsed = Number(obj?.score ?? obj)
+  return Number.isFinite(parsed) ? parsed : 0
+}
+
 function VibePanel({ item, review, saveReview }: { item: ValidationItem; review: ProductReview; saveReview: (r: ProductReview) => void }) {
-  const computed = Object.entries(item.extraction.all_vibe_scores ?? {}).sort((a,b) => (b[1]?.score ?? 0) - (a[1]?.score ?? 0)).slice(0, 12).map(([label, obj]) => ({ label, score: obj?.score ?? 0, source: 'computed' as const }))
+  const computed = Object.entries(item.extraction.all_vibe_scores ?? {}).sort((a,b) => vibeScoreValue(b[1]) - vibeScoreValue(a[1])).slice(0, 12).map(([label, obj]) => ({ label, score: vibeScoreValue(obj), source: 'computed' as const }))
   const gpt = (item.extraction.gpt_suggested_vibes ?? []).map((label) => ({ label, score: undefined, source: 'gpt' as const }))
   const pending = item.extraction.vibe_review_status === 'pending_ar_vibe_review'
-  return <section className="card vibe-card"><div className="section-kicker">AI style alignment {pending ? '· pending AR vibe review' : ''}</div><h3>Suggested vibe validation</h3><p className="hint">Computed vector vibes and GPT suggestions are separate. For v8.3 AFROPOP + TOD these are visible for AR calibration only — not production-approved product truth until AR/Zoya signs off. Agree when the taste feels right; disagree only when the vibe is wrong. Use “Should also rank high” when another vibe deserves a boost without marking the current vibe wrong.</p>{pending && <p className="v82-warning">Vibe status: computed / pending AR approval. Do not treat as production-approved yet.</p>}{computed.length || gpt.length ? <div className="vibe-list">{[...computed.slice(0,3), ...gpt].map((v, idx) => <VibeRow key={`${v.source}-${v.label}-${idx}`} vibe={v} review={review} saveReview={saveReview} />)}</div> : <p className="v82-warning">No computed vibe scores found for this row yet. Review extraction/components first, then run the production vibe scoring pass.</p>}<VibeBoostPanel review={review} saveReview={saveReview}/>{computed.length > 0 && <details><summary>Show all computed vibe scores</summary>{computed.map((v) => <div key={v.label} className="score-row"><span>{v.label}</span><progress max={100} value={v.score}/><b>{v.score.toFixed(1)}</b></div>)}</details>}</section>
+  return <section className="card vibe-card"><div className="section-kicker">AI style alignment {pending ? '· pending AR vibe review' : ''}</div><h3>Suggested vibe validation</h3><p className="hint">Computed vector vibes and GPT suggestions are separate. For v8.3 AFROPOP + TOD these are visible for AR calibration only — not production-approved product truth until AR/Zoya signs off. Agree when the taste feels right; disagree only when the vibe is wrong. Use “Should also rank high” when another vibe deserves a boost without marking the current vibe wrong.</p>{pending && <p className="v82-warning">Vibe status: computed / pending AR approval. Do not treat as production-approved yet.</p>}{computed.length || gpt.length ? <div className="vibe-list">{[...computed.slice(0,3), ...gpt].map((v, idx) => <VibeRow key={`${v.source}-${v.label}-${idx}`} vibe={v} review={review} saveReview={saveReview} />)}</div> : <p className="v82-warning">No computed vibe scores found for this row yet. Review extraction/components first, then run the production vibe scoring pass.</p>}<VibeBoostPanel review={review} saveReview={saveReview}/>{computed.length > 0 && <details open><summary>Show all computed vibe scores</summary>{computed.map((v) => <div key={v.label} className="score-row"><span>{v.label}</span><progress max={100} value={v.score}/><b>{v.score.toFixed(1)}</b></div>)}</details>}</section>
 }
 
 
