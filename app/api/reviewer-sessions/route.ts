@@ -19,13 +19,15 @@ type SessionEvent = {
   user_agent?: string
   ip?: string
   location: {
-    source: 'vercel_headers' | 'ip_headers'
+    source: 'vercel_headers' | 'ipapi_fallback' | 'ip_headers'
     country?: string
     region?: string
     city?: string
     latitude?: string
     longitude?: string
+    timezone?: string
     accuracy?: string
+    org?: string
   }
   meta?: Record<string, any>
 }
@@ -65,16 +67,53 @@ function clientIp(request: NextRequest) {
   return request.headers.get('x-real-ip') || forwarded || request.headers.get('cf-connecting-ip') || ''
 }
 
+function isPublicIp(ip: string) {
+  if (!ip || ip === '::1' || ip.startsWith('127.') || ip.startsWith('10.') || ip.startsWith('192.168.')) return false
+  if (/^172\.(1[6-9]|2\d|3[0-1])\./.test(ip)) return false
+  return /^[a-f0-9:.]+$/i.test(ip)
+}
+
 function headerLocation(request: NextRequest): SessionEvent['location'] {
   return {
-    source: request.headers.get('x-vercel-ip-city') ? 'vercel_headers' : 'ip_headers',
+    source: request.headers.get('x-vercel-ip-city') || request.headers.get('x-vercel-ip-country') ? 'vercel_headers' : 'ip_headers',
     country: request.headers.get('x-vercel-ip-country') || undefined,
     region: request.headers.get('x-vercel-ip-country-region') || request.headers.get('x-vercel-ip-region') || undefined,
     city: request.headers.get('x-vercel-ip-city') ? decodeURIComponent(request.headers.get('x-vercel-ip-city') || '') : undefined,
     latitude: request.headers.get('x-vercel-ip-latitude') || undefined,
     longitude: request.headers.get('x-vercel-ip-longitude') || undefined,
-    accuracy: request.headers.get('x-vercel-ip-timezone') || undefined,
+    timezone: request.headers.get('x-vercel-ip-timezone') || undefined,
   }
+}
+
+async function lookupIpLocation(ip: string): Promise<SessionEvent['location'] | null> {
+  if (process.env.TASTE_LAB_DISABLE_IP_GEO_FALLBACK === '1' || !isPublicIp(ip)) return null
+  try {
+    const response = await fetch(`https://ipapi.co/${encodeURIComponent(ip)}/json/`, {
+      headers: { accept: 'application/json', 'user-agent': 'gtf-taste-lab-reviewer-session-audit/1.0' },
+      signal: AbortSignal.timeout(1200),
+    })
+    if (!response.ok) return null
+    const data: any = await response.json()
+    if (data?.error) return null
+    return {
+      source: 'ipapi_fallback',
+      country: data.country_name || data.country_code || undefined,
+      region: data.region || data.region_code || undefined,
+      city: data.city || undefined,
+      latitude: data.latitude != null ? String(data.latitude) : undefined,
+      longitude: data.longitude != null ? String(data.longitude) : undefined,
+      timezone: data.timezone || undefined,
+      org: data.org || undefined,
+    }
+  } catch {
+    return null
+  }
+}
+
+async function resolveLocation(request: NextRequest, ip: string): Promise<SessionEvent['location']> {
+  const fromHeaders = headerLocation(request)
+  if (fromHeaders.city || fromHeaders.country || fromHeaders.latitude || fromHeaders.longitude) return fromHeaders
+  return (await lookupIpLocation(ip)) ?? fromHeaders
 }
 
 function summarize(events: SessionEvent[]): SessionPayload['summary'] {
@@ -129,6 +168,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json().catch(() => ({}))
     const now = new Date().toISOString()
+    const ip = clientIp(request)
     const event: SessionEvent = {
       event_id: `${now}-${Math.random().toString(36).slice(2, 10)}`,
       session_id: String(body.session_id || ''),
@@ -141,8 +181,8 @@ export async function POST(request: NextRequest) {
       client_created_at: body.client_created_at ? String(body.client_created_at) : undefined,
       server_received_at: now,
       user_agent: request.headers.get('user-agent') || undefined,
-      ip: clientIp(request),
-      location: headerLocation(request),
+      ip,
+      location: await resolveLocation(request, ip),
       meta: body.meta && typeof body.meta === 'object' ? body.meta : undefined,
     }
     if (!event.session_id) return NextResponse.json({ ok: false, error: 'session_id required' }, { status: 400 })
