@@ -4566,41 +4566,41 @@
       "completion_tokens": 1022,
       "total_tokens": 8334
     },
-    "primary_vibe": "Glam",
+    "primary_vibe": "Sexy Elegant",
     "suggested_vibes": [
-      "Glam",
       "Sexy Elegant",
+      "Glam",
       "Dubai Glam"
     ],
     "gpt_suggested_vibes": [],
     "all_vibe_scores": {
-      "Glam": {
-        "score": 69,
-        "raw_score": 68.95,
-        "adjustment": 0,
+      "Sexy Elegant": {
+        "score": 76,
+        "raw_score": 69.46,
+        "adjustment": 7,
         "source": "production_vibe_mapper_v2_polarized"
       },
-      "Sexy Elegant": {
-        "score": 69,
-        "raw_score": 69.46,
-        "adjustment": 0,
+      "Glam": {
+        "score": 75,
+        "raw_score": 68.95,
+        "adjustment": 6,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Dubai Glam": {
-        "score": 68,
+        "score": 73,
         "raw_score": 68,
-        "adjustment": 0,
+        "adjustment": 5,
+        "source": "production_vibe_mapper_v2_polarized"
+      },
+      "IT Girl": {
+        "score": 63,
+        "raw_score": 59.3,
+        "adjustment": 4,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Wedding Guest": {
         "score": 63,
         "raw_score": 62.54,
-        "adjustment": 0,
-        "source": "production_vibe_mapper_v2_polarized"
-      },
-      "IT Girl": {
-        "score": 59,
-        "raw_score": 59.3,
         "adjustment": 0,
         "source": "production_vibe_mapper_v2_polarized"
       },
@@ -4641,13 +4641,13 @@
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Beach & Resort": {
-        "score": 34,
+        "score": 30,
         "raw_score": 34.32,
-        "adjustment": 0,
+        "adjustment": -4,
         "source": "production_vibe_mapper_v2_polarized"
       }
     },
-    "vibe_confidence": 0,
+    "vibe_confidence": 0.03,
     "vibe_review_status": "pending_ar_vibe_review",
     "vibe_source": "polarized_v2_file_based_validation_not_production_approved",
     "vibe_generated_at": "2026-05-29T16:40:00+05:30"
@@ -43825,28 +43825,28 @@
       "boat neckline dress"
     ],
     "suggested_vibes": [
-      "Glam",
       "Sexy Elegant",
+      "Glam",
       "Old Money"
     ],
-    "primary_vibe": "Glam",
+    "primary_vibe": "Sexy Elegant",
     "all_vibe_scores": {
-      "Glam": {
-        "score": 67,
-        "raw_score": 66.95,
-        "adjustment": 0,
+      "Sexy Elegant": {
+        "score": 73,
+        "raw_score": 66.92,
+        "adjustment": 6,
         "source": "production_vibe_mapper_v2_polarized"
       },
-      "Sexy Elegant": {
-        "score": 67,
-        "raw_score": 66.92,
-        "adjustment": 0,
+      "Glam": {
+        "score": 71,
+        "raw_score": 66.95,
+        "adjustment": 4,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Old Money": {
-        "score": 61,
+        "score": 64,
         "raw_score": 60.74,
-        "adjustment": 0,
+        "adjustment": 3,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Dubai Glam": {
@@ -43942,7 +43942,7 @@
       "status": "PASS",
       "issues": []
     },
-    "vibe_confidence": 0,
+    "vibe_confidence": 0.07,
     "vibe_review_status": "pending_ar_vibe_review",
     "vibe_source": "polarized_v2_file_based_validation_not_production_approved",
     "vibe_generated_at": "2026-05-29T16:40:00+05:30"
@@ -46020,37 +46020,37 @@
     "suggested_vibes": [
       "Old Money",
       "Elevated City",
-      "Elevated Basics / Hailey Bieber"
+      "Sexy Elegant"
     ],
     "primary_vibe": "Old Money",
     "all_vibe_scores": {
       "Old Money": {
-        "score": 66,
+        "score": 73,
         "raw_score": 65.63,
-        "adjustment": 0,
+        "adjustment": 7,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Elevated City": {
-        "score": 65,
+        "score": 70,
         "raw_score": 64.62,
-        "adjustment": 0,
+        "adjustment": 5,
+        "source": "production_vibe_mapper_v2_polarized"
+      },
+      "Sexy Elegant": {
+        "score": 67,
+        "raw_score": 61.36,
+        "adjustment": 6,
+        "source": "production_vibe_mapper_v2_polarized"
+      },
+      "Glam": {
+        "score": 65,
+        "raw_score": 61.37,
+        "adjustment": 4,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Elevated Basics / Hailey Bieber": {
         "score": 63,
         "raw_score": 62.62,
-        "adjustment": 0,
-        "source": "production_vibe_mapper_v2_polarized"
-      },
-      "Glam": {
-        "score": 61,
-        "raw_score": 61.37,
-        "adjustment": 0,
-        "source": "production_vibe_mapper_v2_polarized"
-      },
-      "Sexy Elegant": {
-        "score": 61,
-        "raw_score": 61.36,
         "adjustment": 0,
         "source": "production_vibe_mapper_v2_polarized"
       },
@@ -46135,7 +46135,7 @@
       "status": "PASS",
       "issues": []
     },
-    "vibe_confidence": 0.03,
+    "vibe_confidence": 0.1,
     "vibe_review_status": "pending_ar_vibe_review",
     "vibe_source": "polarized_v2_file_based_validation_not_production_approved",
     "vibe_generated_at": "2026-05-29T16:40:00+05:30"
@@ -52361,15 +52361,15 @@
     "primary_vibe": "Old Money",
     "all_vibe_scores": {
       "Old Money": {
-        "score": 67,
+        "score": 74,
         "raw_score": 67.39,
-        "adjustment": 0,
+        "adjustment": 7,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Elevated City": {
-        "score": 65,
+        "score": 70,
         "raw_score": 65.14,
-        "adjustment": 0,
+        "adjustment": 5,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Elevated Basics / Hailey Bieber": {
@@ -52378,16 +52378,16 @@
         "adjustment": 0,
         "source": "production_vibe_mapper_v2_polarized"
       },
-      "Glam": {
-        "score": 58,
-        "raw_score": 57.88,
-        "adjustment": 0,
+      "Sexy Elegant": {
+        "score": 63,
+        "raw_score": 56.56,
+        "adjustment": 6,
         "source": "production_vibe_mapper_v2_polarized"
       },
-      "Sexy Elegant": {
-        "score": 57,
-        "raw_score": 56.56,
-        "adjustment": 0,
+      "Glam": {
+        "score": 62,
+        "raw_score": 57.88,
+        "adjustment": 4,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Wedding Guest": {
@@ -52471,7 +52471,7 @@
       "status": "PASS",
       "issues": []
     },
-    "vibe_confidence": 0.07,
+    "vibe_confidence": 0.13,
     "vibe_review_status": "pending_ar_vibe_review",
     "vibe_source": "polarized_v2_file_based_validation_not_production_approved",
     "vibe_generated_at": "2026-05-29T16:40:00+05:30"
@@ -56485,20 +56485,32 @@
     "suggested_vibes": [
       "Old Money",
       "Elevated City",
-      "Elevated Basics / Hailey Bieber"
+      "Sexy Elegant"
     ],
     "primary_vibe": "Old Money",
     "all_vibe_scores": {
       "Old Money": {
-        "score": 68,
+        "score": 75,
         "raw_score": 67.97,
-        "adjustment": 0,
+        "adjustment": 7,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Elevated City": {
-        "score": 65,
+        "score": 70,
         "raw_score": 65.38,
-        "adjustment": 0,
+        "adjustment": 5,
+        "source": "production_vibe_mapper_v2_polarized"
+      },
+      "Sexy Elegant": {
+        "score": 66,
+        "raw_score": 60.1,
+        "adjustment": 6,
+        "source": "production_vibe_mapper_v2_polarized"
+      },
+      "Glam": {
+        "score": 65,
+        "raw_score": 61.22,
+        "adjustment": 4,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Elevated Basics / Hailey Bieber": {
@@ -56510,18 +56522,6 @@
       "Wedding Guest": {
         "score": 62,
         "raw_score": 61.71,
-        "adjustment": 0,
-        "source": "production_vibe_mapper_v2_polarized"
-      },
-      "Glam": {
-        "score": 61,
-        "raw_score": 61.22,
-        "adjustment": 0,
-        "source": "production_vibe_mapper_v2_polarized"
-      },
-      "Sexy Elegant": {
-        "score": 60,
-        "raw_score": 60.1,
         "adjustment": 0,
         "source": "production_vibe_mapper_v2_polarized"
       },
@@ -56600,7 +56600,7 @@
       "status": "PASS",
       "issues": []
     },
-    "vibe_confidence": 0.1,
+    "vibe_confidence": 0.17,
     "vibe_review_status": "pending_ar_vibe_review",
     "vibe_source": "polarized_v2_file_based_validation_not_production_approved",
     "vibe_generated_at": "2026-05-29T16:40:00+05:30"
@@ -70309,20 +70309,32 @@
     "suggested_vibes": [
       "Old Money",
       "Elevated City",
-      "Elevated Basics / Hailey Bieber"
+      "Sexy Elegant"
     ],
     "primary_vibe": "Old Money",
     "all_vibe_scores": {
       "Old Money": {
-        "score": 68,
+        "score": 75,
         "raw_score": 67.97,
-        "adjustment": 0,
+        "adjustment": 7,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Elevated City": {
-        "score": 65,
+        "score": 70,
         "raw_score": 65.38,
-        "adjustment": 0,
+        "adjustment": 5,
+        "source": "production_vibe_mapper_v2_polarized"
+      },
+      "Sexy Elegant": {
+        "score": 66,
+        "raw_score": 60.1,
+        "adjustment": 6,
+        "source": "production_vibe_mapper_v2_polarized"
+      },
+      "Glam": {
+        "score": 65,
+        "raw_score": 61.22,
+        "adjustment": 4,
         "source": "production_vibe_mapper_v2_polarized"
       },
       "Elevated Basics / Hailey Bieber": {
@@ -70334,18 +70346,6 @@
       "Wedding Guest": {
         "score": 62,
         "raw_score": 61.71,
-        "adjustment": 0,
-        "source": "production_vibe_mapper_v2_polarized"
-      },
-      "Glam": {
-        "score": 61,
-        "raw_score": 61.22,
-        "adjustment": 0,
-        "source": "production_vibe_mapper_v2_polarized"
-      },
-      "Sexy Elegant": {
-        "score": 60,
-        "raw_score": 60.1,
         "adjustment": 0,
         "source": "production_vibe_mapper_v2_polarized"
       },
@@ -70425,7 +70425,7 @@
       "status": "PASS",
       "issues": []
     },
-    "vibe_confidence": 0.1,
+    "vibe_confidence": 0.17,
     "vibe_review_status": "pending_ar_vibe_review",
     "vibe_source": "polarized_v2_file_based_validation_not_production_approved",
     "vibe_generated_at": "2026-05-29T16:40:00+05:30"
