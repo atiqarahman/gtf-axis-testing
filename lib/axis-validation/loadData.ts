@@ -38,11 +38,14 @@ async function fetchJson<T>(paths: string[]): Promise<T> {
   throw lastError
 }
 
-export async function loadValidationData(datasetVersion: 'v8.2' | 'v8.3' = 'v8.3'): Promise<{ items: ValidationItem[]; qa: QaSummary }> {
+export type DatasetVersion = 'v8.2' | 'v8.3' | 'v8.3-itrh-20'
+
+export async function loadValidationData(datasetVersion: DatasetVersion = 'v8.3'): Promise<{ items: ValidationItem[]; qa: QaSummary }> {
   const isV83 = datasetVersion === 'v8.3'
+  const isItrh20 = datasetVersion === 'v8.3-itrh-20'
   const [products, extractions] = await Promise.all([
-    fetchJson<Product[]>(isV83 ? ['/data/products_v8_3.json', '/data/products.json'] : ['/data/products.json']),
-    fetchJson<Extraction[]>(isV83 ? ['/data/extractions_v8_3.json', '/data/extractions_v8_2.json'] : ['/data/extractions_v8_2.json', '/data/extractions_v8.2.json', '/data/extractions_v8_1.json']),
+    fetchJson<Product[]>(isItrh20 ? ['/data/products_itrh_beta_20_aug01.json'] : isV83 ? ['/data/products_v8_3.json', '/data/products.json'] : ['/data/products.json']),
+    fetchJson<Extraction[]>(isItrh20 ? ['/data/extractions_itrh_beta_20_aug01.json'] : isV83 ? ['/data/extractions_v8_3.json', '/data/extractions_v8_2.json'] : ['/data/extractions_v8_2.json', '/data/extractions_v8.2.json', '/data/extractions_v8_1.json']),
   ])
   const productIds = products.map((p) => p.product_id)
   const extractionIds = extractions.map((e) => e.product_id)
@@ -73,7 +76,7 @@ export async function loadValidationData(datasetVersion: 'v8.2' | 'v8.3' = 'v8.3
 
   for (const e of extractions) {
     if (e.brand_category || e.components?.length || e.search_terms?.length || e.schema_version?.includes('8.2')) v82Ready++
-    if (e.schema_version?.includes(isV83 ? '8.3' : '8.2') && e.brand_category && e.search_terms?.length) readyVersionCount++
+    if (e.schema_version?.includes(isV83 || isItrh20 ? '8.3' : '8.2') && e.brand_category && e.search_terms?.length) readyVersionCount++
     if (e.is_multi_piece || (e.components?.length ?? 0) > 0) multiPieceExtractions++
     if (!e.brand_category) missingBrandCategory.push(e.product_id)
     for (const axis of AXES) {

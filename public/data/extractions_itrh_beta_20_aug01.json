@@ -1,0 +1,5505 @@
+[
+  {
+    "product_id": "GTF-ITRH-NTK01",
+    "schema_version": "8.3",
+    "brand_sku": "NTK01",
+    "gtf_sku": "GTF-ITRH-NTK01",
+    "product_name": "Maya Gold Stone Dress",
+    "brand_category": "DRESS",
+    "category": "DRESS",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/IT_187844.jpg?v=1756278982",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/ITRH_794.jpg?v=1756278983"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/IT_187844.jpg?v=1756278982",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/ITRH_794.jpg?v=1756278983",
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "gold dress",
+      "stone embellished dress",
+      "fitted dress",
+      "luxury dress",
+      "high-neck dress",
+      "floor-length dress"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "dress",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "gold",
+        "confidence": 1.0
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_primary": {
+        "value": "stone",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "floor-length",
+        "confidence": 1.0
+      },
+      "neckline": {
+        "value": "high-neck",
+        "confidence": 1.0
+      },
+      "sleeve_length": {
+        "value": "sleeveless",
+        "confidence": 1.0
+      },
+      "pattern": {
+        "value": "embellished",
+        "confidence": 1.0
+      },
+      "details": [
+        {
+          "value": "stone embellishments",
+          "confidence": 1.0
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 1.0
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 2,
+        "reasoning": "The dress is heavily embellished with stones, making it far from minimalistic."
+      },
+      "polish": {
+        "score": 9,
+        "reasoning": "The dress has a high level of polish due to its intricate embellishments and luxurious material."
+      },
+      "body_awareness": {
+        "score": 8,
+        "reasoning": "The fitted silhouette accentuates the body shape."
+      },
+      "drama": {
+        "score": 9,
+        "reasoning": "The gold color and stone embellishments add a dramatic flair."
+      },
+      "novelty": {
+        "score": 7,
+        "reasoning": "The use of stone embellishments is unique and adds novelty."
+      },
+      "craft": {
+        "score": 10,
+        "reasoning": "High craftsmanship is evident in the detailed embellishments."
+      },
+      "boldness": {
+        "score": 8,
+        "reasoning": "The bold gold color and embellishments make a strong statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The dress is highly glamorous due to its luxurious materials and design."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "The dress aligns with current trends in luxury and embellished fashion."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The dress is a statement piece and may require minimal additional styling."
+      },
+      "cultural_richness": {
+        "score": 8,
+        "reasoning": "The design reflects cultural richness through its intricate embellishments."
+      }
+    },
+    "suggested_vibes": [
+      "Glam",
+      "Dubai Glam",
+      "Unique Finds"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 82,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 83,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 78,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 79,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 78,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 79,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-NTK32",
+    "schema_version": "8.3",
+    "brand_sku": "NTK32",
+    "gtf_sku": "GTF-ITRH-NTK32",
+    "product_name": "Naara White Mini Dress With Bow",
+    "brand_category": "DRESS",
+    "category": "DRESS",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/ITRH_955.jpg?v=1756278938",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/ITRH_963.jpg?v=1756278938"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/ITRH_955.jpg?v=1756278938",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/ITRH_963.jpg?v=1756278938",
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "white mini dress",
+      "sequin dress",
+      "bow dress",
+      "fitted mini dress",
+      "luxury dress"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "dress",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "white",
+        "confidence": 0.9
+      },
+      "secondary_color": {
+        "value": "black",
+        "confidence": 0.9
+      },
+      "material_primary": {
+        "value": "sequin",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 0.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "mini",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "straight",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "sleeveless",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "bow",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 0.9
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The dress features a large decorative bow, adding complexity."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "The sequined material and structured design contribute to a polished look."
+      },
+      "body_awareness": {
+        "score": 7,
+        "reasoning": "The fitted silhouette emphasizes body shape."
+      },
+      "drama": {
+        "score": 9,
+        "reasoning": "The large bow and sequins create a dramatic effect."
+      },
+      "novelty": {
+        "score": 8,
+        "reasoning": "The design is unique with its oversized bow detail."
+      },
+      "craft": {
+        "score": 8,
+        "reasoning": "The use of sequins and detailed bow suggests high craftsmanship."
+      },
+      "boldness": {
+        "score": 9,
+        "reasoning": "The bold contrast of black and white and the large bow are striking."
+      },
+      "glamour": {
+        "score": 9,
+        "reasoning": "The sequins and design elements contribute to a glamorous appearance."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "The dress aligns with current trends in bold and statement fashion."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The dress is a statement piece, limiting versatility in styling."
+      },
+      "cultural_richness": {
+        "score": 5,
+        "reasoning": "The design is modern with limited cultural references."
+      }
+    },
+    "suggested_vibes": [
+      "Glam",
+      "Dubai Glam",
+      "Sexy Elegant"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 64,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 79,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 73,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-GW379",
+    "schema_version": "8.3",
+    "brand_sku": "GW379",
+    "gtf_sku": "GTF-ITRH-GW379",
+    "product_name": "Eden Back Rainbow Gown",
+    "brand_category": "DRESS",
+    "category": "DRESS",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/25awards15.jpg?v=1721200832",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Snapinsta.app_328821760_242002081669528_3799309036794704882_n_1024.jpg?v=1721200832"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/25awards15.jpg?v=1721200832",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Snapinsta.app_328821760_242002081669528_3799309036794704882_n_1024.jpg?v=1721200832",
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "rainbow dress",
+      "sequined dress",
+      "fitted dress",
+      "high-neck dress",
+      "cut-out dress",
+      "luxury gown"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "dress",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "rainbow",
+        "confidence": 0.9
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.0
+      },
+      "material_primary": {
+        "value": "sequined",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 0.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "floor-length",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "high-neck",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "sequined",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "cut-out",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 0.9
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 2,
+        "reasoning": "The dress is highly embellished with sequins, reducing minimalism."
+      },
+      "polish": {
+        "score": 9,
+        "reasoning": "The dress has a high level of polish due to its luxurious materials and finish."
+      },
+      "body_awareness": {
+        "score": 8,
+        "reasoning": "The fitted silhouette and cut-out details enhance body awareness."
+      },
+      "drama": {
+        "score": 9,
+        "reasoning": "The sequined material and cut-out design add significant drama."
+      },
+      "novelty": {
+        "score": 8,
+        "reasoning": "The rainbow sequined pattern provides a novel appearance."
+      },
+      "craft": {
+        "score": 8,
+        "reasoning": "The intricate sequin work indicates a high level of craftsmanship."
+      },
+      "boldness": {
+        "score": 9,
+        "reasoning": "The bold color and design make a strong statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The dress is highly glamorous due to its luxurious and eye-catching design."
+      },
+      "trend_currency": {
+        "score": 8,
+        "reasoning": "The dress aligns with current trends in bold and glamorous fashion."
+      },
+      "styling_affordance": {
+        "score": 7,
+        "reasoning": "The dress can be styled for high-profile events, offering moderate versatility."
+      },
+      "cultural_richness": {
+        "score": 6,
+        "reasoning": "The design is modern with limited cultural references."
+      }
+    },
+    "suggested_vibes": [
+      "Glam",
+      "Dubai Glam",
+      "Sexy Elegant"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 81,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 84,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 79,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 80,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 77,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 77,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 79,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-SHR13",
+    "schema_version": "8.3",
+    "brand_sku": "SHR13",
+    "gtf_sku": "GTF-ITRH-SHR13",
+    "product_name": "Zeina Kaftan Dress",
+    "brand_category": "DRESS",
+    "category": "DRESS",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/01-04-25Itrh.4602_740c2e08-1b34-48bc-9166-6b9f68ceb20a.jpg?v=1753694990",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/01-04-25Itrh.4616.jpg?v=1756278697"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/01-04-25Itrh.4602_740c2e08-1b34-48bc-9166-6b9f68ceb20a.jpg?v=1753694990",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/01-04-25Itrh.4616.jpg?v=1756278697",
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "kaftan dress",
+      "sequin dress",
+      "one-shoulder dress",
+      "floral pattern dress",
+      "luxury dress"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "kaftan dress",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "brown",
+        "confidence": 0.9
+      },
+      "secondary_color": {
+        "value": "black",
+        "confidence": 0.85
+      },
+      "material_primary": {
+        "value": "sequin",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 0.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "flowy",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "floor-length",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "one-shoulder",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "floral",
+        "confidence": 0.85
+      },
+      "details": [
+        {
+          "value": "fringe",
+          "confidence": 0.8
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 0.9
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The dress has a detailed pattern and embellishments."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "High-quality materials and finish."
+      },
+      "body_awareness": {
+        "score": 6,
+        "reasoning": "The silhouette is flowy but highlights the shoulder."
+      },
+      "drama": {
+        "score": 9,
+        "reasoning": "Bold pattern and one-shoulder design add drama."
+      },
+      "novelty": {
+        "score": 7,
+        "reasoning": "Unique design with a mix of patterns and textures."
+      },
+      "craft": {
+        "score": 8,
+        "reasoning": "Intricate detailing and high-quality craftsmanship."
+      },
+      "boldness": {
+        "score": 8,
+        "reasoning": "Striking pattern and color contrast."
+      },
+      "glamour": {
+        "score": 9,
+        "reasoning": "Luxurious materials and dramatic design."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "Aligns with current trends in luxury occasionwear."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "Versatile for formal occasions but limited casual use."
+      },
+      "cultural_richness": {
+        "score": 8,
+        "reasoning": "Reflects cultural elements in design."
+      }
+    },
+    "suggested_vibes": [
+      "Dubai Glam",
+      "Glam",
+      "Unique Finds"
+    ],
+    "primary_vibe": "Dubai Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 77,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 63,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 77,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-ITRHSP70",
+    "schema_version": "8.3",
+    "brand_sku": "ITRH-SP70",
+    "gtf_sku": "GTF-ITRH-ITRHSP70",
+    "product_name": "Shalini Salsa Gown",
+    "brand_category": "DRESS",
+    "category": "DRESS",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Snapinsta.app_469386499_18363409105139556_3266190537787595284_n_1080.jpg?v=1736420017",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Snapinsta.app_469511858_18363409087139556_4138536596433439120_n_1080.jpg?v=1736420017"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Snapinsta.app_469386499_18363409105139556_3266190537787595284_n_1080.jpg?v=1736420017",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Snapinsta.app_469511858_18363409087139556_4138536596433439120_n_1080.jpg?v=1736420017",
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "red dress",
+      "sequined dress",
+      "mermaid dress",
+      "floor-length dress",
+      "v-neck dress",
+      "luxury dress"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "dress",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "red",
+        "confidence": 1.0
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_primary": {
+        "value": "sequined",
+        "confidence": 1.0
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "mermaid",
+        "confidence": 1.0
+      },
+      "length": {
+        "value": "floor-length",
+        "confidence": 1.0
+      },
+      "neckline": {
+        "value": "v-neck",
+        "confidence": 1.0
+      },
+      "sleeve_length": {
+        "value": "sleeveless",
+        "confidence": 1.0
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 1.0
+      },
+      "details": [
+        {
+          "value": "ruffle",
+          "confidence": 1.0
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 1.0
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The dress is detailed with sequins and ruffles, reducing minimalism."
+      },
+      "polish": {
+        "score": 9,
+        "reasoning": "High polish due to the luxurious material and finish."
+      },
+      "body_awareness": {
+        "score": 8,
+        "reasoning": "The mermaid silhouette accentuates body shape."
+      },
+      "drama": {
+        "score": 9,
+        "reasoning": "The vibrant color and silhouette add drama."
+      },
+      "novelty": {
+        "score": 6,
+        "reasoning": "The design is classic with some unique elements."
+      },
+      "craft": {
+        "score": 8,
+        "reasoning": "High craftsmanship evident in the detailing."
+      },
+      "boldness": {
+        "score": 8,
+        "reasoning": "Bold color and design make a statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The dress is highly glamorous with its sequined finish."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "The style is currently fashionable."
+      },
+      "styling_affordance": {
+        "score": 5,
+        "reasoning": "Limited styling options due to its statement nature."
+      },
+      "cultural_richness": {
+        "score": 5,
+        "reasoning": "Moderate cultural richness due to its classic design."
+      }
+    },
+    "suggested_vibes": [
+      "Glam",
+      "Dubai Glam",
+      "Sexy Elegant"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 69,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 63,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 80,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 73,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-BNG01",
+    "schema_version": "8.3",
+    "brand_sku": "BNG-01",
+    "gtf_sku": "GTF-ITRH-BNG01",
+    "product_name": "Celestial Flutter Saree Set",
+    "brand_category": "saree",
+    "category": "saree",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/WhatsAppImage2025-05-17at10.58.37AM.jpg?v=1747477497",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/WhatsAppImage2025-05-17at10.58.38AM_1.jpg?v=1747477497"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/WhatsAppImage2025-05-17at10.58.37AM.jpg?v=1747477497",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/WhatsAppImage2025-05-17at10.58.38AM_1.jpg?v=1747477497",
+    "is_multi_piece": true,
+    "component_count": 2,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "saree",
+        "role": "one_piece",
+        "visibility": "visible",
+        "confidence": 0.95,
+        "attributes": {
+          "category": {
+            "value": "saree",
+            "confidence": 0.95
+          },
+          "primary_color": {
+            "value": "black",
+            "confidence": 0.95
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.9
+          },
+          "material_primary": {
+            "value": "net",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.9
+          },
+          "silhouette": {
+            "value": "draped",
+            "confidence": 0.95
+          },
+          "length": {
+            "value": "floor-length",
+            "confidence": 0.95
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 0.9
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 0.9
+          },
+          "pattern": {
+            "value": "floral",
+            "confidence": 0.9
+          },
+          "details": [
+            {
+              "value": "sequined",
+              "confidence": 0.9
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "blouse",
+        "role": "top",
+        "visibility": "visible",
+        "confidence": 0.95,
+        "attributes": {
+          "category": {
+            "value": "blouse",
+            "confidence": 0.95
+          },
+          "primary_color": {
+            "value": "black",
+            "confidence": 0.95
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.9
+          },
+          "material_primary": {
+            "value": "velvet",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.9
+          },
+          "silhouette": {
+            "value": "fitted",
+            "confidence": 0.95
+          },
+          "length": {
+            "value": "cropped",
+            "confidence": 0.95
+          },
+          "neckline": {
+            "value": "sweetheart",
+            "confidence": 0.9
+          },
+          "sleeve_length": {
+            "value": "sleeveless",
+            "confidence": 0.9
+          },
+          "pattern": {
+            "value": "solid",
+            "confidence": 0.9
+          },
+          "details": [
+            {
+              "value": "none",
+              "confidence": 0.9
+            }
+          ]
+        }
+      }
+    ],
+    "search_terms": [
+      "black saree",
+      "floral saree",
+      "sequined saree",
+      "draped saree",
+      "black blouse",
+      "velvet blouse",
+      "sweetheart neckline blouse",
+      "saree set"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "saree",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "black",
+        "confidence": 0.95
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.9
+      },
+      "material_primary": {
+        "value": "net",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 0.9
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "draped",
+        "confidence": 0.95
+      },
+      "length": {
+        "value": "floor-length",
+        "confidence": 0.95
+      },
+      "neckline": {
+        "value": "none",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "none",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "floral",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "sequined",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 0.9
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The saree has intricate floral patterns and sequins."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "The saree is elegant and well-finished."
+      },
+      "body_awareness": {
+        "score": 7,
+        "reasoning": "The draped silhouette highlights the body shape."
+      },
+      "drama": {
+        "score": 9,
+        "reasoning": "The sequins and floral patterns add dramatic flair."
+      },
+      "novelty": {
+        "score": 6,
+        "reasoning": "The design is unique with its floral sequined pattern."
+      },
+      "craft": {
+        "score": 8,
+        "reasoning": "High-quality craftsmanship is evident in the detailing."
+      },
+      "boldness": {
+        "score": 7,
+        "reasoning": "The black color and sequins make a bold statement."
+      },
+      "glamour": {
+        "score": 9,
+        "reasoning": "The saree is highly glamorous with its shimmering sequins."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "The saree aligns with current fashion trends."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The saree can be styled in various ways for different occasions."
+      },
+      "cultural_richness": {
+        "score": 8,
+        "reasoning": "The saree reflects rich cultural heritage."
+      }
+    },
+    "suggested_vibes": [
+      "Glam",
+      "Dubai Glam",
+      "Winter Holidays"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 69,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 63,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 73,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-ITRHKK01",
+    "schema_version": "8.3",
+    "brand_sku": "ITRHKK01",
+    "gtf_sku": "GTF-ITRH-ITRHKK01",
+    "product_name": "Pink Mystic Saree Set",
+    "brand_category": "saree set",
+    "category": "saree set",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/193.webp?v=1767954134",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/198.webp?v=1767954134"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/193.webp?v=1767954134",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/198.webp?v=1767954134",
+    "is_multi_piece": true,
+    "component_count": 2,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "blouse",
+        "role": "top",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "blouse",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "pink",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "sequin",
+            "confidence": 1.0
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "fitted",
+            "confidence": 1.0
+          },
+          "length": {
+            "value": "cropped",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "halter",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "sleeveless",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "sequined",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "embellished",
+              "confidence": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "saree",
+        "role": "bottom",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "saree",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "pink",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "sequin",
+            "confidence": 1.0
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "draped",
+            "confidence": 1.0
+          },
+          "length": {
+            "value": "floor-length",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "sequined",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "embellished",
+              "confidence": 1.0
+            }
+          ]
+        }
+      }
+    ],
+    "search_terms": [
+      "pink saree set",
+      "sequin saree",
+      "halter blouse",
+      "embellished saree",
+      "draped saree",
+      "luxury saree"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "saree set",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "pink",
+        "confidence": 1.0
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_primary": {
+        "value": "sequin",
+        "confidence": 1.0
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "draped",
+        "confidence": 1.0
+      },
+      "length": {
+        "value": "floor-length",
+        "confidence": 1.0
+      },
+      "neckline": {
+        "value": "halter",
+        "confidence": 1.0
+      },
+      "sleeve_length": {
+        "value": "sleeveless",
+        "confidence": 1.0
+      },
+      "pattern": {
+        "value": "sequined",
+        "confidence": 1.0
+      },
+      "details": [
+        {
+          "value": "embellished",
+          "confidence": 1.0
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 1.0
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 2,
+        "reasoning": "The saree set is heavily embellished with sequins, indicating a lack of minimalism."
+      },
+      "polish": {
+        "score": 9,
+        "reasoning": "The high-quality materials and intricate design contribute to a polished appearance."
+      },
+      "body_awareness": {
+        "score": 8,
+        "reasoning": "The fitted blouse and draped saree highlight the body's silhouette."
+      },
+      "drama": {
+        "score": 9,
+        "reasoning": "The sparkling sequins and vibrant color create a dramatic effect."
+      },
+      "novelty": {
+        "score": 7,
+        "reasoning": "The design incorporates traditional elements with modern embellishments."
+      },
+      "craft": {
+        "score": 9,
+        "reasoning": "The detailed sequin work showcases high craftsmanship."
+      },
+      "boldness": {
+        "score": 8,
+        "reasoning": "The bright pink color and sequins make a bold statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The overall look is highly glamorous due to the sparkle and design."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "The saree set aligns with current trends in Indian occasion wear."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The set can be styled with various accessories for different occasions."
+      },
+      "cultural_richness": {
+        "score": 9,
+        "reasoning": "The saree set reflects rich cultural heritage with its traditional design."
+      }
+    },
+    "suggested_vibes": [
+      "Dubai Glam",
+      "Glam",
+      "Unique Finds"
+    ],
+    "primary_vibe": "Dubai Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 82,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 82,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 78,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 79,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 78,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 79,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-DCSR489",
+    "schema_version": "8.3",
+    "brand_sku": "DCSR489",
+    "gtf_sku": "GTF-ITRH-DCSR489",
+    "product_name": "Gleaming Mint Jewel Saree Set",
+    "brand_category": "saree set",
+    "category": "saree set",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/KAJOL_211223_2101mcopy2.jpg?v=1703585251",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/KAJOL_211223_2203mcopy2.jpg?v=1703585248"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/KAJOL_211223_2101mcopy2.jpg?v=1703585251",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/KAJOL_211223_2203mcopy2.jpg?v=1703585248",
+    "is_multi_piece": true,
+    "component_count": 2,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "saree",
+        "role": "one_piece",
+        "visibility": "visible",
+        "confidence": 0.95,
+        "attributes": {
+          "category": {
+            "value": "saree",
+            "confidence": 0.95
+          },
+          "primary_color": {
+            "value": "mint",
+            "confidence": 0.95
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.95
+          },
+          "material_primary": {
+            "value": "sequin",
+            "confidence": 0.95
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.95
+          },
+          "silhouette": {
+            "value": "draped",
+            "confidence": 0.95
+          },
+          "length": {
+            "value": "floor-length",
+            "confidence": 0.95
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 0.95
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 0.95
+          },
+          "pattern": {
+            "value": "sequined",
+            "confidence": 0.95
+          },
+          "details": [
+            {
+              "value": "jewel embellishments",
+              "confidence": 0.95
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "blouse",
+        "role": "top",
+        "visibility": "visible",
+        "confidence": 0.95,
+        "attributes": {
+          "category": {
+            "value": "blouse",
+            "confidence": 0.95
+          },
+          "primary_color": {
+            "value": "mint",
+            "confidence": 0.95
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.95
+          },
+          "material_primary": {
+            "value": "sequin",
+            "confidence": 0.95
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.95
+          },
+          "silhouette": {
+            "value": "fitted",
+            "confidence": 0.95
+          },
+          "length": {
+            "value": "cropped",
+            "confidence": 0.95
+          },
+          "neckline": {
+            "value": "scoop",
+            "confidence": 0.95
+          },
+          "sleeve_length": {
+            "value": "sleeveless",
+            "confidence": 0.95
+          },
+          "pattern": {
+            "value": "sequined",
+            "confidence": 0.95
+          },
+          "details": [
+            {
+              "value": "jewel embellishments",
+              "confidence": 0.95
+            }
+          ]
+        }
+      }
+    ],
+    "search_terms": [
+      "mint saree set",
+      "sequin saree",
+      "jewel embellished saree",
+      "draped saree",
+      "saree with blouse",
+      "luxury saree"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "saree set",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "mint",
+        "confidence": 0.95
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.95
+      },
+      "material_primary": {
+        "value": "sequin",
+        "confidence": 0.95
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 0.95
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "draped",
+        "confidence": 0.95
+      },
+      "length": {
+        "value": "floor-length",
+        "confidence": 0.95
+      },
+      "neckline": {
+        "value": "none",
+        "confidence": 0.95
+      },
+      "sleeve_length": {
+        "value": "none",
+        "confidence": 0.95
+      },
+      "pattern": {
+        "value": "sequined",
+        "confidence": 0.95
+      },
+      "details": [
+        {
+          "value": "jewel embellishments",
+          "confidence": 0.95
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 0.95
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The saree set is heavily embellished with sequins, reducing minimalism."
+      },
+      "polish": {
+        "score": 9,
+        "reasoning": "The high-quality materials and finish contribute to a polished look."
+      },
+      "body_awareness": {
+        "score": 7,
+        "reasoning": "The draped silhouette accentuates the body shape."
+      },
+      "drama": {
+        "score": 8,
+        "reasoning": "The sparkling sequins and draped style add drama."
+      },
+      "novelty": {
+        "score": 6,
+        "reasoning": "The use of sequins in a saree is somewhat novel."
+      },
+      "craft": {
+        "score": 9,
+        "reasoning": "High craftsmanship is evident in the detailed embellishments."
+      },
+      "boldness": {
+        "score": 7,
+        "reasoning": "The bold color and sequins make a statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The overall look is very glamorous due to the sparkle and style."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "Sequins are currently trending in fashion."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The saree set offers moderate styling options."
+      },
+      "cultural_richness": {
+        "score": 9,
+        "reasoning": "The saree is a traditional Indian garment with cultural significance."
+      }
+    },
+    "suggested_vibes": [
+      "Dubai Glam",
+      "Glam",
+      "Winter Holidays"
+    ],
+    "primary_vibe": "Dubai Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 80,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 69,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 78,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-DCSR526",
+    "schema_version": "8.3",
+    "brand_sku": "DCSR526",
+    "gtf_sku": "GTF-ITRH-DCSR526",
+    "product_name": "Olive Opulence Corset Saree",
+    "brand_category": "saree",
+    "category": "saree",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/17-02-24Itrh.3725.jpg?v=1709656256",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/17-02-24Itrh.3759.jpg?v=1709656256"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/17-02-24Itrh.3725.jpg?v=1709656256",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/17-02-24Itrh.3759.jpg?v=1709656256",
+    "is_multi_piece": true,
+    "component_count": 2,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "corset",
+        "role": "top",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "corset",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "olive",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "embellished fabric",
+            "confidence": 1.0
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "fitted",
+            "confidence": 1.0
+          },
+          "length": {
+            "value": "cropped",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "straight",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "sleeveless",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "embellished",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "embellished",
+              "confidence": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "saree",
+        "role": "bottom",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "saree",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "olive",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "embellished fabric",
+            "confidence": 1.0
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "draped",
+            "confidence": 1.0
+          },
+          "length": {
+            "value": "floor-length",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "embellished",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "draped",
+              "confidence": 1.0
+            }
+          ]
+        }
+      }
+    ],
+    "search_terms": [
+      "olive saree",
+      "embellished saree",
+      "corset saree",
+      "draped saree",
+      "luxury saree",
+      "olive corset",
+      "embellished corset"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "saree",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "olive",
+        "confidence": 1.0
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_primary": {
+        "value": "embellished fabric",
+        "confidence": 1.0
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "draped",
+        "confidence": 1.0
+      },
+      "length": {
+        "value": "floor-length",
+        "confidence": 1.0
+      },
+      "neckline": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "sleeve_length": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "pattern": {
+        "value": "embellished",
+        "confidence": 1.0
+      },
+      "details": [
+        {
+          "value": "corset",
+          "confidence": 1.0
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 1.0
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The saree is heavily embellished, reducing minimalism."
+      },
+      "polish": {
+        "score": 9,
+        "reasoning": "High-quality materials and finish contribute to a polished look."
+      },
+      "body_awareness": {
+        "score": 8,
+        "reasoning": "The corset and draped saree highlight the body shape."
+      },
+      "drama": {
+        "score": 8,
+        "reasoning": "The embellishments and draping add dramatic flair."
+      },
+      "novelty": {
+        "score": 7,
+        "reasoning": "The combination of corset and saree is relatively novel."
+      },
+      "craft": {
+        "score": 9,
+        "reasoning": "High level of craftsmanship in embellishments."
+      },
+      "boldness": {
+        "score": 7,
+        "reasoning": "The bold color and embellishments make a statement."
+      },
+      "glamour": {
+        "score": 9,
+        "reasoning": "The saree exudes glamour with its luxurious materials."
+      },
+      "trend_currency": {
+        "score": 6,
+        "reasoning": "The style is trendy but not cutting-edge."
+      },
+      "styling_affordance": {
+        "score": 7,
+        "reasoning": "The saree can be styled in various ways for different occasions."
+      },
+      "cultural_richness": {
+        "score": 8,
+        "reasoning": "The saree is rich in cultural significance and design."
+      }
+    },
+    "suggested_vibes": [
+      "Dubai Glam",
+      "Glam",
+      "Unique Finds"
+    ],
+    "primary_vibe": "Dubai Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 78,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 78,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-DC22W062",
+    "schema_version": "8.3",
+    "brand_sku": "DC22W062",
+    "gtf_sku": "GTF-ITRH-DC22W062",
+    "product_name": "Hot pink Fusion B",
+    "brand_category": "lehenga set",
+    "category": "lehenga set",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/Itrhdelhi-21-dec-214602.jpg?v=1674313572",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/Itrhdelhi-21-dec-214609.jpg?v=1674313572"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/Itrhdelhi-21-dec-214602.jpg?v=1674313572",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/Itrhdelhi-21-dec-214609.jpg?v=1674313572",
+    "is_multi_piece": true,
+    "component_count": 3,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "blouse",
+        "role": "top",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "blouse",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "hot pink",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "material_primary": {
+            "value": "silk",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "silhouette": {
+            "value": "fitted",
+            "confidence": 0.9
+          },
+          "length": {
+            "value": "waist-length",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "high neck",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "long",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "embellished",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "sequins",
+              "confidence": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "lehenga",
+        "role": "bottom",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "lehenga",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "gold",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "material_primary": {
+            "value": "silk",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "silhouette": {
+            "value": "flared",
+            "confidence": 0.9
+          },
+          "length": {
+            "value": "floor-length",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "metallic",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "metallic sheen",
+              "confidence": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 3,
+        "piece_type": "dupatta",
+        "role": "layer",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "dupatta",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "hot pink",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "material_primary": {
+            "value": "net",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "silhouette": {
+            "value": "draped",
+            "confidence": 0.9
+          },
+          "length": {
+            "value": "long",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "embellished",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "sequins",
+              "confidence": 1.0
+            }
+          ]
+        }
+      }
+    ],
+    "search_terms": [
+      "hot pink lehenga set",
+      "silk lehenga",
+      "embellished blouse",
+      "flared lehenga",
+      "dupatta",
+      "sequins lehenga",
+      "floor-length lehenga",
+      "high neck blouse"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "lehenga set",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "hot pink",
+        "confidence": 1.0
+      },
+      "secondary_color": {
+        "value": "gold",
+        "confidence": 1.0
+      },
+      "material_primary": {
+        "value": "silk",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 0.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "flared",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "floor-length",
+        "confidence": 1.0
+      },
+      "neckline": {
+        "value": "high neck",
+        "confidence": 1.0
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 1.0
+      },
+      "pattern": {
+        "value": "embellished",
+        "confidence": 1.0
+      },
+      "details": [
+        {
+          "value": "sequins",
+          "confidence": 1.0
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 1.0
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 2,
+        "reasoning": "The design is heavily embellished with sequins."
+      },
+      "polish": {
+        "score": 9,
+        "reasoning": "The outfit has a high level of finish and sophistication."
+      },
+      "body_awareness": {
+        "score": 5,
+        "reasoning": "The silhouette is traditional and modest."
+      },
+      "drama": {
+        "score": 8,
+        "reasoning": "The vibrant color and embellishments add drama."
+      },
+      "novelty": {
+        "score": 6,
+        "reasoning": "The fusion of traditional and modern elements is somewhat novel."
+      },
+      "craft": {
+        "score": 9,
+        "reasoning": "High craftsmanship is evident in the detailing."
+      },
+      "boldness": {
+        "score": 8,
+        "reasoning": "The bold color choice makes a strong statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The outfit is highly glamorous due to its design and embellishments."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "The style is trendy within the context of Indian occasion wear."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The set can be styled in various ways for different occasions."
+      },
+      "cultural_richness": {
+        "score": 10,
+        "reasoning": "The outfit is rich in cultural elements typical of Indian fashion."
+      }
+    },
+    "suggested_vibes": [
+      "Dubai Glam",
+      "Glam",
+      "Unique Finds"
+    ],
+    "primary_vibe": "Dubai Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 80,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 63,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 77,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 69,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-DCSJ537",
+    "schema_version": "8.3",
+    "brand_sku": "DCSJ537",
+    "gtf_sku": "GTF-ITRH-DCSJ537",
+    "product_name": "Scarlet Sparkle Trio Skirt Set",
+    "brand_category": "coord set",
+    "category": "coord set",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/DCSJ537_1_d6e88692-cbf0-4fe3-92db-10ab7bbe13bf.jpg?v=1709394502",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/DCSJ537_2_f0aca346-b3c8-4fb9-a712-6d6ef27b7004.jpg?v=1709394502"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/DCSJ537_1_d6e88692-cbf0-4fe3-92db-10ab7bbe13bf.jpg?v=1709394502",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/DCSJ537_2_f0aca346-b3c8-4fb9-a712-6d6ef27b7004.jpg?v=1709394502",
+    "is_multi_piece": true,
+    "component_count": 3,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "bralette",
+        "role": "top",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "bralette",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "red",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "sequined",
+            "confidence": 1.0
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "fitted",
+            "confidence": 1.0
+          },
+          "length": {
+            "value": "cropped",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "v-neck",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "solid",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "sequined",
+              "confidence": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "skirt",
+        "role": "bottom",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "skirt",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "red",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "sequined",
+            "confidence": 1.0
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "fitted",
+            "confidence": 1.0
+          },
+          "length": {
+            "value": "maxi",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "solid",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "sequined",
+              "confidence": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 3,
+        "piece_type": "shirt",
+        "role": "outerwear",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "shirt",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "red",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "sequined",
+            "confidence": 1.0
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "loose",
+            "confidence": 1.0
+          },
+          "length": {
+            "value": "hip-length",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "collared",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "long",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "solid",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "sequined",
+              "confidence": 1.0
+            }
+          ]
+        }
+      }
+    ],
+    "search_terms": [
+      "red coord set",
+      "sequined coord set",
+      "fitted coord set",
+      "red bralette",
+      "sequined bralette",
+      "red skirt",
+      "sequined skirt",
+      "red shirt",
+      "sequined shirt",
+      "Scarlet Sparkle Trio Skirt Set"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "coord set",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "red",
+        "confidence": 1.0
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_primary": {
+        "value": "sequined",
+        "confidence": 1.0
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 1.0
+      },
+      "length": {
+        "value": "mixed",
+        "confidence": 1.0
+      },
+      "neckline": {
+        "value": "mixed",
+        "confidence": 1.0
+      },
+      "sleeve_length": {
+        "value": "mixed",
+        "confidence": 1.0
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 1.0
+      },
+      "details": [
+        {
+          "value": "sequined",
+          "confidence": 1.0
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 1.0
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The set is heavily embellished with sequins, reducing minimalism."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "The coordinated set has a polished and cohesive look."
+      },
+      "body_awareness": {
+        "score": 9,
+        "reasoning": "The fitted silhouette and bralette emphasize body awareness."
+      },
+      "drama": {
+        "score": 8,
+        "reasoning": "The vibrant color and sequins add dramatic flair."
+      },
+      "novelty": {
+        "score": 7,
+        "reasoning": "The use of sequins and the coordinated set design provide novelty."
+      },
+      "craft": {
+        "score": 8,
+        "reasoning": "The detailed sequin work indicates high craftsmanship."
+      },
+      "boldness": {
+        "score": 9,
+        "reasoning": "The bright red color and sequins make a bold statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The set is highly glamorous due to its color and embellishments."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "Coordinated sets and sequins are currently trending."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The set can be styled in various ways but is quite specific in its look."
+      },
+      "cultural_richness": {
+        "score": 5,
+        "reasoning": "The set has some cultural elements but is primarily modern."
+      }
+    },
+    "suggested_vibes": [
+      "Glam",
+      "Sexy Elegant",
+      "Dubai Glam"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 65,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 80,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 77,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 73,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-ITRHSN01",
+    "schema_version": "8.3",
+    "brand_sku": "ITRH-SN01",
+    "gtf_sku": "GTF-ITRH-ITRHSN01",
+    "product_name": "Aqua Elegance Skirt, Shirt and Blouse Set",
+    "brand_category": "coord set",
+    "category": "coord set",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/SONAKSHISINHA_2.jpg?v=1740730145",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/SONAKSHISINHA_3.jpg?v=1740730155"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/SONAKSHISINHA_2.jpg?v=1740730145",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/SONAKSHISINHA_3.jpg?v=1740730155",
+    "is_multi_piece": true,
+    "component_count": 3,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "skirt",
+        "role": "bottom",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "skirt",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "aqua",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "sequined",
+            "confidence": 1.0
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "fitted",
+            "confidence": 1.0
+          },
+          "length": {
+            "value": "midi",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "sequined",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "ruched",
+              "confidence": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "shirt",
+        "role": "top",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "shirt",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "aqua",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "sequined",
+            "confidence": 1.0
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "loose",
+            "confidence": 1.0
+          },
+          "length": {
+            "value": "waist-length",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "v-neck",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "long",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "sequined",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "sheer",
+              "confidence": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 3,
+        "piece_type": "blouse",
+        "role": "top",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "blouse",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "aqua",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "sequined",
+            "confidence": 1.0
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "fitted",
+            "confidence": 1.0
+          },
+          "length": {
+            "value": "crop",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "straight",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "sleeveless",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "sequined",
+            "confidence": 1.0
+          },
+          "details": [
+            {
+              "value": "embellished",
+              "confidence": 1.0
+            }
+          ]
+        }
+      }
+    ],
+    "search_terms": [
+      "aqua coord set",
+      "sequined coord set",
+      "fitted coord set",
+      "aqua skirt",
+      "sequined skirt",
+      "fitted skirt",
+      "aqua shirt",
+      "sequined shirt",
+      "loose shirt",
+      "aqua blouse",
+      "sequined blouse",
+      "fitted blouse"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "coord set",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "aqua",
+        "confidence": 1.0
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_primary": {
+        "value": "sequined",
+        "confidence": 1.0
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 1.0
+      },
+      "length": {
+        "value": "midi",
+        "confidence": 1.0
+      },
+      "neckline": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "sleeve_length": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "pattern": {
+        "value": "sequined",
+        "confidence": 1.0
+      },
+      "details": [
+        {
+          "value": "ruched",
+          "confidence": 1.0
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 1.0
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The set is heavily embellished with sequins, reducing minimalism."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "The coordinated set has a polished and sophisticated look."
+      },
+      "body_awareness": {
+        "score": 9,
+        "reasoning": "The fitted silhouette and crop top emphasize body awareness."
+      },
+      "drama": {
+        "score": 8,
+        "reasoning": "The sequins and bold color add dramatic flair."
+      },
+      "novelty": {
+        "score": 7,
+        "reasoning": "The unique combination of pieces and materials adds novelty."
+      },
+      "craft": {
+        "score": 7,
+        "reasoning": "The detailed sequin work indicates high craftsmanship."
+      },
+      "boldness": {
+        "score": 9,
+        "reasoning": "The vibrant color and sequins make a bold statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The set is highly glamorous due to its design and embellishments."
+      },
+      "trend_currency": {
+        "score": 8,
+        "reasoning": "The style is trendy with current fashion elements."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The set offers moderate styling options due to its boldness."
+      },
+      "cultural_richness": {
+        "score": 5,
+        "reasoning": "The set has some cultural elements in its design."
+      }
+    },
+    "suggested_vibes": [
+      "Glam",
+      "Sexy Elegant",
+      "Dubai Glam"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 65,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 81,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 78,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 73,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-NTK17",
+    "schema_version": "8.3",
+    "brand_sku": "NTK17",
+    "gtf_sku": "GTF-ITRH-NTK17",
+    "product_name": "Nishqa Blue Blazer And Bell Bottom Pants",
+    "brand_category": "pantsuit",
+    "category": "pantsuit",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/IT_187095.jpg?v=1726752502",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/ITRH_38.jpg?v=1726752502"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/IT_187095.jpg?v=1726752502",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/ITRH_38.jpg?v=1726752502",
+    "is_multi_piece": true,
+    "component_count": 2,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "blazer",
+        "role": "outerwear",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "blazer",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "blue",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "fabric",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "structured",
+            "confidence": 0.9
+          },
+          "length": {
+            "value": "hip-length",
+            "confidence": 0.9
+          },
+          "neckline": {
+            "value": "lapel",
+            "confidence": 0.9
+          },
+          "sleeve_length": {
+            "value": "long",
+            "confidence": 0.9
+          },
+          "pattern": {
+            "value": "embellished",
+            "confidence": 0.9
+          },
+          "details": [
+            {
+              "value": "feather",
+              "confidence": 0.9
+            },
+            {
+              "value": "embellishments",
+              "confidence": 0.9
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "pants",
+        "role": "bottom",
+        "visibility": "visible",
+        "confidence": 1.0,
+        "attributes": {
+          "category": {
+            "value": "bell bottom pants",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "blue",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "fabric",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "flared",
+            "confidence": 0.9
+          },
+          "length": {
+            "value": "long",
+            "confidence": 0.9
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "solid",
+            "confidence": 0.9
+          },
+          "details": []
+        }
+      }
+    ],
+    "search_terms": [
+      "blue pantsuit",
+      "embellished blazer",
+      "bell bottom pants",
+      "feather blazer",
+      "luxury pantsuit",
+      "structured blazer",
+      "flared pants"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "pantsuit",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "blue",
+        "confidence": 1.0
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_primary": {
+        "value": "fabric",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "structured",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "long",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "lapel",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "embellished",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "feather",
+          "confidence": 0.9
+        },
+        {
+          "value": "embellishments",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 1.0
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 2,
+        "reasoning": "The design is highly embellished and detailed."
+      },
+      "polish": {
+        "score": 9,
+        "reasoning": "The outfit has a high level of finish and sophistication."
+      },
+      "body_awareness": {
+        "score": 8,
+        "reasoning": "The structured silhouette emphasizes the body shape."
+      },
+      "drama": {
+        "score": 10,
+        "reasoning": "The bold color and embellishments create a dramatic effect."
+      },
+      "novelty": {
+        "score": 9,
+        "reasoning": "Unique design elements like feathers add novelty."
+      },
+      "craft": {
+        "score": 9,
+        "reasoning": "High craftsmanship is evident in the detailing."
+      },
+      "boldness": {
+        "score": 10,
+        "reasoning": "The vibrant color and design make a bold statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The outfit exudes glamour with its luxurious details."
+      },
+      "trend_currency": {
+        "score": 8,
+        "reasoning": "The design aligns with current fashion trends."
+      },
+      "styling_affordance": {
+        "score": 7,
+        "reasoning": "The outfit can be styled for various high-fashion occasions."
+      },
+      "cultural_richness": {
+        "score": 7,
+        "reasoning": "The design incorporates elements that suggest cultural influences."
+      }
+    },
+    "suggested_vibes": [
+      "Glam",
+      "Dubai Glam",
+      "Sexy Elegant"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 79,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 78,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 86,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 88,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 83,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 84,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 83,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 81,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 83,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-ITRHPT06",
+    "schema_version": "8.3",
+    "brand_sku": "ITRH-PT06",
+    "gtf_sku": "GTF-ITRH-ITRHPT06",
+    "product_name": "Veronese Dazzle Blazer and Pant Set",
+    "brand_category": "pantsuit",
+    "category": "pantsuit",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Snapinsta.app_461654469_18463305487032769_3653659349857830999_n_1080.jpg?v=1730108674",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Snapinsta.app_461652820_18463305448032769_6934893474439229834_n_1080.jpg?v=1730108675"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Snapinsta.app_461654469_18463305487032769_3653659349857830999_n_1080.jpg?v=1730108674",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/Snapinsta.app_461652820_18463305448032769_6934893474439229834_n_1080.jpg?v=1730108675",
+    "is_multi_piece": true,
+    "component_count": 2,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "blazer",
+        "role": "outerwear",
+        "visibility": "visible",
+        "confidence": 0.95,
+        "attributes": {
+          "category": {
+            "value": "blazer",
+            "confidence": 0.95
+          },
+          "primary_color": {
+            "value": "green",
+            "confidence": 0.95
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "material_primary": {
+            "value": "sequin",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "silhouette": {
+            "value": "structured",
+            "confidence": 0.9
+          },
+          "length": {
+            "value": "hip-length",
+            "confidence": 0.9
+          },
+          "neckline": {
+            "value": "lapel",
+            "confidence": 0.9
+          },
+          "sleeve_length": {
+            "value": "long",
+            "confidence": 0.9
+          },
+          "pattern": {
+            "value": "sequined",
+            "confidence": 0.9
+          },
+          "details": [
+            {
+              "value": "sequin",
+              "confidence": 0.9
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "pants",
+        "role": "bottom",
+        "visibility": "visible",
+        "confidence": 0.95,
+        "attributes": {
+          "category": {
+            "value": "pants",
+            "confidence": 0.95
+          },
+          "primary_color": {
+            "value": "green",
+            "confidence": 0.95
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "material_primary": {
+            "value": "sequin",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "silhouette": {
+            "value": "flared",
+            "confidence": 0.9
+          },
+          "length": {
+            "value": "full-length",
+            "confidence": 0.9
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "sequined",
+            "confidence": 0.9
+          },
+          "details": [
+            {
+              "value": "sequin",
+              "confidence": 0.9
+            }
+          ]
+        }
+      }
+    ],
+    "search_terms": [
+      "green pantsuit",
+      "sequin pantsuit",
+      "structured pantsuit",
+      "green blazer",
+      "sequin blazer",
+      "structured blazer",
+      "green pants",
+      "sequin pants",
+      "flared pants"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "pantsuit",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "green",
+        "confidence": 0.95
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.0
+      },
+      "material_primary": {
+        "value": "sequin",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 0.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "structured",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "full-length",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "lapel",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "sequined",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "sequin",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 0.9
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The sequined material and structured silhouette add complexity."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "The structured fit and luxury material contribute to a polished look."
+      },
+      "body_awareness": {
+        "score": 7,
+        "reasoning": "The structured fit highlights the body shape."
+      },
+      "drama": {
+        "score": 9,
+        "reasoning": "The sequined material and bold color create a dramatic effect."
+      },
+      "novelty": {
+        "score": 6,
+        "reasoning": "The use of sequins adds a novel touch."
+      },
+      "craft": {
+        "score": 8,
+        "reasoning": "High-quality materials and construction are evident."
+      },
+      "boldness": {
+        "score": 9,
+        "reasoning": "The bold color and sequins make a strong statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The overall look is highly glamorous due to the sequins and fit."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "Sequins and structured fits are currently trending."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The set can be styled for various formal occasions."
+      },
+      "cultural_richness": {
+        "score": 5,
+        "reasoning": "The design is modern with no specific cultural references."
+      }
+    },
+    "suggested_vibes": [
+      "Glam",
+      "Dubai Glam",
+      "Sexy Elegant"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 69,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 63,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 79,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-DC22M003",
+    "schema_version": "8.3",
+    "brand_sku": "DC22M003",
+    "gtf_sku": "GTF-ITRH-DC22M003",
+    "product_name": "Men Neon Green Blink",
+    "brand_category": "kurta set",
+    "category": "kurta set",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/Itrhdelhi-21-dec-210648.jpg?v=1676489349",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/Itrhdelhi-21-dec-210650.jpg?v=1676489349"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/Itrhdelhi-21-dec-210648.jpg?v=1676489349",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/Itrhdelhi-21-dec-210650.jpg?v=1676489349",
+    "is_multi_piece": true,
+    "component_count": 2,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "kurta",
+        "role": "top",
+        "visibility": "visible",
+        "confidence": 0.9,
+        "attributes": {
+          "category": {
+            "value": "kurta",
+            "confidence": 0.9
+          },
+          "primary_color": {
+            "value": "neon green",
+            "confidence": 0.9
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "material_primary": {
+            "value": "cotton",
+            "confidence": 0.8
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "silhouette": {
+            "value": "straight",
+            "confidence": 0.8
+          },
+          "length": {
+            "value": "knee-length",
+            "confidence": 0.8
+          },
+          "neckline": {
+            "value": "mandarin collar",
+            "confidence": 0.9
+          },
+          "sleeve_length": {
+            "value": "long",
+            "confidence": 0.9
+          },
+          "pattern": {
+            "value": "solid",
+            "confidence": 0.8
+          },
+          "details": [
+            {
+              "value": "perforated",
+              "confidence": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "pants",
+        "role": "bottom",
+        "visibility": "visible",
+        "confidence": 0.9,
+        "attributes": {
+          "category": {
+            "value": "pants",
+            "confidence": 0.9
+          },
+          "primary_color": {
+            "value": "black",
+            "confidence": 0.9
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "material_primary": {
+            "value": "cotton",
+            "confidence": 0.8
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "silhouette": {
+            "value": "straight",
+            "confidence": 0.8
+          },
+          "length": {
+            "value": "full-length",
+            "confidence": 0.8
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "pattern": {
+            "value": "solid",
+            "confidence": 0.8
+          },
+          "details": []
+        }
+      }
+    ],
+    "search_terms": [
+      "neon green kurta set",
+      "perforated kurta",
+      "black pants",
+      "cotton kurta set",
+      "mandarin collar kurta",
+      "straight silhouette kurta"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "kurta set",
+        "confidence": 0.9
+      },
+      "primary_color": {
+        "value": "neon green",
+        "confidence": 0.9
+      },
+      "secondary_color": {
+        "value": "black",
+        "confidence": 0.9
+      },
+      "material_primary": {
+        "value": "cotton",
+        "confidence": 0.8
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 0.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "straight",
+        "confidence": 0.8
+      },
+      "length": {
+        "value": "knee-length",
+        "confidence": 0.8
+      },
+      "neckline": {
+        "value": "mandarin collar",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 0.8
+      },
+      "details": [
+        {
+          "value": "perforated",
+          "confidence": 0.8
+        }
+      ],
+      "price_tier": {
+        "value": "premium",
+        "confidence": 0.9
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 6,
+        "reasoning": "The design is straightforward with minimal embellishments."
+      },
+      "polish": {
+        "score": 7,
+        "reasoning": "The outfit has a refined look with a neat finish."
+      },
+      "body_awareness": {
+        "score": 5,
+        "reasoning": "The silhouette is straight and not form-fitting."
+      },
+      "drama": {
+        "score": 6,
+        "reasoning": "The neon color adds a dramatic flair."
+      },
+      "novelty": {
+        "score": 7,
+        "reasoning": "The use of neon color is unique and eye-catching."
+      },
+      "craft": {
+        "score": 8,
+        "reasoning": "The perforated design indicates a high level of craftsmanship."
+      },
+      "boldness": {
+        "score": 8,
+        "reasoning": "The bold neon color makes a strong statement."
+      },
+      "glamour": {
+        "score": 6,
+        "reasoning": "The outfit has a subtle glamour due to its color and finish."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "Neon colors are currently trending in fashion."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The set can be styled in various ways for different occasions."
+      },
+      "cultural_richness": {
+        "score": 7,
+        "reasoning": "The kurta set is a traditional Indian attire with a modern twist."
+      }
+    },
+    "suggested_vibes": [
+      "Unique Finds",
+      "Dubai Glam",
+      "Cool Girl"
+    ],
+    "primary_vibe": "Unique Finds",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 65,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 65,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-ONB18",
+    "schema_version": "8.3",
+    "brand_sku": "ONB18",
+    "gtf_sku": "GTF-ITRH-ONB18",
+    "product_name": "Emerald Bomber Set",
+    "brand_category": "coord set",
+    "category": "coord set",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/83.webp?v=1767349713",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/85.webp?v=1767349701"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/83.webp?v=1767349713",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/85.webp?v=1767349701",
+    "is_multi_piece": true,
+    "component_count": 2,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "bomber jacket",
+        "role": "outerwear",
+        "visibility": "visible",
+        "confidence": 0.9,
+        "attributes": {
+          "category": {
+            "value": "bomber jacket",
+            "confidence": 0.9
+          },
+          "primary_color": {
+            "value": "emerald",
+            "confidence": 0.9
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "material_primary": {
+            "value": "sequined",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "silhouette": {
+            "value": "relaxed",
+            "confidence": 0.8
+          },
+          "length": {
+            "value": "hip-length",
+            "confidence": 0.8
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "sleeve_length": {
+            "value": "long",
+            "confidence": 0.9
+          },
+          "pattern": {
+            "value": "sequined",
+            "confidence": 0.9
+          },
+          "details": [
+            {
+              "value": "sequined",
+              "confidence": 0.9
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "jeans",
+        "role": "bottom",
+        "visibility": "visible",
+        "confidence": 0.9,
+        "attributes": {
+          "category": {
+            "value": "jeans",
+            "confidence": 0.9
+          },
+          "primary_color": {
+            "value": "blue",
+            "confidence": 0.9
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "material_primary": {
+            "value": "denim",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "silhouette": {
+            "value": "relaxed",
+            "confidence": 0.8
+          },
+          "length": {
+            "value": "full-length",
+            "confidence": 0.9
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "pattern": {
+            "value": "distressed",
+            "confidence": 0.8
+          },
+          "details": [
+            {
+              "value": "distressed",
+              "confidence": 0.8
+            }
+          ]
+        }
+      }
+    ],
+    "search_terms": [
+      "emerald coord set",
+      "sequined bomber jacket",
+      "relaxed bomber jacket",
+      "blue jeans",
+      "distressed jeans",
+      "luxury coord set"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "coord set",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "emerald",
+        "confidence": 0.9
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.0
+      },
+      "material_primary": {
+        "value": "sequined",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 0.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "relaxed",
+        "confidence": 0.8
+      },
+      "length": {
+        "value": "hip-length",
+        "confidence": 0.8
+      },
+      "neckline": {
+        "value": "none",
+        "confidence": 0.0
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "sequined",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "sequined",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 0.9
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The set is embellished with sequins, reducing minimalism."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "The sequined material and coordinated look add polish."
+      },
+      "body_awareness": {
+        "score": 5,
+        "reasoning": "The relaxed silhouette provides moderate body awareness."
+      },
+      "drama": {
+        "score": 7,
+        "reasoning": "The sequins and bold color contribute to a dramatic look."
+      },
+      "novelty": {
+        "score": 6,
+        "reasoning": "The use of sequins and color adds novelty."
+      },
+      "craft": {
+        "score": 7,
+        "reasoning": "The sequined detailing indicates a high level of craft."
+      },
+      "boldness": {
+        "score": 8,
+        "reasoning": "The bold color and sequins make a strong statement."
+      },
+      "glamour": {
+        "score": 9,
+        "reasoning": "The sequined material and coordinated style are highly glamorous."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "The set aligns with current trends in coordinated and sequined fashion."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The set can be styled in various ways due to its bold elements."
+      },
+      "cultural_richness": {
+        "score": 5,
+        "reasoning": "The design has moderate cultural richness due to its unique style."
+      }
+    },
+    "suggested_vibes": [
+      "Glam",
+      "Dubai Glam",
+      "Winter Holidays"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 63,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 63,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 69,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 60,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 62,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 62,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 64,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-DC22W034",
+    "schema_version": "8.3",
+    "brand_sku": "DC22W034",
+    "gtf_sku": "GTF-ITRH-DC22W034",
+    "product_name": "Daffodil Lehenga",
+    "brand_category": "lehenga",
+    "category": "lehenga",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/Itrhdelhi-21-dec-212775.jpg?v=1673836708",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/Itrhdelhi-21-dec-212796.jpg?v=1673836708"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/Itrhdelhi-21-dec-212775.jpg?v=1673836708",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/Itrhdelhi-21-dec-212796.jpg?v=1673836708",
+    "is_multi_piece": true,
+    "component_count": 3,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "blouse",
+        "role": "top",
+        "visibility": "visible",
+        "confidence": 0.9,
+        "attributes": {
+          "category": {
+            "value": "blouse",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "yellow",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "silk",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "fitted",
+            "confidence": 0.9
+          },
+          "length": {
+            "value": "cropped",
+            "confidence": 0.9
+          },
+          "neckline": {
+            "value": "v-neck",
+            "confidence": 0.9
+          },
+          "sleeve_length": {
+            "value": "long",
+            "confidence": 0.9
+          },
+          "pattern": {
+            "value": "embellished",
+            "confidence": 0.9
+          },
+          "details": [
+            {
+              "value": "sequins",
+              "confidence": 0.9
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "lehenga skirt",
+        "role": "bottom",
+        "visibility": "visible",
+        "confidence": 0.9,
+        "attributes": {
+          "category": {
+            "value": "lehenga skirt",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "yellow",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "silk",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "flared",
+            "confidence": 0.9
+          },
+          "length": {
+            "value": "floor-length",
+            "confidence": 1.0
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "embellished",
+            "confidence": 0.9
+          },
+          "details": [
+            {
+              "value": "sequins",
+              "confidence": 0.9
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 3,
+        "piece_type": "dupatta",
+        "role": "layer",
+        "visibility": "visible",
+        "confidence": 0.9,
+        "attributes": {
+          "category": {
+            "value": "dupatta",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "yellow",
+            "confidence": 1.0
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "material_primary": {
+            "value": "silk",
+            "confidence": 0.9
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "silhouette": {
+            "value": "draped",
+            "confidence": 0.9
+          },
+          "length": {
+            "value": "long",
+            "confidence": 0.9
+          },
+          "neckline": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 1.0
+          },
+          "pattern": {
+            "value": "embellished",
+            "confidence": 0.9
+          },
+          "details": [
+            {
+              "value": "sequins",
+              "confidence": 0.9
+            }
+          ]
+        }
+      }
+    ],
+    "search_terms": [
+      "yellow lehenga",
+      "silk lehenga",
+      "flared lehenga",
+      "embellished lehenga",
+      "lehenga set",
+      "blouse",
+      "lehenga skirt",
+      "dupatta",
+      "sequins lehenga"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "lehenga",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "yellow",
+        "confidence": 1.0
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_primary": {
+        "value": "silk",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "flared",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "floor-length",
+        "confidence": 1.0
+      },
+      "neckline": {
+        "value": "v-neck",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "embellished",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "sequins",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 1.0
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 2,
+        "reasoning": "The lehenga is heavily embellished with sequins."
+      },
+      "polish": {
+        "score": 9,
+        "reasoning": "The garment has a high level of finish and luxury appeal."
+      },
+      "body_awareness": {
+        "score": 6,
+        "reasoning": "The fitted blouse enhances body awareness."
+      },
+      "drama": {
+        "score": 8,
+        "reasoning": "The flared silhouette and embellishments add drama."
+      },
+      "novelty": {
+        "score": 5,
+        "reasoning": "The design is traditional with a modern color twist."
+      },
+      "craft": {
+        "score": 9,
+        "reasoning": "High craftsmanship evident in the detailed embellishments."
+      },
+      "boldness": {
+        "score": 7,
+        "reasoning": "The bright color and embellishments make a bold statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The lehenga is highly glamorous with its luxurious materials and design."
+      },
+      "trend_currency": {
+        "score": 6,
+        "reasoning": "The lehenga aligns with current trends in occasion wear."
+      },
+      "styling_affordance": {
+        "score": 7,
+        "reasoning": "The lehenga can be styled in various ways for different occasions."
+      },
+      "cultural_richness": {
+        "score": 10,
+        "reasoning": "The lehenga is rich in cultural significance and traditional design."
+      }
+    },
+    "suggested_vibes": [
+      "Dubai Glam",
+      "Glam",
+      "Winter Holidays"
+    ],
+    "primary_vibe": "Dubai Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 69,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 79,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 65,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 69,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-DCCO503",
+    "schema_version": "8.3",
+    "brand_sku": "DCCO503",
+    "gtf_sku": "GTF-ITRH-DCCO503",
+    "product_name": "Dazzling Regal Glamour",
+    "brand_category": "occasionwear",
+    "category": "occasionwear",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/IMG_6136.jpg?v=1703868412",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/IMG_6135.jpg?v=1703868412"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/IMG_6136.jpg?v=1703868412",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/IMG_6135.jpg?v=1703868412",
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "blue jumpsuit",
+      "sequined jumpsuit",
+      "draped jumpsuit",
+      "v-neck jumpsuit",
+      "full-length jumpsuit"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "jumpsuit",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "blue",
+        "confidence": 0.95
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.95
+      },
+      "material_primary": {
+        "value": "sequined",
+        "confidence": 0.95
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 0.95
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "full-length",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "v-neck",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "draped",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 0.95
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The sequined material and draped details add complexity."
+      },
+      "polish": {
+        "score": 9,
+        "reasoning": "High-quality materials and elegant design contribute to a polished look."
+      },
+      "body_awareness": {
+        "score": 7,
+        "reasoning": "The fitted silhouette accentuates the body shape."
+      },
+      "drama": {
+        "score": 8,
+        "reasoning": "The sequins and bold color create a dramatic effect."
+      },
+      "novelty": {
+        "score": 6,
+        "reasoning": "The design is unique but follows current fashion trends."
+      },
+      "craft": {
+        "score": 9,
+        "reasoning": "High attention to detail and quality craftsmanship."
+      },
+      "boldness": {
+        "score": 8,
+        "reasoning": "The vibrant color and sequins make a bold statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The overall look is very glamorous and suitable for high-end occasions."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "The style is trendy and in line with current fashion."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The piece can be styled in various ways but is quite distinctive on its own."
+      },
+      "cultural_richness": {
+        "score": 5,
+        "reasoning": "The design is modern with limited cultural references."
+      }
+    },
+    "suggested_vibes": [
+      "Glam",
+      "Dubai Glam",
+      "Winter Holidays"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 65,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 78,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 69,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 71,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 73,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-SHR25B",
+    "schema_version": "8.3",
+    "brand_sku": "SHR25B",
+    "gtf_sku": "GTF-ITRH-SHR25B",
+    "product_name": "Sharifa Abaya Set-B",
+    "brand_category": "set",
+    "category": "set",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/01-04-25Itrh.5076.jpg?v=1756278668",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/01-04-25Itrh.5076.jpg?v=1756278668"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/01-04-25Itrh.5076.jpg?v=1756278668",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/files/01-04-25Itrh.5076.jpg?v=1756278668",
+    "is_multi_piece": true,
+    "component_count": 2,
+    "components": [
+      {
+        "component_index": 1,
+        "piece_type": "abaya",
+        "role": "outerwear",
+        "visibility": "visible",
+        "confidence": 0.9,
+        "attributes": {
+          "category": {
+            "value": "abaya",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "white",
+            "confidence": 0.9
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "material_primary": {
+            "value": "silk",
+            "confidence": 0.8
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "silhouette": {
+            "value": "flowy",
+            "confidence": 0.9
+          },
+          "length": {
+            "value": "floor-length",
+            "confidence": 0.9
+          },
+          "neckline": {
+            "value": "open",
+            "confidence": 0.8
+          },
+          "sleeve_length": {
+            "value": "long",
+            "confidence": 0.9
+          },
+          "pattern": {
+            "value": "solid",
+            "confidence": 0.8
+          },
+          "details": [
+            {
+              "value": "embellished",
+              "confidence": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "component_index": 2,
+        "piece_type": "dress",
+        "role": "one_piece",
+        "visibility": "visible",
+        "confidence": 0.9,
+        "attributes": {
+          "category": {
+            "value": "dress",
+            "confidence": 1.0
+          },
+          "primary_color": {
+            "value": "silver",
+            "confidence": 0.9
+          },
+          "secondary_color": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "material_primary": {
+            "value": "silk",
+            "confidence": 0.8
+          },
+          "material_secondary": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "silhouette": {
+            "value": "straight",
+            "confidence": 0.9
+          },
+          "length": {
+            "value": "floor-length",
+            "confidence": 0.9
+          },
+          "neckline": {
+            "value": "round",
+            "confidence": 0.8
+          },
+          "sleeve_length": {
+            "value": "none",
+            "confidence": 0.0
+          },
+          "pattern": {
+            "value": "solid",
+            "confidence": 0.8
+          },
+          "details": [
+            {
+              "value": "embellished",
+              "confidence": 0.8
+            }
+          ]
+        }
+      }
+    ],
+    "search_terms": [
+      "abaya set",
+      "white abaya",
+      "silver dress",
+      "silk abaya",
+      "embellished dress",
+      "floor-length set"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "set",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "white",
+        "confidence": 0.9
+      },
+      "secondary_color": {
+        "value": "silver",
+        "confidence": 0.9
+      },
+      "material_primary": {
+        "value": "silk",
+        "confidence": 0.8
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 0.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "flowy",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "floor-length",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "round",
+        "confidence": 0.8
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 0.8
+      },
+      "details": [
+        {
+          "value": "embellished",
+          "confidence": 0.8
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 0.9
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The set has a simple silhouette but includes embellishments."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "High-quality materials and finish."
+      },
+      "body_awareness": {
+        "score": 5,
+        "reasoning": "The flowy silhouette provides moderate body awareness."
+      },
+      "drama": {
+        "score": 7,
+        "reasoning": "The floor-length and embellishments add drama."
+      },
+      "novelty": {
+        "score": 6,
+        "reasoning": "Unique design elements in the embellishments."
+      },
+      "craft": {
+        "score": 8,
+        "reasoning": "High craftsmanship evident in the detailing."
+      },
+      "boldness": {
+        "score": 5,
+        "reasoning": "The set is elegant but not overly bold."
+      },
+      "glamour": {
+        "score": 9,
+        "reasoning": "Luxurious materials and design contribute to glamour."
+      },
+      "trend_currency": {
+        "score": 6,
+        "reasoning": "The style is classic with some trendy elements."
+      },
+      "styling_affordance": {
+        "score": 7,
+        "reasoning": "Versatile for various formal occasions."
+      },
+      "cultural_richness": {
+        "score": 8,
+        "reasoning": "Reflects cultural elements in design."
+      }
+    },
+    "suggested_vibes": [
+      "Dubai Glam",
+      "Winter Holidays",
+      "Glam"
+    ],
+    "primary_vibe": "Dubai Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 64,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 62,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 62,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 63,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 64,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 65,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 64,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  },
+  {
+    "product_id": "GTF-ITRH-DCSR527",
+    "schema_version": "8.3",
+    "brand_sku": "DCSR527",
+    "gtf_sku": "GTF-ITRH-DCSR527",
+    "product_name": "Citrine Crystal Radiance Slit Skirt",
+    "brand_category": "SKIRT",
+    "category": "SKIRT",
+    "source_truth": {
+      "run_id": "d2b289f8",
+      "review_status": "approved",
+      "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/DCSR527_1_58d8f1c1-90ac-4ce8-a9a3-fd1836749c89.jpg?v=1709394415",
+      "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/DCSR527_4_1342e08c-27b9-41e2-baad-2656489209e0.jpg?v=1709394415"
+    },
+    "final_primary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/DCSR527_1_58d8f1c1-90ac-4ce8-a9a3-fd1836749c89.jpg?v=1709394415",
+    "final_secondary_image": "https://cdn.shopify.com/s/files/1/0692/8564/2553/products/DCSR527_4_1342e08c-27b9-41e2-baad-2656489209e0.jpg?v=1709394415",
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "yellow skirt",
+      "crystal skirt",
+      "draped skirt",
+      "slit skirt",
+      "luxury skirt"
+    ],
+    "hard_attributes": {
+      "category": {
+        "value": "skirt",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "yellow",
+        "confidence": 1.0
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_primary": {
+        "value": "crystal",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_source": "image-extracted",
+      "silhouette": {
+        "value": "draped",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "maxi",
+        "confidence": 1.0
+      },
+      "neckline": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "sleeve_length": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 1.0
+      },
+      "details": [
+        {
+          "value": "slit",
+          "confidence": 0.9
+        },
+        {
+          "value": "crystal embellishment",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "luxury",
+        "confidence": 1.0
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 3,
+        "reasoning": "The skirt has a simple silhouette but is heavily embellished."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "The crystal embellishments add a polished and luxurious feel."
+      },
+      "body_awareness": {
+        "score": 7,
+        "reasoning": "The draped silhouette and slit highlight the body shape."
+      },
+      "drama": {
+        "score": 9,
+        "reasoning": "The bold color and crystal embellishments create a dramatic effect."
+      },
+      "novelty": {
+        "score": 6,
+        "reasoning": "The use of crystals and the draped design add novelty."
+      },
+      "craft": {
+        "score": 8,
+        "reasoning": "The craftsmanship is evident in the detailed embellishments."
+      },
+      "boldness": {
+        "score": 9,
+        "reasoning": "The bright color and embellishments make a bold statement."
+      },
+      "glamour": {
+        "score": 10,
+        "reasoning": "The skirt is highly glamorous due to its luxurious materials and design."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "The style is trendy with its modern draping and embellishments."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The skirt can be styled for high-end occasions but is less versatile for casual wear."
+      },
+      "cultural_richness": {
+        "score": 5,
+        "reasoning": "The design incorporates elements that could be culturally inspired."
+      }
+    },
+    "suggested_vibes": [
+      "Glam",
+      "Dubai Glam",
+      "Sexy Elegant"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Beach & Resort": {
+        "score": 69,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Cool Girl": {
+        "score": 68,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Dubai Glam": {
+        "score": 76,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated Basics / Hailey Bieber": {
+        "score": 63,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Elevated City": {
+        "score": 66,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Glam": {
+        "score": 79,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "IT Girl": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Old Money": {
+        "score": 67,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Sexy Elegant": {
+        "score": 75,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Unique Finds": {
+        "score": 70,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Wedding Guest": {
+        "score": 72,
+        "source": "production_vibe_mapper_axis_vectors"
+      },
+      "Winter Holidays": {
+        "score": 74,
+        "source": "production_vibe_mapper_axis_vectors"
+      }
+    },
+    "gpt_suggested_vibes": [],
+    "vibe_review_status": "pending_ar_vibe_review",
+    "vibe_source": "production_vibe_mapper_axis_vectors",
+    "product_tier": "REVIEW",
+    "review_needed": [
+      "taste_lab_human_review"
+    ],
+    "manual_needed": []
+  }
+]

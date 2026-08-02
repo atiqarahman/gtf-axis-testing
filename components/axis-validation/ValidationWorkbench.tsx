@@ -5,7 +5,7 @@ import { Download, AlertTriangle, Check, ChevronLeft, ChevronRight, SlidersHoriz
 import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer } from 'recharts'
 import { AXES, VIBES, canonicalizeVibe, type AxisId, type VibeId } from '@/lib/axis-validation/constants'
 import { AXIS_RUBRICS, AXIS_RUBRIC_VERSION } from '@/lib/axis-validation/rubric'
-import { loadValidationData, type QaSummary, type ValidationItem } from '@/lib/axis-validation/loadData'
+import { loadValidationData, type DatasetVersion, type QaSummary, type ValidationItem } from '@/lib/axis-validation/loadData'
 import { resolveImage } from '@/lib/axis-validation/imageResolver'
 import { confidenceTier, getEnumForAttribute, normalizeValue } from '@/lib/axis-validation/normalization'
 import type { ComponentReview, ExtractionComponent, ProductReview, SearchMatchReason, VibeBoostSuggestion, VibeReview } from '@/lib/axis-validation/types'
@@ -70,9 +70,10 @@ export default function ValidationWorkbench() {
   const [tier, setTier] = useState('all')
   const [category, setCategory] = useState('all')
   const [queue, setQueue] = useState('all')
-  const [datasetVersion, setDatasetVersion] = useState<'v8.2' | 'v8.3'>(() => {
+  const [datasetVersion, setDatasetVersion] = useState<DatasetVersion>(() => {
     if (typeof window === 'undefined') return 'v8.3'
-    return new URLSearchParams(window.location.search).get('version') === 'v8.2' ? 'v8.2' : 'v8.3'
+    const version = new URLSearchParams(window.location.search).get('version')
+    return version === 'v8.2' || version === 'v8.3-itrh-20' ? version : 'v8.3'
   })
   const [query, setQuery] = useState('')
   const [showQa, setShowQa] = useState(false)
@@ -251,8 +252,8 @@ export default function ValidationWorkbench() {
     const r = reviews[i.product_id]
     return !(r?.image_resolution_status === 'approved' && r.selected_image_path) && r?.image_resolution_status !== 'no_valid_candidate'
   }).map((i) => i.product_id)), [qa, reviews])
-  const approvedImageIds = useMemo(() => new Set(Object.values(reviews).filter((r) => r.image_resolution_status === 'approved').map((r) => r.product_id)), [reviews])
-  const failedImageIds = useMemo(() => new Set(Object.values(reviews).filter((r) => r.image_resolution_status === 'no_valid_candidate').map((r) => r.product_id)), [reviews])
+  const approvedImageIds = useMemo(() => { const ids = new Set(activeItems.map((i) => i.product.product_id)); return new Set(Object.values(reviews).filter((r) => ids.has(r.product_id) && r.image_resolution_status === 'approved').map((r) => r.product_id)) }, [activeItems, reviews])
+  const failedImageIds = useMemo(() => { const ids = new Set(activeItems.map((i) => i.product.product_id)); return new Set(Object.values(reviews).filter((r) => ids.has(r.product_id) && r.image_resolution_status === 'no_valid_candidate').map((r) => r.product_id)) }, [activeItems, reviews])
   const isMultiPiece = (item: ValidationItem) => Boolean(item.extraction.is_multi_piece || (item.extraction.components?.length ?? 0) > 0)
   const singleCount = activeItems.filter((item) => !isMultiPiece(item)).length
   const multiCount = activeItems.filter(isMultiPiece).length
@@ -377,8 +378,8 @@ export default function ValidationWorkbench() {
     }
   }
   function exportJson() {
-    const blob = new Blob([JSON.stringify(Object.values(reviews).map(enrichedReview), null, 2)], { type: 'application/json' })
-    downloadBlob(blob, `gtf-axis-reviews-${new Date().toISOString().slice(0,10)}.json`)
+    const blob = new Blob([JSON.stringify(activeReviewList.map(enrichedReview), null, 2)], { type: 'application/json' })
+    downloadBlob(blob, `gtf-axis-reviews-${datasetVersion}-${new Date().toISOString().slice(0,10)}.json`)
   }
   async function persistNow(nextReviews = reviews, source = 'manual_save') {
     const response = await fetch('/api/reviews', {
@@ -419,7 +420,7 @@ export default function ValidationWorkbench() {
   }
 
   function exportCsv() {
-    const rows = Object.values(reviews).map((r) => {
+    const rows = activeReviewList.map((r) => {
       const source = items.find((i) => i.product.product_id === r.product_id)
       return {
         product_id: r.product_id,
@@ -469,7 +470,7 @@ export default function ValidationWorkbench() {
     })
     const header = Object.keys(rows[0] ?? { product_id: '', overall_decision: '' })
     const csv = [header.join(','), ...rows.map((row) => header.map((h) => JSON.stringify((row as any)[h] ?? '')).join(','))].join('\n')
-    downloadBlob(new Blob([csv], { type: 'text/csv' }), `gtf-axis-reviews-${new Date().toISOString().slice(0,10)}.csv`)
+    downloadBlob(new Blob([csv], { type: 'text/csv' }), `gtf-axis-reviews-${datasetVersion}-${new Date().toISOString().slice(0,10)}.csv`)
   }
 
   if (!item || !review) return <div className="loading">Loading GTF Axis Validation…</div>
@@ -510,7 +511,7 @@ export default function ValidationWorkbench() {
       </section>
 
       <section className="toolbar taste-toolbar">
-        <select value={datasetVersion} onChange={(e) => { setDatasetVersion(e.target.value as 'v8.2' | 'v8.3'); setBrand('all'); setCategory('all'); setQueue('all'); setTier('all'); setQuery(''); setIndex(0); setReviews({}) }}><option value="v8.3">v8.3 staged — AFROPOP + TOD vibes</option><option value="v8.2">v8.2 TOD baseline</option></select>
+        <select value={datasetVersion} onChange={(e) => { setDatasetVersion(e.target.value as DatasetVersion); setBrand('all'); setCategory('all'); setQueue('all'); setTier('all'); setQuery(''); setIndex(0); setReviews({}) }}><option value="v8.3-itrh-20">ITRH 20 · AR Taste Lab batch</option><option value="v8.3">v8.3 staged — AFROPOP + TOD vibes</option><option value="v8.2">v8.2 TOD baseline</option></select>
         <input placeholder="Search products, brands, SKUs…" value={query} onChange={(e) => { setQuery(e.target.value); setIndex(0) }} />
         <select value={brand} onChange={(e) => { setBrand(e.target.value); setIndex(0) }}><option value="all">All brands</option>{brands.map((b) => <option key={b}>{b}</option>)}</select>
         <select value={tier} onChange={(e) => { setTier(e.target.value); setIndex(0) }}><option value="all">All pipeline tiers</option><option>AUTO</option><option>REVIEW</option><option>MANUAL</option></select>
@@ -643,6 +644,7 @@ function Meta({ item, image }: { item: ValidationItem; image: any }) {
   const primary = sourceTruthImageUrl(item.extraction.source_truth?.final_primary_image ?? item.extraction.final_primary_image) || image.src
   const secondary = sourceTruthImageUrl(item.extraction.source_truth?.final_secondary_image ?? item.extraction.final_secondary_image) || image.candidates?.[1]?.src
   return <section className="card"><div className="card-title"><h3>Product metadata</h3><Badge tone={item.extraction.product_tier === 'AUTO' ? 'green' : item.extraction.product_tier === 'REVIEW' ? 'amber' : 'red'}>Product tier: {item.extraction.product_tier}</Badge></div>
+    {(primary || secondary) && <div className="source-image-pair">{primary && <figure><img src={primary} alt={`${item.product.title} approved primary`} /><figcaption>Approved primary</figcaption></figure>}{secondary && <figure><img src={secondary} alt={`${item.product.title} approved secondary`} /><figcaption>Approved secondary</figcaption></figure>}</div>}
     <div className="meta-grid"><span>Catalog category</span><b>{item.product.category}</b><span>Brand category</span><b>{item.extraction.brand_category ?? item.product.category ?? '—'}</b><span>Extracted category</span><b>{item.extraction.hard_attributes.category?.value}</b><span>Schema</span><b>{item.extraction.schema_version}</b><span>Confidence</span><b>{item.extraction.confidence ?? '—'}</b><span>Review needed</span><b>{item.extraction.review_needed?.join(', ') || 'None'}</b><span>Manual needed</span><b>{item.extraction.manual_needed?.join(', ') || 'None'}</b><span>Catalog image ref</span><code>{item.product.image_file || '—'}</code><span>Source Truth primary</span>{primary ? <a href={primary} target="_blank">open final primary</a> : <b>—</b>}<span>Source Truth secondary</span>{secondary ? <a href={secondary} target="_blank">open final secondary</a> : <b>—</b>}</div>
   </section>
 }
@@ -747,7 +749,7 @@ function VibePanel({ item, review, saveReview }: { item: ValidationItem; review:
   const computed = Object.entries(item.extraction.all_vibe_scores ?? {}).sort((a,b) => vibeScoreValue(b[1]) - vibeScoreValue(a[1])).slice(0, 12).map(([label, obj]) => ({ label, score: vibeScoreValue(obj), source: 'computed' as const }))
   const gpt = (item.extraction.gpt_suggested_vibes ?? []).map((label) => ({ label, score: undefined, source: 'gpt' as const }))
   const pending = item.extraction.vibe_review_status === 'pending_ar_vibe_review'
-  return <section className="card vibe-card"><div className="section-kicker">AI style alignment {pending ? '· pending AR vibe review' : ''}</div><h3>Suggested vibe validation</h3><p className="hint">Computed vector vibes and GPT suggestions are separate. For v8.3 AFROPOP + TOD these are visible for AR calibration only — not production-approved product truth until AR/Zoya signs off. Agree when the taste feels right; disagree only when the vibe is wrong. Use “Should also rank high” when another vibe deserves a boost without marking the current vibe wrong.</p>{pending && <p className="v82-warning">Vibe status: computed / pending AR approval. Do not treat as production-approved yet.</p>}{computed.length || gpt.length ? <div className="vibe-list">{[...computed.slice(0,3), ...gpt].map((v, idx) => <VibeRow key={`${v.source}-${v.label}-${idx}`} vibe={v} review={review} saveReview={saveReview} />)}</div> : <p className="v82-warning">No computed vibe scores found for this row yet. Review extraction/components first, then run the production vibe scoring pass.</p>}<VibeBoostPanel review={review} saveReview={saveReview}/>{computed.length > 0 && <details open><summary>Show all computed vibe scores</summary>{computed.map((v) => <div key={v.label} className="score-row"><span>{v.label}</span><progress max={100} value={v.score}/><b>{v.score.toFixed(1)}</b></div>)}</details>}</section>
+  return <section className="card vibe-card"><div className="section-kicker">AI style alignment {pending ? '· pending AR vibe review' : ''}</div><h3>Suggested vibe validation</h3><p className="hint">Computed vector vibes and GPT suggestions are separate. These scores are visible for AR calibration only and are not production-approved product truth until AR signs off. Agree when the taste feels right; disagree only when the vibe is wrong. Use “Should also rank high” when another vibe deserves a boost without marking the current vibe wrong.</p>{pending && <p className="v82-warning">Vibe status: computed / pending AR approval. Do not treat as production-approved yet.</p>}{computed.length || gpt.length ? <div className="vibe-list">{[...computed.slice(0,3), ...gpt].map((v, idx) => <VibeRow key={`${v.source}-${v.label}-${idx}`} vibe={v} review={review} saveReview={saveReview} />)}</div> : <p className="v82-warning">No computed vibe scores found for this row yet. Review extraction/components first, then run the production vibe scoring pass.</p>}<VibeBoostPanel review={review} saveReview={saveReview}/>{computed.length > 0 && <details open><summary>Show all computed vibe scores</summary>{computed.map((v) => <div key={v.label} className="score-row"><span>{v.label}</span><progress max={100} value={v.score}/><b>{v.score.toFixed(1)}</b></div>)}</details>}</section>
 }
 
 
