@@ -1,0 +1,241 @@
+{
+  "generated_at": "2026-05-31T04:14:12.803Z",
+  "source": "production_vibe_mapper_v2_polarized",
+  "count": 307,
+  "average_spread": 65.28,
+  "min_spread": 31,
+  "max_spread": 78,
+  "audit": {
+    "GTF-AFROPOP-APAP25001": {
+      "product_name": "GEOMETRIC FUCHSIA PINK DRAPED DRESS WITH HAND EMBROIDERY",
+      "ranked": [
+        {
+          "displayName": "Dubai Glam",
+          "score": 98,
+          "raw_score": 92.8,
+          "adjustment": 8
+        },
+        {
+          "displayName": "Glam",
+          "score": 93,
+          "raw_score": 82.57,
+          "adjustment": 10
+        },
+        {
+          "displayName": "Wedding Guest",
+          "score": 89,
+          "raw_score": 76.85,
+          "adjustment": 12
+        },
+        {
+          "displayName": "Unique Finds",
+          "score": 80,
+          "raw_score": 76.22,
+          "adjustment": 4
+        },
+        {
+          "displayName": "Sexy Elegant",
+          "score": 68,
+          "raw_score": 67.98,
+          "adjustment": 0
+        },
+        {
+          "displayName": "IT Girl",
+          "score": 62,
+          "raw_score": 61.85,
+          "adjustment": 0
+        },
+        {
+          "displayName": "Winter Holidays",
+          "score": 59,
+          "raw_score": 58.66,
+          "adjustment": 0
+        },
+        {
+          "displayName": "Cool Girl",
+          "score": 34,
+          "raw_score": 45.82,
+          "adjustment": -12
+        },
+        {
+          "displayName": "Beach & Resort",
+          "score": 20,
+          "raw_score": 15.85,
+          "adjustment": -18
+        },
+        {
+          "displayName": "Elevated Basics / Hailey Bieber",
+          "score": 20,
+          "raw_score": 11.24,
+          "adjustment": -18
+        },
+        {
+          "displayName": "Elevated City",
+          "score": 20,
+          "raw_score": 16,
+          "adjustment": -12
+        },
+        {
+          "displayName": "Old Money",
+          "score": 20,
+          "raw_score": 21.41,
+          "adjustment": -18
+        }
+      ]
+    },
+    "GTF-AFROPOP-APAP25002": {
+      "product_name": "BEIGE FAUX LEATHER HAND DETAILD BRALETTE",
+      "ranked": [
+        {
+          "displayName": "Sexy Elegant",
+          "score": 95,
+          "raw_score": 69.45,
+          "adjustment": 26
+        },
+        {
+          "displayName": "IT Girl",
+          "score": 86,
+          "raw_score": 67.95,
+          "adjustment": 18
+        },
+        {
+          "displayName": "Cool Girl",
+          "score": 85,
+          "raw_score": 58.84,
+          "adjustment": 26
+        },
+        {
+          "displayName": "Glam",
+          "score": 70,
+          "raw_score": 62.23,
+          "adjustment": 8
+        },
+        {
+          "displayName": "Dubai Glam",
+          "score": 54,
+          "raw_score": 53.76,
+          "adjustment": 0
+        },
+        {
+          "displayName": "Elevated Basics / Hailey Bieber",
+          "score": 47,
+          "raw_score": 46.98,
+          "adjustment": 0
+        },
+        {
+          "displayName": "Unique Finds",
+          "score": 47,
+          "raw_score": 46.65,
+          "adjustment": 0
+        },
+        {
+          "displayName": "Beach & Resort",
+          "score": 42,
+          "raw_score": 41.84,
+          "adjustment": 0
+        },
+        {
+          "displayName": "Elevated City",
+          "score": 42,
+          "raw_score": 50.19,
+          "adjustment": -8
+        },
+        {
+          "displayName": "Winter Holidays",
+          "score": 38,
+          "raw_score": 37.96,
+          "adjustment": 0
+        },
+        {
+          "displayName": "Wedding Guest",
+          "score": 35,
+          "raw_score": 47.22,
+          "adjustment": -12
+        },
+        {
+          "displayName": "Old Money",
+          "score": 21,
+          "raw_score": 45.29,
+          "adjustment": -24
+        }
+      ]
+    },
+    "GTF-AFROPOP-APAP25003": {
+      "product_name": "HEMP DENIM PANTSUIT WITH TOPSTITCH DETAILS",
+      "ranked": [
+        {
+          "displayName": "Cool Girl",
+          "score": 92,
+          "raw_score": 52.33,
+          "adjustment": 40
+        },
+        {
+          "displayName": "Elevated City",
+          "score": 84,
+          "raw_score": 76.28,
+          "adjustment": 8
+        },
+        {
+          "displayName": "Elevated Basics / Hailey Bieber",
+          "score": 76,
+          "raw_score": 71.33,
+          "adjustment": 5
+        },
+        {
+          "displayName": "Winter Holidays",
+          "score": 59,
+          "raw_score": 59.16,
+          "adjustment": 0
+        },
+        {
+          "displayName": "IT Girl",
+          "score": 57,
+          "raw_score": 44.71,
+          "adjustment": 12
+        },
+        {
+          "displayName": "Old Money",
+          "score": 55,
+          "raw_score": 80.33,
+          "adjustment": -25
+        },
+        {
+          "displayName": "Beach & Resort",
+          "score": 45,
+          "raw_score": 63.33,
+          "adjustment": -18
+        },
+        {
+          "displayName": "Sexy Elegant",
+          "score": 45,
+          "raw_score": 44.56,
+          "adjustment": 0
+        },
+        {
+          "displayName": "Unique Finds",
+          "score": 45,
+          "raw_score": 45.18,
+          "adjustment": 0
+        },
+        {
+          "displayName": "Wedding Guest",
+          "score": 36,
+          "raw_score": 54.11,
+          "adjustment": -18
+        },
+        {
+          "displayName": "Glam",
+          "score": 26,
+          "raw_score": 44.5,
+          "adjustment": -18
+        },
+        {
+          "displayName": "Dubai Glam",
+          "score": 25,
+          "raw_score": 42.91,
+          "adjustment": -18
+        }
+      ]
+    }
+  }
+}

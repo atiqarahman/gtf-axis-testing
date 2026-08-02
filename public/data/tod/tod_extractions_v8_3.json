@@ -1,0 +1,1823 @@
+[
+  {
+    "product_id": "GTF-TOD-021010139510ONESIZE1PETITE",
+    "schema_version": "8.3",
+    "extraction_status": "ok",
+    "brand_category": "Dresses",
+    "target_scope": "single_garment",
+    "source_truth": {
+      "run_id": "3db82f22",
+      "review_status": "approved",
+      "final_primary_image": "/source-truth/drive-image/1TJaQ9wPR22O9eWZVDmTLq_MbfNdMeJ19",
+      "final_secondary_image": "/source-truth/drive-image/1hv8viAqsUou5m9vhxl2PRipKpZfvJm2e"
+    },
+    "hard_attributes": {
+      "category": {
+        "value": "dress",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "chocolate",
+        "confidence": 1.0
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_primary": {
+        "value": "cotton",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "acrylic",
+        "confidence": 0.9
+      },
+      "material_source": "brand-provided",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 1.0
+      },
+      "length": {
+        "value": "maxi",
+        "confidence": 1.0
+      },
+      "neckline": {
+        "value": "spaghetti",
+        "confidence": 1.0
+      },
+      "sleeve_length": {
+        "value": "sleeveless",
+        "confidence": 1.0
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 1.0
+      },
+      "details": [
+        {
+          "value": "spaghetti-strap",
+          "confidence": 1.0
+        }
+      ],
+      "price_tier": {
+        "value": "mid",
+        "confidence": 0.8
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 8,
+        "reasoning": "The dress has a simple, elegant design with minimal embellishments."
+      },
+      "polish": {
+        "score": 7,
+        "reasoning": "The fitted silhouette and clean lines contribute to a polished look."
+      },
+      "body_awareness": {
+        "score": 9,
+        "reasoning": "The fitted silhouette accentuates the body's shape."
+      },
+      "drama": {
+        "score": 6,
+        "reasoning": "The maxi length adds a touch of drama."
+      },
+      "novelty": {
+        "score": 5,
+        "reasoning": "The design is classic with no unique or novel elements."
+      },
+      "craft": {
+        "score": 7,
+        "reasoning": "The material and construction appear to be of good quality."
+      },
+      "boldness": {
+        "score": 5,
+        "reasoning": "The solid color and simple design are not particularly bold."
+      },
+      "glamour": {
+        "score": 7,
+        "reasoning": "The dress has a glamorous appeal due to its fitted silhouette and length."
+      },
+      "trend_currency": {
+        "score": 6,
+        "reasoning": "The dress aligns with current trends in minimalistic fashion."
+      },
+      "styling_affordance": {
+        "score": 8,
+        "reasoning": "The dress can be styled in various ways for different occasions."
+      },
+      "cultural_richness": {
+        "score": 4,
+        "reasoning": "The design does not incorporate culturally rich elements."
+      }
+    },
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "chocolate dress",
+      "fitted maxi dress",
+      "spaghetti strap dress",
+      "cotton acrylic dress"
+    ],
+    "suggested_vibes": [
+      "Glam",
+      "Sexy Elegant",
+      "Elevated City"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Old Money": 5,
+      "Glam": 8,
+      "Cool Girl": 6,
+      "Sexy Elegant": 7,
+      "Wedding Guest": 6,
+      "Dubai Glam": 7,
+      "Elevated City": 7,
+      "Winter Holidays": 5,
+      "Beach & Resort": 4,
+      "IT Girl": 6,
+      "Elevated Basics / Hailey Bieber": 5,
+      "Unique Finds": 4
+    },
+    "gpt_suggested_vibes": [
+      "Glam",
+      "Sexy Elegant",
+      "Elevated City"
+    ],
+    "product_tier": "mid",
+    "review_needed": [],
+    "manual_needed": [],
+    "reasoning_trace": {
+      "color_determination": "Based on the image, the primary color is chocolate.",
+      "material_determination": "Material is based on brand-provided data.",
+      "silhouette_determination": "The dress is fitted as seen in the image.",
+      "length_determination": "The dress is maxi length as it reaches the floor.",
+      "neckline_determination": "The dress has spaghetti straps as visible in the image.",
+      "sleeve_length_determination": "The dress is sleeveless with spaghetti straps."
+    },
+    "meta": {
+      "mode": "catalog",
+      "confidence": "high",
+      "schema_version": "8.3",
+      "prompt_guard_version": "v8.3-refinement-spec-may29",
+      "extraction_notes": null,
+      "model": "gpt-4o",
+      "source": "tod_v83_gpt_extraction",
+      "generated_at": "2026-05-29T07:00:15.822042+00:00",
+      "source_truth_run_id": "3db82f22",
+      "prompt_tokens": 7462,
+      "completion_tokens": 1295,
+      "total_tokens": 8757
+    },
+    "gtf_sku": "GTF-TOD-021010139510ONESIZE1PETITE",
+    "brand_sku": "02-1010-139-510-one-size-1-petite",
+    "product_name": "SAINT-TROPEZ dress",
+    "category": "Dresses",
+    "final_primary_image": "/source-truth/drive-image/1TJaQ9wPR22O9eWZVDmTLq_MbfNdMeJ19",
+    "final_secondary_image": "/source-truth/drive-image/1hv8viAqsUou5m9vhxl2PRipKpZfvJm2e",
+    "ct_runtime_validation": {
+      "status": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "product_id": "GTF-TOD-021050480660ONESIZE1PETITE",
+    "schema_version": "8.3",
+    "extraction_status": "ok",
+    "brand_category": "Cardigans",
+    "target_scope": "single_garment",
+    "source_truth": {
+      "run_id": "3db82f22",
+      "review_status": "approved",
+      "final_primary_image": "/source-truth/drive-image/1Jsw1Z012LIebZiXrvD7mGVeKbGTc2YHa",
+      "final_secondary_image": "/source-truth/drive-image/1wwQDnfVSgQJtPIEozjsKi7QFJ4PXKeLQ"
+    },
+    "hard_attributes": {
+      "category": {
+        "value": "cardigan",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "charcoal",
+        "confidence": 0.9
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.9
+      },
+      "material_primary": {
+        "value": "viscose",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "lurex",
+        "confidence": 0.8
+      },
+      "material_source": "brand-provided",
+      "silhouette": {
+        "value": "relaxed",
+        "confidence": 0.85
+      },
+      "length": {
+        "value": "maxi",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "n/a",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "ribbed",
+          "confidence": 0.85
+        },
+        {
+          "value": "lurex",
+          "confidence": 0.8
+        }
+      ],
+      "price_tier": {
+        "value": "mid",
+        "confidence": 0.8
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 7,
+        "reasoning": "The cardigan has a simple, elegant design with minimal embellishments."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "The lurex material adds a polished, sophisticated touch."
+      },
+      "body_awareness": {
+        "score": 5,
+        "reasoning": "The relaxed silhouette does not emphasize body shape."
+      },
+      "drama": {
+        "score": 6,
+        "reasoning": "The maxi length and lurex material add a subtle dramatic effect."
+      },
+      "novelty": {
+        "score": 5,
+        "reasoning": "The design is classic with a modern twist due to the lurex."
+      },
+      "craft": {
+        "score": 7,
+        "reasoning": "The use of lurex and ribbed texture indicates attention to detail."
+      },
+      "boldness": {
+        "score": 4,
+        "reasoning": "The color and design are understated rather than bold."
+      },
+      "glamour": {
+        "score": 7,
+        "reasoning": "The lurex material adds a touch of glamour."
+      },
+      "trend_currency": {
+        "score": 6,
+        "reasoning": "The cardigan aligns with current trends in relaxed, elegant fashion."
+      },
+      "styling_affordance": {
+        "score": 8,
+        "reasoning": "The cardigan can be styled in various ways for different occasions."
+      },
+      "cultural_richness": {
+        "score": 5,
+        "reasoning": "The design is culturally neutral with no specific cultural references."
+      }
+    },
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "charcoal cardigan",
+      "lurex cardigan",
+      "maxi cardigan",
+      "ribbed cardigan"
+    ],
+    "suggested_vibes": [
+      "Elevated Basics / Hailey Bieber",
+      "Glam",
+      "Winter Holidays"
+    ],
+    "primary_vibe": "Elevated Basics / Hailey Bieber",
+    "all_vibe_scores": {
+      "Old Money": 5,
+      "Glam": 7,
+      "Cool Girl": 6,
+      "Sexy Elegant": 5,
+      "Wedding Guest": 4,
+      "Dubai Glam": 6,
+      "Elevated City": 6,
+      "Winter Holidays": 7,
+      "Beach & Resort": 3,
+      "IT Girl": 6,
+      "Elevated Basics / Hailey Bieber": 8,
+      "Unique Finds": 5
+    },
+    "gpt_suggested_vibes": [
+      "Elevated Basics / Hailey Bieber",
+      "Glam",
+      "Winter Holidays"
+    ],
+    "product_tier": "mid",
+    "review_needed": [],
+    "manual_needed": [],
+    "reasoning_trace": {},
+    "meta": {
+      "mode": "catalog",
+      "confidence": "high",
+      "schema_version": "8.3",
+      "prompt_guard_version": "v8.3-refinement-spec-may29",
+      "extraction_notes": null,
+      "model": "gpt-4o",
+      "source": "tod_v83_gpt_extraction",
+      "generated_at": "2026-05-29T07:00:31.356858+00:00",
+      "source_truth_run_id": "3db82f22",
+      "prompt_tokens": 7460,
+      "completion_tokens": 1214,
+      "total_tokens": 8674
+    },
+    "gtf_sku": "GTF-TOD-021050480660ONESIZE1PETITE",
+    "brand_sku": "02-1050-480-660-one-size-1-petite",
+    "product_name": "IREN cardigan",
+    "category": "Cardigans",
+    "final_primary_image": "/source-truth/drive-image/1Jsw1Z012LIebZiXrvD7mGVeKbGTc2YHa",
+    "final_secondary_image": "/source-truth/drive-image/1wwQDnfVSgQJtPIEozjsKi7QFJ4PXKeLQ",
+    "ct_runtime_validation": {
+      "status": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "product_id": "GTF-TOD-032011031148XSSPETITE",
+    "schema_version": "8.3",
+    "extraction_status": "ok",
+    "brand_category": "Dresses",
+    "target_scope": "single_garment",
+    "source_truth": {
+      "run_id": "3db82f22",
+      "review_status": "approved",
+      "final_primary_image": "/source-truth/drive-image/1nQrUXVodxV-A0gD3PgJVYFn_L4Nu90pI",
+      "final_secondary_image": "/source-truth/drive-image/11MmINX2HPjv7R5_sflMoM7MfJvUjOnH_"
+    },
+    "hard_attributes": {
+      "category": {
+        "value": "dress",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "gold",
+        "confidence": 0.9
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.9
+      },
+      "material_primary": {
+        "value": "tensel",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "viscose",
+        "confidence": 0.9
+      },
+      "material_source": "brand-provided",
+      "silhouette": {
+        "value": "wrap",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "maxi",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "v-neck",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "textured",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "belted",
+          "confidence": 0.9
+        },
+        {
+          "value": "flared-sleeves",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "mid",
+        "confidence": 0.9
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 7,
+        "reasoning": "The dress has a simple yet elegant design with minimal embellishments."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "The gold color and wrap silhouette give it a polished look."
+      },
+      "body_awareness": {
+        "score": 6,
+        "reasoning": "The wrap style accentuates the waist."
+      },
+      "drama": {
+        "score": 5,
+        "reasoning": "The flared sleeves add a touch of drama."
+      },
+      "novelty": {
+        "score": 4,
+        "reasoning": "The design is classic with a modern twist."
+      },
+      "craft": {
+        "score": 7,
+        "reasoning": "The textured pattern and material choice reflect good craftsmanship."
+      },
+      "boldness": {
+        "score": 5,
+        "reasoning": "The gold color is bold but the design is subtle."
+      },
+      "glamour": {
+        "score": 8,
+        "reasoning": "The gold color and maxi length add glamour."
+      },
+      "trend_currency": {
+        "score": 6,
+        "reasoning": "Wrap dresses are currently in trend."
+      },
+      "styling_affordance": {
+        "score": 7,
+        "reasoning": "Can be styled for both casual and formal occasions."
+      },
+      "cultural_richness": {
+        "score": 4,
+        "reasoning": "The design is more contemporary than culturally rich."
+      }
+    },
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "gold dress",
+      "wrap dress",
+      "maxi dress",
+      "textured dress",
+      "flared sleeves dress"
+    ],
+    "suggested_vibes": [
+      "Glam",
+      "Wedding Guest",
+      "Dubai Glam"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Old Money": 5,
+      "Glam": 8,
+      "Cool Girl": 6,
+      "Sexy Elegant": 7,
+      "Wedding Guest": 8,
+      "Dubai Glam": 8,
+      "Elevated City": 6,
+      "Winter Holidays": 7,
+      "Beach & Resort": 5,
+      "IT Girl": 6,
+      "Elevated Basics / Hailey Bieber": 5,
+      "Unique Finds": 6
+    },
+    "gpt_suggested_vibes": [
+      "Glam",
+      "Wedding Guest",
+      "Dubai Glam"
+    ],
+    "product_tier": "mid",
+    "review_needed": [],
+    "manual_needed": [],
+    "reasoning_trace": {},
+    "meta": {
+      "mode": "catalog",
+      "confidence": "high",
+      "schema_version": "8.3",
+      "prompt_guard_version": "v8.3-refinement-spec-may29",
+      "extraction_notes": null,
+      "model": "gpt-4o",
+      "source": "tod_v83_gpt_extraction",
+      "generated_at": "2026-05-29T07:00:45.480982+00:00",
+      "source_truth_run_id": "3db82f22",
+      "prompt_tokens": 6772,
+      "completion_tokens": 1183,
+      "total_tokens": 7955
+    },
+    "gtf_sku": "GTF-TOD-032011031148XSSPETITE",
+    "brand_sku": "03-2011-031-148-xs-s-petite",
+    "product_name": "KASSIA dress",
+    "category": "Dresses",
+    "final_primary_image": "/source-truth/drive-image/1nQrUXVodxV-A0gD3PgJVYFn_L4Nu90pI",
+    "final_secondary_image": "/source-truth/drive-image/11MmINX2HPjv7R5_sflMoM7MfJvUjOnH_",
+    "ct_runtime_validation": {
+      "status": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "product_id": "GTF-TOD-031020043510SM",
+    "schema_version": "8.3",
+    "extraction_status": "ok",
+    "brand_category": "Sweaters",
+    "target_scope": "single_garment",
+    "source_truth": {
+      "run_id": "3db82f22",
+      "review_status": "approved",
+      "final_primary_image": "/source-truth/drive-image/1EcBq1Cc9B4MwTOB6Zv_aHnvPllK9u3ol",
+      "final_secondary_image": "/source-truth/drive-image/1BBzqEqk8h6Vq6Qb66b0_mTGk43PrPki1"
+    },
+    "hard_attributes": {
+      "category": {
+        "value": "sweater",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "chocolate",
+        "confidence": 0.95
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.9
+      },
+      "material_primary": {
+        "value": "cotton",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "viscose",
+        "confidence": 0.9
+      },
+      "material_source": "brand-provided",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "n/a",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "crew",
+        "confidence": 0.95
+      },
+      "sleeve_length": {
+        "value": "long",
+        "confidence": 0.95
+      },
+      "pattern": {
+        "value": "cable",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "cable-knit",
+          "confidence": 0.95
+        },
+        {
+          "value": "ribbed-trim",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "mid",
+        "confidence": 0.9
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 7,
+        "reasoning": "Simple design with subtle texture."
+      },
+      "polish": {
+        "score": 6,
+        "reasoning": "Neat and well-finished appearance."
+      },
+      "body_awareness": {
+        "score": 5,
+        "reasoning": "Fitted silhouette but not overly revealing."
+      },
+      "drama": {
+        "score": 4,
+        "reasoning": "Low drama due to classic design."
+      },
+      "novelty": {
+        "score": 3,
+        "reasoning": "Standard sweater design with common texture."
+      },
+      "craft": {
+        "score": 6,
+        "reasoning": "Good craftsmanship with cable-knit detail."
+      },
+      "boldness": {
+        "score": 3,
+        "reasoning": "Subdued color and design."
+      },
+      "glamour": {
+        "score": 4,
+        "reasoning": "Minimal glamour due to simple style."
+      },
+      "trend_currency": {
+        "score": 5,
+        "reasoning": "Moderately trendy with classic elements."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "Versatile styling options."
+      },
+      "cultural_richness": {
+        "score": 3,
+        "reasoning": "Limited cultural references."
+      }
+    },
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "chocolate sweater",
+      "cotton sweater",
+      "cable-knit sweater",
+      "crew neck sweater",
+      "fitted sweater"
+    ],
+    "suggested_vibes": [
+      "Elevated Basics / Hailey Bieber",
+      "Cool Girl"
+    ],
+    "primary_vibe": "Elevated Basics / Hailey Bieber",
+    "all_vibe_scores": {
+      "Old Money": 3,
+      "Glam": 4,
+      "Cool Girl": 6,
+      "Sexy Elegant": 3,
+      "Wedding Guest": 2,
+      "Dubai Glam": 3,
+      "Elevated City": 5,
+      "Winter Holidays": 4,
+      "Beach & Resort": 2,
+      "IT Girl": 5,
+      "Elevated Basics / Hailey Bieber": 7,
+      "Unique Finds": 3
+    },
+    "gpt_suggested_vibes": [
+      "Elevated Basics / Hailey Bieber",
+      "Cool Girl"
+    ],
+    "product_tier": "mid",
+    "review_needed": [],
+    "manual_needed": [],
+    "reasoning_trace": {},
+    "meta": {
+      "mode": "catalog",
+      "confidence": "high",
+      "schema_version": "8.3",
+      "prompt_guard_version": "v8.3-refinement-spec-may29",
+      "extraction_notes": null,
+      "model": "gpt-4o",
+      "source": "tod_v83_gpt_extraction",
+      "generated_at": "2026-05-29T07:00:59.594323+00:00",
+      "source_truth_run_id": "3db82f22",
+      "prompt_tokens": 6774,
+      "completion_tokens": 1155,
+      "total_tokens": 7929
+    },
+    "gtf_sku": "GTF-TOD-031020043510SM",
+    "brand_sku": "03-1020-043-510-s-m-",
+    "product_name": "SHANTY long sleev jumper",
+    "category": "Sweaters",
+    "final_primary_image": "/source-truth/drive-image/1EcBq1Cc9B4MwTOB6Zv_aHnvPllK9u3ol",
+    "final_secondary_image": "/source-truth/drive-image/1BBzqEqk8h6Vq6Qb66b0_mTGk43PrPki1",
+    "ct_runtime_validation": {
+      "status": "PASS",
+      "issues": []
+    },
+    "v83_postprocess": {
+      "spotcheck_cleanup": true
+    }
+  },
+  {
+    "product_id": "GTF-TOD-011010099170ONESIZE1",
+    "schema_version": "8.3",
+    "extraction_status": "ok",
+    "brand_category": "Dresses",
+    "target_scope": "single_garment",
+    "source_truth": {
+      "run_id": "3db82f22",
+      "review_status": "approved",
+      "final_primary_image": "/source-truth/drive-image/1ReTqNELV3AR2Tzbe-wFVVU1CZdEQoc4p",
+      "final_secondary_image": "/source-truth/drive-image/1kZkOGWVghOn4PnURYyksZNxV5AnkpgQz"
+    },
+    "hard_attributes": {
+      "category": {
+        "value": "dress",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "sage",
+        "confidence": 0.9
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.9
+      },
+      "material_primary": {
+        "value": "viscose",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "lurex",
+        "confidence": 0.8
+      },
+      "material_source": "brand-provided",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "maxi",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "halter",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "sleeveless",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "ribbed",
+          "confidence": 0.9
+        },
+        {
+          "value": "sheer",
+          "confidence": 0.7
+        }
+      ],
+      "price_tier": {
+        "value": "mid",
+        "confidence": 0.8
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 7,
+        "reasoning": "The dress has a simple, elegant design with minimal embellishments."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "The fitted silhouette and halter neckline add a polished look."
+      },
+      "body_awareness": {
+        "score": 8,
+        "reasoning": "The fitted silhouette accentuates the body shape."
+      },
+      "drama": {
+        "score": 6,
+        "reasoning": "The maxi length and halter neckline add a touch of drama."
+      },
+      "novelty": {
+        "score": 5,
+        "reasoning": "The design is classic with a modern twist due to the lurex material."
+      },
+      "craft": {
+        "score": 7,
+        "reasoning": "The ribbed texture and lurex material indicate quality craftsmanship."
+      },
+      "boldness": {
+        "score": 5,
+        "reasoning": "The color and design are subtle, not overly bold."
+      },
+      "glamour": {
+        "score": 7,
+        "reasoning": "The lurex material adds a glamorous touch."
+      },
+      "trend_currency": {
+        "score": 6,
+        "reasoning": "The dress aligns with current trends in fitted silhouettes."
+      },
+      "styling_affordance": {
+        "score": 7,
+        "reasoning": "The dress can be styled for various occasions."
+      },
+      "cultural_richness": {
+        "score": 5,
+        "reasoning": "The design is modern and minimal, with no specific cultural references."
+      }
+    },
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "sage dress",
+      "halter dress",
+      "fitted maxi dress",
+      "ribbed dress",
+      "lurex dress"
+    ],
+    "suggested_vibes": [
+      "Glam",
+      "Wedding Guest",
+      "Elevated City"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Old Money": 5,
+      "Glam": 8,
+      "Cool Girl": 6,
+      "Sexy Elegant": 7,
+      "Wedding Guest": 8,
+      "Dubai Glam": 7,
+      "Elevated City": 8,
+      "Winter Holidays": 6,
+      "Beach & Resort": 5,
+      "IT Girl": 6,
+      "Elevated Basics / Hailey Bieber": 6,
+      "Unique Finds": 5
+    },
+    "gpt_suggested_vibes": [
+      "Glam",
+      "Wedding Guest",
+      "Elevated City"
+    ],
+    "product_tier": "mid",
+    "review_needed": [],
+    "manual_needed": [],
+    "reasoning_trace": {},
+    "meta": {
+      "mode": "catalog",
+      "confidence": "high",
+      "schema_version": "8.3",
+      "prompt_guard_version": "v8.3-refinement-spec-may29",
+      "extraction_notes": null,
+      "model": "gpt-4o",
+      "source": "tod_v83_gpt_extraction",
+      "generated_at": "2026-05-29T07:01:15.290955+00:00",
+      "source_truth_run_id": "3db82f22",
+      "prompt_tokens": 6778,
+      "completion_tokens": 1200,
+      "total_tokens": 7978
+    },
+    "gtf_sku": "GTF-TOD-011010099170ONESIZE1",
+    "brand_sku": "01-1010-099-170-one-size-1-",
+    "product_name": "ANITA dress",
+    "category": "Dresses",
+    "final_primary_image": "/source-truth/drive-image/1ReTqNELV3AR2Tzbe-wFVVU1CZdEQoc4p",
+    "final_secondary_image": "/source-truth/drive-image/1kZkOGWVghOn4PnURYyksZNxV5AnkpgQz",
+    "ct_runtime_validation": {
+      "status": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "product_id": "GTF-TOD-011010099510ONESIZE1",
+    "schema_version": "8.3",
+    "extraction_status": "ok",
+    "brand_category": "Dresses",
+    "target_scope": "single_garment",
+    "source_truth": {
+      "run_id": "3db82f22",
+      "review_status": "approved",
+      "final_primary_image": "/source-truth/drive-image/1-lB5Pyid17PMnwHMFf3WHsBu0vGrTnv4",
+      "final_secondary_image": "/source-truth/drive-image/19hcCgdxPnJfSYOQZTntbbJW92Ei1uLbx"
+    },
+    "hard_attributes": {
+      "category": {
+        "value": "dress",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "chocolate",
+        "confidence": 0.95
+      },
+      "secondary_color": {
+        "value": "gold",
+        "confidence": 0.9
+      },
+      "material_primary": {
+        "value": "viscose",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "lurex",
+        "confidence": 0.9
+      },
+      "material_source": "mixed",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "maxi",
+        "confidence": 0.95
+      },
+      "neckline": {
+        "value": "turtleneck",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "sleeveless",
+        "confidence": 0.95
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 0.85
+      },
+      "details": [
+        {
+          "value": "lurex",
+          "confidence": 0.9
+        },
+        {
+          "value": "sheer",
+          "confidence": 0.85
+        }
+      ],
+      "price_tier": {
+        "value": "premium",
+        "confidence": 0.8
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 6,
+        "reasoning": "The dress has a simple silhouette but the lurex adds a touch of complexity."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "The dress appears well-finished with a sleek design."
+      },
+      "body_awareness": {
+        "score": 7,
+        "reasoning": "The fitted silhouette highlights the body shape."
+      },
+      "drama": {
+        "score": 7,
+        "reasoning": "The lurex material and maxi length add drama."
+      },
+      "novelty": {
+        "score": 5,
+        "reasoning": "The design is classic with a modern twist due to the material."
+      },
+      "craft": {
+        "score": 8,
+        "reasoning": "The use of lurex and the fitted design suggest high craftsmanship."
+      },
+      "boldness": {
+        "score": 6,
+        "reasoning": "The dress is bold due to its color and material choice."
+      },
+      "glamour": {
+        "score": 9,
+        "reasoning": "The dress is highly glamorous with its shimmering effect."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "The dress aligns with current trends in evening wear."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "The dress can be styled for various formal occasions."
+      },
+      "cultural_richness": {
+        "score": 5,
+        "reasoning": "The dress has a modern aesthetic with limited cultural references."
+      }
+    },
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "chocolate dress",
+      "lurex dress",
+      "fitted maxi dress",
+      "sleeveless turtleneck dress"
+    ],
+    "suggested_vibes": [
+      "Glam",
+      "Sexy Elegant",
+      "Wedding Guest"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Old Money": 4,
+      "Glam": 9,
+      "Cool Girl": 6,
+      "Sexy Elegant": 8,
+      "Wedding Guest": 7,
+      "Dubai Glam": 8,
+      "Elevated City": 5,
+      "Winter Holidays": 6,
+      "Beach & Resort": 3,
+      "IT Girl": 6,
+      "Elevated Basics / Hailey Bieber": 4,
+      "Unique Finds": 5
+    },
+    "gpt_suggested_vibes": [
+      "Glam",
+      "Sexy Elegant",
+      "Wedding Guest"
+    ],
+    "product_tier": "premium",
+    "review_needed": [],
+    "manual_needed": [],
+    "reasoning_trace": {
+      "color_determination": "Based on visual evidence and known color from catalog.",
+      "material_determination": "Mixed source from catalog and visual evidence.",
+      "silhouette_determination": "Visual evidence shows a fitted silhouette.",
+      "length_determination": "Visual evidence confirms maxi length.",
+      "neckline_determination": "Visual evidence shows a turtleneck.",
+      "sleeve_length_determination": "Visual evidence shows sleeveless design.",
+      "pattern_determination": "Visual evidence suggests a solid pattern with lurex details."
+    },
+    "meta": {
+      "mode": "catalog",
+      "confidence": "high",
+      "schema_version": "8.3",
+      "prompt_guard_version": "v8.3-refinement-spec-may29",
+      "extraction_notes": null,
+      "model": "gpt-4o",
+      "source": "tod_v83_gpt_extraction",
+      "generated_at": "2026-05-29T07:01:32.950706+00:00",
+      "source_truth_run_id": "3db82f22",
+      "prompt_tokens": 7455,
+      "completion_tokens": 1314,
+      "total_tokens": 8769
+    },
+    "gtf_sku": "GTF-TOD-011010099510ONESIZE1",
+    "brand_sku": "01-1010-099-510-one-size-1-",
+    "product_name": "ANITA dress",
+    "category": "Dresses",
+    "final_primary_image": "/source-truth/drive-image/1-lB5Pyid17PMnwHMFf3WHsBu0vGrTnv4",
+    "final_secondary_image": "/source-truth/drive-image/19hcCgdxPnJfSYOQZTntbbJW92Ei1uLbx",
+    "ct_runtime_validation": {
+      "status": "PASS",
+      "issues": []
+    }
+  },
+  {
+    "product_id": "GTF-TOD-032011032690XSSPETITE",
+    "schema_version": "8.3",
+    "extraction_status": "ok",
+    "brand_category": "Dresses",
+    "target_scope": "single_garment",
+    "source_truth": {
+      "run_id": "3db82f22",
+      "review_status": "approved",
+      "final_primary_image": "/source-truth/drive-image/1N9mWeyd_F2nT-FJ3_QE6BKarMFRKg56v",
+      "final_secondary_image": "/source-truth/drive-image/1JNiug-tDKgCfmjBcxV2ieuw2HppkoAs2"
+    },
+    "hard_attributes": {
+      "category": {
+        "value": "dress",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "black",
+        "confidence": 0.95
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.95
+      },
+      "material_primary": {
+        "value": "polyester",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "none",
+        "confidence": 0.9
+      },
+      "material_source": "brand-provided",
+      "silhouette": {
+        "value": "mermaid",
+        "confidence": 0.9
+      },
+      "length": {
+        "value": "floor-length",
+        "confidence": 0.95
+      },
+      "neckline": {
+        "value": "strapless",
+        "confidence": 0.95
+      },
+      "sleeve_length": {
+        "value": "sleeveless",
+        "confidence": 0.95
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 0.95
+      },
+      "details": [
+        {
+          "value": "ruched",
+          "confidence": 0.9
+        },
+        {
+          "value": "sheer",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "mid",
+        "confidence": 0.9
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 7,
+        "reasoning": "The dress has a simple, elegant design with minimal embellishments."
+      },
+      "polish": {
+        "score": 8,
+        "reasoning": "The fitted silhouette and floor-length design give it a polished look."
+      },
+      "body_awareness": {
+        "score": 9,
+        "reasoning": "The fitted silhouette accentuates the body shape."
+      },
+      "drama": {
+        "score": 8,
+        "reasoning": "The floor-length and strapless design add drama."
+      },
+      "novelty": {
+        "score": 6,
+        "reasoning": "The design is classic with a modern twist."
+      },
+      "craft": {
+        "score": 7,
+        "reasoning": "The ruched detailing shows attention to craftsmanship."
+      },
+      "boldness": {
+        "score": 7,
+        "reasoning": "The strapless design and fitted silhouette are bold choices."
+      },
+      "glamour": {
+        "score": 9,
+        "reasoning": "The dress exudes glamour with its elegant design."
+      },
+      "trend_currency": {
+        "score": 7,
+        "reasoning": "The dress aligns with current fashion trends."
+      },
+      "styling_affordance": {
+        "score": 8,
+        "reasoning": "The dress can be styled for various formal occasions."
+      },
+      "cultural_richness": {
+        "score": 6,
+        "reasoning": "The design is culturally neutral."
+      }
+    },
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "black dress",
+      "floor-length dress",
+      "strapless dress",
+      "fitted dress",
+      "ruched dress"
+    ],
+    "suggested_vibes": [
+      "Glam",
+      "Sexy Elegant",
+      "Wedding Guest"
+    ],
+    "primary_vibe": "Glam",
+    "all_vibe_scores": {
+      "Old Money": 5,
+      "Glam": 9,
+      "Cool Girl": 6,
+      "Sexy Elegant": 8,
+      "Wedding Guest": 8,
+      "Dubai Glam": 7,
+      "Elevated City": 6,
+      "Winter Holidays": 7,
+      "Beach & Resort": 4,
+      "IT Girl": 6,
+      "Elevated Basics / Hailey Bieber": 5,
+      "Unique Finds": 6
+    },
+    "gpt_suggested_vibes": [
+      "Glam",
+      "Sexy Elegant",
+      "Wedding Guest"
+    ],
+    "product_tier": "mid",
+    "review_needed": [],
+    "manual_needed": [],
+    "reasoning_trace": {
+      "category": "Determined from product name and brand category.",
+      "primary_color": "Confirmed from image and known color.",
+      "material_primary": "Based on known material from catalog.",
+      "silhouette": "Inferred from image.",
+      "length": "Inferred from image.",
+      "neckline": "Inferred from image.",
+      "sleeve_length": "Inferred from image.",
+      "pattern": "Inferred from image.",
+      "details": "Inferred from image."
+    },
+    "meta": {
+      "mode": "catalog",
+      "confidence": "high",
+      "schema_version": "8.3",
+      "prompt_guard_version": "v8.3-refinement-spec-may29",
+      "extraction_notes": null,
+      "model": "gpt-4o",
+      "source": "tod_v83_gpt_extraction",
+      "generated_at": "2026-05-29T07:01:49.525644+00:00",
+      "source_truth_run_id": "3db82f22",
+      "prompt_tokens": 6770,
+      "completion_tokens": 1285,
+      "total_tokens": 8055
+    },
+    "gtf_sku": "GTF-TOD-032011032690XSSPETITE",
+    "brand_sku": "03-2011-032-690-xs-s-petite",
+    "product_name": "FLORENCE dress",
+    "category": "Dresses",
+    "final_primary_image": "/source-truth/drive-image/1N9mWeyd_F2nT-FJ3_QE6BKarMFRKg56v",
+    "final_secondary_image": "/source-truth/drive-image/1JNiug-tDKgCfmjBcxV2ieuw2HppkoAs2",
+    "ct_runtime_validation": {
+      "status": "PASS",
+      "issues": []
+    },
+    "v83_postprocess": {
+      "spotcheck_cleanup": true
+    }
+  },
+  {
+    "product_id": "GTF-TOD-031210018040XSSPETITE",
+    "schema_version": "8.3",
+    "extraction_status": "ok",
+    "brand_category": "Pants",
+    "target_scope": "single_garment",
+    "source_truth": {
+      "run_id": "3db82f22",
+      "review_status": "approved",
+      "final_primary_image": "/source-truth/drive-image/1vxTrgb7PJ_qXxQyl-gH8HD_DH3TYFv_X",
+      "final_secondary_image": "/source-truth/drive-image/1cCL_hrIRiGP-G5ZGl6Q4IKw-TpRd0zB6"
+    },
+    "hard_attributes": {
+      "category": {
+        "value": "pants",
+        "confidence": 1.0
+      },
+      "primary_color": {
+        "value": "ivory",
+        "confidence": 1.0
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 1.0
+      },
+      "material_primary": {
+        "value": "wool",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "viscose",
+        "confidence": 0.9
+      },
+      "material_source": "brand-provided",
+      "silhouette": {
+        "value": "tailored",
+        "confidence": 0.95
+      },
+      "length": {
+        "value": "ankle",
+        "confidence": 1.0
+      },
+      "neckline": {
+        "value": "n/a",
+        "confidence": 1.0
+      },
+      "sleeve_length": {
+        "value": "n/a",
+        "confidence": 1.0
+      },
+      "pattern": {
+        "value": "solid",
+        "confidence": 1.0
+      },
+      "details": [
+        {
+          "value": "belt-loops",
+          "confidence": 1.0
+        }
+      ],
+      "price_tier": {
+        "value": "premium",
+        "confidence": 0.8
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 8,
+        "reasoning": "Clean lines and simple design."
+      },
+      "polish": {
+        "score": 7,
+        "reasoning": "Tailored fit adds sophistication."
+      },
+      "body_awareness": {
+        "score": 6,
+        "reasoning": "Fitted silhouette highlights form."
+      },
+      "drama": {
+        "score": 3,
+        "reasoning": "Subtle design with minimal embellishments."
+      },
+      "novelty": {
+        "score": 4,
+        "reasoning": "Classic style with no unique features."
+      },
+      "craft": {
+        "score": 7,
+        "reasoning": "High-quality materials and construction."
+      },
+      "boldness": {
+        "score": 2,
+        "reasoning": "Neutral color and classic style."
+      },
+      "glamour": {
+        "score": 5,
+        "reasoning": "Elegant but understated."
+      },
+      "trend_currency": {
+        "score": 6,
+        "reasoning": "Timeless style with current appeal."
+      },
+      "styling_affordance": {
+        "score": 7,
+        "reasoning": "Versatile piece for various outfits."
+      },
+      "cultural_richness": {
+        "score": 3,
+        "reasoning": "Standard design with no cultural elements."
+      }
+    },
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "ivory pants",
+      "wool pants",
+      "tailored pants",
+      "LEO trousers"
+    ],
+    "suggested_vibes": [
+      "Elevated Basics / Hailey Bieber",
+      "Old Money"
+    ],
+    "primary_vibe": "Elevated Basics / Hailey Bieber",
+    "all_vibe_scores": {
+      "Old Money": 7,
+      "Glam": 5,
+      "Cool Girl": 6,
+      "Sexy Elegant": 4,
+      "Wedding Guest": 3,
+      "Dubai Glam": 4,
+      "Elevated City": 6,
+      "Winter Holidays": 5,
+      "Beach & Resort": 3,
+      "IT Girl": 6,
+      "Elevated Basics / Hailey Bieber": 8,
+      "Unique Finds": 4
+    },
+    "gpt_suggested_vibes": [
+      "Elevated Basics / Hailey Bieber",
+      "Old Money"
+    ],
+    "product_tier": "premium",
+    "review_needed": [],
+    "manual_needed": [],
+    "reasoning_trace": {
+      "category": "Determined from brand category and visual confirmation.",
+      "primary_color": "Mapped from known color 'milk' to 'ivory'.",
+      "material_primary": "Based on brand-provided material.",
+      "silhouette": "Tailored due to visible belt loops and fit.",
+      "length": "Ankle length confirmed visually."
+    },
+    "meta": {
+      "mode": "catalog",
+      "confidence": "high",
+      "schema_version": "8.3",
+      "prompt_guard_version": "v8.3-refinement-spec-may29",
+      "extraction_notes": null,
+      "model": "gpt-4o",
+      "source": "tod_v83_gpt_extraction",
+      "generated_at": "2026-05-29T07:02:05.149545+00:00",
+      "source_truth_run_id": "3db82f22",
+      "prompt_tokens": 7111,
+      "completion_tokens": 1196,
+      "total_tokens": 8307
+    },
+    "gtf_sku": "GTF-TOD-031210018040XSSPETITE",
+    "brand_sku": "03-1210-018-040-xs-s-petite",
+    "product_name": "LEO trousers",
+    "category": "Pants",
+    "final_primary_image": "/source-truth/drive-image/1vxTrgb7PJ_qXxQyl-gH8HD_DH3TYFv_X",
+    "final_secondary_image": "/source-truth/drive-image/1cCL_hrIRiGP-G5ZGl6Q4IKw-TpRd0zB6",
+    "ct_runtime_validation": {
+      "status": "PASS",
+      "issues": []
+    },
+    "v83_postprocess": {
+      "spotcheck_cleanup": true
+    }
+  },
+  {
+    "product_id": "GTF-TOD-001020009510SM",
+    "schema_version": "8.3",
+    "extraction_status": "ok",
+    "brand_category": "Sweaters",
+    "target_scope": "single_garment",
+    "source_truth": {
+      "run_id": "3db82f22",
+      "review_status": "approved",
+      "final_primary_image": "/source-truth/drive-image/19fmn0WCxkBwJISOLZ5PEf86NJT7Py2mg",
+      "final_secondary_image": "/source-truth/drive-image/1dejDcvtXyQag28hvx7ho9aTycsccVYuq"
+    },
+    "hard_attributes": {
+      "category": {
+        "value": "jumper",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "chocolate",
+        "confidence": 0.9
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.9
+      },
+      "material_primary": {
+        "value": "cotton",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "viscose",
+        "confidence": 0.9
+      },
+      "material_source": "brand-provided",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 0.85
+      },
+      "length": {
+        "value": "n/a",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "crew",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "short",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "cable",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "ribbed",
+          "confidence": 0.9
+        },
+        {
+          "value": "cable-knit",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "mid",
+        "confidence": 0.8
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 6,
+        "reasoning": "Simple design with subtle texture."
+      },
+      "polish": {
+        "score": 7,
+        "reasoning": "Clean lines and refined finish."
+      },
+      "body_awareness": {
+        "score": 5,
+        "reasoning": "Fitted silhouette enhances body shape."
+      },
+      "drama": {
+        "score": 4,
+        "reasoning": "Low-key design with minimal dramatic elements."
+      },
+      "novelty": {
+        "score": 5,
+        "reasoning": "Textured pattern adds a touch of uniqueness."
+      },
+      "craft": {
+        "score": 7,
+        "reasoning": "Quality materials and detailed knitwork."
+      },
+      "boldness": {
+        "score": 3,
+        "reasoning": "Subdued color and classic style."
+      },
+      "glamour": {
+        "score": 4,
+        "reasoning": "Understated elegance with minimal embellishment."
+      },
+      "trend_currency": {
+        "score": 6,
+        "reasoning": "Textured knits are currently in trend."
+      },
+      "styling_affordance": {
+        "score": 7,
+        "reasoning": "Versatile piece suitable for various outfits."
+      },
+      "cultural_richness": {
+        "score": 3,
+        "reasoning": "Standard design with no specific cultural references."
+      }
+    },
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "chocolate jumper",
+      "cotton sweater",
+      "textured knit",
+      "fitted crew neck",
+      "ribbed short sleeve"
+    ],
+    "suggested_vibes": [
+      "Elevated Basics / Hailey Bieber",
+      "Cool Girl"
+    ],
+    "primary_vibe": "Elevated Basics / Hailey Bieber",
+    "all_vibe_scores": {
+      "Old Money": 3,
+      "Glam": 4,
+      "Cool Girl": 7,
+      "Sexy Elegant": 4,
+      "Wedding Guest": 2,
+      "Dubai Glam": 3,
+      "Elevated City": 5,
+      "Winter Holidays": 5,
+      "Beach & Resort": 3,
+      "IT Girl": 6,
+      "Elevated Basics / Hailey Bieber": 8,
+      "Unique Finds": 5
+    },
+    "gpt_suggested_vibes": [
+      "Elevated Basics / Hailey Bieber",
+      "Cool Girl"
+    ],
+    "product_tier": "mid",
+    "review_needed": [],
+    "manual_needed": [],
+    "reasoning_trace": {
+      "color_determination": "Based on visual evidence and catalog data.",
+      "material_assessment": "Confirmed with brand-provided data.",
+      "pattern_recognition": "Visual confirmation of ribbed and cable-knit texture.",
+      "silhouette_analysis": "Fitted based on visual inspection."
+    },
+    "meta": {
+      "mode": "catalog",
+      "confidence": "high",
+      "schema_version": "8.3",
+      "prompt_guard_version": "v8.3-refinement-spec-may29",
+      "extraction_notes": null,
+      "model": "gpt-4o",
+      "source": "tod_v83_gpt_extraction",
+      "generated_at": "2026-05-29T07:02:18.666784+00:00",
+      "source_truth_run_id": "3db82f22",
+      "prompt_tokens": 7445,
+      "completion_tokens": 1222,
+      "total_tokens": 8667
+    },
+    "gtf_sku": "GTF-TOD-001020009510SM",
+    "brand_sku": "00-1020-009-510-S/M-",
+    "product_name": "SHANTY jumper",
+    "category": "Sweaters",
+    "final_primary_image": "/source-truth/drive-image/19fmn0WCxkBwJISOLZ5PEf86NJT7Py2mg",
+    "final_secondary_image": "/source-truth/drive-image/1dejDcvtXyQag28hvx7ho9aTycsccVYuq",
+    "ct_runtime_validation": {
+      "status": "PASS",
+      "issues": []
+    },
+    "v83_postprocess": {
+      "spotcheck_cleanup": true
+    }
+  },
+  {
+    "product_id": "GTF-TOD-001020009420SM",
+    "schema_version": "8.3",
+    "extraction_status": "ok",
+    "brand_category": "Sweaters",
+    "target_scope": "single_garment",
+    "source_truth": {
+      "run_id": "3db82f22",
+      "review_status": "approved",
+      "final_primary_image": "/source-truth/drive-image/1Se0fVXBV_mE3Kn1d9fxSi1ctnMdwlYxm",
+      "final_secondary_image": "/source-truth/drive-image/1EUCNsE-ssvbDxH63EYzKoliAzVgw8Cvu"
+    },
+    "hard_attributes": {
+      "category": {
+        "value": "sweater",
+        "confidence": 0.95
+      },
+      "primary_color": {
+        "value": "khaki",
+        "confidence": 0.9
+      },
+      "secondary_color": {
+        "value": "none",
+        "confidence": 0.9
+      },
+      "material_primary": {
+        "value": "cotton",
+        "confidence": 0.9
+      },
+      "material_secondary": {
+        "value": "viscose",
+        "confidence": 0.8
+      },
+      "material_source": "brand-provided",
+      "silhouette": {
+        "value": "fitted",
+        "confidence": 0.85
+      },
+      "length": {
+        "value": "n/a",
+        "confidence": 0.9
+      },
+      "neckline": {
+        "value": "crew",
+        "confidence": 0.9
+      },
+      "sleeve_length": {
+        "value": "short",
+        "confidence": 0.9
+      },
+      "pattern": {
+        "value": "cable",
+        "confidence": 0.9
+      },
+      "details": [
+        {
+          "value": "ribbed",
+          "confidence": 0.9
+        },
+        {
+          "value": "cable-knit",
+          "confidence": 0.9
+        }
+      ],
+      "price_tier": {
+        "value": "mid",
+        "confidence": 0.8
+      }
+    },
+    "axis_scores": {
+      "minimalism": {
+        "score": 7,
+        "reasoning": "Simple design with subtle texture."
+      },
+      "polish": {
+        "score": 6,
+        "reasoning": "Neat and well-finished appearance."
+      },
+      "body_awareness": {
+        "score": 5,
+        "reasoning": "Fitted silhouette enhances body shape."
+      },
+      "drama": {
+        "score": 3,
+        "reasoning": "Low drama due to simple design."
+      },
+      "novelty": {
+        "score": 4,
+        "reasoning": "Standard design with common texture."
+      },
+      "craft": {
+        "score": 6,
+        "reasoning": "Good craftsmanship with ribbed and cable-knit details."
+      },
+      "boldness": {
+        "score": 3,
+        "reasoning": "Subdued color and design."
+      },
+      "glamour": {
+        "score": 4,
+        "reasoning": "Minimal glamour due to simple style."
+      },
+      "trend_currency": {
+        "score": 5,
+        "reasoning": "Moderately trendy with current textures."
+      },
+      "styling_affordance": {
+        "score": 6,
+        "reasoning": "Versatile piece for various outfits."
+      },
+      "cultural_richness": {
+        "score": 3,
+        "reasoning": "Limited cultural influence."
+      }
+    },
+    "is_multi_piece": false,
+    "component_count": 0,
+    "components": [],
+    "search_terms": [
+      "khaki sweater",
+      "cotton sweater",
+      "ribbed sweater",
+      "cable-knit sweater",
+      "fitted sweater"
+    ],
+    "suggested_vibes": [
+      "Elevated Basics / Hailey Bieber",
+      "Cool Girl"
+    ],
+    "primary_vibe": "Elevated Basics / Hailey Bieber",
+    "all_vibe_scores": {
+      "Old Money": 3,
+      "Glam": 4,
+      "Cool Girl": 6,
+      "Sexy Elegant": 3,
+      "Wedding Guest": 2,
+      "Dubai Glam": 3,
+      "Elevated City": 5,
+      "Winter Holidays": 4,
+      "Beach & Resort": 2,
+      "IT Girl": 5,
+      "Elevated Basics / Hailey Bieber": 7,
+      "Unique Finds": 4
+    },
+    "gpt_suggested_vibes": [
+      "Elevated Basics / Hailey Bieber",
+      "Cool Girl"
+    ],
+    "product_tier": "mid",
+    "review_needed": [],
+    "manual_needed": [],
+    "reasoning_trace": {},
+    "meta": {
+      "mode": "catalog",
+      "confidence": "high",
+      "schema_version": "8.3",
+      "prompt_guard_version": "v8.3-refinement-spec-may29",
+      "extraction_notes": null,
+      "model": "gpt-4o",
+      "source": "tod_v83_gpt_extraction",
+      "generated_at": "2026-05-29T07:02:37.886809+00:00",
+      "source_truth_run_id": "3db82f22",
+      "prompt_tokens": 7445,
+      "completion_tokens": 1150,
+      "total_tokens": 8595
+    },
+    "gtf_sku": "GTF-TOD-001020009420SM",
+    "brand_sku": "00-1020-009-420-S/M-",
+    "product_name": "SHANTY jumper",
+    "category": "Sweaters",
+    "final_primary_image": "/source-truth/drive-image/1Se0fVXBV_mE3Kn1d9fxSi1ctnMdwlYxm",
+    "final_secondary_image": "/source-truth/drive-image/1EUCNsE-ssvbDxH63EYzKoliAzVgw8Cvu",
+    "ct_runtime_validation": {
+      "status": "PASS",
+      "issues": []
+    },
+    "v83_postprocess": {
+      "spotcheck_cleanup": true
+    }
+  }
+]

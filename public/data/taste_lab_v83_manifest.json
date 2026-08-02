@@ -1,0 +1,22 @@
+{
+  "dataset": "GTF v8.3 production Taste Lab import",
+  "generated_at": "2026-05-29T16:47:24",
+  "counts": {
+    "products": 307,
+    "extractions": 307,
+    "afropop": 58,
+    "tod": 249,
+    "blocked_excluded": 1
+  },
+  "excluded": [
+    "AP/AP25/044"
+  ],
+  "known_edge_cases": [
+    "AP/AP25/052"
+  ],
+  "backup_dir": "/Users/rahulkaushik/projects/gtf-axis-testing/public/data/archive/pre-v83-307-production-import-20260529-164724",
+  "inputs": {
+    "afropop": "/Users/rahulkaushik/.openclaw/workspace/gtf-review/v83-implementation/afropop_v83_full_extractions.json",
+    "tod": "/Users/rahulkaushik/.openclaw/workspace/gtf-review/v83-implementation/tod/tod_extractions_v8_3.json"
+  }
+}
